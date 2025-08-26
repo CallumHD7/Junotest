@@ -110,7 +110,9 @@ export default function PersonalAccount2() {
                 <div key={index} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
                   <input
                     ref={(el) => (inputRefs.current[index] = el)}
-                    type="text"
+                    type="tel"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
                     value={value}
                     onChange={(e) => handleOtpChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
@@ -139,7 +141,9 @@ export default function PersonalAccount2() {
                   <div key={actualIndex} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
                     <input
                       ref={(el) => (inputRefs.current[actualIndex] = el)}
-                      type="text"
+                      type="tel"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
                       value={value}
                       onChange={(e) => handleOtpChange(actualIndex, e.target.value)}
                       onKeyDown={(e) => handleKeyDown(actualIndex, e)}
