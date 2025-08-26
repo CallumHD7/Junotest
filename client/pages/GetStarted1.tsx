@@ -8,8 +8,7 @@ export default function GetStarted1() {
   };
 
   const handleSkip = () => {
-    // Navigate to next screen or skip onboarding
-    console.log("Skip onboarding");
+    navigate("/select-account-type");
   };
 
   const handleNext = () => {
