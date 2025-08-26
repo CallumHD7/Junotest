@@ -15,8 +15,7 @@ export default function Welcome() {
   }, []);
 
   const handleGetStarted = () => {
-    // Handle get started logic (to be implemented)
-    console.log("Get started clicked");
+    navigate("/getstarted1");
   };
 
   const handleLogIn = () => {
