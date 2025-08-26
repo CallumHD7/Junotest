@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(186.51% 100% at 50.13% 0%, var(--tw-gradient-stops))',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
