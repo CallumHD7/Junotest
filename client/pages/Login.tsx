@@ -6,7 +6,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
 
   const handleBackClick = () => {
-    navigate("/");
+    navigate("/welcome");
   };
 
   const handleContinue = () => {
