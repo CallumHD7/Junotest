@@ -2,9 +2,19 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Index() {
+  const navigate = useNavigate();
   const [currentScreen, setCurrentScreen] = useState<'loading' | 'welcome'>('loading');
   const [isLogoVisible, setIsLogoVisible] = useState(false);
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
+
+  const handleGetStarted = () => {
+    // Handle get started logic (to be implemented)
+    console.log("Get started clicked");
+  };
+
+  const handleLogIn = () => {
+    navigate("/login");
+  };
 
   useEffect(() => {
     // Start logo animation after component mounts
