@@ -93,7 +93,8 @@ export default function PersonalAccount2() {
 
             {/* OTP Input Section */}
             <div className="flex items-center gap-1 self-stretch relative">
-              {otpValues.map((value, index) => (
+              {/* First 3 digits */}
+              {otpValues.slice(0, 3).map((value, index) => (
                 <div key={index} className="flex flex-col justify-center items-center gap-2 flex-1 relative">
                   <input
                     id={`otp-${index}`}
@@ -102,19 +103,22 @@ export default function PersonalAccount2() {
                     onChange={(e) => handleOtpChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
                     className={`flex h-[72px] px-2 py-1 flex-col justify-center items-center gap-2 flex-1 rounded-lg text-center text-[52px] font-normal leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
-                      value 
-                        ? "bg-[#26272B] border-white text-white" 
+                      value
+                        ? "bg-[#26272B] border-white text-white"
                         : "bg-[#3F3F46] border-transparent text-[#A0A0AB]"
                     }`}
                     maxLength={1}
                   />
                 </div>
               ))}
+
               {/* Separator */}
               <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] mx-1">
                 -
               </div>
-              {otpValues.slice(3).map((value, index) => {
+
+              {/* Last 3 digits */}
+              {otpValues.slice(3, 6).map((value, index) => {
                 const actualIndex = index + 3;
                 return (
                   <div key={actualIndex} className="flex flex-col justify-center items-center gap-2 flex-1 relative">
@@ -125,8 +129,8 @@ export default function PersonalAccount2() {
                       onChange={(e) => handleOtpChange(actualIndex, e.target.value)}
                       onKeyDown={(e) => handleKeyDown(actualIndex, e)}
                       className={`flex h-[72px] px-2 py-1 flex-col justify-center items-center gap-2 flex-1 rounded-lg text-center text-[52px] font-normal leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
-                        value 
-                          ? "bg-[#26272B] border-white text-white" 
+                        value
+                          ? "bg-[#26272B] border-white text-white"
                           : "bg-[#3F3F46] border-transparent text-[#A0A0AB]"
                       }`}
                       maxLength={1}
