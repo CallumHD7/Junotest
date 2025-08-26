@@ -184,12 +184,18 @@ export default function Index() {
 
           {/* Action Buttons */}
           <div className="flex flex-col gap-3">
-            <button className="w-full h-12 bg-white rounded-lg flex items-center justify-center">
+            <button
+              onClick={handleGetStarted}
+              className="w-full h-12 bg-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
+            >
               <span className="text-[#18181B] text-[14px] font-bold uppercase">
                 GET STARTED
               </span>
             </button>
-            <button className="w-full h-12 border border-[#51525C] rounded-lg flex items-center justify-center">
+            <button
+              onClick={handleLogIn}
+              className="w-full h-12 border border-[#51525C] rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
+            >
               <span className="text-white text-[14px] font-bold uppercase">
                 LOG IN
               </span>
