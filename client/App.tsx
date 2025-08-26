@@ -14,6 +14,10 @@ import GetStarted3 from "./pages/GetStarted3";
 import GetStarted4 from "./pages/GetStarted4";
 import SelectAccountType from "./pages/SelectAccountType";
 import PersonalAccount1 from "./pages/PersonalAccount1";
+import PersonalAccount2 from "./pages/PersonalAccount2";
+import PersonalAccount3 from "./pages/PersonalAccount3";
+import PersonalAccount4 from "./pages/PersonalAccount4";
+import PersonalAccount5 from "./pages/PersonalAccount5";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
@@ -34,6 +38,10 @@ const App = () => (
           <Route path="/getstarted4" element={<GetStarted4 />} />
           <Route path="/select-account-type" element={<SelectAccountType />} />
           <Route path="/personalaccount1" element={<PersonalAccount1 />} />
+          <Route path="/personalaccount2" element={<PersonalAccount2 />} />
+          <Route path="/personalaccount3" element={<PersonalAccount3 />} />
+          <Route path="/personalaccount4" element={<PersonalAccount4 />} />
+          <Route path="/personalaccount5" element={<PersonalAccount5 />} />
           <Route path="/login" element={<Login />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
