@@ -87,7 +87,7 @@ export default function GetStarted1() {
               />
               
               {/* User 1 - Floating Animation */}
-              <div className="absolute left-4 top-12 w-12 h-12 sm:w-16 sm:h-16 md:left-5 md:top-16 rounded-full overflow-hidden animate-float-1">
+              <div className="absolute left-6 top-16 w-16 h-16 sm:w-20 sm:h-20 md:left-8 md:top-20 rounded-full overflow-hidden animate-float-1">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F7e72e68fa21d4e81953f6b495e4a7708?format=webp"
                   alt="User 1"
@@ -96,7 +96,7 @@ export default function GetStarted1() {
               </div>
 
               {/* User 2 - Floating Animation */}
-              <div className="absolute right-4 top-36 w-12 h-12 sm:w-16 sm:h-16 sm:top-48 md:right-5 rounded-full overflow-hidden animate-float-2">
+              <div className="absolute right-6 bottom-24 w-16 h-16 sm:w-20 sm:h-20 sm:bottom-20 md:right-8 rounded-full overflow-hidden animate-float-2">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F75b5af5738ef47108b64eb5353644742?format=webp"
                   alt="User 2"
