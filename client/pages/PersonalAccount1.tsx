@@ -30,7 +30,7 @@ export default function PersonalAccount1() {
   const handleContinue = () => {
     // Validate form and proceed to next step
     console.log("Form data:", formData);
-    // Navigate to next step (to be implemented)
+    navigate("/personalaccount2");
   };
 
   return (
