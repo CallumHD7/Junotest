@@ -107,7 +107,7 @@ export default function PersonalAccount2() {
             <div className="flex items-center gap-1 sm:gap-1 self-stretch relative">
               {/* First 3 digits */}
               {otpValues.slice(0, 3).map((value, index) => (
-                <div key={index} className="flex h-[72px] px-2 py-[2px] flex-col justify-center items-center gap-2 flex-1 relative">
+                <div key={index} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
                   <input
                     ref={(el) => (inputRefs.current[index] = el)}
                     type="text"
@@ -136,7 +136,7 @@ export default function PersonalAccount2() {
               {otpValues.slice(3, 6).map((value, index) => {
                 const actualIndex = index + 3;
                 return (
-                  <div key={actualIndex} className="flex h-[72px] px-2 py-[2px] flex-col justify-center items-center gap-2 flex-1 relative">
+                  <div key={actualIndex} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
                     <input
                       ref={(el) => (inputRefs.current[actualIndex] = el)}
                       type="text"
