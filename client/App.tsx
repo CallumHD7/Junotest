@@ -13,6 +13,7 @@ import GetStarted2 from "./pages/GetStarted2";
 import GetStarted3 from "./pages/GetStarted3";
 import GetStarted4 from "./pages/GetStarted4";
 import SelectAccountType from "./pages/SelectAccountType";
+import PersonalAccount1 from "./pages/PersonalAccount1";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
