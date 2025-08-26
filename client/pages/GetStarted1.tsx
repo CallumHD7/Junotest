@@ -78,11 +78,12 @@ export default function GetStarted1() {
           {/* Main Section */}
           <div className="flex flex-col items-start gap-8 flex-1 self-stretch relative">
             {/* Main Graphic with User Animations */}
-            <div className="flex-1 self-stretch rounded-lg relative">
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/bae5f3f2064dbc883589f24f76917a22554bdfeb?width=686" 
-                alt="Main graphic" 
-                className="w-full h-full object-cover rounded-lg"
+            <div className="flex flex-col justify-center items-center flex-1 self-stretch rounded-lg relative p-0.5">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/35ce650b823504f009fabbb89841af9bd1d9e502?width=684"
+                alt="iPhone Asset"
+                className="w-[342px] h-[382px] absolute left-0 top-0"
+                style={{ aspectRatio: '77/86' }}
               />
               
               {/* User 1 - Floating Animation */}
