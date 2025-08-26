@@ -110,8 +110,14 @@
 
   input, textarea, select {
     touch-action: manipulation;
-    font-size: 16px !important; /* Prevents zoom on iOS */
     -webkit-text-size-adjust: 100%;
     -webkit-user-select: text;
+  }
+
+  /* Only apply 16px font-size to inputs that don't have large custom sizes */
+  input:not([class*="text-[52px]"]),
+  textarea:not([class*="text-[52px]"]),
+  select:not([class*="text-[52px]"]) {
+    font-size: 16px !important; /* Prevents zoom on iOS */
   }
 }
