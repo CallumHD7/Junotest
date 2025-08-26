@@ -80,26 +80,26 @@ export default function GetStarted1() {
             {/* Main Graphic with User Animations */}
             <div className="flex flex-col justify-center items-center flex-1 self-stretch rounded-lg relative p-0.5">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/35ce650b823504f009fabbb89841af9bd1d9e502?width=684"
+                src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fe8a796f776ac4472b6b3253d685845c8?format=webp"
                 alt="iPhone Asset"
-                className="w-[342px] h-[382px] absolute left-0 top-0"
+                className="w-full max-w-[342px] h-auto object-contain"
                 style={{ aspectRatio: '77/86' }}
               />
               
               {/* User 1 - Floating Animation */}
-              <div className="absolute left-5 top-16 w-16 h-16 rounded-full overflow-hidden animate-float-1">
-                <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/f2d8397657ef39f434c3d8ce262924990e0dd684?width=144" 
-                  alt="User 1" 
+              <div className="absolute left-4 top-12 w-12 h-12 sm:w-16 sm:h-16 md:left-5 md:top-16 rounded-full overflow-hidden animate-float-1">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F7e72e68fa21d4e81953f6b495e4a7708?format=webp"
+                  alt="User 1"
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* User 2 - Floating Animation */}
-              <div className="absolute right-5 top-48 w-16 h-16 rounded-full overflow-hidden animate-float-2">
-                <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/d49a2460db8d8e7e9291e7f7ed70a1b9f235e47e?width=144" 
-                  alt="User 2" 
+              <div className="absolute right-4 top-36 w-12 h-12 sm:w-16 sm:h-16 sm:top-48 md:right-5 rounded-full overflow-hidden animate-float-2">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F75b5af5738ef47108b64eb5353644742?format=webp"
+                  alt="User 2"
                   className="w-full h-full object-cover"
                 />
               </div>
