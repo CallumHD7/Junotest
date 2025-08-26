@@ -104,7 +104,7 @@ export default function PersonalAccount2() {
             </div>
 
             {/* OTP Input Section */}
-            <div className="flex items-center gap-1 self-stretch relative">
+            <div className="flex items-center gap-1 sm:gap-1 self-stretch relative">
               {/* First 3 digits */}
               {otpValues.slice(0, 3).map((value, index) => (
                 <div key={index} className="flex h-[72px] px-2 py-[2px] flex-col justify-center items-center gap-2 flex-1 relative">
@@ -128,7 +128,7 @@ export default function PersonalAccount2() {
               ))}
 
               {/* Separator */}
-              <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] px-1">
+              <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] px-1 pb-2 sm:pb-0">
                 -
               </div>
 
