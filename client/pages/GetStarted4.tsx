@@ -13,8 +13,7 @@ export default function GetStarted4() {
   };
 
   const handleGetStarted = () => {
-    // Navigate to main app or login - for now let's go to login
-    navigate("/login");
+    navigate("/select-account-type");
   };
 
   return (
