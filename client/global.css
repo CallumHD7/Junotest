@@ -114,10 +114,10 @@
     -webkit-user-select: text;
   }
 
-  /* Only apply 16px font-size to inputs that don't have large custom sizes */
-  input:not([class*="text-[52px]"]),
-  textarea:not([class*="text-[52px]"]),
-  select:not([class*="text-[52px]"]) {
+  /* Apply 16px font-size to prevent zoom, but exclude OTP inputs */
+  input:not(.otp-input),
+  textarea,
+  select {
     font-size: 16px !important; /* Prevents zoom on iOS */
   }
 }
