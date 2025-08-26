@@ -70,7 +70,7 @@ export default function PersonalAccount1() {
       </div>
 
       {/* Form Section */}
-      <div className="flex px-4 pt-2 pb-0 pb-7 sm:pb-0 flex-col items-start gap-8 flex-1 self-stretch relative overflow-y-auto">
+      <div className="flex px-4 pt-2 pb-7 sm:pb-0 flex-col items-start gap-8 flex-1 self-stretch relative overflow-y-auto">
         <div className="flex flex-col items-start gap-6 self-stretch relative">
           {/* Full Name */}
           <div className="flex flex-col items-start gap-2 self-stretch relative">
