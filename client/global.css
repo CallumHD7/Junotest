@@ -105,5 +105,11 @@
 
   body {
     @apply bg-background text-foreground;
+    touch-action: manipulation;
+  }
+
+  input, textarea, select {
+    touch-action: manipulation;
+    font-size: 16px; /* Prevents zoom on iOS */
   }
 }
