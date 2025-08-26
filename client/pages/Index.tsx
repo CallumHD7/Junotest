@@ -95,9 +95,9 @@ export default function Index() {
   return (
     <div className="relative w-full h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
       {/* Background Image */}
-      <img 
-        src="https://api.builder.io/api/v1/image/assets/TEMP/872069920e5a771ebac4581531485f86c0b0641f?width=750" 
-        alt="Architectural building" 
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F29c83fbe49da4743b02af1f85912b5e0?format=webp&width=1200"
+        alt="Architectural building"
         className="absolute inset-0 w-full h-full object-cover"
       />
       
