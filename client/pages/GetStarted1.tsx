@@ -75,165 +75,205 @@ export default function GetStarted1() {
 
         {/* Content Container */}
         <div className="flex flex-col justify-between h-full">
-          {/* Phone Mockup and Content */}
+          {/* Phone Mockup Section */}
           <div className="flex flex-col items-center gap-12 flex-1">
-            {/* Phone Mockup Container */}
-            <div className="relative w-[260px] h-[540px] mx-auto">
-              {/* Phone Frame */}
-              <div className="absolute inset-0 rounded-[35px] border-[1.7px] border-white/75 bg-black shadow-2xl">
-                {/* Screen Content */}
-                <div className="absolute top-[11px] left-[12px] w-[240px] h-[520px] rounded-[27px] bg-[#18181B] overflow-hidden">
-                  {/* Phone Status Bar */}
-                  <div className="h-[31px] bg-[#26272B] px-3 flex justify-between items-center border-b border-white/12">
-                    <span className="text-white text-[10px] font-semibold">9:41</span>
-                    <div className="flex items-center gap-1">
-                      <svg width="13" height="9" viewBox="0 0 13 9" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M8.05762 3.49551H8.69874C9.05281 3.49551 9.33985 3.78255 9.33985 4.13663V7.98333C9.33985 8.3374 9.05281 8.62444 8.69874 8.62444H8.05762C7.70354 8.62444 7.4165 8.3374 7.4165 7.98333V4.13663C7.4165 3.78255 7.70354 3.49551 8.05762 3.49551Z" fill="white"/>
-                      </svg>
-                      <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
-                        <path d="M5.96136 6.66232C6.37135 6.66232 6.76973 6.77006 7.12075 6.97549L7.26297 7.05872C7.3708 7.12182 7.38976 7.26951 7.30136 7.35766L6.08703 8.56862C6.01244 8.643 5.89151 8.643 5.81692 8.56862L4.6104 7.36545C4.52238 7.27767 4.54073 7.13074 4.64764 7.06718L4.78827 6.98356C5.14251 6.77293 5.54595 6.66232 5.96136 6.66232Z" fill="white"/>
-                      </svg>
-                      <svg width="17" height="9" viewBox="0 0 17 9" fill="none">
-                        <rect x="1.85156" y="2.85419" width="12.1812" height="5.12893" rx="0.641116" fill="white"/>
-                      </svg>
+            {/* Phone Container with Background Gradient */}
+            <div className="relative w-full max-w-md mx-auto">
+              {/* Background Gradient Container */}
+              <div className="relative w-full h-[500px] rounded-lg bg-gradient-to-b from-transparent to-[rgba(26,138,126,0.4)] border border-transparent flex items-center justify-center">
+                {/* iPhone Mockup Container */}
+                <div className="relative">
+                  {/* Phone Shadow */}
+                  <div className="absolute -left-2 top-2 w-[260px] h-[540px] rounded-[35px] bg-black/20 blur-md"></div>
+                  
+                  {/* Phone Frame */}
+                  <div className="relative w-[260px] h-[540px] rounded-[35px] border-[1.7px] border-white/75 bg-black shadow-2xl">
+                    {/* Screen Content */}
+                    <div className="absolute top-[11px] left-[12px] w-[240px] h-[520px] rounded-[27px] bg-[#18181B] overflow-hidden">
+                      {/* Dynamic Island */}
+                      <div className="absolute top-[6px] left-1/2 transform -translate-x-1/2 w-[47px] h-[14px] bg-black rounded-full"></div>
+                      
+                      {/* iPhone Status Bar */}
+                      <div className="h-[31px] bg-[#26272B] px-3 flex justify-between items-center border-b border-white/12">
+                        <span className="text-white text-[10px] font-semibold">9:41</span>
+                        <div className="flex items-center gap-1">
+                          <svg width="13" height="9" viewBox="0 0 13 9" fill="none">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M8.05762 3.49551H8.69874C9.05281 3.49551 9.33985 3.78255 9.33985 4.13663V7.98333C9.33985 8.3374 9.05281 8.62444 8.69874 8.62444H8.05762C7.70354 8.62444 7.4165 8.3374 7.4165 7.98333V4.13663C7.4165 3.78255 7.70354 3.49551 8.05762 3.49551Z" fill="white"/>
+                          </svg>
+                          <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M5.96136 6.66232C6.37135 6.66232 6.76973 6.77006 7.12075 6.97549L7.26297 7.05872C7.3708 7.12182 7.38976 7.26951 7.30136 7.35766L6.08703 8.56862C6.01244 8.643 5.89151 8.643 5.81692 8.56862L4.6104 7.36545C4.52238 7.27767 4.54073 7.13074 4.64764 7.06718L4.78827 6.98356C5.14251 6.77293 5.54595 6.66232 5.96136 6.66232Z" fill="white"/>
+                          </svg>
+                          <svg width="17" height="9" viewBox="0 0 17 9" fill="none">
+                            <rect x="1.85156" y="2.85419" width="12.1812" height="5.12893" rx="0.641116" fill="white"/>
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* App Header */}
+                      <div className="h-[33px] bg-[#26272B] px-[10px] flex justify-between items-center border-b border-white/12">
+                        <span className="text-white text-[10px] font-bold uppercase">BALANCES</span>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                          <path d="M6.93043 14.6215C6.64211 14.6215 6.39395 14.5254 6.18593 14.3332C5.97791 14.1409 5.85234 13.906 5.8092 13.6284L5.66504 12.5712C5.52622 12.5178 5.39551 12.4538 5.27292 12.379C5.15034 12.3043 5.0301 12.2242 4.91221 12.1387L3.91911 12.5552C3.65215 12.6727 3.38519 12.6833 3.11823 12.5872C2.85127 12.4911 2.64304 12.3203 2.49354 12.0747L1.74071 10.7612C1.59122 10.5156 1.5485 10.254 1.61257 9.97636C1.67664 9.69872 1.8208 9.46913 2.04505 9.2876L2.89398 8.64689C2.88331 8.57214 2.87797 8.49996 2.87797 8.43033V7.99786C2.87797 7.92866 2.88331 7.85669 2.89398 7.78194L2.04505 7.14123C1.8208 6.9597 1.67664 6.73011 1.61257 6.45248C1.5485 6.17484 1.59122 5.91321 1.74071 5.66761L2.49354 4.35416C2.64304 4.10856 2.85127 3.93771 3.11823 3.8416C3.38519 3.74549 3.65215 3.75617 3.91911 3.87363L4.91221 4.29009C5.02967 4.20467 5.15247 4.12458 5.28061 4.04983C5.40875 3.97508 5.5369 3.91101 5.66504 3.85762L5.8092 2.80045C5.85191 2.52281 5.97749 2.28789 6.18593 2.09568C6.39437 1.90346 6.64254 1.80736 6.93043 1.80736H8.43609C8.72441 1.80736 8.97279 1.90346 9.18123 2.09568C9.38967 2.28789 9.51504 2.52281 9.55732 2.80045L9.70148 3.85762C9.8403 3.91101 9.97122 3.97508 10.0942 4.04983C10.2173 4.12458 10.3373 4.20467 10.4543 4.29009L11.4474 3.87363C11.7144 3.75617 11.9813 3.74549 12.2483 3.8416C12.5152 3.93771 12.7235 4.10856 12.873 4.35416L13.6258 5.66761C13.7753 5.91321 13.818 6.17484 13.7539 6.45248C13.6899 6.73011 13.5457 6.9597 13.3215 7.14123L12.4725 7.78194C12.4832 7.85669 12.4886 7.92888 12.4886 7.9985V8.43033C12.4886 8.49996 12.4779 8.57214 12.4565 8.64689L13.3055 9.2876C13.5297 9.46913 13.6739 9.69872 13.7379 9.97636C13.802 10.254 13.7593 10.5156 13.6098 10.7612L12.8409 12.0747C12.6914 12.3203 12.4832 12.4911 12.2163 12.5872C11.9493 12.6833 11.6823 12.6727 11.4154 12.5552L10.4543 12.1387C10.3369 12.2242 10.214 12.3043 10.0859 12.379C9.95776 12.4538 9.82962 12.5178 9.70148 12.5712L9.55732 13.6284C9.51461 13.906 9.38925 14.1409 9.18123 14.3332C8.97321 14.5254 8.72483 14.6215 8.43609 14.6215H6.93043Z" fill="white"/>
+                        </svg>
+                      </div>
+
+                      {/* Currency Cards */}
+                      <div className="p-[3px] space-y-[2.5px] h-[407px] overflow-hidden">
+                        {/* USD Card */}
+                        <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
+                          <div className="absolute -left-8 -top-8 w-16 h-16 bg-[#0067E1] rounded-full blur-[64px] opacity-50"></div>
+                          <div className="relative flex items-center gap-2 mb-2">
+                            <svg width="29" height="30" viewBox="0 0 29 30" fill="none" className="w-7 h-7">
+                              <g clipPath="url(#clip0_482_15913)">
+                                <mask id="mask0_482_15913" style={{maskType: "luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="30">
+                                  <path d="M14.7806 29.1587C22.5653 29.1587 28.8761 22.8479 28.8761 15.0632C28.8761 7.2784 22.5653 0.967621 14.7806 0.967621C6.99584 0.967621 0.685059 7.2784 0.685059 15.0632C0.685059 22.8479 6.99584 29.1587 14.7806 29.1587Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0_482_15913)">
+                                  <path d="M14.7806 0.967621H28.8761V4.4915L27.1142 6.25344L28.8761 8.01539V11.5393L27.1142 13.3012L28.8761 15.0632V18.587L27.1142 20.349L28.8761 22.1109V25.6348L14.7806 27.3967L0.685059 25.6348V22.1109L2.447 20.349L0.685059 18.587V15.0632L14.7806 0.967621Z" fill="#EEEEEE"/>
+                                  <path d="M13.0186 4.49158H28.8761V8.01547H13.0186V4.49158ZM13.0186 11.5393H28.8761V15.0632H14.7806L13.0186 11.5393ZM0.685059 18.5871H28.8761V22.111H0.685059V18.5871ZM0.685059 25.6349H28.8761V29.1588H0.685059V25.6349Z" fill="#D80027"/>
+                                  <path d="M0.685059 0.967621H14.7806V15.0632H0.685059V0.967621Z" fill="#0052B4"/>
+                                </g>
+                              </g>
+                            </svg>
+                            <div className="flex-1">
+                              <div className="text-white text-[9px] font-bold uppercase">AMERICAN DOLLAR</div>
+                              <div className="text-[#D1D1D6] text-[9px]">USD</div>
+                            </div>
+                            <div className="text-white text-[9px] font-bold">$44,955.02</div>
+                          </div>
+                          <div className="mb-1">
+                            <div className="text-white text-[9px]">65.6%</div>
+                          </div>
+                          <div className="w-full h-[3px] bg-[#3F3F46] rounded">
+                            <div className="w-[66%] h-full bg-[#0067E1] rounded"></div>
+                          </div>
+                        </div>
+
+                        {/* CHF Card */}
+                        <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
+                          <div className="absolute -left-8 -top-8 w-16 h-16 bg-[#FF0004] rounded-full blur-[64px] opacity-50"></div>
+                          <div className="relative flex items-center gap-2 mb-2">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" className="w-7 h-7">
+                              <g clipPath="url(#clip0_482_15978)">
+                                <path d="M14.7806 28.7921C22.5653 28.7921 28.8761 22.4813 28.8761 14.6966C28.8761 6.91181 22.5653 0.601028 14.7806 0.601028C6.99584 0.601028 0.685059 6.91181 0.685059 14.6966C0.685059 22.4813 6.99584 28.7921 14.7806 28.7921Z" fill="#D80027"/>
+                                <path d="M21.8284 12.3473H17.1299V7.64883H12.4314V12.3473H7.73291V17.0458H12.4314V21.7444H17.1299V17.0458H21.8284V12.3473Z" fill="white"/>
+                              </g>
+                            </svg>
+                            <div className="flex-1">
+                              <div className="text-white text-[9px] font-bold uppercase">SWISS FRANC</div>
+                              <div className="text-[#D1D1D6] text-[9px]">CHF</div>
+                            </div>
+                            <div className="text-right">
+                              <div className="text-white text-[9px] font-bold">₣5,000.00</div>
+                              <div className="text-[#D1D1D6] text-[9px]">$100</div>
+                            </div>
+                          </div>
+                          <div className="mb-1">
+                            <div className="text-white text-[9px]">3.7%</div>
+                          </div>
+                          <div className="w-full h-[3px] bg-[#3F3F46] rounded">
+                            <div className="w-[4%] h-full bg-[#FF0004] rounded"></div>
+                          </div>
+                        </div>
+
+                        {/* EUR Card */}
+                        <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
+                          <div className="absolute -left-8 -top-8 w-16 h-16 bg-[#0074FF] rounded-full blur-[64px] opacity-50"></div>
+                          <div className="relative flex items-center gap-2 mb-2">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" className="w-7 h-7">
+                              <g clipPath="url(#clip0_482_15957)">
+                                <mask id="mask0_482_15957" style={{maskType: "luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="29">
+                                  <path d="M14.7806 28.4256C22.5653 28.4256 28.8761 22.1148 28.8761 14.33C28.8761 6.54529 22.5653 0.234509 14.7806 0.234509C6.99584 0.234509 0.685059 6.54529 0.685059 14.33C0.685059 22.1148 6.99584 28.4256 14.7806 28.4256Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0_482_15957)">
+                                  <path d="M0.685059 0.234509H28.8761V28.4256H0.685059V0.234509Z" fill="#0052B4"/>
+                                </g>
+                              </g>
+                            </svg>
+                            <div className="flex-1">
+                              <div className="text-white text-[9px] font-bold uppercase">EURO</div>
+                              <div className="text-[#D1D1D6] text-[9px]">EUR</div>
+                            </div>
+                            <div className="text-right">
+                              <div className="text-white text-[9px] font-bold">€15,000.00</div>
+                              <div className="text-[#D1D1D6] text-[9px]">$18,000.00</div>
+                            </div>
+                          </div>
+                          <div className="mb-1">
+                            <div className="text-white text-[9px]">32%</div>
+                          </div>
+                          <div className="w-full h-[3px] bg-[#3F3F46] rounded">
+                            <div className="w-[32%] h-full bg-[#0074FF] rounded"></div>
+                          </div>
+                        </div>
+
+                        {/* GBP Card */}
+                        <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
+                          <div className="absolute -left-8 -top-8 w-16 h-16 bg-[#FF002E] rounded-full blur-[64px] opacity-50"></div>
+                          <div className="relative flex items-center gap-2 mb-2">
+                            <svg width="29" height="30" viewBox="0 0 29 30" fill="none" className="w-7 h-7">
+                              <g clipPath="url(#clip0_482_15935)">
+                                <mask id="mask0_482_15935" style={{maskType: "luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="30">
+                                  <path d="M14.7806 29.0589C22.5653 29.0589 28.8761 22.7481 28.8761 14.9633C28.8761 7.17859 22.5653 0.867805 14.7806 0.867805C6.99584 0.867805 0.685059 7.17859 0.685059 14.9633C0.685059 22.7481 6.99584 29.0589 14.7806 29.0589Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0_482_15935)">
+                                  <path d="M0.685059 0.867805L1.12554 2.07914L0.685059 3.34554V4.61193L2.447 7.58521L0.685059 10.5585V12.3204L2.447 14.9633L0.685059 17.6062V19.3682L2.447 22.3415L0.685059 25.3147V29.0589L1.89639 28.6184L3.16279 29.0589H4.42918L7.40246 27.2969L10.3757 29.0589H12.1377L14.7806 27.2969L17.4235 29.0589H19.1854L22.1587 27.2969L25.132 29.0589H28.8761L28.4356 27.8475L28.8761 26.5811V25.3147L27.1142 22.3415L28.8761 19.3682V17.6062L27.1142 14.9633L28.8761 12.3204V10.5585L27.1142 7.58521L28.8761 4.61193V0.867805L27.6648 1.30829L26.3984 0.867805H25.132L22.1587 2.62975L19.1854 0.867805H17.4235L14.7806 2.62975L12.1377 0.867805H10.3757L7.40246 2.62975L4.42918 0.867805H0.685059Z" fill="#EEEEEE"/>
+                                  <path d="M19.1854 0.867805V6.81436L25.132 0.867805H19.1854ZM28.8761 4.61193L22.9296 10.5585H28.8761V4.61193ZM0.685059 10.5585H6.63161L0.685059 4.61193V10.5585ZM4.42918 0.867805L10.3757 6.81436V0.867805H4.42918ZM10.3757 29.0589V23.1123L4.42918 29.0589H10.3757ZM0.685059 25.3147L6.63161 19.3682H0.685059V25.3147ZM28.8761 19.3682H22.9296L28.8761 25.3147V19.3682ZM25.132 29.0589L19.1854 23.1123V29.0589H25.132Z" fill="#0052B4"/>
+                                  <path d="M0.685059 0.867805V3.34554L7.89801 10.5585H10.3757L0.685059 0.867805ZM12.1377 0.867805V12.3204H0.685059V17.6062H12.1377V29.0589H17.4235V17.6062H28.8761V12.3204H17.4235V0.867805H12.1377ZM26.3984 0.867805L19.1854 8.08075V10.5585L28.8761 0.867805H26.3984ZM10.3757 19.3682L0.685059 29.0589H3.16279L10.3757 21.8459V19.3682ZM19.1854 19.3682L28.8761 29.0589V26.5811L21.6632 19.3682H19.1854Z" fill="#D80027"/>
+                                </g>
+                              </g>
+                            </svg>
+                            <div className="flex-1">
+                              <div className="text-white text-[9px] font-bold uppercase">BRITISH POUND</div>
+                              <div className="text-[#D1D1D6] text-[9px]">GBP</div>
+                            </div>
+                            <div className="text-right">
+                              <div className="text-white text-[9px] font-bold">£2,500.00</div>
+                              <div className="text-[#D1D1D6] text-[9px]">$3,000.00</div>
+                            </div>
+                          </div>
+                          <div className="mb-1">
+                            <div className="text-white text-[9px]">12.2%</div>
+                          </div>
+                          <div className="w-full h-[3px] bg-[#3F3F46] rounded">
+                            <div className="w-[12%] h-full bg-[#FF002E] rounded"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Home Indicator */}
+                      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[75px] h-[3px] bg-white rounded-full"></div>
                     </div>
+
+                    {/* Phone Hardware Elements */}
+                    <div className="absolute -left-[2px] top-[87px] w-[2px] h-5 bg-black/50 rounded-r"></div>
+                    <div className="absolute -left-[2px] top-[126px] w-[2px] h-10 bg-black/50 rounded-r"></div>
+                    <div className="absolute -left-[2px] top-[180px] w-[2px] h-10 bg-black/50 rounded-r"></div>
+                    <div className="absolute -right-[2px] top-[139px] w-[2px] h-[67px] bg-black/50 rounded-l"></div>
                   </div>
-
-                  {/* App Header */}
-                  <div className="h-[33px] bg-[#26272B] px-[10px] flex justify-between items-center border-b border-white/12">
-                    <span className="text-white text-[10px] font-bold uppercase">BALANCES</span>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                      <path d="M6.93043 14.6215C6.64211 14.6215 6.39395 14.5254 6.18593 14.3332C5.97791 14.1409 5.85234 13.906 5.8092 13.6284L5.66504 12.5712C5.52622 12.5178 5.39551 12.4538 5.27292 12.379C5.15034 12.3043 5.0301 12.2242 4.91221 12.1387L3.91911 12.5552C3.65215 12.6727 3.38519 12.6833 3.11823 12.5872C2.85127 12.4911 2.64304 12.3203 2.49354 12.0747L1.74071 10.7612C1.59122 10.5156 1.5485 10.254 1.61257 9.97636C1.67664 9.69872 1.8208 9.46913 2.04505 9.2876L2.89398 8.64689C2.88331 8.57214 2.87797 8.49996 2.87797 8.43033V7.99786C2.87797 7.92866 2.88331 7.85669 2.89398 7.78194L2.04505 7.14123C1.8208 6.9597 1.67664 6.73011 1.61257 6.45248C1.5485 6.17484 1.59122 5.91321 1.74071 5.66761L2.49354 4.35416C2.64304 4.10856 2.85127 3.93771 3.11823 3.8416C3.38519 3.74549 3.65215 3.75617 3.91911 3.87363L4.91221 4.29009C5.02967 4.20467 5.15247 4.12458 5.28061 4.04983C5.40875 3.97508 5.5369 3.91101 5.66504 3.85762L5.8092 2.80045C5.85191 2.52281 5.97749 2.28789 6.18593 2.09568C6.39437 1.90346 6.64254 1.80736 6.93043 1.80736H8.43609C8.72441 1.80736 8.97279 1.90346 9.18123 2.09568C9.38967 2.28789 9.51504 2.52281 9.55732 2.80045L9.70148 3.85762C9.8403 3.91101 9.97122 3.97508 10.0942 4.04983C10.2173 4.12458 10.3373 4.20467 10.4543 4.29009L11.4474 3.87363C11.7144 3.75617 11.9813 3.74549 12.2483 3.8416C12.5152 3.93771 12.7235 4.10856 12.873 4.35416L13.6258 5.66761C13.7753 5.91321 13.818 6.17484 13.7539 6.45248C13.6899 6.73011 13.5457 6.9597 13.3215 7.14123L12.4725 7.78194C12.4832 7.85669 12.4886 7.92888 12.4886 7.9985V8.43033C12.4886 8.49996 12.4779 8.57214 12.4565 8.64689L13.3055 9.2876C13.5297 9.46913 13.6739 9.69872 13.7379 9.97636C13.802 10.254 13.7593 10.5156 13.6098 10.7612L12.8409 12.0747C12.6914 12.3203 12.4832 12.4911 12.2163 12.5872C11.9493 12.6833 11.6823 12.6727 11.4154 12.5552L10.4543 12.1387C10.3369 12.2242 10.214 12.3043 10.0859 12.379C9.95776 12.4538 9.82962 12.5178 9.70148 12.5712L9.55732 13.6284C9.51461 13.906 9.38925 14.1409 9.18123 14.3332C8.97321 14.5254 8.72483 14.6215 8.43609 14.6215H6.93043Z" fill="white"/>
-                    </svg>
-                  </div>
-
-                  {/* Currency Cards */}
-                  <div className="p-[3px] space-y-[2.5px] h-[407px] overflow-hidden">
-                    {/* USD Card */}
-                    <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
-                      <div className="absolute -left-8 -top-8 w-16 h-16 bg-blue-600 rounded-full blur-[64px] opacity-50"></div>
-                      <div className="relative flex items-center gap-2 mb-2">
-                        <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center">
-                          <span className="text-white text-[6px] font-bold">US</span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-white text-[9px] font-bold uppercase">AMERICAN DOLLAR</div>
-                          <div className="text-[#D1D1D6] text-[9px]">USD</div>
-                        </div>
-                        <div className="text-white text-[9px] font-bold">$44,955.02</div>
-                      </div>
-                      <div className="mb-1">
-                        <div className="text-white text-[9px]">65.6%</div>
-                      </div>
-                      <div className="w-full h-[3px] bg-[#3F3F46] rounded">
-                        <div className="w-[66%] h-full bg-blue-600 rounded"></div>
-                      </div>
-                    </div>
-
-                    {/* CHF Card */}
-                    <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
-                      <div className="absolute -left-8 -top-8 w-16 h-16 bg-red-600 rounded-full blur-[64px] opacity-50"></div>
-                      <div className="relative flex items-center gap-2 mb-2">
-                        <div className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center">
-                          <span className="text-white text-[6px] font-bold">CH</span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-white text-[9px] font-bold uppercase">SWISS FRANC</div>
-                          <div className="text-[#D1D1D6] text-[9px]">CHF</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-white text-[9px] font-bold">₣5,000.00</div>
-                          <div className="text-[#D1D1D6] text-[9px]">$100</div>
-                        </div>
-                      </div>
-                      <div className="mb-1">
-                        <div className="text-white text-[9px]">3.7%</div>
-                      </div>
-                      <div className="w-full h-[3px] bg-[#3F3F46] rounded">
-                        <div className="w-[4%] h-full bg-red-600 rounded"></div>
-                      </div>
-                    </div>
-
-                    {/* EUR Card */}
-                    <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
-                      <div className="absolute -left-8 -top-8 w-16 h-16 bg-blue-500 rounded-full blur-[64px] opacity-50"></div>
-                      <div className="relative flex items-center gap-2 mb-2">
-                        <div className="w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center">
-                          <span className="text-white text-[6px] font-bold">EU</span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-white text-[9px] font-bold uppercase">EURO</div>
-                          <div className="text-[#D1D1D6] text-[9px]">EUR</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-white text-[9px] font-bold">€15,000.00</div>
-                          <div className="text-[#D1D1D6] text-[9px]">$18,000.00</div>
-                        </div>
-                      </div>
-                      <div className="mb-1">
-                        <div className="text-white text-[9px]">32%</div>
-                      </div>
-                      <div className="w-full h-[3px] bg-[#3F3F46] rounded">
-                        <div className="w-[32%] h-full bg-blue-500 rounded"></div>
-                      </div>
-                    </div>
-
-                    {/* GBP Card */}
-                    <div className="bg-[#26272B] rounded-[5px] border border-white/12 p-[11px] relative overflow-hidden">
-                      <div className="absolute -left-8 -top-8 w-16 h-16 bg-red-700 rounded-full blur-[64px] opacity-50"></div>
-                      <div className="relative flex items-center gap-2 mb-2">
-                        <div className="w-7 h-7 rounded-full bg-red-700 flex items-center justify-center">
-                          <span className="text-white text-[6px] font-bold">GB</span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-white text-[9px] font-bold uppercase">BRITISH POUND</div>
-                          <div className="text-[#D1D1D6] text-[9px]">GBP</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-white text-[9px] font-bold">£2,500.00</div>
-                          <div className="text-[#D1D1D6] text-[9px]">$3,000.00</div>
-                        </div>
-                      </div>
-                      <div className="mb-1">
-                        <div className="text-white text-[9px]">12.2%</div>
-                      </div>
-                      <div className="w-full h-[3px] bg-[#3F3F46] rounded">
-                        <div className="w-[12%] h-full bg-red-700 rounded"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Home Indicator */}
-                  <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[75px] h-[3px] bg-white rounded-full"></div>
                 </div>
 
-                {/* Phone Hardware Elements */}
-                <div className="absolute -left-[2px] top-[87px] w-[2px] h-5 bg-black/50 rounded-r"></div>
-                <div className="absolute -left-[2px] top-[126px] w-[2px] h-10 bg-black/50 rounded-r"></div>
-                <div className="absolute -left-[2px] top-[180px] w-[2px] h-10 bg-black/50 rounded-r"></div>
-                <div className="absolute -right-[2px] top-[139px] w-[2px] h-[67px] bg-black/50 rounded-l"></div>
-              </div>
-
-              {/* User Profile Images */}
-              <div className="absolute -left-4 top-[75px] w-[72px] h-[72px] rounded-full bg-gray-300 border-4 border-white/20 transform -rotate-3 overflow-hidden">
-                <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/f2d8397657ef39f434c3d8ce262924990e0dd684?width=144" 
-                  alt="User profile" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -right-4 top-[285px] w-[72px] h-[72px] rounded-full bg-gray-300 border-4 border-white/20 transform rotate-3 overflow-hidden">
-                <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/d49a2460db8d8e7e9291e7f7ed70a1b9f235e47e?width=144" 
-                  alt="User profile" 
-                  className="w-full h-full object-cover"
-                />
+                {/* User Profile Images */}
+                <div className="absolute left-5 top-[75px] w-[72px] h-[72px] rounded-full overflow-hidden transform -rotate-[3.654deg]">
+                  <img 
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f2d8397657ef39f434c3d8ce262924990e0dd684?width=144" 
+                    alt="User profile" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute right-5 top-[285px] w-[72px] h-[72px] rounded-full overflow-hidden transform rotate-[3.513deg]">
+                  <img 
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/d49a2460db8d8e7e9291e7f7ed70a1b9f235e47e?width=144" 
+                    alt="User profile" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
 
             {/* Text Content */}
             <div className="text-center px-4">
-              <h1 className="text-white text-[24px] font-bold uppercase leading-tight mb-3">
+              <h1 className="text-white text-[24px] font-bold uppercase leading-normal mb-3">
                 MONEY IN ONE APP
               </h1>
               <p className="text-[#D1D1D6] text-[14px] font-medium uppercase leading-[20px]">
