@@ -33,6 +33,7 @@ const App = () => (
           <Route path="/getstarted3" element={<GetStarted3 />} />
           <Route path="/getstarted4" element={<GetStarted4 />} />
           <Route path="/select-account-type" element={<SelectAccountType />} />
+          <Route path="/personalaccount1" element={<PersonalAccount1 />} />
           <Route path="/login" element={<Login />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
