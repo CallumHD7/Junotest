@@ -104,7 +104,7 @@ export default function PersonalAccount3() {
                       value={formData.password}
                       onChange={(e) => handleInputChange("password", e.target.value)}
                       placeholder={formData.password ? "••••••••" : "Enter your password"}
-                      className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                      className="flex-1 bg-transparent text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                     />
                     <EyeIcon 
                       onClick={() => setShowPassword(!showPassword)} 
@@ -124,7 +124,7 @@ export default function PersonalAccount3() {
                       value={formData.confirmPassword}
                       onChange={(e) => handleInputChange("confirmPassword", e.target.value)}
                       placeholder={formData.confirmPassword ? "••••••••" : "Confirm your password"}
-                      className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                      className="flex-1 bg-transparent text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                     />
                     <EyeIcon 
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)} 
