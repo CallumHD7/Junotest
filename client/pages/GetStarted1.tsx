@@ -78,7 +78,7 @@ export default function GetStarted1() {
           {/* Main Section */}
           <div className="flex flex-col items-start gap-8 flex-1 self-stretch relative">
             {/* Main Graphic with User Animations */}
-            <div className="flex flex-col justify-center items-center flex-1 self-stretch rounded-lg relative p-0.5">
+            <div className="flex flex-col justify-center items-center flex-1 self-stretch rounded-lg relative p-0.5 pb-24 sm:pb-0.5">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fe8a796f776ac4472b6b3253d685845c8?format=webp"
                 alt="iPhone Asset"
