@@ -28,7 +28,7 @@ export default function Intro() {
   return (
     <div className="relative w-full h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
       {/* Main Content */}
-      <div className="flex flex-col justify-center items-center h-[calc(100vh-3rem-2.5rem)] px-6">
+      <div className="flex flex-col justify-center items-center h-[calc(100vh-2.5rem)] px-6">
         {/* Juno Logo */}
         <div className={`transition-all duration-1000 ease-out ${
           isLogoVisible 
