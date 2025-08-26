@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Intro from "./pages/Intro";
 import Welcome from "./pages/Welcome";
+import GetStarted1 from "./pages/GetStarted1";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
