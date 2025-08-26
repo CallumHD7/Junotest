@@ -148,7 +148,7 @@ export default function PersonalAccount2() {
                       onChange={(e) => handleOtpChange(actualIndex, e.target.value)}
                       onKeyDown={(e) => handleKeyDown(actualIndex, e)}
                       onFocus={() => handleFocus(actualIndex)}
-                      className={`w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
+                      className={`otp-input w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
                         focusedIndex === actualIndex && !value
                           ? "bg-[#26272B] border-white text-white"
                           : value
