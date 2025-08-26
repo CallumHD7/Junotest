@@ -8,8 +8,7 @@ export default function SelectAccountType() {
   };
 
   const handlePersonalAccount = () => {
-    // Navigate to personal account setup
-    console.log("Selected personal account");
+    navigate("/personalaccount1");
   };
 
   const handleBusinessAccount = () => {
