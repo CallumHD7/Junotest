@@ -96,10 +96,10 @@ export default function SelectAccountType() {
 
                 {/* Text Content */}
                 <div className="flex flex-col justify-center items-start gap-1 self-stretch relative">
-                  <div className="self-stretch text-white text-base font-semibold leading-6 uppercase">
+                  <div className="text-white text-base font-semibold leading-6 uppercase text-left">
                     BUSINESS ACCOUNT
                   </div>
-                  <div className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
+                  <div className="text-[#D1D1D6] text-xs font-medium leading-4 uppercase text-left">
                     Do business or freelance work with clients worldwide.
                   </div>
                 </div>
