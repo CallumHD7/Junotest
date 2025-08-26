@@ -82,7 +82,7 @@ export default function GetStarted1() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fe8a796f776ac4472b6b3253d685845c8?format=webp"
                 alt="iPhone Asset"
-                className="w-full max-w-[342px] h-auto object-contain"
+                className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[342px] h-auto object-contain"
                 style={{ aspectRatio: '77/86' }}
               />
               
