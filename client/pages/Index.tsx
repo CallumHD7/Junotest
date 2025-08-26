@@ -1,62 +1,77 @@
-import { DemoResponse } from "@shared/api";
 import { useEffect, useState } from "react";
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
+  const [isLogoVisible, setIsLogoVisible] = useState(false);
+
   useEffect(() => {
-    fetchDemo();
+    // Start logo animation after component mounts
+    const timer = setTimeout(() => {
+      setIsLogoVisible(true);
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, []);
 
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
+    <div className="relative w-full h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
+      {/* Status Bar */}
+      <div className="flex justify-between items-center w-full h-12 px-6 pt-3.5 pb-3">
+        {/* Left Side - Time */}
+        <div className="flex items-center">
+          <span className="text-white text-[17px] font-semibold leading-[22px] tracking-[-0.408px]">
+            9:41
+          </span>
+        </div>
+
+        {/* Right Side - Icons */}
+        <div className="flex items-center gap-[6px]">
+          {/* Mobile Signal */}
+          <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+            <path d="M10 3C10 2.44772 10.4477 2 11 2H12C12.5523 2 13 2.44772 13 3V11C13 11.5523 12.5523 12 12 12H11C10.4477 12 10 11.5523 10 11V3Z" fill="white"/>
+            <path d="M15 1C15 0.447715 15.4477 0 16 0H17C17.5523 0 18 0.447715 18 1V11C18 11.5523 17.5523 12 17 12H16C15.4477 12 15 11.5523 15 11V1Z" fill="white"/>
+            <path d="M5 6.5C5 5.94772 5.44772 5.5 6 5.5H7C7.55228 5.5 8 5.94772 8 6.5V11C8 11.5523 7.55228 12 7 12H6C5.44772 12 5 11.5523 5 11V6.5Z" fill="white"/>
+            <path d="M0 9C0 8.44772 0.447715 8 1 8H2C2.55228 8 3 8.44772 3 9V11C3 11.5523 2.55228 12 2 12H1C0.447715 12 0 11.5523 0 11V9Z" fill="white"/>
           </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
+
+          {/* WiFi */}
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
+            <path d="M6.11523 8.91901C7.53497 7.6934 9.61437 7.69354 11.0342 8.91901C11.1056 8.98495 11.1474 9.07853 11.1494 9.17682C11.1513 9.27505 11.1136 9.36971 11.0449 9.43854L8.82129 11.7286C8.75619 11.7958 8.66779 11.834 8.5752 11.834C8.48248 11.834 8.3933 11.7959 8.32812 11.7286L6.10449 9.43854C6.03588 9.36968 5.99802 9.27501 6 9.17682C6.00204 9.07853 6.04375 8.98489 6.11523 8.91901ZM3.10938 6.17877C6.16845 3.27418 10.9058 3.27418 13.9648 6.17877C14.0338 6.24687 14.0732 6.34057 14.0742 6.43854C14.0751 6.53639 14.0373 6.63083 13.9697 6.70026L12.6846 8.02545C12.5521 8.1607 12.338 8.16403 12.2021 8.03229C11.1977 7.10385 9.89124 6.5889 8.53613 6.58893C7.18182 6.5895 5.87596 7.10438 4.87207 8.03229C4.7362 8.164 4.52208 8.16078 4.38965 8.02545L3.10449 6.70026C3.03675 6.63091 2.99919 6.53645 3 6.43854C3.00091 6.34059 3.0404 6.24687 3.10938 6.17877ZM0.107422 3.44244C4.79928 -1.14721 12.2007 -1.14715 16.8926 3.44244C16.9605 3.51063 16.9994 3.604 17 3.70123C17.0004 3.79808 16.9632 3.89119 16.8965 3.96002L15.6094 5.28619C15.4769 5.42214 15.2616 5.42384 15.127 5.2901C13.3393 3.55533 10.9666 2.58806 8.5 2.58795C6.03337 2.58807 3.66077 3.55533 1.87305 5.2901C1.7385 5.42395 1.52302 5.42233 1.39062 5.28619L0.103516 3.96002C0.036661 3.89102 -0.000625595 3.79732 0 3.70026C0.000734301 3.60317 0.0395536 3.51048 0.107422 3.44244Z" fill="white"/>
+          </svg>
+
+          {/* Battery */}
+          <svg width="28" height="13" viewBox="0 0 28 13" fill="none">
+            <path opacity="0.35" d="M4 0.527344H21C22.9178 0.527344 24.4727 2.08222 24.4727 4V9C24.4727 10.9178 22.9178 12.4727 21 12.4727H4C2.08222 12.4727 0.527344 10.9178 0.527344 9V4C0.527344 2.08222 2.08222 0.527344 4 0.527344Z" stroke="white" strokeWidth="1.05509"/>
+            <path opacity="0.4" d="M26 5V9.22034C26.8491 8.86291 27.4012 8.0314 27.4012 7.11017C27.4012 6.18894 26.8491 5.35744 26 5Z" fill="white"/>
+            <path d="M2 4C2 2.89543 2.89543 2 4 2H15C16.1046 2 17 2.89543 17 4V9C17 10.1046 16.1046 11 15 11H4C2.89543 11 2 10.1046 2 9V4Z" fill="white"/>
+          </svg>
+        </div>
       </div>
+
+      {/* Main Content */}
+      <div className="flex flex-col justify-center items-center h-[calc(100vh-3rem-2.5rem)] px-6">
+        {/* Juno Logo */}
+        <div className={`transition-all duration-1000 ease-out ${
+          isLogoVisible 
+            ? 'opacity-100 transform translate-y-0 scale-100' 
+            : 'opacity-0 transform translate-y-8 scale-95'
+        }`}>
+          <svg 
+            width="126" 
+            height="58" 
+            viewBox="0 0 126 58" 
+            fill="none" 
+            className="animate-pulse-slow"
+          >
+            <path d="M13.4029 0.555555H20.4192V7.50864H13.4029V0.555555ZM13.5926 12.8815H20.2296V45.3081C20.2296 52.0084 17.7644 57.4444 11.001 57.4444C7.71405 57.4444 5.62812 55.9274 4.11108 54.4736L6.51306 48.9743C7.52442 50.2385 8.47257 51.2499 10.1792 51.2499C13.4661 51.2499 13.5926 47.6469 13.5926 42.9694V12.8815Z" fill="white"/>
+            <path d="M52.996 12.8499V44.202H46.359V36.2375C44.9684 41.8 40.9861 45.1501 35.5501 45.1501C28.8498 45.1501 25.7526 39.9037 25.7526 32.2553V12.8499H32.3896V29.9798C32.3896 36.2375 34.4123 39.5244 38.9634 39.5244C43.1353 39.5244 46.0429 36.7432 46.359 32.3817V12.8499H52.996Z" fill="white"/>
+            <path d="M58.3293 13.7664H64.9664V21.8573C66.2938 16.2316 70.276 12.8183 75.7753 12.8183C82.5387 12.8183 85.5728 18.0647 85.5728 25.7131V45.1817H78.9358V27.9886C78.9358 21.7941 76.913 18.444 72.3619 18.444C68.0637 18.444 65.156 21.4148 64.9664 25.9659V45.1817H58.3293V13.7664Z" fill="white"/>
+            <path d="M90.9061 29.0632C90.9061 19.2025 97.1639 12.3126 106.456 12.3126C115.495 12.3126 121.689 19.0128 121.689 29C121.689 38.9872 115.495 45.6874 106.393 45.6874C97.2903 45.6874 90.9061 38.9872 90.9061 29.0632ZM97.4167 29.0632C97.4167 35.4474 101.146 39.5561 106.329 39.5561C111.576 39.5561 115.179 35.4474 115.179 29C115.179 22.6158 111.702 18.3807 106.456 18.3807C101.209 18.3807 97.4167 22.6158 97.4167 29.0632Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+      {/* Home Indicator */}
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-[100px] h-1 bg-white rounded-full"></div>
     </div>
   );
 }
