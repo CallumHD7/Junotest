@@ -96,7 +96,7 @@ export default function PersonalAccount4() {
                     <select
                       value={formData.accountPurpose}
                       onChange={(e) => handleInputChange("accountPurpose", e.target.value)}
-                      className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                      className="flex-1 bg-transparent text-[#A0A0AB] text-base font-medium leading-5 uppercase border-none outline-none appearance-none"
                     >
                       <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT REASON OPENING ACCOUNT</option>
                       <option value="personal-savings" className="bg-[#3F3F46] text-white">PERSONAL SAVINGS</option>
