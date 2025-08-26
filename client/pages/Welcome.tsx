@@ -35,7 +35,7 @@ export default function Welcome() {
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
       {/* Main Content Container */}
-      <div className={`relative z-10 flex flex-col justify-between h-[calc(100vh-3rem)] px-4 pt-6 pb-8 transition-all duration-1000 ease-out ${
+      <div className={`relative z-10 flex flex-col justify-between h-screen px-4 pt-6 pb-8 transition-all duration-1000 ease-out ${
         isWelcomeVisible 
           ? 'opacity-100 transform translate-y-0' 
           : 'opacity-0 transform translate-y-8'
