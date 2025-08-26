@@ -144,7 +144,7 @@ export default function PersonalAccount5() {
                 <select
                   value={formData.inboundUsdValue}
                   onChange={(e) => handleInputChange("inboundUsdValue", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-[#A0A0AB] text-base font-medium leading-5 uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="under-1000" className="bg-[#3F3F46] text-white">UNDER $1,000</option>
@@ -165,7 +165,7 @@ export default function PersonalAccount5() {
                 <select
                   value={formData.inboundCurrencies}
                   onChange={(e) => handleInputChange("inboundCurrencies", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-[#A0A0AB] text-base font-medium leading-5 uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="usd" className="bg-[#3F3F46] text-white">USD</option>
