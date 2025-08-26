@@ -13,8 +13,7 @@ export default function GetStarted1() {
   };
 
   const handleNext = () => {
-    // Navigate to next onboarding step
-    console.log("Go to next step");
+    navigate("/getstarted2");
   };
 
   return (
