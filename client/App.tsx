@@ -18,6 +18,7 @@ import PersonalAccount2 from "./pages/PersonalAccount2";
 import PersonalAccount3 from "./pages/PersonalAccount3";
 import PersonalAccount4 from "./pages/PersonalAccount4";
 import PersonalAccount5 from "./pages/PersonalAccount5";
+import Dashboard_Fiat from "./pages/Dashboard_Fiat";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
