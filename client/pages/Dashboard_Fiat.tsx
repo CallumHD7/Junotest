@@ -347,7 +347,7 @@ export default function Dashboard_Fiat() {
             </svg>
           </div>
 
-          <div className="flex flex-wrap gap-1 p-3 pt-0">
+          <div className="flex flex-wrap gap-1 p-3 pt-0 justify-between">
             {savedAccounts.slice(0, 6).map((account, index) => (
               <div key={index} className="flex w-[169.5px] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
                 <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center relative">
