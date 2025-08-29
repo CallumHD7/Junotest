@@ -301,35 +301,166 @@ export default function Dashboard_Fiat() {
           </div>
 
           <div className="flex flex-col gap-1 px-1 pb-1">
-            {balances.map((balance, index) => (
-              <div key={index} className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white">
-                <div className="flex items-center gap-3">
-                  <div className="text-3xl">{balance.flag}</div>
-                  <div className="flex-1">
-                    <div className="text-[#18181B] text-sm font-bold leading-5">{balance.name}</div>
-                    <div className="text-[#51525C] text-sm font-medium leading-5">{balance.code}</div>
-                  </div>
-                  <div className="flex flex-col items-end gap-0.5">
-                    <div className="text-[#18181B] text-sm font-bold leading-5 text-right">{balance.amount}</div>
-                    {balance.equivalent && (
-                      <div className="text-[#51525C] text-sm font-medium leading-5 text-right">{balance.equivalent}</div>
-                    )}
-                  </div>
+            {/* American Dollar */}
+            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
+              {/* Background blur effect */}
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0067E1] opacity-20 blur-[99.5px]"></div>
+
+              <div className="flex items-center gap-3 relative z-10">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                  <mask id="mask0_us" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                    <path d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="white"/>
+                  </mask>
+                  <g mask="url(#mask0_us)">
+                    <path d="M22 0H44V5.5L41.25 8.25L44 11V16.5L41.25 19.25L44 22V27.5L41.25 30.25L44 33V38.5L22 41.25L0 38.5V33L2.75 30.25L0 27.5V22L22 0Z" fill="#EEEEEE"/>
+                    <path d="M19.25 5.5H44V11H19.25V5.5ZM19.25 16.5H44V22H22L19.25 16.5ZM0 27.5H44V33H0V27.5ZM0 38.5H44V44H0V38.5Z" fill="#D80027"/>
+                    <path d="M0 0H22V22H0V0Z" fill="#0052B4"/>
+                    <path d="M16.0703 20.8828L20.9688 17.3594H14.9531L19.8516 20.8828L17.9609 15.125L16.0703 20.8828ZM9.10938 20.8828L14.0078 17.3594H7.99219L12.8906 20.8828L11 15.125L9.10938 20.8828ZM2.14844 20.8828L7.04688 17.3594H1.03125L5.92969 20.8828L4.03906 15.125L2.14844 20.8828ZM16.0703 13.9219L20.9688 10.3984H14.9531L19.8516 13.9219L17.9609 8.16406L16.0703 13.9219ZM9.10938 13.9219L14.0078 10.3984H7.99219L12.8906 13.9219L11 8.16406L9.10938 13.9219ZM2.14844 13.9219L7.04688 10.3984H1.03125L5.92969 13.9219L4.03906 8.16406L2.14844 13.9219ZM16.0703 6.875L20.9688 3.35156H14.9531L19.8516 6.875L17.9609 1.11719L16.0703 6.875ZM9.10938 6.875L14.0078 3.35156H7.99219L12.8906 6.875L11 1.11719L9.10938 6.875ZM2.14844 6.875L7.04688 3.35156H1.03125L5.92969 6.875L4.03906 1.11719L2.14844 6.875Z" fill="#EEEEEE"/>
+                  </g>
+                </svg>
+                <div className="flex-1">
+                  <div className="text-[#18181B] text-sm font-bold leading-5">AMERICAN DOLLAR</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5">USD</div>
                 </div>
-                <div className="flex flex-col gap-1">
-                  <div className="text-[#18181B] text-sm font-medium leading-5">{balance.percentage}%</div>
-                  <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
-                    <div 
-                      className="h-1 rounded-[1px] absolute left-0 top-0"
-                      style={{
-                        backgroundColor: balance.color,
-                        width: `${Math.min(balance.percentage, 100)}%`
-                      }}
-                    ></div>
-                  </div>
+                <div className="flex flex-col items-end gap-0.5">
+                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">$44,955.02</div>
                 </div>
               </div>
-            ))}
+              <div className="flex flex-col gap-1 relative z-10">
+                <div className="text-[#18181B] text-sm font-medium leading-5">65.6%</div>
+                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
+                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#0067E1]" style={{width: "65.6%"}}></div>
+                </div>
+              </div>
+            </div>
+
+            {/* British Pound */}
+            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
+              {/* Background blur effect */}
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#FF002E] opacity-20 blur-[99.5px]"></div>
+
+              <div className="flex items-center gap-3 relative z-10">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                  <mask id="mask0_uk" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                    <path d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="white"/>
+                  </mask>
+                  <g mask="url(#mask0_uk)">
+                    <path d="M0 0L0.6875 1.89062L0 3.86719V5.84375L2.75 10.4844L0 15.125V17.875L2.75 22L0 26.125V28.875L2.75 33.5156L0 38.1562V44L1.89062 43.3125L3.86719 44H5.84375L10.4844 41.25L15.125 44H17.875L22 41.25L26.125 44H28.875L33.5156 41.25L38.1562 44H44L43.3125 42.1094L44 40.1328V38.1562L41.25 33.5156L44 28.875V26.125L41.25 22L44 17.875V15.125L41.25 10.4844L44 5.84375V0L42.1094 0.6875L40.1328 0H38.1562L33.5156 2.75L28.875 0H26.125L22 2.75L17.875 0H15.125L10.4844 2.75L5.84375 0H0Z" fill="#EEEEEE"/>
+                    <path d="M28.875 0V9.28125L38.1562 0H28.875ZM44 5.84375L34.7188 15.125H44V5.84375ZM0 15.125H9.28125L0 5.84375V15.125ZM5.84375 0L15.125 9.28125V0H5.84375ZM15.125 44V34.7188L5.84375 44H15.125ZM0 38.1562L9.28125 28.875H0V38.1562ZM44 28.875H34.7188L44 38.1562V28.875ZM38.1562 44L28.875 34.7188V44H38.1562Z" fill="#0052B4"/>
+                    <path d="M0 0V3.86719L11.2578 15.125H15.125L0 0ZM17.875 0V17.875H0V26.125H17.875V44H26.125V26.125H44V17.875H26.125V0H17.875ZM40.1328 0L28.875 11.2578V15.125L44 0H40.1328ZM15.125 28.875L0 44H3.86719L15.125 32.7422V28.875ZM28.875 28.875L44 44V40.1328L32.7422 28.875H28.875Z" fill="#D80027"/>
+                  </g>
+                </svg>
+                <div className="flex-1">
+                  <div className="text-[#18181B] text-sm font-bold leading-5">BRITISH POUND</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5">GBP</div>
+                </div>
+                <div className="flex flex-col items-end gap-0.5">
+                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">£2,500.00</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5 text-right">$3,000.00</div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1 relative z-10">
+                <div className="text-[#18181B] text-sm font-medium leading-5">12.2%</div>
+                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
+                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#FF002E]" style={{width: "12.2%"}}></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Euro */}
+            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
+              {/* Background blur effect */}
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0074FF] opacity-20 blur-[99.5px]"></div>
+
+              <div className="flex items-center gap-3 relative z-10">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                  <mask id="mask0_eu" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                    <path d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="white"/>
+                  </mask>
+                  <g mask="url(#mask0_eu)">
+                    <path d="M0 0H44V44H0V0Z" fill="#0052B4"/>
+                    <path d="M21.9994 8.61084L22.7127 10.8022H25.0072L23.1424 12.1515L23.8557 14.3515L21.9908 12.9937L20.126 14.3515L20.8393 12.1515L18.9744 10.8022H21.2775L21.9994 8.61084ZM12.5291 12.5296L14.5916 13.578L16.2158 11.9452L15.8549 14.2226L17.9088 15.271L15.6314 15.6319L15.2705 17.9093L14.2221 15.8468L11.9447 16.2163L13.5775 14.5835L12.5291 12.5296ZM8.61035 21.9999L10.8018 21.2866V18.9921L12.151 20.8569L14.351 20.1437L12.9932 22.0085L14.351 23.8733L12.151 23.1601L10.8018 25.0249V22.7218L8.61035 21.9999ZM12.5291 31.4702L13.5775 29.4077L11.9447 27.7835L14.2221 28.1444L15.2705 26.0905L15.6314 28.3679L17.9088 28.7288L15.8463 29.7772L16.2158 32.0546L14.583 30.4218L12.5291 31.4702ZM21.9994 35.389L21.2861 33.1976H18.9916L20.8564 31.8483L20.1432 29.6483L22.008 31.0062L23.8729 29.6483L23.1596 31.8483L25.0244 33.1976H22.7213L21.9994 35.389ZM31.4697 31.4702L29.4072 30.4218L27.783 32.0546L28.1439 29.7772L26.09 28.7288L28.3674 28.3679L28.7283 26.0905L29.7768 28.153L32.0541 27.7835L30.4213 29.4163L31.4697 31.4702ZM35.3885 21.9999L33.1971 22.7132V25.0077L31.8479 23.1429L29.6479 23.8562L31.0057 21.9913L29.6479 20.1265L31.8479 20.8397L33.1971 18.9749V21.278L35.3885 21.9999ZM31.4697 12.5296L30.4213 14.5921L32.0541 16.2163L29.7768 15.8554L28.7283 17.9093L28.3674 15.6319L26.09 15.271L28.1525 14.2226L27.783 11.9452L29.4158 13.578L31.4697 12.5296Z" fill="#FFDA44"/>
+                  </g>
+                </svg>
+                <div className="flex-1">
+                  <div className="text-[#18181B] text-sm font-bold leading-5">EURO</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5">EUR</div>
+                </div>
+                <div className="flex flex-col items-end gap-0.5">
+                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">€15,000.00</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5 text-right">$18,000.00</div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1 relative z-10">
+                <div className="text-[#18181B] text-sm font-medium leading-5">32%</div>
+                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
+                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#0074FF]" style={{width: "32%"}}></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Swiss Franc */}
+            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
+              {/* Background blur effect */}
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#FF0004] opacity-20 blur-[99.5px]"></div>
+
+              <div className="flex items-center gap-3 relative z-10">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                  <path d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="#D80027"/>
+                  <path d="M33 18.3333H25.6667V11H18.3333V18.3333H11V25.6667H18.3333V33H25.6667V25.6667H33V18.3333Z" fill="white"/>
+                </svg>
+                <div className="flex-1">
+                  <div className="text-[#18181B] text-sm font-bold leading-5">SWISS FRANC</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5">CHF</div>
+                </div>
+                <div className="flex flex-col items-end gap-0.5">
+                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">₣5,000.00</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5 text-right">$100</div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1 relative z-10">
+                <div className="text-[#18181B] text-sm font-medium leading-5">3.7%</div>
+                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
+                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#FF0004]" style={{width: "3.7%"}}></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Australian Dollar */}
+            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
+              {/* Background blur effect */}
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0091FF] opacity-20 blur-[99.5px]"></div>
+
+              <div className="flex items-center gap-3 relative z-10">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                  <path d="M44 22C44 34.1502 34.1502 44 22 44C9.84981 44 0 34.1502 0 22C0 22.0052 22 0.00249219 22 0C34.1502 0 44 9.84981 44 22Z" fill="#0052B4"/>
+                  <path d="M21.9414 21.9998H22.0003C22.0003 21.9798 22.0003 21.9608 22.0003 21.9409C21.9807 21.9606 21.9611 21.9802 21.9414 21.9998Z" fill="#F0F0F0"/>
+                  <path d="M22 11.4782C22 7.60719 22 5.07057 22 0H21.9963C9.84775 0.00197656 0 9.85084 0 21.9999H11.4782V15.5364L17.9418 21.9999H21.9412C21.9609 21.9803 21.9805 21.9607 22.0001 21.941C22.0001 20.4589 22.0001 19.1364 22.0001 17.9419L15.5365 11.4782H22Z" fill="#F0F0F0"/>
+                  <path d="M11.1308 2.86963C7.68992 4.82892 4.82941 7.68943 2.87012 11.1303V22.0001H8.60928V8.60888V8.60879H22.0006C22.0006 6.79869 22.0006 5.07427 22.0006 2.86963H11.1308Z" fill="#D80027"/>
+                  <path d="M22.0002 19.2943L14.1839 11.4781H11.4785C11.4785 11.478 11.4785 11.4781 11.4785 11.4781L22.0001 21.9997H22.0002C22.0002 21.9997 22.0002 20.1344 22.0002 19.2943Z" fill="#D80027"/>
+                  <path d="M13.2689 25.8262L14.4763 28.3508L17.2028 27.7207L15.9818 30.2388L18.1744 31.9776L15.4444 32.5929L15.4521 35.3914L13.2689 33.6406L11.0857 35.3914L11.0933 32.5929L8.36328 31.9776L10.556 30.2388L9.3348 27.7207L12.0615 28.3508L13.2689 25.8262Z" fill="#F0F0F0"/>
+                  <path d="M32.9381 30.6089L33.5418 31.8712L34.9051 31.5561L34.2945 32.8152L35.3909 33.6846L34.0259 33.9922L34.0297 35.3915L32.9381 34.516L31.8465 35.3915L31.8503 33.9922L30.4854 33.6846L31.5817 32.8152L30.9712 31.5561L32.3344 31.8712L32.9381 30.6089Z" fill="#F0F0F0"/>
+                  <path d="M27.3229 17.2173L27.9266 18.4797L29.2899 18.1645L28.6794 19.4236L29.7757 20.293L28.4107 20.6006L28.4144 21.9999L27.3229 21.1244L26.2314 21.9999L26.2351 20.6006L24.8701 20.293L25.9664 19.4236L25.3559 18.1645L26.7192 18.4797L27.3229 17.2173Z" fill="#F0F0F0"/>
+                  <path d="M32.9381 9.56494L33.5418 10.8274L34.9051 10.5122L34.2946 11.7713L35.3908 12.6406L34.0259 12.9484L34.0297 14.3476L32.9381 13.4722L31.8465 14.3476L31.8503 12.9484L30.4854 12.6406L31.5816 11.7713L30.9712 10.5122L32.3344 10.8274L32.9381 9.56494Z" fill="#F0F0F0"/>
+                  <path d="M37.8444 15.3042L38.4481 16.5666L39.8114 16.2514L39.2009 17.5105L40.2972 18.3799L38.9321 18.6876L38.9359 20.0868L37.8444 19.2114L36.7529 20.0868L36.7565 18.6876L35.3916 18.3799L36.4879 17.5105L35.8774 16.2514L37.2406 16.5666L37.8444 15.3042Z" fill="#F0F0F0"/>
+                  <path d="M34.3367 22L34.8115 23.4615H36.3483L35.105 24.3647L35.58 25.8261L34.3367 24.9229L33.0936 25.8261L33.5684 24.3647L32.3252 23.4615H33.8618L34.3367 22Z" fill="#F0F0F0"/>
+                </svg>
+                <div className="flex-1">
+                  <div className="text-[#18181B] text-sm font-bold leading-5">AUSTRALIAN DOLLAR</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5">AU$</div>
+                </div>
+                <div className="flex flex-col items-end gap-0.5">
+                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">AU$5,000.00</div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5 text-right">$2,500.00</div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1 relative z-10">
+                <div className="text-[#18181B] text-sm font-medium leading-5">10%</div>
+                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
+                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#0091FF]" style={{width: "10%"}}></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
