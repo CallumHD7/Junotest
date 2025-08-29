@@ -47,7 +47,7 @@ export default function PersonalAccount5() {
     setTimeout(() => {
       setIsLoading(false);
       // Navigate to completion or dashboard
-      navigate("/");
+      navigate("/dashboard_fiat");
     }, 2000);
   };
 
