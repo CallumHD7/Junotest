@@ -237,9 +237,9 @@ export default function Dashboard_Fiat() {
             {/* Deposit */}
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
-                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
-                  <path d="M15.5735 23.4911L25.9444 13.1202" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M15.5734 14.4133V23.4878H24.648" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M12.4268 25.0768L26.5689 10.9346" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12.4277 12.7017V25.076H24.8021" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">DEPOSIT</span>
@@ -248,9 +248,9 @@ export default function Dashboard_Fiat() {
             {/* Withdraw */}
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
-                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
-                  <path d="M25.9483 13.1128L15.5774 23.4837" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M25.9484 22.1906V13.1161H16.8739" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M26.5684 10.9364L12.4262 25.0786" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M26.5674 23.3115V10.9372H14.193" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">WITHDRAW</span>
