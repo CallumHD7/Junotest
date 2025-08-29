@@ -349,7 +349,7 @@ export default function Dashboard_Fiat() {
 
           <div className="grid grid-cols-2 gap-1 p-3 pt-0">
             {savedAccounts.slice(0, 6).map((account, index) => (
-              <div key={index} className="flex w-[169.5px] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div key={index} className="flex h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
                 <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center relative">
                   {/* Bank icon */}
                   <svg width="19" height="20" viewBox="0 0 20 20" fill="none">
