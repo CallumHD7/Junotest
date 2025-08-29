@@ -158,33 +158,7 @@ export default function Dashboard_Fiat() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#F4F4F5] flex flex-col">
-      {/* Status Bar */}
-      <div className="flex justify-between items-center w-full h-11 px-5 py-3 bg-transparent">
-        <div className="flex items-center gap-1">
-          <span className="text-[#18181B] text-[15px] font-semibold leading-[15px]">9:41</span>
-        </div>
-        <div className="flex items-center gap-1">
-          {/* Signal bars */}
-          <div className="flex gap-0.5">
-            <div className="w-1 h-3.5 bg-[#18181B] rounded-sm"></div>
-            <div className="w-1 h-3.5 bg-[#18181B] rounded-sm"></div>
-            <div className="w-1 h-3.5 bg-[#18181B] rounded-sm"></div>
-            <div className="w-1 h-3.5 bg-[#D1D1D6] rounded-sm"></div>
-          </div>
-          {/* WiFi icon */}
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" className="ml-1">
-            <path d="M8.13198 8.94141C8.77147 8.94141 9.39286 9.10945 9.94037 9.42987L10.1622 9.5597C10.3304 9.65813 10.36 9.88848 10.2221 10.026L8.328 11.9148C8.21166 12.0308 8.02303 12.0308 7.90669 11.9148L6.02478 10.0381C5.88749 9.90122 5.91611 9.67204 6.08287 9.57289L6.30222 9.44247C6.85476 9.11394 7.48403 8.94141 8.13198 8.94141Z" fill="#18181B"/>
-            <path d="M8.13657 5.46875C9.72741 5.46875 11.2548 5.99649 12.4991 6.97382L12.675 7.11194C12.8152 7.22205 12.8275 7.42955 12.7013 7.55539L11.5705 8.68302C11.4659 8.78732 11.3004 8.7993 11.1818 8.71116L11.044 8.60871C10.2036 7.98413 9.19024 7.6491 8.13657 7.6491C7.07642 7.6491 6.05714 7.9883 5.21396 8.62005L5.07597 8.72343C4.95737 8.8123 4.79127 8.8006 4.68637 8.69599L3.55601 7.56877C3.43008 7.44319 3.44204 7.23622 3.58159 7.1259L3.75644 6.98766C5.00369 6.00163 6.53806 5.46875 8.13657 5.46875Z" fill="#18181B"/>
-            <path d="M8.13272 2C10.6574 2 13.0717 2.89057 14.9828 4.52294L15.1459 4.66228C15.2777 4.77488 15.2855 4.97558 15.1627 5.09797L14.0356 6.22195C13.9264 6.33084 13.7519 6.33847 13.6336 6.23952L13.494 6.12283C11.9894 4.86472 10.1035 4.18035 8.13272 4.18035C6.15517 4.18035 4.26327 4.86943 2.75641 6.13541L2.6168 6.2527C2.4985 6.3521 2.32359 6.34466 2.2142 6.23557L1.08726 5.11176C0.964693 4.98954 0.972236 4.78918 1.10365 4.67646L1.26614 4.53708C3.17953 2.89589 5.60056 2 8.13272 2Z" fill="#18181B"/>
-          </svg>
-          {/* Battery */}
-          <div className="w-6 h-3.5 ml-1 border border-[#3C3C43]/60 rounded-sm relative">
-            <div className="w-[19px] h-2 bg-[#18181B] rounded-[1px] absolute left-0.5 top-0.5"></div>
-            <div className="w-0.5 h-1.5 bg-[#3C3C43]/60 rounded-r absolute -right-0.5 top-1"></div>
-          </div>
-        </div>
-      </div>
+    <div className="w-full min-h-screen bg-[#F4F4F5] flex flex-col pb-[86px]">
 
       {/* Header */}
       <div className="flex justify-between items-center w-full h-13 px-4 py-2.5 relative">
@@ -239,7 +213,7 @@ export default function Dashboard_Fiat() {
         backgroundImage: `url('https://api.builder.io/api/v1/image/assets/TEMP/6116bee6116639206902abace56bbafb288d1bc5?width=3428')`
       }}>
         {/* Circular Chart */}
-        <div className="absolute left-[38px] top-[144px] w-[300px] h-[300px]">
+        <div className="absolute left-1/2 top-[100px] transform -translate-x-1/2 w-[300px] h-[300px]">
           <svg width="301" height="300" viewBox="0 0 301 300" fill="none">
             <path d="M150.5 4.61538C169.592 4.61538 188.497 8.37587 206.136 15.6821C223.775 22.9884 239.802 33.6973 253.302 47.1976C266.803 60.6978 277.512 76.7248 284.818 94.3637C292.124 112.003 295.885 130.908 295.885 150C295.885 169.092 292.124 187.997 284.818 205.636C277.512 223.275 266.803 239.302 253.302 252.802C239.802 266.303 223.775 277.012 206.136 284.318C188.497 291.624 169.592 295.385 150.5 295.385" stroke="#0067E1" strokeWidth="9.23077"/>
             <path d="M149.58 295.382C123.664 295.218 98.2626 288.129 76.0065 274.85" stroke="#FF002E" strokeWidth="9.23077"/>
@@ -258,7 +232,7 @@ export default function Dashboard_Fiat() {
         </div>
 
         {/* Action Buttons */}
-        <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-3 px-3 pb-[82px]">
+        <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-3 px-3 pb-[40px]">
           <div className="flex items-center gap-3">
             {/* Deposit */}
             <div className="flex flex-col items-center gap-2.5">
@@ -560,7 +534,7 @@ export default function Dashboard_Fiat() {
       </div>
 
       {/* Bottom Navigation */}
-      <div className="flex w-full h-[70px] p-1.5 items-start gap-1 border-t border-[#E4E4E7] bg-white">
+      <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-start gap-1 border-t border-[#E4E4E7] bg-white z-50">
         <button
           onClick={() => setSelectedTab("home")}
           className={`flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg ${
