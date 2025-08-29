@@ -32,7 +32,7 @@ export default function PersonalAccount5() {
   const handleSkip = () => {
     // Navigate to completion or dashboard
     console.log("Skipping transaction activity");
-    navigate("/");
+    navigate("/dashboard_fiat");
   };
 
   const handleInputChange = (field: string, value: string) => {
