@@ -43,6 +43,7 @@ const App = () => (
           <Route path="/personalaccount3" element={<PersonalAccount3 />} />
           <Route path="/personalaccount4" element={<PersonalAccount4 />} />
           <Route path="/personalaccount5" element={<PersonalAccount5 />} />
+          <Route path="/dashboard_fiat" element={<Dashboard_Fiat />} />
           <Route path="/login" element={<Login />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
