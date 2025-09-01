@@ -290,7 +290,7 @@ export default function Dashboard_Fiat() {
       </div>
 
       {/* Content Wrapper */}
-      <div className="flex flex-col p-1 gap-1 rounded-t-3xl border-t border-black/12 bg-[#F4F4F5] -mt-4 relative z-10">
+      <div className="flex flex-col p-1 gap-1 border-t border-black/12 bg-[#F4F4F5] -mt-4 relative z-10 overflow-hidden sm:overflow-visible">
         {/* Balances Section */}
         <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1">
           <div className="flex p-3 items-center gap-1">
@@ -304,7 +304,7 @@ export default function Dashboard_Fiat() {
             {/* American Dollar */}
             <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
               {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0067E1] opacity-20 blur-[99.5px]"></div>
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0067E1] opacity-40 blur-[99.5px]"></div>
 
               <div className="flex items-center gap-3 relative z-10">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
@@ -337,7 +337,7 @@ export default function Dashboard_Fiat() {
             {/* British Pound */}
             <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
               {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#FF002E] opacity-20 blur-[99.5px]"></div>
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#FF002E] opacity-40 blur-[99.5px]"></div>
 
               <div className="flex items-center gap-3 relative z-10">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
@@ -370,7 +370,7 @@ export default function Dashboard_Fiat() {
             {/* Euro */}
             <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
               {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0074FF] opacity-20 blur-[99.5px]"></div>
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0074FF] opacity-40 blur-[99.5px]"></div>
 
               <div className="flex items-center gap-3 relative z-10">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
@@ -402,7 +402,7 @@ export default function Dashboard_Fiat() {
             {/* Swiss Franc */}
             <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
               {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#FF0004] opacity-20 blur-[99.5px]"></div>
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#FF0004] opacity-40 blur-[99.5px]"></div>
 
               <div className="flex items-center gap-3 relative z-10">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
@@ -429,7 +429,7 @@ export default function Dashboard_Fiat() {
             {/* Australian Dollar */}
             <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
               {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0091FF] opacity-20 blur-[99.5px]"></div>
+              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0091FF] opacity-40 blur-[99.5px]"></div>
 
               <div className="flex items-center gap-3 relative z-10">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
