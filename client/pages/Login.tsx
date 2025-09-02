@@ -10,8 +10,10 @@ export default function Login() {
   };
 
   const handleContinue = () => {
-    // Handle email login logic here
-    console.log("Continue with email:", email);
+    // Navigate to password entry page
+    if (email.trim()) {
+      navigate("/login2", { state: { email } });
+    }
   };
 
   const handlePasskeyLogin = () => {
