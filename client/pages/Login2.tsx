@@ -3,12 +3,13 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Login2() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
 
-  // This would typically come from the previous page or state management
-  const userEmail = "j.smith@gmail.com";
+  // Get email from navigation state or use fallback
+  const userEmail = location.state?.email || "j.smith@gmail.com";
 
   const handleBackClick = () => {
     navigate("/login");
