@@ -20,6 +20,7 @@ import PersonalAccount4 from "./pages/PersonalAccount4";
 import PersonalAccount5 from "./pages/PersonalAccount5";
 import Dashboard_Fiat from "./pages/Dashboard_Fiat";
 import Login from "./pages/Login";
+import Login2 from "./pages/Login2";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
