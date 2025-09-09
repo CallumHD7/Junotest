@@ -1,4 +1,3 @@
-/** @import must precede all other statements */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
 
 @tailwind base;
@@ -120,4 +119,10 @@
   select {
     font-size: 16px !important; /* Prevents zoom on iOS */
   }
+}
+
+/* Floating avatar animation */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
