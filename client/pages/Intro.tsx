@@ -73,7 +73,7 @@ export default function Intro() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-gradient-to-b from-[#26272B] to-[#18181B]">
+    <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-b from-[#26272B] to-[#18181B]">
       {/* Circle fill */}
       <div
         className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] z-0"
