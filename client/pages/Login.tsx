@@ -106,11 +106,11 @@ export default function Login() {
           </div>
 
           {/* Footer */}
-          <div className="flex justify-center items-center gap-1 text-center">
+          <div className="flex items-center gap-1 justify-center text-center flex-1 sm:flex-none sm:justify-center sm:items-center">
             <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
               DON'T HAVE AN ACCOUNT?
             </span>
-            <button 
+            <button
               onClick={handleSignUp}
               className="text-white text-[12px] font-bold uppercase transition-opacity hover:opacity-70"
             >
