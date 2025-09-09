@@ -48,7 +48,7 @@ export default function Welcome() {
   };
 
   return (
-    <div className="relative w-full h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
+    <div className="relative w-full min-h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -61,7 +61,7 @@ export default function Welcome() {
       
 
       {/* Main Content Container */}
-      <div className={`relative z-10 flex flex-col justify-between min-h-[662px] sm:min-h-[664px] flex-none sm:flex-1 h-auto sm:h-screen mr-[-1px] sm:mr-0 mt-auto sm:mt-0 px-4 pt-6 pb-4 sm:pb-8 transition-all duration-1000 ease-out ${
+      <div className={`relative z-10 flex flex-col justify-between min-h-[662px] sm:min-h-[664px] flex-none sm:flex-1 h-auto sm:min-h-screen mr-[-1px] sm:mr-0 mt-auto sm:mt-0 px-4 pt-6 pb-4 sm:pb-8 transition-all duration-1000 ease-out ${
         isWelcomeVisible 
           ? 'opacity-100 transform translate-y-0' 
           : 'opacity-0 transform translate-y-8'
