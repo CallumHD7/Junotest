@@ -87,10 +87,10 @@ export default function Welcome() {
         <div className="flex flex-col gap-12 mt-auto sm:mt-0 items-start justify-end flex-1 sm:items-stretch sm:justify-start sm:flex-none">
           {/* Text Content */}
           <div className="flex flex-col gap-4">
-            <h1 className="text-white text-[40px] font-bold leading-[44px] uppercase tracking-tight">
+            <h1 className="text-white text-[24px] font-semibold leading-[28px] uppercase tracking-tight">
               JUNO FOR PEOPLE AND COMPANIES
             </h1>
-            <p className="text-[#D1D1D6] text-[16px] font-medium uppercase">
+            <p className="text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase">
               THE NEW STANDARD OF BANKING.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Welcome() {
               onClick={handleGetStarted}
               className="w-full h-12 bg-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
             >
-              <span className="text-[#18181B] text-[14px] font-bold uppercase">
+              <span className="text-[#18181B] text-[14px] font-medium leading-[20px] uppercase">
                 GET STARTED
               </span>
             </button>
@@ -109,7 +109,7 @@ export default function Welcome() {
               onClick={handleLogIn}
               className="w-full h-12 border border-[#51525C] rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
             >
-              <span className="text-white text-[14px] font-bold uppercase">
+              <span className="text-white text-[14px] font-medium leading-[20px] uppercase">
                 LOG IN
               </span>
             </button>
