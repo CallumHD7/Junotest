@@ -40,7 +40,7 @@ export default function SelectAccountType() {
           <div className="flex flex-col items-start gap-8 self-stretch relative">
             {/* Header */}
             <div className="flex flex-col items-start gap-3 self-stretch relative">
-              <h1 className="self-stretch text-white text-2xl font-semibold leading-normal uppercase">
+              <h1 className="self-stretch text-white text-[24px] font-semibold leading-[28px] uppercase">
                 ACCOUNT TYPE
               </h1>
               <p className="self-stretch text-[#D1D1D6] text-sm font-medium leading-5 uppercase">
