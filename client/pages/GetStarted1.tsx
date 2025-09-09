@@ -55,7 +55,7 @@ export default function GetStarted1() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fd5ce4b1ea5114af8a4f756cf54d7a800?format=webp&width=800"
                 alt=""
-                className="absolute z-10 w-[84px] h-[84px] top-[36px] left-2 rounded-full select-none pointer-events-none drop-shadow-xl animate-[bob_3.6s_ease-in-out_infinite]"
+                className="absolute z-10 w-[84px] h-[84px] top-[48px] left-2 rounded-full select-none pointer-events-none drop-shadow-xl animate-[bob_3.6s_ease-in-out_infinite]"
                 style={{ animationDelay: '0.2s' }}
                 aria-hidden="true"
               />
