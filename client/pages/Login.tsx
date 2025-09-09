@@ -106,7 +106,7 @@ export default function Login() {
           </div>
 
           {/* Footer */}
-          <div className="flex items-center gap-1 justify-center text-center flex-1 sm:flex-none sm:justify-center sm:items-center">
+          <div className="flex items-end justify-center text-center gap-1 flex-1 sm:flex-none sm:items-center sm:justify-center">
             <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
               DON'T HAVE AN ACCOUNT?
             </span>
