@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Intro() {
   const navigate = useNavigate();
 
-  // phase: 0 init, 1 step1 (0-1000ms), 2 step2 (1300-2700ms), 3 end
+  // phase: 0 init, 1 step1 (0-500ms), 2 step2 (800-1500ms), 3 end
   const [phase, setPhase] = useState(0);
   const [clipped, setClipped] = useState(true);
   const [circleActive, setCircleActive] = useState(false);
@@ -16,14 +16,14 @@ export default function Intro() {
     timers.push(window.setTimeout(() => setPhase(1), 20));
 
     // End of Step 1 (1000ms): remove clipping
-    timers.push(window.setTimeout(() => setClipped(false), 1000));
+    timers.push(window.setTimeout(() => setClipped(false), 500));
 
     // Delay 300ms, then Step 2 begins (scale+fade) and circle starts
     timers.push(
       window.setTimeout(() => {
         setPhase(2);
         setCircleActive(true);
-      }, 1300)
+      }, 800)
     );
 
     // Navigate after circle and step2 finish (max 1600ms from 1300ms)
@@ -31,7 +31,7 @@ export default function Intro() {
       window.setTimeout(() => {
         setPhase(3);
         navigate("/welcome");
-      }, 3000)
+      }, 2500)
     );
 
     return () => timers.forEach(clearTimeout);
@@ -58,8 +58,8 @@ export default function Intro() {
 
   const logoTransition =
     phase < 2
-      ? "transform 1000ms ease-out, opacity 1000ms ease-out"
-      : "transform 1400ms ease-in-out, opacity 1400ms ease-in-out";
+      ? "transform 500ms ease-out, opacity 500ms ease-out"
+      : "transform 700ms ease-in-out, opacity 700ms ease-in-out";
 
   // Circle reveal (starts with step2 after 300ms delay; lasts 1600ms ease-out)
   const circleStyle: CSSProperties = {
@@ -81,7 +81,7 @@ export default function Intro() {
       {/* Center stage */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div
-          className={`${clipped ? "overflow-hidden" : "overflow-visible"} transition-[height] duration-[1000ms] ease-out`}
+          className={`${clipped ? "overflow-hidden" : "overflow-visible"} transition-[height] duration-[500ms] ease-out`}
           style={wrapperStyle}
         >
           <div
