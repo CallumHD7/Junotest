@@ -17,13 +17,18 @@ export default function Welcome() {
   }, [navigate]);
 
   useEffect(() => {
-    // Start welcome animation after component mounts
-    const timer = setTimeout(() => {
-      setIsWelcomeVisible(true);
-      setBgAnim(true);
-    }, 100);
-
-    return () => clearTimeout(timer);
+    // Start welcome animation after layout is ready
+    let raf1 = 0, raf2 = 0;
+    raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => {
+        setIsWelcomeVisible(true);
+        setBgAnim(true);
+      });
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
   }, []);
 
   const handleGetStarted = () => {
@@ -36,6 +41,7 @@ export default function Welcome() {
 
   const bgImageStyle: CSSProperties = {
     width: bgAnim ? "100%" : "calc(100% + 180px)",
+    maxWidth: "none",
     opacity: bgAnim ? 1 : 0,
     transition: "width 900ms ease-out, opacity 900ms ease-out",
     willChange: "width, opacity",
@@ -54,10 +60,10 @@ export default function Welcome() {
       </div>
       
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-20 sm:bg-none bg-[url('https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F929f58dff9924d11825ef62fc9a547b9')] bg-no-repeat bg-center bg-cover"></div>
 
       {/* Main Content Container */}
-      <div className={`relative z-10 flex flex-col justify-between h-[100vh] min-h-[664px] flex-1 sm:min-h-0 sm:flex-none sm:h-screen px-4 pt-6 pb-8 transition-all duration-1000 ease-out ${
+      <div className={`relative z-10 flex flex-col justify-between min-h-[664px] flex-1 h-auto sm:h-screen mr-[-1px] sm:mr-0 px-4 pt-6 pb-4 sm:pb-8 transition-all duration-1000 ease-out ${
         isWelcomeVisible 
           ? 'opacity-100 transform translate-y-0' 
           : 'opacity-0 transform translate-y-8'
