@@ -39,7 +39,7 @@ export default function PersonalAccount4() {
   );
 
   return (
-    <div className="flex flex-col w-full h-screen bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
+    <div className="flex flex-col w-full min-h-screen bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Main Content */}
       <div className="flex px-4 pt-6 pb-2 flex-col items-start gap-7 flex-1 self-stretch relative">
         {/* Header with Back and Skip */}
