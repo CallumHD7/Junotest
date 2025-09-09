@@ -7,6 +7,16 @@ export default function Welcome() {
   const [bgAnim, setBgAnim] = useState(false);
 
   useEffect(() => {
+    try {
+      if (!sessionStorage.getItem("fromIntro")) {
+        navigate("/", { replace: true });
+      } else {
+        sessionStorage.removeItem("fromIntro");
+      }
+    } catch {}
+  }, [navigate]);
+
+  useEffect(() => {
     // Start welcome animation after component mounts
     const timer = setTimeout(() => {
       setIsWelcomeVisible(true);
