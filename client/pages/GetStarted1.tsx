@@ -55,7 +55,7 @@ export default function GetStarted1() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F3fd48c4c5e374f3481189d7768775ad1?format=webp&width=800"
                 alt=""
-                className="absolute z-20 w-[84px] h-[84px] top-[120px] left-[8px] select-none pointer-events-none drop-shadow-xl"
+                className="absolute z-20 w-[84px] h-[84px] top-[64px] left-[8px] select-none pointer-events-none drop-shadow-xl"
                                 aria-hidden="true"
               />
               <img
