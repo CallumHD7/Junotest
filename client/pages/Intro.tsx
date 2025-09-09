@@ -4,30 +4,34 @@ import { useNavigate } from "react-router-dom";
 export default function Intro() {
   const navigate = useNavigate();
 
-  // phase: 0 init, 1 step1 (0-600ms), 2 step2 (600-1200ms), 3 done (>=1400ms)
+  // phase: 0 init, 1 step1 (0-1000ms), 2 step2 (1300-2700ms), 3 end
   const [phase, setPhase] = useState(0);
-  const [rectActive, setRectActive] = useState(false);
+  const [clipped, setClipped] = useState(true);
+  const [circleActive, setCircleActive] = useState(false);
 
   useEffect(() => {
     const timers: number[] = [];
 
-    // Kick off step 1 after a tick for CSS transitions to apply
+    // Start Step 1 after a tick so transitions apply
     timers.push(window.setTimeout(() => setPhase(1), 20));
 
-    // Begin step 2 at 600ms and enable rectangle reveal concurrently
+    // End of Step 1 (1000ms): remove clipping
+    timers.push(window.setTimeout(() => setClipped(false), 1000));
+
+    // Delay 300ms, then Step 2 begins (scale+fade) and circle starts
     timers.push(
       window.setTimeout(() => {
         setPhase(2);
-        setRectActive(true);
-      }, 600)
+        setCircleActive(true);
+      }, 1300)
     );
 
-    // Mark done at 1400ms (rectangle completes by then) and navigate
+    // Navigate after circle and step2 finish (max 1600ms from 1300ms)
     timers.push(
       window.setTimeout(() => {
         setPhase(3);
         navigate("/welcome");
-      }, 1400)
+      }, 3000)
     );
 
     return () => timers.forEach(clearTimeout);
@@ -40,51 +44,54 @@ export default function Intro() {
   const logoAspect = logoViewW / logoViewH; // ~2.1724
   const wrapperWidth = Math.round(baseLogoHeight * logoAspect); // width at 64px height
 
-  // Wrapper clipping behavior: remove after step 1 completes
-  const unclipped = phase >= 2;
-
   // Wrapper height animates from 1px -> 64px in step1
   const wrapperStyle: CSSProperties = {
     height: phase >= 1 ? baseLogoHeight : 1,
     width: wrapperWidth,
+    willChange: "height",
   };
 
   // Logo transform & opacity
   const translateY = phase >= 1 ? 0 : 40; // 40px below center initially
   const scale = phase >= 2 ? 2 : 1; // step2 scales uniformly to 128px
-  const opacity = phase === 1 ? 1 : phase >= 2 ? 0 : 0; // fades in step1, out in step2
+  const opacity = phase === 0 ? 0 : phase === 1 ? 1 : 0; // in during step1, out during step2
 
-  // Rectangle reveal (starts at 600ms, ends by 1400ms)
-  const rectStyle: CSSProperties = {
-    width: rectActive ? "100vw" : 6,
-    height: rectActive ? "100vh" : 6,
-    opacity: rectActive ? 1 : 0,
+  const logoTransition =
+    phase < 2
+      ? "transform 1000ms ease-out, opacity 1000ms ease-out"
+      : "transform 1400ms ease-in-out, opacity 1400ms ease-in-out";
+
+  // Circle reveal (starts with step2 after 300ms delay; lasts 1600ms ease-out)
+  const circleStyle: CSSProperties = {
+    width: circleActive ? "200vmax" : 6,
+    height: circleActive ? "200vmax" : 6,
+    opacity: circleActive ? 1 : 0,
+    borderRadius: "9999px",
   };
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-gradient-to-b from-[#26272B] to-[#18181B]">
-      {/* Rectangle reveal */}
+      {/* Circle fill */}
       <div
-        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-all duration-[800ms] ease-in-out z-0"
-        style={rectStyle}
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-[width,height,opacity] duration-[1600ms] ease-out z-0"
+        style={circleStyle}
         aria-hidden
       />
 
       {/* Center stage */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div
-          className={`transition-all ease-in-out ${phase === 1 ? "duration-[600ms]" : "duration-[600ms]"} ${
-            unclipped ? "overflow-visible" : "overflow-hidden"
-          }`}
+          className={`${clipped ? "overflow-hidden" : "overflow-visible"} transition-[height] duration-[1000ms] ease-out`}
           style={wrapperStyle}
         >
           <div
-            className="transition-all ease-in-out duration-[600ms]"
             style={{
-              transform: `translateY(${translateY}px) scale(${scale})`,
+              transform: `translateY(${translateY}px) scale(${scale})`;
               transformOrigin: "center",
               opacity,
               height: baseLogoHeight,
+              willChange: "transform, opacity",
+              transition: logoTransition,
             }}
           >
             {/* Juno logo */}
