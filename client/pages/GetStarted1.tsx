@@ -55,16 +55,14 @@ export default function GetStarted1() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F3fd48c4c5e374f3481189d7768775ad1?format=webp&width=800"
                 alt=""
-                className="absolute z-20 w-[84px] h-[84px] top-[80px] left-2 select-none pointer-events-none drop-shadow-xl animate-[bob_3.6s_ease-in-out_infinite]"
-                style={{ animationDelay: '0.2s' }}
-                aria-hidden="true"
+                className="absolute z-20 w-[84px] h-[84px] top-[80px] left-[8px] select-none pointer-events-none drop-shadow-xl"
+                                aria-hidden="true"
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F0ffd9a45e73b4db08f33194b16f5ad51?format=webp&width=800"
                 alt=""
-                className="absolute z-20 w-[96px] h-[96px] bottom-6 right-3 select-none pointer-events-none drop-shadow-xl animate-[bob_4.2s_ease-in-out_infinite]"
-                style={{ animationDelay: '0.9s' }}
-                aria-hidden="true"
+                className="absolute z-20 w-[96px] h-[96px] bottom-[24px] right-[12px] select-none pointer-events-none drop-shadow-xl"
+                                aria-hidden="true"
               />
             </div>
 
