@@ -184,8 +184,6 @@ export default function Login2() {
         </div>
       </div>
 
-      {/* Home Indicator */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-[100px] h-1 bg-white rounded-full"></div>
     </div>
   );
 }
