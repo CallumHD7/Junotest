@@ -63,7 +63,7 @@ export default function Welcome() {
       <div className="absolute inset-0 bg-black bg-opacity-20 sm:bg-none bg-[url('https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F929f58dff9924d11825ef62fc9a547b9')] bg-no-repeat bg-center bg-cover"></div>
 
       {/* Main Content Container */}
-      <div className={`relative z-10 flex flex-col justify-between min-h-[664px] flex-1 h-auto sm:h-screen mr-[-1px] sm:mr-0 px-4 pt-6 pb-4 sm:pb-8 transition-all duration-1000 ease-out ${
+      <div className={`relative z-10 flex flex-col justify-between min-h-[662px] sm:min-h-[664px] flex-1 h-auto sm:h-screen mr-[-1px] sm:mr-0 mt-auto sm:mt-0 px-4 pt-6 pb-4 sm:pb-8 transition-all duration-1000 ease-out ${
         isWelcomeVisible 
           ? 'opacity-100 transform translate-y-0' 
           : 'opacity-0 transform translate-y-8'
