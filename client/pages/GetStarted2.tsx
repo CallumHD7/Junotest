@@ -78,10 +78,6 @@ export default function GetStarted2() {
         </div>
       </div>
 
-      {/* Home Indicator */}
-      <div className="flex w-full h-10 px-0 py-7 pb-2 justify-center items-center flex-shrink-0 relative">
-        <div className="w-[100px] h-1 flex-shrink-0 rounded-[100px] bg-white absolute left-1/2 top-7 transform -translate-x-1/2"></div>
-      </div>
     </div>
   );
 }
