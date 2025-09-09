@@ -56,7 +56,7 @@ export default function Welcome() {
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
       {/* Main Content Container */}
-      <div className={`relative z-10 flex flex-col justify-between h-screen px-4 pt-6 pb-8 transition-all duration-1000 ease-out ${
+      <div className={`relative z-10 flex flex-col justify-between h-[100vh] min-h-[664px] flex-1 sm:min-h-0 sm:flex-none sm:h-screen px-4 pt-6 pb-8 transition-all duration-1000 ease-out ${
         isWelcomeVisible 
           ? 'opacity-100 transform translate-y-0' 
           : 'opacity-0 transform translate-y-8'
@@ -64,11 +64,12 @@ export default function Welcome() {
         
         {/* Top Section with Small Logo */}
         <div className="flex justify-start">
-          <svg 
-            width="62" 
-            height="28" 
-            viewBox="0 0 62 28" 
+          <svg
+            width="62"
+            height="28"
+            viewBox="0 0 62 28"
             fill="none"
+            className="block"
           >
             <path d="M6.32333 0H9.77667V3.42222H6.32333V0ZM6.41667 6.06667H9.68333V22.0267C9.68333 25.3244 8.47 28 5.14111 28C3.52333 28 2.49667 27.2533 1.75 26.5378L2.93222 23.8311C3.43 24.4533 3.89667 24.9511 4.73667 24.9511C6.35444 24.9511 6.41667 23.1778 6.41667 20.8756V6.06667Z" fill="white"/>
             <path d="M25.8107 6.05109V21.4822H22.5441V17.5622C21.8596 20.3 19.8996 21.9489 17.2241 21.9489C13.9263 21.9489 12.4019 19.3666 12.4019 15.6022V6.05109H15.6685V14.4822C15.6685 17.5622 16.6641 19.18 18.9041 19.18C20.9574 19.18 22.3885 17.8111 22.5441 15.6644V6.05109H25.8107Z" fill="white"/>
