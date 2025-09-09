@@ -7,7 +7,7 @@ export default function Intro() {
   // phase: 0 init, 1 step1 (0-500ms), 2 step2 (800-1500ms), 3 end
   const [phase, setPhase] = useState(0);
   const [clipped, setClipped] = useState(true);
-  const [rectActive, setRectActive] = useState(false);
+  const [circleActive, setCircleActive] = useState(false);
 
   useEffect(() => {
     const timers: number[] = [];
@@ -22,7 +22,7 @@ export default function Intro() {
     timers.push(
       window.setTimeout(() => {
         setPhase(2);
-        setRectActive(true);
+        setCircleActive(true);
       }, 800)
     );
 
@@ -61,20 +61,20 @@ export default function Intro() {
       ? "transform 500ms ease-out, opacity 500ms ease-out"
       : "transform 700ms ease-in-out, opacity 700ms ease-in-out";
 
-  // Rectangle reveal (starts with step2 after 300ms delay; lasts 1600ms ease-out)
-  const rectStyle: CSSProperties = {
-    width: rectActive ? "100vw" : 6,
-    height: rectActive ? "100vh" : 6,
-    opacity: rectActive ? 1 : 0,
-    borderRadius: 4,
+  // Circle reveal (starts with step2 after 300ms delay; lasts 1600ms ease-out)
+  const circleStyle: CSSProperties = {
+    width: circleActive ? "200vmax" : 6,
+    height: circleActive ? "200vmax" : 6,
+    opacity: circleActive ? 1 : 0,
+    borderRadius: "9999px",
   };
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-gradient-to-b from-[#26272B] to-[#18181B]">
-      {/* Rectangle fill */}
+      {/* Circle fill */}
       <div
         className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-[width,height,opacity] duration-[1600ms] ease-out z-0"
-        style={rectStyle}
+        style={circleStyle}
         aria-hidden
       />
 
