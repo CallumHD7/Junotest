@@ -47,7 +47,7 @@ export default function Intro() {
   };
 
   // Background image (always present, animates at phase 4)
-  const imgStyle: React.CSSProperties = {
+  const imgStyle: CSSProperties = {
     width: phase >= 4 ? "100vw" : "calc(100vw + 180px)",
     opacity: phase >= 4 ? 1 : 0,
   };
