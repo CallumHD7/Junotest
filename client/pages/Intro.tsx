@@ -86,7 +86,7 @@ export default function Intro() {
         >
           <div
             style={{
-              transform: `translateY(${translateY}px) scale(${scale})`;
+              transform: `translateY(${translateY}px) scale(${scale})`,
               transformOrigin: "center",
               opacity,
               height: baseLogoHeight,
