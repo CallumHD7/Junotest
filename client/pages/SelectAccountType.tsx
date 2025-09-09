@@ -23,7 +23,7 @@ export default function SelectAccountType() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Main Content */}
-      <div className="flex px-4 pt-6 pb-2 flex-col items-start gap-6 flex-1 self-stretch relative">
+      <div className="flex p-4 md:p-6 flex-col items-start gap-6 flex-1 self-stretch relative">
         {/* Back Button */}
         <button 
           onClick={handleBack}
