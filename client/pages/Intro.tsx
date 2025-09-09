@@ -31,7 +31,8 @@ export default function Intro() {
     timers.push(
       window.setTimeout(() => {
         setPhase(3);
-        navigate("/welcome");
+        try { sessionStorage.setItem("fromIntro", "1"); } catch {}
+        navigate("/welcome", { replace: true });
       }, 1500)
     );
 
