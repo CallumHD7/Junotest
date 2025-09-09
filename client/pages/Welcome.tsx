@@ -61,7 +61,7 @@ export default function Welcome() {
       
 
       {/* Main Content Container */}
-      <div className={`relative z-10 flex flex-col justify-between min-h-[662px] sm:min-h-[664px] flex-none sm:flex-1 h-[100vh] sm:min-h-screen mr-[-1px] sm:mr-0 mt-auto sm:mt-0 px-4 pt-6 pb-6 sm:pb-8 transition-all duration-1000 ease-out ${
+      <div className={`relative z-10 flex flex-col justify-between min-h-[662px] sm:min-h-[664px] flex-none sm:flex-1 h-[100vh] sm:min-h-screen mr-[-1px] sm:mr-0 mt-auto sm:mt-0 p-4 md:p-6 transition-all duration-1000 ease-out ${
         isWelcomeVisible 
           ? 'opacity-100 transform translate-y-0' 
           : 'opacity-0 transform translate-y-8'
