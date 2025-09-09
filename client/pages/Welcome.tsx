@@ -84,7 +84,7 @@ export default function Welcome() {
         </div>
 
         {/* Bottom Section with Content */}
-        <div className="flex flex-col gap-12 mt-auto sm:mt-0">
+        <div className="flex flex-col gap-12 mt-auto sm:mt-0 items-start justify-end flex-1 sm:items-stretch sm:justify-start sm:flex-none">
           {/* Text Content */}
           <div className="flex flex-col gap-4">
             <h1 className="text-white text-[40px] font-bold leading-[44px] uppercase tracking-tight">
@@ -96,7 +96,7 @@ export default function Welcome() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 w-full sm:w-auto">
             <button 
               onClick={handleGetStarted}
               className="w-full h-12 bg-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
