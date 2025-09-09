@@ -48,10 +48,10 @@ export default function GetStarted3() {
             {/* Text Content - Left Aligned */}
             <div className="flex flex-col items-start gap-8 self-stretch relative">
               <div className="flex flex-col items-start gap-3 self-stretch relative">
-                <h1 className="self-stretch text-white text-2xl font-semibold leading-normal uppercase">
+                <h1 className="self-stretch text-white text-[24px] font-semibold leading-[28px] uppercase">
                   SECURITY COMES FIRST
                 </h1>
-                <p className="self-stretch text-[#D1D1D6] text-sm font-medium leading-5 uppercase">
+                <p className="self-stretch text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase">
                   Log in with passkeys or biometrics, secured by encryption.
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function GetStarted3() {
             onClick={handleNext}
             className="flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg bg-white transition-opacity hover:opacity-90"
           >
-            <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">
+            <span className="text-[#18181B] text-center text-[14px] font-medium leading-[20px] uppercase">
               NEXT
             </span>
           </button>
