@@ -4,86 +4,87 @@ import { useNavigate } from "react-router-dom";
 export default function Intro() {
   const navigate = useNavigate();
 
-  // 0: init, 1: step1 (logo rise), 2: step2 (logo scale+fade), 3: step3 (bg rectangle expand), 4: step4 (bg image shrink+fade)
+  // phase: 0 init, 1 step1 (0-600ms), 2 step2 (600-1200ms), 3 done (>=1400ms)
   const [phase, setPhase] = useState(0);
+  const [rectActive, setRectActive] = useState(false);
 
   useEffect(() => {
     const timers: number[] = [];
 
-    // Start sequence
-    timers.push(window.setTimeout(() => setPhase(1), 100)); // Step 1
-    timers.push(window.setTimeout(() => setPhase(2), 100 + 900)); // Step 2 after step1
-    timers.push(window.setTimeout(() => setPhase(3), 100 + 900 + 900)); // Step 3
-    timers.push(window.setTimeout(() => setPhase(4), 100 + 900 + 900 + 700)); // Step 4
+    // Kick off step 1 after a tick for CSS transitions to apply
+    timers.push(window.setTimeout(() => setPhase(1), 20));
 
-    // Navigate away after final animation
+    // Begin step 2 at 600ms and enable rectangle reveal concurrently
     timers.push(
       window.setTimeout(() => {
-        navigate("/welcome");
-      }, 100 + 900 + 900 + 700 + 1000)
+        setPhase(2);
+        setRectActive(true);
+      }, 600)
     );
 
-    return () => {
-      timers.forEach((t) => clearTimeout(t));
-    };
+    // Mark done at 1400ms (rectangle completes by then) and navigate
+    timers.push(
+      window.setTimeout(() => {
+        setPhase(3);
+        navigate("/welcome");
+      }, 1400)
+    );
+
+    return () => timers.forEach(clearTimeout);
   }, [navigate]);
 
-  const unclipped = phase >= 2; // remove clip after step 1 completes
+  // Logo dimensions
+  const baseLogoHeight = 64; // px (target after step1)
+  const logoViewW = 126;
+  const logoViewH = 58;
+  const logoAspect = logoViewW / logoViewH; // ~2.1724
+  const wrapperWidth = Math.round(baseLogoHeight * logoAspect); // width at 64px height
 
-  // Logo wrapper height
-  const wrapperHeight = phase >= 1 ? 64 : 1; // px
+  // Wrapper clipping behavior: remove after step 1 completes
+  const unclipped = phase >= 2;
 
-  // Logo transform/opacity
-  const logoTranslateY = phase === 0 ? 40 : 0; // px below center initially
-  const logoScale = phase >= 2 ? 2 : 1; // scale to 128px from 64px
-  const logoOpacity = phase === 1 ? 1 : phase >= 2 ? 0 : 0;
-
-  // Background rectangle
-  const rectExpanded = phase >= 3;
-  const rectStyle: CSSProperties = {
-    width: rectExpanded ? "100vw" : 6,
-    height: rectExpanded ? "100vh" : 6,
-    opacity: rectExpanded ? 1 : 0,
+  // Wrapper height animates from 1px -> 64px in step1
+  const wrapperStyle: CSSProperties = {
+    height: phase >= 1 ? baseLogoHeight : 1,
+    width: wrapperWidth,
   };
 
-  // Background image (always present, animates at phase 4)
-  const imgStyle: CSSProperties = {
-    width: phase >= 4 ? "100vw" : "calc(100vw + 180px)",
-    opacity: phase >= 4 ? 1 : 0,
+  // Logo transform & opacity
+  const translateY = phase >= 1 ? 0 : 40; // 40px below center initially
+  const scale = phase >= 2 ? 2 : 1; // step2 scales uniformly to 128px
+  const opacity = phase === 1 ? 1 : phase >= 2 ? 0 : 0; // fades in step1, out in step2
+
+  // Rectangle reveal (starts at 600ms, ends by 1400ms)
+  const rectStyle: CSSProperties = {
+    width: rectActive ? "100vw" : 6,
+    height: rectActive ? "100vh" : 6,
+    opacity: rectActive ? 1 : 0,
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-[#0E0E10]">
-      {/* Step 3: expanding rectangle background (#131316) */}
+    <div className="relative w-full h-screen overflow-hidden bg-gradient-to-b from-[#26272B] to-[#18181B]">
+      {/* Rectangle reveal */}
       <div
-        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-all duration-700 ease-out z-0"
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-all duration-[800ms] ease-in-out z-0"
         style={rectStyle}
         aria-hidden
       />
 
-      {/* Step 4: background image shrink and fade-in to full width */}
-      <img
-        src="/placeholder.svg"
-        alt="Background"
-        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-auto max-w-none transition-all duration-1000 ease-out z-10"
-        style={imgStyle}
-      />
-
-      {/* Centered stage for logo */}
-      <div className="absolute inset-0 flex items-center justify-center z-20">
+      {/* Center stage */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
         <div
-          className={`transition-all ease-out ${phase === 1 ? "duration-700" : "duration-500"} ${
+          className={`transition-all ease-in-out ${phase === 1 ? "duration-[600ms]" : "duration-[600ms]"} ${
             unclipped ? "overflow-visible" : "overflow-hidden"
           }`}
-          style={{ height: wrapperHeight }}
+          style={wrapperStyle}
         >
           <div
-            className="transition-all duration-700 ease-out"
+            className="transition-all ease-in-out duration-[600ms]"
             style={{
-              transform: `translateY(${logoTranslateY}px) scale(${logoScale})`,
+              transform: `translateY(${translateY}px) scale(${scale})`,
               transformOrigin: "center",
-              opacity: logoOpacity,
-              height: 64,
+              opacity,
+              height: baseLogoHeight,
             }}
           >
             {/* Juno logo */}
@@ -93,7 +94,7 @@ export default function Intro() {
               role="img"
               aria-label="Juno"
               className="block"
-              style={{ height: 64, width: "auto" }}
+              style={{ height: baseLogoHeight, width: "auto" }}
             >
               <path d="M13.4029 0.555555H20.4192V7.50864H13.4029V0.555555ZM13.5926 12.8815H20.2296V45.3081C20.2296 52.0084 17.7644 57.4444 11.001 57.4444C7.71405 57.4444 5.62812 55.9274 4.11108 54.4736L6.51306 48.9743C7.52442 50.2385 8.47257 51.2499 10.1792 51.2499C13.4661 51.2499 13.5926 47.6469 13.5926 42.9694V12.8815Z" fill="white"/>
               <path d="M52.996 12.8499V44.202H46.359V36.2375C44.9684 41.8 40.9861 45.1501 35.5501 45.1501C28.8498 45.1501 25.7526 39.9037 25.7526 32.2553V12.8499H32.3896V29.9798C32.3896 36.2375 34.4123 39.5244 38.9634 39.5244C43.1353 39.5244 46.0429 36.7432 46.359 32.3817V12.8499H52.996Z" fill="white"/>
@@ -105,7 +106,7 @@ export default function Intro() {
       </div>
 
       {/* Home Indicator */}
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[100px] h-1 bg-white rounded-full z-30" />
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[100px] h-1 bg-white rounded-full z-20" />
     </div>
   );
 }
