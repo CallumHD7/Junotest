@@ -95,7 +95,7 @@ export default function PersonalAccount5() {
         {/* Title Section */}
         <div className="flex flex-col justify-end items-start self-stretch relative">
           <div className="flex flex-col items-start gap-3 self-stretch relative">
-            <h1 className="self-stretch text-white text-2xl font-bold leading-normal uppercase">
+            <h1 className="self-stretch text-white text-[24px] font-semibold leading-[28px] uppercase">
               TRANSACTION ACTIVITY
             </h1>
             <p className="self-stretch text-[#D1D1D6] text-sm font-normal leading-5 uppercase">
@@ -401,7 +401,7 @@ export default function PersonalAccount5() {
           {isLoading ? (
             <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
           ) : (
-            <span className="text-[#18181B] text-center text-sm font-bold leading-5 uppercase">
+            <span className="text-[#18181B] text-center text-[14px] font-medium leading-[20px] uppercase">
               CONTINUE
             </span>
           )}
