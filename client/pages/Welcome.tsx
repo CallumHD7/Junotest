@@ -35,9 +35,10 @@ export default function Welcome() {
   };
 
   const bgImageStyle: CSSProperties = {
-    width: bgAnim ? "100vw" : "calc(100vw + 180px)",
+    width: bgAnim ? "100%" : "calc(100% + 180px)",
     opacity: bgAnim ? 1 : 0,
     transition: "width 900ms ease-out, opacity 900ms ease-out",
+    willChange: "width, opacity",
   };
 
   return (
