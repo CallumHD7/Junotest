@@ -51,6 +51,21 @@ export default function GetStarted1() {
                 style={{ objectPosition: 'left 48px top 8px' }}
                 aria-hidden="true"
               />
+              {/* Floating Avatars */}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fd5ce4b1ea5114af8a4f756cf54d7a800?format=webp&width=800"
+                alt=""
+                className="absolute z-10 w-[84px] h-[84px] top-6 left-2 rounded-full select-none pointer-events-none drop-shadow-xl animate-[bob_3.6s_ease-in-out_infinite]"
+                style={{ animationDelay: '0.2s' }}
+                aria-hidden="true"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F97103fb5e3e64a3b8e49105dd7123575?format=webp&width=800"
+                alt=""
+                className="absolute z-10 w-[96px] h-[96px] bottom-6 right-3 rounded-full select-none pointer-events-none drop-shadow-xl animate-[bob_4.2s_ease-in-out_infinite]"
+                style={{ animationDelay: '0.9s' }}
+                aria-hidden="true"
+              />
             </div>
 
             {/* Text Content - Left Aligned */}
