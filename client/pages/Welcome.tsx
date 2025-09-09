@@ -78,7 +78,7 @@ export default function Welcome() {
         </div>
 
         {/* Bottom Section with Content */}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 mt-auto sm:mt-0">
           {/* Text Content */}
           <div className="flex flex-col gap-4">
             <h1 className="text-white text-[40px] font-bold leading-[44px] uppercase tracking-tight">
@@ -112,7 +112,7 @@ export default function Welcome() {
       </div>
 
       {/* Home Indicator */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-[100px] h-1 bg-white rounded-full z-10"></div>
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-[100px] h-1 bg-white rounded-full z-10 mt-auto sm:mt-0"></div>
     </div>
   );
 }
