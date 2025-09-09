@@ -43,7 +43,7 @@ export default function GetStarted4() {
           {/* Main Section */}
           <div className="flex flex-col items-start gap-8 flex-1 self-stretch relative">
             {/* Main Graphic - Empty Gradient Box */}
-            <div className="flex-1 self-stretch rounded-lg border border-transparent bg-gradient-to-b from-transparent to-[rgba(26,138,126,0.4)] relative"></div>
+            <div className="flex-1 self-stretch rounded-lg bg-gradient-to-b from-transparent to-[rgba(26,138,126,0.4)] relative"></div>
 
             {/* Text Content - Left Aligned */}
             <div className="flex flex-col items-start gap-8 self-stretch relative">
