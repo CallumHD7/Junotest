@@ -43,11 +43,12 @@ export default function GetStarted1() {
           {/* Main Section */}
           <div className="flex flex-col items-start gap-8 flex-1 self-stretch relative">
             {/* Main Graphic - Empty Gradient Box */}
-            <div className="flex-1 self-stretch rounded-lg bg-gradient-to-b from-transparent to-[rgba(26,138,126,0.4)] relative flex justify-end items-start pt-2 pr-10">
+            <div className="flex-1 self-stretch rounded-lg bg-gradient-to-b from-transparent to-[rgba(26,138,126,0.4)] relative overflow-hidden">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F04f6196d4bb54bd2ae553b0a77d452d2?format=webp&width=800"
-                alt="Balances screen preview"
-                className="max-w-full h-auto"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover object-left z-0 select-none pointer-events-none"
+                aria-hidden="true"
               />
             </div>
 
