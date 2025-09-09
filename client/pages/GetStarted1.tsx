@@ -47,7 +47,7 @@ export default function GetStarted1() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F04f6196d4bb54bd2ae553b0a77d452d2?format=webp&width=800"
                 alt=""
-                className="absolute left-0 right-0 bottom-0 top-6 w-full h-full object-cover z-0 select-none pointer-events-none scale-[1.6] origin-center translate-y-[40px]"
+                className="absolute left-0 right-0 bottom-0 top-[28px] w-full h-full object-cover z-0 select-none pointer-events-none scale-[1.6] origin-center translate-y-[40px]"
                 style={{ objectPosition: 'left 48px top 8px' }}
                 aria-hidden="true"
               />
@@ -55,13 +55,13 @@ export default function GetStarted1() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F3fd48c4c5e374f3481189d7768775ad1?format=webp&width=800"
                 alt=""
-                className="absolute z-20 w-[84px] h-[84px] top-[76px] left-[8px] select-none pointer-events-none drop-shadow-xl"
+                className="absolute z-20 w-[84px] h-[84px] top-[76px] left-[8px] select-none pointer-events-none drop-shadow-xl animate-[bob_3.6s_ease-in-out_infinite]"
                                 aria-hidden="true"
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F0ffd9a45e73b4db08f33194b16f5ad51?format=webp&width=800"
                 alt=""
-                className="absolute z-20 w-[96px] h-[96px] bottom-[-16px] right-[12px] select-none pointer-events-none drop-shadow-xl"
+                className="absolute z-20 w-[96px] h-[96px] bottom-[-16px] right-[12px] select-none pointer-events-none drop-shadow-xl animate-[bob_4.2s_ease-in-out_infinite]"
                                 aria-hidden="true"
               />
             </div>
