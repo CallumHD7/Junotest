@@ -31,7 +31,7 @@ export default function Intro() {
       window.setTimeout(() => {
         setPhase(3);
         navigate("/welcome");
-      }, 2500)
+      }, 3400)
     );
 
     return () => timers.forEach(clearTimeout);
@@ -61,7 +61,7 @@ export default function Intro() {
       ? "transform 500ms ease-out, opacity 500ms ease-out"
       : "transform 700ms ease-in-out, opacity 700ms ease-in-out";
 
-  // Circle reveal (starts with step2 after 300ms delay; lasts 1600ms ease-out)
+  // Circle reveal (starts with step2 after 300ms delay; lasts 2400ms ease-out)
   const circleStyle: CSSProperties = {
     width: circleActive ? "200vmax" : 6,
     height: circleActive ? "200vmax" : 6,
@@ -73,7 +73,7 @@ export default function Intro() {
     <div className="relative w-full h-screen overflow-hidden bg-gradient-to-b from-[#26272B] to-[#18181B]">
       {/* Circle fill */}
       <div
-        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-[width,height,opacity] duration-[1600ms] ease-out z-0"
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-[width,height,opacity] duration-[2400ms] ease-out z-0"
         style={circleStyle}
         aria-hidden
       />
