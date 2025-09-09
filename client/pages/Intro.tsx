@@ -40,7 +40,7 @@ export default function Intro() {
 
   // Background rectangle
   const rectExpanded = phase >= 3;
-  const rectStyle: React.CSSProperties = {
+  const rectStyle: CSSProperties = {
     width: rectExpanded ? "100vw" : 6,
     height: rectExpanded ? "100vh" : 6,
     opacity: rectExpanded ? 1 : 0,
