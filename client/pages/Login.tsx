@@ -41,7 +41,7 @@ export default function Login() {
         </button>
 
         {/* Content Container */}
-        <div className="flex flex-col justify-between h-full">
+        <div className="flex flex-col justify-between flex-1">
           {/* Header and Form Section */}
           <div className="flex flex-col gap-8">
             {/* Header */}
@@ -106,7 +106,7 @@ export default function Login() {
           </div>
 
           {/* Footer */}
-          <div className="flex items-end justify-center text-center gap-1 flex-1 sm:flex-none sm:items-center sm:justify-center">
+          <div className="flex items-end justify-center text-center gap-1 mt-auto">
             <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
               DON'T HAVE AN ACCOUNT?
             </span>
