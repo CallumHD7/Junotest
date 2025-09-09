@@ -29,7 +29,7 @@ export default function Login() {
   return (
     <div className="relative w-full min-h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
       {/* Main Content */}
-      <div className="flex flex-col min-h-screen p-4 md:p-6">
+      <div className="flex flex-col min-h-screen px-4 py-6 md:p-6">
         {/* Back Button */}
         <button 
           onClick={handleBackClick}

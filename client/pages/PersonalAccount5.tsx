@@ -63,7 +63,7 @@ export default function PersonalAccount5() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Header Section */}
-      <div className="flex p-4 md:p-6 flex-col items-start gap-7 self-stretch relative">
+      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-7 self-stretch relative">
         {/* Header with Back and Skip */}
         <div className="flex justify-between items-center self-stretch relative">
           <button 
@@ -106,7 +106,7 @@ export default function PersonalAccount5() {
       </div>
 
       {/* Scrollable Form Section */}
-      <div className="flex p-4 md:p-6 flex-col items-start gap-8 flex-1 self-stretch overflow-y-auto relative">
+      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-8 flex-1 self-stretch overflow-y-auto relative">
         <div className="flex h-auto flex-col items-start gap-8 self-stretch relative">
           {/* Inbound Section */}
           <div className="flex flex-col items-start gap-6 self-stretch relative">
@@ -387,7 +387,7 @@ export default function PersonalAccount5() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex p-4 md:p-6 flex-col items-start gap-6 self-stretch border-t border-[#51525C] relative">
+      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-6 self-stretch border-t border-[#51525C] relative">
         {/* Continue Button */}
         <button 
           onClick={handleContinue}
