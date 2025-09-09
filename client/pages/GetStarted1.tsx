@@ -48,7 +48,7 @@ export default function GetStarted1() {
                 src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F04f6196d4bb54bd2ae553b0a77d452d2?format=webp&width=800"
                 alt=""
                 className="absolute inset-0 w-full h-full object-cover z-0 select-none pointer-events-none scale-[1.4] origin-top"
-                style={{ objectPosition: 'left 50px top 8px' }}
+                style={{ objectPosition: 'left 46px top 8px' }}
                 aria-hidden="true"
               />
             </div>
