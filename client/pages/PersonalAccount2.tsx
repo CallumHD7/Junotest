@@ -93,10 +93,10 @@ export default function PersonalAccount2() {
           <div className="flex flex-col items-start gap-8 self-stretch relative">
             {/* Header Section */}
             <div className="flex flex-col items-start gap-3 self-stretch relative">
-              <h1 className="self-stretch text-white text-2xl font-semibold leading-normal uppercase">
+              <h1 className="self-stretch text-white text-[24px] font-semibold leading-[28px] uppercase">
                 VERIFY EMAIL
               </h1>
-              <p className="self-stretch text-sm font-semibold leading-5 uppercase">
+              <p className="self-stretch text-[14px] font-medium leading-[20px] uppercase text-[#D1D1D6]">
                 <span className="text-[#D1D1D6] font-normal">WE SENT IT TO </span>
                 <span className="text-white font-bold">CALLUM@GMAIL.COM</span>
                 <span className="text-[#D1D1D6] font-normal">.</span>
@@ -175,7 +175,7 @@ export default function PersonalAccount2() {
               {isLoading ? (
                 <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
               ) : (
-                <span className="text-[#18181B] text-center text-sm font-bold leading-5 uppercase">
+                <span className="text-[#18181B] text-center text-[14px] font-medium leading-[20px] uppercase">
                   SUBMIT
                 </span>
               )}
