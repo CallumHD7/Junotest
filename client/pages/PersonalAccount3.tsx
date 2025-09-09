@@ -82,7 +82,7 @@ export default function PersonalAccount3() {
           <div className="flex flex-col items-start gap-8 self-stretch relative">
             {/* Header Section */}
             <div className="flex flex-col items-start gap-3 self-stretch relative">
-              <h1 className="self-stretch text-white text-2xl font-bold leading-normal uppercase">
+              <h1 className="self-stretch text-white text-[24px] font-semibold leading-[28px] uppercase">
                 CREATE A PASSWORD
               </h1>
               <p className="self-stretch text-[#D1D1D6] text-sm font-normal leading-5 uppercase">
