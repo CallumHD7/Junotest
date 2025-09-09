@@ -59,10 +59,10 @@ export default function PersonalAccount1() {
         {/* Header Section */}
         <div className="flex flex-col justify-end items-start self-stretch relative">
           <div className="flex flex-col items-start gap-3 self-stretch relative">
-            <h1 className="self-stretch text-white text-2xl font-semibold leading-normal uppercase">
+            <h1 className="self-stretch text-white text-[24px] font-semibold leading-[28px] uppercase">
               PERSONAL DETAILS
             </h1>
-            <p className="self-stretch text-[#D1D1D6] text-sm font-medium leading-5 uppercase">
+            <p className="self-stretch text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase">
               Tell us a bit about yourself so we can set up your personal account in minutes.
             </p>
           </div>
