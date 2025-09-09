@@ -4,10 +4,11 @@ import { useNavigate } from "react-router-dom";
 export default function Intro() {
   const navigate = useNavigate();
 
-  // phase: 0 init, 1 step1 (0-500ms), 2 step2 (800-1500ms), 3 end
+  // phase: 0 init, 1 step1 (0-500ms), 2 step2 (1250-2650ms), 3 end
   const [phase, setPhase] = useState(0);
   const [clipped, setClipped] = useState(true);
   const [circleActive, setCircleActive] = useState(false);
+  const [circleShown, setCircleShown] = useState(false);
 
   useEffect(() => {
     const timers: number[] = [];
@@ -15,15 +16,15 @@ export default function Intro() {
     // Start Step 1 after a tick so transitions apply
     timers.push(window.setTimeout(() => setPhase(1), 20));
 
-    // End of Step 1 (1000ms): remove clipping
-    timers.push(window.setTimeout(() => setClipped(false), 500));
+    // End of Step 1 (500ms): remove clipping and show circle seed
+    timers.push(window.setTimeout(() => { setClipped(false); setCircleShown(true); }, 500));
 
-    // Delay 300ms, then Step 2 begins (scale+fade) and circle starts
+    // Pause 750ms, then Step 2 begins (scale+fade) and circle expansion starts
     timers.push(
       window.setTimeout(() => {
         setPhase(2);
         setCircleActive(true);
-      }, 800)
+      }, 1250)
     );
 
     // Navigate after circle and step2 finish (max 1600ms from 1300ms)
@@ -31,7 +32,7 @@ export default function Intro() {
       window.setTimeout(() => {
         setPhase(3);
         navigate("/welcome");
-      }, 3400)
+      }, 3650)
     );
 
     return () => timers.forEach(clearTimeout);
@@ -59,21 +60,22 @@ export default function Intro() {
   const logoTransition =
     phase < 2
       ? "transform 500ms ease-out, opacity 500ms ease-out"
-      : "transform 700ms ease-in-out, opacity 700ms ease-in-out";
+      : "transform 1400ms ease-in-out, opacity 1400ms ease-in-out";
 
-  // Circle reveal (starts with step2 after 300ms delay; lasts 2400ms ease-out)
+  // Circle reveal: small 6x6 appears when logo reaches center, then expands with Step 2 for 1400ms
   const circleStyle: CSSProperties = {
     width: circleActive ? "200vmax" : 6,
     height: circleActive ? "200vmax" : 6,
-    opacity: circleActive ? 1 : 0,
+    opacity: circleShown ? 1 : 0,
     borderRadius: "9999px",
+    transition: "width 1400ms ease-out, height 1400ms ease-out, opacity 300ms ease-out",
   };
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-gradient-to-b from-[#26272B] to-[#18181B]">
       {/* Circle fill */}
       <div
-        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] transition-[width,height,opacity] duration-[2400ms] ease-out z-0"
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#131316] z-0"
         style={circleStyle}
         aria-hidden
       />

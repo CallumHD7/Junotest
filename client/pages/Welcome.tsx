@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Welcome() {
   const navigate = useNavigate();
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
+  const [bgAnim, setBgAnim] = useState(false);
 
   useEffect(() => {
     // Start welcome animation after component mounts
     const timer = setTimeout(() => {
       setIsWelcomeVisible(true);
+      setBgAnim(true);
     }, 100);
 
     return () => clearTimeout(timer);
@@ -22,14 +24,23 @@ export default function Welcome() {
     navigate("/login");
   };
 
+  const bgImageStyle: CSSProperties = {
+    width: bgAnim ? "100vw" : "calc(100vw + 180px)",
+    opacity: bgAnim ? 1 : 0,
+    transition: "width 900ms ease-out, opacity 900ms ease-out",
+  };
+
   return (
     <div className="relative w-full h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
       {/* Background Image */}
-      <img 
-        src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F29c83fbe49da4743b02af1f85912b5e0?format=webp&width=1200" 
-        alt="Architectural building" 
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F29c83fbe49da4743b02af1f85912b5e0?format=webp&width=1200"
+          alt="Architectural building"
+          className="absolute top-0 left-1/2 -translate-x-1/2 h-full object-cover"
+          style={bgImageStyle}
+        />
+      </div>
       
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>
