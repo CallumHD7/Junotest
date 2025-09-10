@@ -30,6 +30,7 @@ import Login2 from "./pages/Login2";
 import ForgotPassword from "./pages/ForgotPassword";
 import TwoFactorAuth from "./pages/TwoFactorAuth";
 import CreateNewPassword from "./pages/CreateNewPassword";
+import DashboardCrypto from "./pages/DashboardCrypto";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/two-factor-auth" element={<TwoFactorAuth />} />
           <Route path="/create-new-password" element={<CreateNewPassword />} />
+          <Route path="/dashboard-crypto" element={<DashboardCrypto />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
