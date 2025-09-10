@@ -138,7 +138,9 @@ export default function BusinessAccount1() {
               <select
                 value={formData.countryOfIncorporation}
                 onChange={(e) => handleInputChange("countryOfIncorporation", e.target.value)}
-                className="flex h-12 px-4 pr-12 justify-between items-center w-full rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase border border-transparent focus:border-[#A0A0AB] outline-none appearance-none transition-colors"
+                className={`flex h-12 px-4 pr-12 justify-between items-center w-full rounded-lg bg-[#3F3F46] text-sm font-medium leading-5 uppercase border border-transparent focus:border-[#A0A0AB] outline-none appearance-none transition-colors ${
+                  formData.countryOfIncorporation ? "text-white" : "text-[#A0A0AB]"
+                }`}
               >
                 <option value="" className="text-[#A0A0AB]">SELECT COUNTRY</option>
                 <option value="US">United States</option>
