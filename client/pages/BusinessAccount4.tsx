@@ -32,12 +32,7 @@ export default function BusinessAccount4() {
   };
 
   const handleContinue = () => {
-    setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      navigate("/businessaccount5");
-    }, 2000);
+    navigate("/businessaccount5");
   };
 
   const FileUploadField = ({ 
