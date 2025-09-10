@@ -92,11 +92,11 @@ export default function PersonalAccount4() {
                   <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                     Account Purpose*
                   </label>
-                  <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+                  <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                     <select
                       value={formData.accountPurpose}
                       onChange={(e) => handleInputChange("accountPurpose", e.target.value)}
-                      className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                      className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none focus:border-[#A0A0AB] transition-colors"
                     >
                       <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT REASON OPENING ACCOUNT</option>
                       <option value="personal-savings" className="bg-[#3F3F46] text-white">PERSONAL SAVINGS</option>
