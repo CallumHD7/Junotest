@@ -75,15 +75,13 @@ export default function Login() {
                 <button
                   onClick={handleContinue}
                   disabled={!email.trim()}
-                  className={`w-full h-12 rounded-lg flex items-center justify-center transition-all ${
+                  className={`flex h-12 px-8 py-3 justify-center items-center gap-2 self-stretch rounded-lg transition-all ${
                     email.trim()
-                      ? "bg-white hover:opacity-90 cursor-pointer"
-                      : "bg-[#3F3F46] cursor-not-allowed"
+                      ? "bg-white hover:opacity-90"
+                      : "bg-[#D1D1D6] cursor-not-allowed"
                   }`}
                 >
-                  <span className={`text-[14px] font-bold uppercase ${
-                    email.trim() ? "text-[#18181B]" : "text-[#D1D1D6]"
-                  }`}>
+                  <span className="text-[#18181B] text-center text-sm font-bold leading-5 uppercase">
                     CONTINUE
                   </span>
                 </button>
