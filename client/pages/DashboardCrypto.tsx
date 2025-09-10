@@ -305,8 +305,349 @@ export default function DashboardCrypto() {
           </div>
         </div>
 
-        {/* Other sections would continue here... */}
-        
+        {/* Saved Addresses Section */}
+        <div className="flex flex-col items-center self-stretch rounded-lg border border-black/[0.12] bg-white">
+          <div className="flex flex-col items-start self-stretch">
+            <div className="flex p-3 items-center gap-2 self-stretch">
+              <div className="flex items-center gap-1 flex-1">
+                <div className="text-[#3F3F46] text-sm font-semibold leading-5">SAVED ADDRESSES</div>
+                <div className="flex w-4 h-4 px-0.5 flex-col justify-center items-center gap-2.5 rounded bg-[#E4E4E7]">
+                  <div className="text-[#18181B] text-center text-[8px] font-semibold leading-3 tracking-[0.16px]">9</div>
+                </div>
+              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4.5V19.5M19.5 12H4.5" stroke="#3F3F46" strokeWidth="1.95" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+
+            <div className="flex px-3 items-start content-start gap-1 self-stretch flex-wrap">
+              {/* Saved Address 1 */}
+              <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                  <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
+                    <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
+                  </svg>
+                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                      <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-1 self-stretch">
+                  <div className="self-stretch text-[#18181B] text-sm font-semibold leading-5 uppercase">ALEX'S CRYPTO WALLET</div>
+                  <div className="self-stretch text-[#51525C] text-xs font-medium leading-4">3Fz4G7H8J9K0L1...Y4Z5</div>
+                </div>
+              </div>
+
+              {/* Saved Address 2 */}
+              <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                  <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
+                    <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
+                  </svg>
+                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                      <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-1 self-stretch">
+                  <div className="self-stretch text-[#18181B] text-sm font-semibold leading-5 uppercase">JORDAN'S BITCOIN VAULT</div>
+                  <div className="self-stretch text-[#51525C] text-xs font-medium leading-4">3Fz4G7H8J9K0L1...Y4Z5</div>
+                </div>
+              </div>
+
+              {/* Additional Saved Addresses... */}
+              <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                  <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
+                    <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
+                  </svg>
+                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                      <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-1 self-stretch">
+                  <div className="self-stretch text-[#18181B] text-sm font-semibold leading-5 uppercase">TAYLOR'S BTC SAFE</div>
+                  <div className="self-stretch text-[#51525C] text-xs font-medium leading-4">3Fz4G7H8J9K0L1...Y4Z5</div>
+                </div>
+              </div>
+
+              {/* Continue pattern for remaining addresses... */}
+              <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                  <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
+                    <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
+                  </svg>
+                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                      <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-1 self-stretch">
+                  <div className="self-stretch text-[#18181B] text-sm font-semibold leading-5 uppercase">SAM'S DIGITAL CURRENCY HUB</div>
+                  <div className="self-stretch text-[#51525C] text-xs font-medium leading-4">3Fz4G7H8J9K0L1...Y4Z5</div>
+                </div>
+              </div>
+
+              <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                  <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
+                    <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
+                  </svg>
+                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                      <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-1 self-stretch">
+                  <div className="self-stretch text-[#18181B] text-sm font-semibold leading-5 uppercase">MAYA'S ETHER HAVEN</div>
+                  <div className="self-stretch text-[#51525C] text-xs font-medium leading-4">3Fz4G7H8J9K0L1...Y4Z5</div>
+                </div>
+              </div>
+
+              <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                  <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
+                    <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
+                  </svg>
+                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                      <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-1 self-stretch">
+                  <div className="self-stretch text-[#18181B] text-sm font-semibold leading-5 uppercase">RILEY'S LITECOIN LOCKER</div>
+                  <div className="self-stretch text-[#51525C] text-xs font-medium leading-4">3Fz4G7H8J9K0L1...Y4Z5</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex p-3 flex-col items-start gap-2.5 self-stretch">
+            <div className="flex h-10 py-3 justify-center items-center gap-2.5 self-stretch rounded bg-[#E4E4E7]">
+              <div className="text-[#18181B] text-center text-sm font-semibold leading-5">SEE ALL</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Transactions Section */}
+        <div className="flex flex-col items-center self-stretch rounded-lg border border-black/[0.12] bg-white">
+          <div className="flex flex-col items-start self-stretch">
+            <div className="flex p-3 flex-col justify-center items-start gap-3 self-stretch">
+              <div className="flex items-center gap-1 self-stretch">
+                <div className="text-[#3F3F46] text-sm font-semibold leading-5">TRANSACTIONS</div>
+              </div>
+              <div className="flex h-10 px-3 py-2 items-center gap-0.5 self-stretch rounded border border-[#D1D1D6] bg-[#FCFCFC]">
+                <div className="flex flex-col items-start flex-1">
+                  <div className="self-stretch text-[#18181B] text-sm font-medium leading-5 tracking-[0.28px] uppercase">28 DEC 22 – 10 JAN 23</div>
+                </div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="transform rotate-90">
+                  <path d="M6.70313 8.70078C6.88646 8.51745 7.11979 8.42578 7.40312 8.42578C7.68646 8.42578 7.91979 8.51745 8.10313 8.70078L12.0031 12.6008L15.9031 8.70078C16.0865 8.51745 16.3198 8.42578 16.6031 8.42578C16.8865 8.42578 17.1198 8.51745 17.3031 8.70078C17.4865 8.88411 17.5781 9.11745 17.5781 9.40078C17.5781 9.68411 17.4865 9.91745 17.3031 10.1008L12.7031 14.7008C12.6031 14.8008 12.4948 14.8718 12.3781 14.9138C12.2615 14.9558 12.1365 14.9764 12.0031 14.9758C11.8698 14.9758 11.7448 14.9548 11.6281 14.9128C11.5115 14.8708 11.4031 14.8001 11.3031 14.7008L6.70313 10.1008C6.51979 9.91745 6.42812 9.68411 6.42812 9.40078C6.42812 9.11745 6.51979 8.88411 6.70313 8.70078Z" fill="#18181B"/>
+                </svg>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-start self-stretch">
+              {/* Transaction 1 */}
+              <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M16.8126 5.81887L5.18349 16.8203" stroke="#18181B" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M16.8125 14.8867V5.82129H7.747" stroke="#18181B" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">BUY</div>
+                </div>
+                <div className="flex flex-col justify-center items-end gap-0.5">
+                  <div className="flex px-1 py-0.5 justify-center items-center gap-2.5 rounded bg-[rgba(170,170,187,0.16)]">
+                    <div className="text-[#26272B] text-center text-xs font-semibold leading-4 tracking-[0.24px] uppercase">AWAITING APPROVAL</div>
+                  </div>
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">0.36728192 BTC</div>
+                </div>
+              </div>
+
+              <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+              {/* Transaction 2 */}
+              <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M2.75 10.0833H10.0833V2.75H2.75V10.0833ZM4.58333 4.58333H8.25V8.25H4.58333V4.58333ZM2.75 19.25H10.0833V11.9167H2.75V19.25ZM4.58333 13.75H8.25V17.4167H4.58333V13.75ZM11.9167 2.75V10.0833H19.25V2.75H11.9167ZM17.4167 8.25H13.75V4.58333H17.4167V8.25ZM17.4167 17.4167H19.25V19.25H17.4167V17.4167ZM11.9167 11.9167H13.75V13.75H11.9167V11.9167ZM13.75 13.75H15.5833V15.5833H13.75V13.75ZM11.9167 15.5833H13.75V17.4167H11.9167V15.5833ZM13.75 17.4167H15.5833V19.25H13.75V17.4167ZM15.5833 15.5833H17.4167V17.4167H15.5833V15.5833ZM15.5833 11.9167H17.4167V13.75H15.5833V11.9167ZM17.4167 13.75H19.25V15.5833H17.4167V13.75Z" fill="#18181B"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">RECEIVE</div>
+                </div>
+                <div className="flex flex-col justify-center items-end gap-0.5">
+                  <div className="flex px-1 py-0.5 justify-center items-center gap-2.5 rounded bg-[rgba(170,170,187,0.16)]">
+                    <div className="text-[#26272B] text-center text-xs font-semibold leading-4 tracking-[0.24px] uppercase">AWAITING APPROVAL</div>
+                  </div>
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">0.36728192 BTC</div>
+                </div>
+              </div>
+
+              <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+              {/* Transaction 3 */}
+              <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M5.18254 16.8203L16.8117 5.81887" stroke="#18181B" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M5.1875 7.84766V16.8203H14.253" stroke="#18181B" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">SELL</div>
+                </div>
+                <div className="flex flex-col justify-center items-end gap-0.5">
+                  <div className="flex px-1 py-0.5 justify-center items-center gap-2.5 rounded bg-[rgba(182,43,43,0.16)]">
+                    <div className="text-[#5F0000] text-center text-xs font-semibold leading-4 tracking-[0.24px] uppercase">FAILED</div>
+                  </div>
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">0.36728192 BTC</div>
+                </div>
+              </div>
+
+              <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+              {/* Transaction 4 */}
+              <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center">
+                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M10.6837 2.10844L11.4739 1.30078L15.2439 5.07192L11.4739 8.84307L10.6842 8.03597L13.0876 5.63319H1.26562V4.51066H13.0876L10.6837 2.10844ZM0.75 12.9266L4.5217 9.15547L5.31084 9.96257L2.9075 12.3653H14.7294V13.4879H2.90807L5.31084 15.8907L4.5217 16.6978L0.75 12.9266Z" fill="#18181B"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">EXCHANGE</div>
+                </div>
+                <div className="flex flex-col justify-center items-end gap-0.5">
+                  <div className="flex px-1 py-0.5 justify-center items-center gap-2.5 rounded bg-[rgba(130,179,96,0.16)]">
+                    <div className="text-[#275F00] text-center text-xs font-semibold leading-4 tracking-[0.24px] uppercase">COMPLETED</div>
+                  </div>
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">0.36728192 BTC</div>
+                </div>
+              </div>
+
+              <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+              {/* Transaction 5 */}
+              <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M3.98458 18.08L18.6911 11.776C18.8431 11.7113 18.9727 11.6033 19.0638 11.4654C19.155 11.3275 19.2035 11.1659 19.2035 11.0007C19.2035 10.8354 19.155 10.6738 19.0638 10.536C18.9727 10.3981 18.8431 10.2901 18.6911 10.2253L3.98458 3.92136C3.85723 3.86581 3.71807 3.84284 3.57963 3.85453C3.44119 3.86621 3.30784 3.91217 3.19161 3.98827C3.07537 4.06436 2.97991 4.1682 2.91383 4.29041C2.84775 4.41262 2.81314 4.54935 2.81312 4.68828L2.80469 8.57349C2.80469 8.99488 3.11652 9.35727 3.5379 9.40784L15.4464 11.0007L3.5379 12.5851C3.11652 12.6441 2.80469 13.0065 2.80469 13.4279L2.81312 17.3131C2.81312 17.9115 3.42834 18.3244 3.98458 18.08Z" fill="#18181B"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">SEND</div>
+                </div>
+                <div className="flex flex-col justify-center items-end gap-0.5">
+                  <div className="flex px-1 py-0.5 justify-center items-center gap-2.5 rounded bg-[rgba(182,140,43,0.16)]">
+                    <div className="text-[#5F3E00] text-center text-xs font-semibold leading-4 tracking-[0.24px] uppercase">REJECTED</div>
+                  </div>
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">0.36728192 BTC</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex p-3 flex-col items-start gap-2.5 self-stretch">
+            <div className="flex h-10 py-3 justify-center items-center gap-2.5 self-stretch rounded bg-[#E4E4E7]">
+              <div className="text-[#18181B] text-center text-sm font-semibold leading-5">SEE ALL</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Statements Section */}
+        <div className="flex flex-col items-center self-stretch rounded-lg border border-black/[0.12] bg-white">
+          <div className="flex flex-col items-start self-stretch">
+            <div className="flex p-3 items-center gap-2 self-stretch">
+              <div className="flex items-center gap-1 flex-1">
+                <div className="flex-1 text-[#3F3F46] text-sm font-semibold leading-5">STATEMENTS</div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4.5V19.5M19.5 12H4.5" stroke="#3F3F46" strokeWidth="1.95" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-start self-stretch">
+              {/* Statement 1 */}
+              <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
+                <div className="flex items-center gap-5 flex-1">
+                  <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="absolute left-[11px] top-[11px]">
+                      <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
+                    </svg>
+                    <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                        <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-start flex-1">
+                    <div className="flex items-center gap-1">
+                      <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                    </div>
+                    <div className="text-[#18181B] text-sm font-semibold leading-5">$45,000.00</div>
+                  </div>
+                  <div className="flex px-1 py-0.5 justify-center items-center">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                      <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#3F3F46"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+              {/* Add more statements following the same pattern... */}
+              <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
+                <div className="flex items-center gap-5 flex-1">
+                  <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="absolute left-[11px] top-[11px]">
+                      <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
+                    </svg>
+                    <div className="w-6 h-6 rounded-full border-2 border-white bg-[#345D9D] absolute right-0 -top-1">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
+                        <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#345D9D"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-start flex-1">
+                    <div className="flex items-center gap-1">
+                      <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                    </div>
+                    <div className="text-[#18181B] text-sm font-semibold leading-5">$45,000.00</div>
+                  </div>
+                  <div className="flex px-1 py-0.5 justify-center items-center">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                      <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#3F3F46"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Continue with more statement items as needed */}
+            </div>
+          </div>
+
+          <div className="flex p-3 flex-col items-start gap-2.5 self-stretch">
+            <div className="flex h-10 py-3 justify-center items-center gap-2.5 self-stretch rounded bg-[#E4E4E7]">
+              <div className="text-[#18181B] text-center text-sm font-semibold leading-5">SEE ALL</div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       {/* Bottom Navigation */}
