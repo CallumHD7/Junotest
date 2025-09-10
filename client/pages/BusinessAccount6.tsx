@@ -448,7 +448,7 @@ export default function BusinessAccount6() {
 
       {/* Document Authorization Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 bg-black/56" onClick={handleModalCancel}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 bg-[rgba(0,0,0,0.56)]" onClick={handleModalCancel}>
           <div className="flex flex-col items-start rounded-lg border border-[#51525C] bg-[#26272B] relative w-auto max-w-[360px]" onClick={(e) => e.stopPropagation()}>
             {/* Close Button */}
             <button
