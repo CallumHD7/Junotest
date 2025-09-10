@@ -97,7 +97,7 @@ export default function BusinessAccount3() {
                 {/* Confirm Password Field */}
                 <div className="flex flex-col items-start gap-2 self-stretch relative">
                   <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
-                    PASSWORD
+                    CONFIRM PASSWORD
                   </label>
                   <div className="flex h-12 px-4 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                     <input
