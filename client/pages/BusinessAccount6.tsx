@@ -40,12 +40,21 @@ export default function BusinessAccount6() {
   };
 
   const handleContinue = () => {
+    setShowModal(true);
+  };
+
+  const handleModalConfirm = () => {
+    setShowModal(false);
     setIsLoading(true);
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
       navigate("/dashboard_fiat");
     }, 2000);
+  };
+
+  const handleModalCancel = () => {
+    setShowModal(false);
   };
 
   const ChevronDownIcon = () => (
