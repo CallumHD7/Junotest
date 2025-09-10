@@ -36,7 +36,7 @@ export default function PersonalAccount1() {
   return (
     <div className="flex flex-col w-full h-screen overflow-y-auto bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Main Content */}
-      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-7 self-stretch relative">
+      <div className="sticky top-0 z-30 flex px-4 py-6 md:p-6 flex-col items-start gap-7 self-stretch bg-[#26272B]/95">
         {/* Back Button */}
         <button 
           onClick={handleBack}
