@@ -126,11 +126,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 ESTIMATED NUMBER OF INBOUND TRANSACTIONS PER MONTH*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.inboundTransactions}
                   onChange={(e) => handleInputChange("inboundTransactions", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="1-5" className="bg-[#3F3F46] text-white">1-5</option>
@@ -147,11 +147,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 AVERAGE USD VALUE OF EACH INBOUND TRANSACTION*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.inboundUsdValue}
                   onChange={(e) => handleInputChange("inboundUsdValue", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="under-1000" className="bg-[#3F3F46] text-white">UNDER $1,000</option>
@@ -168,11 +168,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 MAIN INBOUND CURRENCIES*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.inboundCurrencies}
                   onChange={(e) => handleInputChange("inboundCurrencies", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="usd" className="bg-[#3F3F46] text-white">USD</option>
@@ -189,11 +189,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 TOP JURISDICTIONS YOU WILL RECEIVE FUNDS FROM*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.inboundJurisdictions}
                   onChange={(e) => handleInputChange("inboundJurisdictions", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="us" className="bg-[#3F3F46] text-white">UNITED STATES</option>
@@ -233,11 +233,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 ESTIMATED NUMBER OF OUTBOUND TRANSACTIONS PER MONTH*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.outboundTransactions}
                   onChange={(e) => handleInputChange("outboundTransactions", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="1-5" className="bg-[#3F3F46] text-white">1-5</option>
@@ -254,11 +254,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 AVERAGE USD VALUE OF EACH OUTBOUND TRANSACTION*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.outboundUsdValue}
                   onChange={(e) => handleInputChange("outboundUsdValue", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="under-1000" className="bg-[#3F3F46] text-white">UNDER $1,000</option>
@@ -275,11 +275,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 MAIN OUTBOUND CURRENCIES*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.outboundCurrencies}
                   onChange={(e) => handleInputChange("outboundCurrencies", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="usd" className="bg-[#3F3F46] text-white">USD</option>
@@ -296,11 +296,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 TOP JURISDICTIONS YOU WILL SEND FUNDS TO*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.outboundJurisdictions}
                   onChange={(e) => handleInputChange("outboundJurisdictions", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="us" className="bg-[#3F3F46] text-white">UNITED STATES</option>
@@ -340,11 +340,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 NUMBER OF FX TRANSACTIONS PER MONTH*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.fxTransactions}
                   onChange={(e) => handleInputChange("fxTransactions", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="1-5" className="bg-[#3F3F46] text-white">1-5</option>
@@ -361,11 +361,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 AVERAGE USD VALUE OF EACH FX TRANSACTION*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.fxUsdValue}
                   onChange={(e) => handleInputChange("fxUsdValue", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="under-1000" className="bg-[#3F3F46] text-white">UNDER $1,000</option>
@@ -382,11 +382,11 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 MAIN FX PAIRS*
               </label>
-              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.fxPairs}
                   onChange={(e) => handleInputChange("fxPairs", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT MAIN FX PAIRS</option>
                   <option value="usd-eur" className="bg-[#3F3F46] text-white">USD/EUR</option>
