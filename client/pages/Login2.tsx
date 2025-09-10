@@ -31,8 +31,7 @@ export default function Login2() {
   };
 
   const handleSignUp = () => {
-    // Navigate to sign up page
-    console.log("Navigate to sign up");
+    navigate("/getstarted1");
   };
 
   const togglePasswordVisibility = () => {
@@ -169,7 +168,7 @@ export default function Login2() {
           </div>
 
           {/* Footer */}
-          <div className="flex justify-center items-center gap-1 text-center">
+          <div className="flex justify-center items-center gap-1 text-center sm:flex-col sm:items-stretch sm:gap-2">
             <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
               DON'T HAVE AN ACCOUNT?
             </span>
