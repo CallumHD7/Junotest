@@ -61,7 +61,7 @@ export default function GetStarted2() {
           {/* Progress Indicator - Step 2 Active */}
           <div className="flex items-center gap-1 self-stretch relative">
             <div className="h-1 flex-1 rounded-[99px] bg-[#3F3F46]"></div>
-            <div className="w-[120px] h-1 rounded-[99px] bg-white"></div>
+            <div className="h-1 flex-1 rounded-[99px] bg-white"></div>
             <div className="h-1 flex-1 rounded-[99px] bg-[#3F3F46]"></div>
             <div className="h-1 flex-1 rounded-[99px] bg-[#3F3F46]"></div>
           </div>
