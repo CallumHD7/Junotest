@@ -386,8 +386,8 @@ export default function PersonalAccount5() {
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-6 self-stretch border-t border-[#51525C] relative">
+      {/* Bottom Section - Fixed */}
+      <div className="fixed bottom-0 left-0 right-0 z-10 flex px-4 py-6 md:p-6 flex-col items-start gap-6 border-t border-[#51525C] bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B]">
         {/* Continue Button */}
         <button 
           onClick={handleContinue}
