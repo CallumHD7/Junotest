@@ -107,8 +107,8 @@ export default function Login2() {
                       type={showPassword ? "text" : "password"}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••"
-                      className="w-full h-12 px-4 pr-12 bg-[#3F3F46] rounded-lg border-none outline-none text-white text-[14px] placeholder-[#A0A0AB] font-medium"
+                      placeholder="•��••••••"
+                      className="w-full h-12 px-4 pr-12 bg-[#3F3F46] rounded-lg border border-transparent focus:border-[#A0A0AB] outline-none text-white text-[14px] placeholder-[#A0A0AB] font-medium transition-colors"
                     />
                     {/* Eye Icon */}
                     <button
