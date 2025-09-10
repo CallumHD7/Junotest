@@ -140,7 +140,7 @@ export default function BusinessAccount3() {
 
           {/* Terms and Conditions */}
           <div className="flex justify-center items-center gap-1 self-stretch relative">
-            <p className="flex-1 text-center text-xs font-semibold leading-4 uppercase flex flex-row justify-center flex-wrap gap-1 sm:block">
+            <p className="flex-1 text-center text-xs font-semibold leading-4 uppercase block">
               <span className="text-[#A0A0AB] font-normal">BY CLICKING CONTINUE, I AGREE TO OUR </span>
               <span className="text-white font-bold">TERMS AND CONDITIONS</span>
               <span className="text-[#A0A0AB] font-normal"> AND </span>
