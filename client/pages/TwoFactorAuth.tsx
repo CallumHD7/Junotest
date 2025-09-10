@@ -103,7 +103,7 @@ export default function TwoFactorAuth() {
                     onChange={(e) => handleInputChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
                     onFocus={() => handleFocus(index)}
-                    className={`w-full h-full rounded-lg text-center text-[40px] font-medium leading-[48px] tracking-[-0.8px] border outline-none transition-all ${
+                    className={`otp-input w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
                       focusedIndex === index && !value
                         ? "bg-[#26272B] border-white text-white"
                         : value
@@ -134,7 +134,7 @@ export default function TwoFactorAuth() {
                       onChange={(e) => handleInputChange(actualIndex, e.target.value)}
                       onKeyDown={(e) => handleKeyDown(actualIndex, e)}
                       onFocus={() => handleFocus(actualIndex)}
-                      className={`w-full h-full rounded-lg text-center text-[40px] font-medium leading-[48px] tracking-[-0.8px] border outline-none transition-all ${
+                      className={`otp-input w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
                         focusedIndex === actualIndex && !value
                           ? "bg-[#26272B] border-white text-white"
                           : value
@@ -153,13 +153,17 @@ export default function TwoFactorAuth() {
               onClick={handleVerifyCode}
               disabled={!isCodeComplete || isLoading}
               className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
-                isCodeComplete && !isLoading ? "bg-white hover:opacity-90" : "bg-[#D1D1D6] cursor-not-allowed"
+                isCodeComplete && !isLoading
+                  ? "bg-white hover:opacity-90"
+                  : "bg-[#D1D1D6] cursor-not-allowed"
               }`}
             >
               {isLoading ? (
                 <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
               ) : (
-                <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">VERIFY CODE</span>
+                <span className="text-[#18181B] text-center text-[14px] font-medium leading-[20px] uppercase">
+                  VERIFY CODE
+                </span>
               )}
             </button>
           </div>
