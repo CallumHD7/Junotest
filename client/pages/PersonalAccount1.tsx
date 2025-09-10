@@ -209,7 +209,7 @@ export default function PersonalAccount1() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex px-4 pt-6 pb-2 flex-col items-start gap-6 self-stretch border-t border-[#51525C] relative">
+      <div className="sticky bottom-0 left-0 right-0 z-40 flex px-4 pt-6 pb-2 flex-col items-start gap-6 self-stretch border-t border-[#51525C] bg-[#26272B]">
         {/* Continue Button */}
         <button 
           onClick={handleContinue}
