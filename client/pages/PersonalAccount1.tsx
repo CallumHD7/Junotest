@@ -36,7 +36,7 @@ export default function PersonalAccount1() {
   return (
     <div className="flex flex-col w-full h-screen overflow-y-auto bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Main Content */}
-      <div className="sticky top-0 z-30 flex px-4 py-6 flex-col items-start gap-7 self-stretch bg-[#26272B]/95">
+      <div className="sticky top-0 z-30 flex px-4 py-6 flex-col items-start gap-7 self-stretch bg-[#26272B]">
         {/* Back Button */}
         <button 
           onClick={handleBack}
@@ -209,7 +209,7 @@ export default function PersonalAccount1() {
       </div>
 
       {/* Bottom Section */}
-      <div className="sticky bottom-0 left-0 right-0 z-40 flex px-4 pt-6 pb-2 flex-col items-start gap-6 self-stretch border-t border-[#51525C] bg-[#26272B]">
+      <div className="sticky bottom-0 left-0 right-0 z-40 flex px-4 pt-6 pb-6 flex-col items-start gap-6 self-stretch border-t border-[#51525C] bg-[#26272B]">
         {/* Continue Button */}
         <button 
           onClick={handleContinue}
