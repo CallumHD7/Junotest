@@ -210,7 +210,7 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 TOP ENTITIES / INDIVIDUALS THAT WILL SEND FUNDS INTO YOUR JUNO MONEY ACCOUNT*
               </label>
-              <div className="flex h-[88px] px-4 py-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-[88px] px-4 py-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <textarea
                   value={formData.inboundEntities}
                   onChange={(e) => handleInputChange("inboundEntities", e.target.value)}
@@ -317,7 +317,7 @@ export default function BusinessAccount6() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 TOP BENEFICIARIES THAT WILL RECEIVE FUNDS FROM YOUR JUNO MONEY*
               </label>
-              <div className="flex h-[88px] px-4 py-[14px] pb-0 justify-between items-start self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-[88px] px-4 py-[14px] pb-0 justify-between items-start self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <textarea
                   value={formData.outboundBeneficiaries}
                   onChange={(e) => handleInputChange("outboundBeneficiaries", e.target.value)}
