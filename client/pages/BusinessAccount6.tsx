@@ -110,7 +110,7 @@ export default function BusinessAccount6() {
       </div>
 
       {/* Scrollable Form Section */}
-      <div className="flex px-4 py-2 pb-0 flex-col items-start gap-8 flex-1 self-stretch overflow-y-auto relative">
+      <div className="flex px-4 py-2 pb-6 flex-col items-start gap-8 flex-1 self-stretch overflow-y-auto relative">
         <div className="flex h-auto flex-col items-start gap-8 self-stretch relative">
           {/* Inbound Section */}
           <div className="flex flex-col items-start gap-6 self-stretch relative">
