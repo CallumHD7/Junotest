@@ -130,7 +130,7 @@ export default function PersonalAccount4() {
                   <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                     Please explain the Source of Funds that will be sent into your Juno Money account*
                   </label>
-                  <div className="flex h-[88px] px-4 py-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] relative">
+                  <div className="flex h-[88px] px-4 py-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                     <textarea
                       value={formData.sourceOfFunds}
                       onChange={(e) => handleInputChange("sourceOfFunds", e.target.value)}
