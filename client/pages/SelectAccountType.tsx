@@ -12,8 +12,7 @@ export default function SelectAccountType() {
   };
 
   const handleBusinessAccount = () => {
-    // Navigate to business account setup
-    console.log("Selected business account");
+    navigate("/businessaccount1");
   };
 
   const handleLogIn = () => {
