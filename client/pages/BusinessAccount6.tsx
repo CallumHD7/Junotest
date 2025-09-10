@@ -450,7 +450,7 @@ export default function BusinessAccount6() {
             <div className="flex items-start self-stretch">
               <button
                 onClick={handleModalCancel}
-                className="flex h-14 p-6 flex-col justify-center items-center gap-3 flex-1 border-t border-[#51525C] bg-white/4 transition-opacity hover:opacity-80"
+                className="flex h-14 p-6 flex-col justify-center items-center gap-3 flex-1 border-t border-[#51525C] bg-white/4 sm:bg-transparent transition-opacity hover:opacity-80"
               >
                 <span className="text-white text-center text-[14px] font-semibold leading-[20px] uppercase">
                   CANCEL
