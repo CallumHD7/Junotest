@@ -211,7 +211,7 @@ export default function BusinessAccount1() {
       </div>
 
       {/* Bottom Section - Sticky */}
-      <div className="sticky bottom-0 left-0 right-0 z-40 flex px-4 pt-6 pb-6 sm:pb-2 flex-col items-start gap-6 self-stretch border-t border-[#51525C] bg-[#26272B]">
+      <div className="sticky bottom-0 left-0 right-0 z-40 flex px-4 pt-6 pb-2 flex-col items-start gap-6 self-stretch border-t border-[#51525C] bg-[#26272B]">
         {/* Continue Button */}
         <button
           onClick={handleContinue}
@@ -224,7 +224,7 @@ export default function BusinessAccount1() {
 
         {/* Terms and Conditions */}
         <div className="flex justify-center items-center gap-1 self-stretch relative">
-          <p className="flex-1 text-center text-xs font-medium leading-4 text-[#A0A0AB] uppercase flex flex-wrap justify-center gap-1 sm:block">
+          <p className="flex-1 text-center text-xs font-medium leading-4 text-[#A0A0AB] uppercase block">
             By clicking Continue, I agree to our{" "}
             <span className="text-white font-semibold">Terms and Conditions</span>
             {" "}and{" "}
