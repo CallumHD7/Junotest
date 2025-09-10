@@ -19,7 +19,6 @@ export default function BusinessAccount1() {
   const handleBack = () => {
     navigate("/select-account-type");
   };
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
@@ -31,11 +30,7 @@ export default function BusinessAccount1() {
   const handleContinue = () => {
     // Validate form and proceed to next step
     console.log("Business form data:", formData);
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      navigate("/businessaccount2");
-    }, 2000);
+    navigate("/businessaccount2");
   };
 
   return (
@@ -220,16 +215,11 @@ export default function BusinessAccount1() {
         {/* Continue Button */}
         <button
           onClick={handleContinue}
-          disabled={isLoading}
-          className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
-            !isLoading ? "bg-white hover:opacity-90" : "bg-[#D1D1D6] cursor-not-allowed"
-          }`}
+          className="flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg bg-white transition-opacity hover:opacity-90"
         >
-          {isLoading ? (
-            <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
-          ) : (
-            <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">CONTINUE</span>
-          )}
+          <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">
+            CONTINUE
+          </span>
         </button>
 
         {/* Terms and Conditions */}
