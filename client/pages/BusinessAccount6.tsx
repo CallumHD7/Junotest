@@ -416,10 +416,6 @@ export default function BusinessAccount6() {
         </button>
       </div>
 
-      {/* Home Indicator */}
-      <div className="flex w-full h-10 px-0 py-7 justify-center items-center relative">
-        <div className="w-[100px] h-1 rounded-[100px] bg-white"></div>
-      </div>
 
       {/* Document Authorization Modal */}
       {showModal && (
