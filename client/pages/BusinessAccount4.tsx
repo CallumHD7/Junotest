@@ -21,7 +21,8 @@ export default function BusinessAccount4() {
   };
 
   const handleSkip = () => {
-    navigate("/businessaccount5"); // Next step
+    // Next step not implemented yet; go to dashboard for now
+    navigate("/dashboard_fiat");
   };
 
   const handleFileUpload = (field: string, file: File | null) => {
@@ -36,7 +37,7 @@ export default function BusinessAccount4() {
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      // navigate("/businessaccount5"); // Next step when available
+      navigate("/dashboard_fiat");
     }, 2000);
   };
 
