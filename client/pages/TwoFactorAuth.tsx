@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function TwoFactorAuth() {
   const navigate = useNavigate();
   const [code, setCode] = useState(["", "", "", "", "", ""]);
+  const [focusedIndex, setFocusedIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
@@ -12,7 +13,7 @@ export default function TwoFactorAuth() {
   };
 
   const handleInputChange = (index: number, value: string) => {
-    if (value.length <= 1 && /^\d*$/.test(value)) {
+    if (value.length <= 1 && /^[0-9]*$/.test(value)) {
       const newCode = [...code];
       newCode[index] = value;
       setCode(newCode);
@@ -20,6 +21,7 @@ export default function TwoFactorAuth() {
       // Auto-focus next input
       if (value && index < 5) {
         inputRefs.current[index + 1]?.focus();
+        setFocusedIndex(index + 1);
       }
     }
   };
@@ -27,7 +29,12 @@ export default function TwoFactorAuth() {
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
     if (e.key === "Backspace" && !code[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
+      setFocusedIndex(index - 1);
     }
+  };
+
+  const handleFocus = (index: number) => {
+    setFocusedIndex(index);
   };
 
   const handleVerifyCode = () => {
@@ -51,6 +58,7 @@ export default function TwoFactorAuth() {
   useEffect(() => {
     // Focus first input on mount
     inputRefs.current[0]?.focus();
+    setFocusedIndex(0);
   }, []);
 
   return (
@@ -84,55 +92,60 @@ export default function TwoFactorAuth() {
             {/* Code Input Section */}
             <div className="flex items-center gap-1 self-stretch relative">
               {/* First 3 digits */}
-              {[0, 1, 2].map((index) => (
-                <div
-                  key={index}
-                  className={`flex h-[72px] px-2 py-0.5 flex-col justify-center items-center gap-2 flex-1 rounded-lg ${
-                    code[index] ? "border border-white bg-[#26272B]" : "bg-[#3F3F46]"
-                  } shadow-sm relative`}
-                >
+              {code.slice(0, 3).map((value, index) => (
+                <div key={index} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
                   <input
                     ref={(el) => (inputRefs.current[index] = el)}
-                    type="text"
+                    type="tel"
                     inputMode="numeric"
-                    value={code[index]}
+                    pattern="[0-9]*"
+                    value={value}
                     onChange={(e) => handleInputChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
-                    className={`w-full text-center font-medium text-[52px] leading-[60px] tracking-[-1.04px] bg-transparent border-none outline-none ${
-                      code[index] ? "text-white" : "text-[#A0A0AB]"
+                    onFocus={() => handleFocus(index)}
+                    className={`w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
+                      focusedIndex === index && !value
+                        ? "bg-[#26272B] border-white text-white"
+                        : value
+                        ? "bg-[#26272B] border-white text-white"
+                        : "bg-[#3F3F46] border-transparent text-[#A0A0AB]"
                     }`}
                     maxLength={1}
                   />
                 </div>
               ))}
 
-              {/* Dash separator */}
-              <div className="text-[#A0A0AB] text-center font-medium text-[60px] leading-[72px] tracking-[-1.2px] relative">
+              {/* Separator */}
+              <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] px-1 pb-0">
                 -
               </div>
 
               {/* Last 3 digits */}
-              {[3, 4, 5].map((index) => (
-                <div
-                  key={index}
-                  className={`flex h-[72px] px-2 py-0.5 flex-col justify-center items-center gap-2 flex-1 rounded-lg ${
-                    code[index] ? "border border-white bg-[#26272B]" : "bg-[#3F3F46]"
-                  } shadow-sm relative`}
-                >
-                  <input
-                    ref={(el) => (inputRefs.current[index] = el)}
-                    type="text"
-                    inputMode="numeric"
-                    value={code[index]}
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                    onKeyDown={(e) => handleKeyDown(index, e)}
-                    className={`w-full text-center font-medium text-[52px] leading-[60px] tracking-[-1.04px] bg-transparent border-none outline-none ${
-                      code[index] ? "text-white" : "text-[#A0A0AB]"
-                    }`}
-                    maxLength={1}
-                  />
-                </div>
-              ))}
+              {code.slice(3, 6).map((value, index) => {
+                const actualIndex = index + 3;
+                return (
+                  <div key={actualIndex} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
+                    <input
+                      ref={(el) => (inputRefs.current[actualIndex] = el)}
+                      type="tel"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      value={value}
+                      onChange={(e) => handleInputChange(actualIndex, e.target.value)}
+                      onKeyDown={(e) => handleKeyDown(actualIndex, e)}
+                      onFocus={() => handleFocus(actualIndex)}
+                      className={`w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
+                        focusedIndex === actualIndex && !value
+                          ? "bg-[#26272B] border-white text-white"
+                          : value
+                          ? "bg-[#26272B] border-white text-white"
+                          : "bg-[#3F3F46] border-transparent text-[#A0A0AB]"
+                      }`}
+                      maxLength={1}
+                    />
+                  </div>
+                );
+              })}
             </div>
 
             {/* Verify Button */}
@@ -146,7 +159,7 @@ export default function TwoFactorAuth() {
               {isLoading ? (
                 <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
               ) : (
-                <span className="text-[#18181B] text-center text-sm font-semibold leading-5">
+                <span className="text-[#18181B] text-center text-[14px] font-medium leading-[20px] uppercase">
                   VERIFY CODE
                 </span>
               )}
