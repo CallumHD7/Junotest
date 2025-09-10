@@ -22,8 +22,7 @@ export default function Login() {
   };
 
   const handleSignUp = () => {
-    // Navigate to sign up page (to be implemented)
-    console.log("Navigate to sign up");
+    navigate("/getstarted1");
   };
 
   return (
