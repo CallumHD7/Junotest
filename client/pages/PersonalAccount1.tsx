@@ -133,21 +133,29 @@ export default function PersonalAccount1() {
             <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
               COUNTRY OF RESIDENCE*
             </label>
-            <select
-              value={formData.countryOfResidence}
-              onChange={(e) => handleInputChange("countryOfResidence", e.target.value)}
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
-            >
-              <option value="" className="text-[#A0A0AB]">SELECT YOUR COUNTRY</option>
-              <option value="US">United States</option>
-              <option value="UK">United Kingdom</option>
-              <option value="CA">Canada</option>
-              <option value="AU">Australia</option>
-              <option value="DE">Germany</option>
-              <option value="FR">France</option>
-              <option value="JP">Japan</option>
-              <option value="Other">Other</option>
-            </select>
+            <div className="relative self-stretch">
+              <select
+                value={formData.countryOfResidence}
+                onChange={(e) => handleInputChange("countryOfResidence", e.target.value)}
+                className="flex h-12 px-4 pr-12 justify-between items-center w-full rounded-lg bg-[#3F3F46] text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+              >
+                <option value="" className="text-[#A0A0AB]">SELECT YOUR COUNTRY</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="JP">Japan</option>
+                <option value="Other">Other</option>
+              </select>
+              {/* Chevron Icon */}
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M4 6L8 10L12 6" stroke="#A0A0AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Address Line */}
