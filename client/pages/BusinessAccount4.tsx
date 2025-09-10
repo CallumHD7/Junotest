@@ -83,8 +83,8 @@ export default function BusinessAccount4() {
 
   return (
     <div className="flex flex-col w-full h-screen overflow-y-auto bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
-      {/* Main Content */}
-      <div className="flex px-4 py-6 flex-col items-start gap-7 flex-1 self-stretch relative h-auto flex-grow-0 sm:h-auto sm:flex-1 bg-[rgba(38,39,43,0.95)] sm:bg-transparent">
+      {/* Header Section - Fixed */}
+      <div className="fixed top-0 left-0 right-0 z-20 flex px-4 py-6 flex-col items-start gap-7 bg-[rgba(38,39,43,0.95)] sm:bg-transparent">
         {/* Header Row */}
         <div className="flex justify-between items-center self-stretch relative">
           <button 
@@ -127,7 +127,7 @@ export default function BusinessAccount4() {
       </div>
 
       {/* Form Section */}
-      <div className="flex px-4 py-2 pb-24 flex-col items-start gap-6 flex-1 self-stretch relative">
+      <div className="flex px-4 py-2 pb-24 pt-48 flex-col items-start gap-6 flex-1 self-stretch relative">
         <div className="flex flex-col items-start gap-6 self-stretch relative">
           {/* Info Box */}
           <div className="flex px-3 py-3 items-center gap-3 self-stretch rounded-lg bg-[#333437] sm:bg-transparent relative">
