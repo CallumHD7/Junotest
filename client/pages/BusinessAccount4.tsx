@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function BusinessAccount4() {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<{[key: string]: File | null}>({
     commercialRegistry: null,
     incorporation: null,
@@ -196,18 +195,11 @@ export default function BusinessAccount4() {
       {/* Bottom Section - Fixed */}
       <div className="fixed bottom-0 left-0 right-0 z-10 flex px-4 pt-6 pb-6 flex-col items-start gap-6 border-t border-[#51525C] bg-[#26272B]">
         {/* Continue Button */}
-        <button 
+        <button
           onClick={handleContinue}
-          disabled={isLoading}
-          className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
-            !isLoading ? "bg-white hover:opacity-90" : "bg-[#D1D1D6] cursor-not-allowed"
-          }`}
+          className="flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all bg-white hover:opacity-90"
         >
-          {isLoading ? (
-            <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
-          ) : (
-            <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">CONTINUE</span>
-          )}
+          <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">CONTINUE</span>
         </button>
       </div>
     </div>
