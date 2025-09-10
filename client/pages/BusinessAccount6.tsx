@@ -445,6 +445,56 @@ export default function BusinessAccount6() {
       <div className="flex w-full h-10 px-0 py-7 justify-center items-center relative">
         <div className="w-[100px] h-1 rounded-[100px] bg-white"></div>
       </div>
+
+      {/* Document Authorization Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 bg-black/56">
+          <div className="flex flex-col items-start self-stretch rounded-lg border border-[#51525C] bg-[#26272B] relative max-w-md w-full">
+            {/* Close Button */}
+            <button
+              onClick={handleModalCancel}
+              className="absolute top-5 right-5 w-6 h-6 transition-opacity hover:opacity-70 z-10"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M11.9998 13.4L7.0998 18.3C6.91647 18.4833 6.68314 18.575 6.3998 18.575C6.11647 18.575 5.88314 18.4833 5.6998 18.3C5.51647 18.1167 5.4248 17.8833 5.4248 17.6C5.4248 17.3167 5.51647 17.0833 5.6998 16.9L10.5998 12L5.6998 7.09999C5.51647 6.91665 5.4248 6.68332 5.4248 6.39999C5.4248 6.11665 5.51647 5.88332 5.6998 5.69999C5.88314 5.51665 6.11647 5.42499 6.3998 5.42499C6.68314 5.42499 6.91647 5.51665 7.0998 5.69999L11.9998 10.6L16.8998 5.69999C17.0831 5.51665 17.3165 5.42499 17.5998 5.42499C17.8831 5.42499 18.1165 5.51665 18.2998 5.69999C18.4831 5.88332 18.5748 6.11665 18.5748 6.39999C18.5748 6.68332 18.4831 6.91665 18.2998 7.09999L13.3998 12L18.2998 16.9C18.4831 17.0833 18.5748 17.3167 18.5748 17.6C18.5748 17.8833 18.4831 18.1167 18.2998 18.3C18.1165 18.4833 17.8831 18.575 17.5998 18.575C17.3165 18.575 17.0831 18.4833 16.8998 18.3L11.9998 13.4Z" fill="white"/>
+              </svg>
+            </button>
+
+            {/* Modal Content */}
+            <div className="flex p-5 flex-col items-center gap-6 self-stretch">
+              <div className="flex flex-col items-center gap-4 self-stretch">
+                <h2 className="self-stretch text-white text-[18px] font-semibold leading-[28px] tracking-[0.18px] uppercase text-center">
+                  CONFIRM DOCUMENT AUTHORIZATION
+                </h2>
+                <p className="self-stretch text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase text-center">
+                  BY CLICKING BELOW, YOU CONFIRM THAT YOU HAVE THE LEGAL AUTHORITY TO SHARE THE ATTACHED BUSINESS DOCUMENTS AND THAT YOU ARE AN AUTHORIZED REPRESENTATIVE OF THE ORGANIZATION.
+                </p>
+              </div>
+            </div>
+
+            {/* Modal Actions */}
+            <div className="flex items-start self-stretch">
+              <button
+                onClick={handleModalCancel}
+                className="flex h-14 p-6 flex-col justify-center items-center gap-3 flex-1 border-t border-[#51525C] bg-white/4 transition-opacity hover:opacity-80"
+              >
+                <span className="text-white text-center text-[14px] font-semibold leading-[20px] uppercase">
+                  CANCEL
+                </span>
+              </button>
+              <div className="w-px self-stretch bg-[#51525C]"></div>
+              <button
+                onClick={handleModalConfirm}
+                className="flex h-14 p-6 flex-col justify-center items-center gap-3 flex-1 border-t border-[#51525C] bg-white/4 transition-opacity hover:opacity-80"
+              >
+                <span className="text-white text-center text-[14px] font-semibold leading-[20px] uppercase">
+                  CONFIRM
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
