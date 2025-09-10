@@ -12,7 +12,7 @@ export default function Login2() {
   const userEmail = location.state?.email || "j.smith@gmail.com";
 
   const handleBackClick = () => {
-    navigate("/login");
+    navigate("/welcome");
   };
 
   const handleEditEmail = () => {
