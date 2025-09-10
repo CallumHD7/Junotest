@@ -13,6 +13,7 @@ import GetStarted2 from "./pages/GetStarted2";
 import GetStarted3 from "./pages/GetStarted3";
 import GetStarted4 from "./pages/GetStarted4";
 import SelectAccountType from "./pages/SelectAccountType";
+import BusinessAccount1 from "./pages/BusinessAccount1";
 import PersonalAccount1 from "./pages/PersonalAccount1";
 import PersonalAccount2 from "./pages/PersonalAccount2";
 import PersonalAccount3 from "./pages/PersonalAccount3";
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/getstarted3" element={<GetStarted3 />} />
           <Route path="/getstarted4" element={<GetStarted4 />} />
           <Route path="/select-account-type" element={<SelectAccountType />} />
+          <Route path="/businessaccount1" element={<BusinessAccount1 />} />
           <Route path="/personalaccount1" element={<PersonalAccount1 />} />
           <Route path="/personalaccount2" element={<PersonalAccount2 />} />
           <Route path="/personalaccount3" element={<PersonalAccount3 />} />
