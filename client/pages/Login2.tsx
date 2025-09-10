@@ -166,19 +166,21 @@ export default function Login2() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Footer */}
-          <div className="flex justify-center items-center gap-1 text-center sm:flex-col sm:items-stretch sm:gap-2">
-            <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
-              DON'T HAVE AN ACCOUNT?
-            </span>
-            <button
-              onClick={handleSignUp}
-              className="text-white text-[14px] font-bold uppercase transition-opacity hover:opacity-70 opacity-[0.86252]"
-            >
-              SIGN UP
-            </button>
-          </div>
+      {/* Footer - Positioned at bottom */}
+      <div className="absolute bottom-6 left-0 right-0 px-4 md:px-6">
+        <div className="flex justify-center items-center gap-1 text-center sm:flex-col sm:items-stretch sm:gap-2">
+          <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
+            DON'T HAVE AN ACCOUNT?
+          </span>
+          <button
+            onClick={handleSignUp}
+            className="text-white text-[14px] font-bold uppercase transition-opacity hover:opacity-70 opacity-[0.86252]"
+          >
+            SIGN UP
+          </button>
         </div>
       </div>
 
