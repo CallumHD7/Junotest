@@ -67,7 +67,7 @@ export default function Login() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="ENTER YOUR EMAIL"
-                    className="h-12 px-4 bg-[#3F3F46] rounded-lg border border-transparent outline-none text-white text-sm placeholder-[#A0A0AB] uppercase font-medium focus:border-[#A0A0AB] transition-colors"
+                    className="h-12 px-4 bg-[#3F3F46] rounded-lg border border-transparent outline-none text-white text-sm sm:text-base placeholder-[#A0A0AB] uppercase font-medium focus:border-[#A0A0AB] transition-colors"
                   />
                 </div>
 
