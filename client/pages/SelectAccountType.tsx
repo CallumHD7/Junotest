@@ -114,7 +114,7 @@ export default function SelectAccountType() {
 
           {/* Footer - Log In Link */}
           <div className="flex justify-center flex-col items-center gap-2 self-stretch relative">
-            <span className="text-[#A0A0AB] text-xs font-medium leading-4 uppercase">
+            <span className="text-[#A0A0AB] text-xs font-medium leading-4 uppercase text-center">
               Already have an account?
             </span>
             <button 
