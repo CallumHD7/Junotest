@@ -98,7 +98,7 @@ export default function PersonalAccount3() {
                   <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                     Password
                   </label>
-                  <div className="flex h-12 px-4 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+                  <div className="flex h-12 px-4 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                     <input
                       type={showPassword ? "text" : "password"}
                       value={formData.password}
@@ -118,7 +118,7 @@ export default function PersonalAccount3() {
                   <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                     Password
                   </label>
-                  <div className="flex h-12 px-4 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+                  <div className="flex h-12 px-4 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                     <input
                       type={showConfirmPassword ? "text" : "password"}
                       value={formData.confirmPassword}
