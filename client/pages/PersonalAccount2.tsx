@@ -130,7 +130,7 @@ export default function PersonalAccount2() {
               ))}
 
               {/* Separator */}
-              <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] px-1 pb-2 sm:pb-0">
+              <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] px-1 pb-0">
                 -
               </div>
 
