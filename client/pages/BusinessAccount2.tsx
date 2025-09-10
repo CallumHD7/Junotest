@@ -37,7 +37,7 @@ export default function BusinessAccount2() {
     if (otpCode.length === 6) {
       console.log("OTP submitted:", otpCode);
       // Navigate to next step in business account flow
-      // navigate("/businessaccount3"); // Will be created in next step
+      navigate("/businessaccount3");
     }
   };
 
