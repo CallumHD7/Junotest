@@ -28,6 +28,7 @@ import Dashboard_Fiat from "./pages/Dashboard_Fiat";
 import Login from "./pages/Login";
 import Login2 from "./pages/Login2";
 import ForgotPassword from "./pages/ForgotPassword";
+import TwoFactorAuth from "./pages/TwoFactorAuth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/login2" element={<Login2 />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/two-factor-auth" element={<TwoFactorAuth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
