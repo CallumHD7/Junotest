@@ -98,7 +98,7 @@ export default function BusinessAccount2() {
               <h1 className="self-stretch text-white font-semibold text-2xl leading-normal uppercase">
                 VERIFY BUSINESS EMAIL
               </h1>
-              <p className="self-stretch text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase">
+              <p className="self-stretch text-[#D1D1D6] text-sm font-medium leading-5 uppercase">
                 <span className="text-[#D1D1D6] font-normal">WE SENT IT TO </span>
                 <span className="text-white font-bold">{email.toUpperCase()}</span>
                 <span className="text-[#D1D1D6] font-normal">.</span>
