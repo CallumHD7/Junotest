@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function BusinessAccount2() {
