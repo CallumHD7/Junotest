@@ -406,7 +406,9 @@ export default function BusinessAccount6() {
                 <select
                   value={formData.fxPairs}
                   onChange={(e) => handleInputChange("fxPairs", e.target.value)}
-                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className={`flex-1 bg-transparent text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none ${
+                    formData.fxPairs ? "text-white" : "text-[#A0A0AB]"
+                  }`}
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT MAIN FX PAIRS</option>
                   <option value="usd-eur" className="bg-[#3F3F46] text-white">USD/EUR</option>
