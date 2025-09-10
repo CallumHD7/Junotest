@@ -106,53 +106,62 @@ export default function BusinessAccount2() {
             </div>
 
             {/* OTP Input Section */}
-            <div className="flex items-center gap-1 self-stretch relative">
+            <div className="flex items-center gap-1 sm:gap-1 self-stretch relative">
               {/* First 3 digits */}
-              {otp.slice(0, 3).map((digit, index) => (
-                <div key={index} className="flex-1">
+              {otpValues.slice(0, 3).map((value, index) => (
+                <div key={index} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
                   <input
                     ref={(el) => (inputRefs.current[index] = el)}
-                    type="text"
+                    type="tel"
                     inputMode="numeric"
                     pattern="[0-9]*"
-                    maxLength={1}
-                    value={digit}
+                    value={value}
                     onChange={(e) => handleOtpChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
-                    className={`w-full h-[72px] px-2 py-1 rounded-lg text-center text-[64px] font-medium leading-[72px] tracking-[-1.04px] border border-transparent outline-none transition-colors ${
-                      digit 
-                        ? "bg-[#26272B] text-white border-white" 
-                        : "bg-[#3F3F46] text-[#A0A0AB] focus:border-white focus:bg-[#26272B] focus:text-white"
+                    onFocus={() => handleFocus(index)}
+                    className={`otp-input w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
+                      focusedIndex === index && !value
+                        ? "bg-[#26272B] border-white text-white"
+                        : value
+                        ? "bg-[#26272B] border-white text-white"
+                        : "bg-[#3F3F46] border-transparent text-[#A0A0AB]"
                     }`}
+                    maxLength={1}
                   />
                 </div>
               ))}
-              
-              {/* Dash separator */}
-              <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] px-1">
+
+              {/* Separator */}
+              <div className="text-[#A0A0AB] text-center text-[60px] font-medium leading-[72px] tracking-[-1.2px] px-1 pb-2 sm:pb-0">
                 -
               </div>
-              
+
               {/* Last 3 digits */}
-              {otp.slice(3, 6).map((digit, index) => (
-                <div key={index + 3} className="flex-1">
-                  <input
-                    ref={(el) => (inputRefs.current[index + 3] = el)}
-                    type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    maxLength={1}
-                    value={digit}
-                    onChange={(e) => handleOtpChange(index + 3, e.target.value)}
-                    onKeyDown={(e) => handleKeyDown(index + 3, e)}
-                    className={`w-full h-[72px] px-2 py-1 rounded-lg text-center text-[64px] font-medium leading-[72px] tracking-[-1.04px] border border-transparent outline-none transition-colors ${
-                      digit 
-                        ? "bg-[#26272B] text-white border-white" 
-                        : "bg-[#3F3F46] text-[#A0A0AB] focus:border-white focus:bg-[#26272B] focus:text-white"
-                    }`}
-                  />
-                </div>
-              ))}
+              {otpValues.slice(3, 6).map((value, index) => {
+                const actualIndex = index + 3;
+                return (
+                  <div key={actualIndex} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
+                    <input
+                      ref={(el) => (inputRefs.current[actualIndex] = el)}
+                      type="tel"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      value={value}
+                      onChange={(e) => handleOtpChange(actualIndex, e.target.value)}
+                      onKeyDown={(e) => handleKeyDown(actualIndex, e)}
+                      onFocus={() => handleFocus(actualIndex)}
+                      className={`otp-input w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
+                        focusedIndex === actualIndex && !value
+                          ? "bg-[#26272B] border-white text-white"
+                          : value
+                          ? "bg-[#26272B] border-white text-white"
+                          : "bg-[#3F3F46] border-transparent text-[#A0A0AB]"
+                      }`}
+                      maxLength={1}
+                    />
+                  </div>
+                );
+              })}
             </div>
 
             {/* Submit Button */}
