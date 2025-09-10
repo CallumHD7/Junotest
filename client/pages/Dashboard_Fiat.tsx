@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard_Fiat() {
   const [selectedTab, setSelectedTab] = useState("home");
   const [selectedView, setSelectedView] = useState("fiat");
+  const navigate = useNavigate();
 
   // Mock data for the dashboard
   const balances = [
@@ -184,7 +186,7 @@ export default function Dashboard_Fiat() {
             </span>
           </button>
           <button
-            onClick={() => setSelectedView("crypto")}
+            onClick={() => navigate("/dashboard-crypto")}
             className={`flex px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] ${
               selectedView === "crypto"
                 ? "bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border border-black/[0.04]"
