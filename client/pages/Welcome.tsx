@@ -101,7 +101,7 @@ export default function Welcome() {
               onClick={handleGetStarted}
               className="w-full h-12 bg-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
             >
-              <span className="text-[#18181B] text-[14px] font-medium leading-[20px] uppercase">
+              <span className="text-[#18181B] text-[14px] font-medium leading-[20px] uppercase font-sans">
                 GET STARTED
               </span>
             </button>
