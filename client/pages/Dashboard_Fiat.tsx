@@ -63,7 +63,7 @@ export default function Dashboard_Fiat() {
       sort: "12-34-56"
     },
     {
-      flag: "🇺🇸",
+      flag: "��🇸",
       name: "Emma Romano",
       swift: "NWBKGB2L"
     },
@@ -292,7 +292,7 @@ export default function Dashboard_Fiat() {
       </div>
 
       {/* Content Wrapper */}
-      <div className="flex flex-col p-1 gap-1 border-t border-black/12 bg-[#F4F4F5] -mt-4 relative z-10 overflow-hidden sm:overflow-visible">
+      <div className="flex flex-col p-1 gap-1 border-t border-black/12 bg-[#F4F4F5] -mt-4 relative z-10 overflow-visible">
         {/* Balances Section */}
         <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1">
           <div className="flex p-3 items-center gap-1">
