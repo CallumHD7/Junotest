@@ -61,7 +61,7 @@ export default function Welcome() {
       
 
       {/* Main Content Container */}
-      <div className={`relative z-10 flex flex-col justify-between min-h-[662px] sm:min-h-[664px] flex-none sm:flex-1 h-[100vh] sm:min-h-screen mr-[-1px] sm:mr-0 mt-auto sm:mt-0 px-4 py-6 md:p-6 transition-all duration-1000 ease-out ${
+      <div className={`relative z-10 flex flex-col justify-between min-h-[664px] flex-1 h-[100vh] min-h-screen mr-0 mt-0 px-4 py-6 transition-all duration-1000 ease-out ${
         isWelcomeVisible 
           ? 'opacity-100 transform translate-y-0' 
           : 'opacity-0 transform translate-y-8'
@@ -84,7 +84,7 @@ export default function Welcome() {
         </div>
 
         {/* Bottom Section with Content */}
-        <div className="flex flex-col gap-12 mt-auto sm:mt-0 items-start justify-end flex-1 sm:items-stretch sm:justify-start sm:flex-none">
+        <div className="flex flex-col gap-12 mt-0 items-stretch justify-start flex-none">
           {/* Text Content */}
           <div className="flex flex-col gap-4">
             <h1 className="text-white text-[44px] sm:text-[42px] font-semibold leading-[48px] sm:leading-[44px] uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-1.05px' }}>
