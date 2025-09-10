@@ -19,6 +19,7 @@ export default function BusinessAccount1() {
   const handleBack = () => {
     navigate("/select-account-type");
   };
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
@@ -30,7 +31,11 @@ export default function BusinessAccount1() {
   const handleContinue = () => {
     // Validate form and proceed to next step
     console.log("Business form data:", formData);
-    navigate("/businessaccount2");
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate("/businessaccount2");
+    }, 2000);
   };
 
   return (
@@ -213,13 +218,18 @@ export default function BusinessAccount1() {
       {/* Bottom Section - Sticky */}
       <div className="sticky bottom-0 left-0 right-0 z-40 flex px-4 pt-6 pb-6 sm:pb-2 flex-col items-start gap-6 self-stretch border-t border-[#51525C] bg-[#26272B]">
         {/* Continue Button */}
-        <button 
+        <button
           onClick={handleContinue}
-          className="flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg bg-white transition-opacity hover:opacity-90"
+          disabled={isLoading}
+          className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
+            !isLoading ? "bg-white hover:opacity-90" : "bg-[#D1D1D6] cursor-not-allowed"
+          }`}
         >
-          <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">
-            CONTINUE
-          </span>
+          {isLoading ? (
+            <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
+          ) : (
+            <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">CONTINUE</span>
+          )}
         </button>
 
         {/* Terms and Conditions */}
