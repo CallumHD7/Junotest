@@ -314,7 +314,9 @@ export default function BusinessAccount6() {
                 <select
                   value={formData.outboundJurisdictions}
                   onChange={(e) => handleInputChange("outboundJurisdictions", e.target.value)}
-                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className={`flex-1 bg-transparent text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none ${
+                    formData.outboundJurisdictions ? "text-white" : "text-[#A0A0AB]"
+                  }`}
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="us" className="bg-[#3F3F46] text-white">UNITED STATES</option>
