@@ -103,7 +103,7 @@ export default function TwoFactorAuth() {
                     onChange={(e) => handleInputChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
                     onFocus={() => handleFocus(index)}
-                    className={`w-full h-full rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border outline-none transition-all ${
+                    className={`w-full h-full rounded-lg text-center text-[40px] font-medium leading-[48px] tracking-[-0.8px] border outline-none transition-all ${
                       focusedIndex === index && !value
                         ? "bg-[#26272B] border-white text-white"
                         : value
