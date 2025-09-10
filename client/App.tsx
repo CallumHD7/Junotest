@@ -16,6 +16,7 @@ import SelectAccountType from "./pages/SelectAccountType";
 import BusinessAccount1 from "./pages/BusinessAccount1";
 import BusinessAccount2 from "./pages/BusinessAccount2";
 import BusinessAccount3 from "./pages/BusinessAccount3";
+import BusinessAccount4 from "./pages/BusinessAccount4";
 import PersonalAccount1 from "./pages/PersonalAccount1";
 import PersonalAccount2 from "./pages/PersonalAccount2";
 import PersonalAccount3 from "./pages/PersonalAccount3";
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/businessaccount1" element={<BusinessAccount1 />} />
           <Route path="/businessaccount2" element={<BusinessAccount2 />} />
           <Route path="/businessaccount3" element={<BusinessAccount3 />} />
+          <Route path="/businessaccount4" element={<BusinessAccount4 />} />
           <Route path="/personalaccount1" element={<PersonalAccount1 />} />
           <Route path="/personalaccount2" element={<PersonalAccount2 />} />
           <Route path="/personalaccount3" element={<PersonalAccount3 />} />

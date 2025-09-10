@@ -19,7 +19,7 @@ export default function BusinessAccount3() {
       // Simulate API call
       setTimeout(() => {
         setIsLoading(false);
-        // navigate("/businessaccount4"); // Next step when available
+        navigate("/businessaccount4");
       }, 2000);
     }
   };
