@@ -89,7 +89,7 @@ export default function TwoFactorAuth() {
               </p>
             </div>
 
-            {/* Code Input Section */}
+            {/* OTP Input Section */}
             <div className="flex items-center gap-1 self-stretch relative">
               {/* First 3 digits */}
               {code.slice(0, 3).map((value, index) => (
@@ -148,8 +148,8 @@ export default function TwoFactorAuth() {
               })}
             </div>
 
-            {/* Verify Button */}
-            <button 
+            {/* Submit Button */}
+            <button
               onClick={handleVerifyCode}
               disabled={!isCodeComplete || isLoading}
               className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
@@ -159,9 +159,7 @@ export default function TwoFactorAuth() {
               {isLoading ? (
                 <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
               ) : (
-                <span className="text-[#18181B] text-center text-[14px] font-medium leading-[20px] uppercase">
-                  VERIFY CODE
-                </span>
+                <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">VERIFY CODE</span>
               )}
             </button>
           </div>
