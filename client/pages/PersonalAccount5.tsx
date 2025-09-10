@@ -106,7 +106,7 @@ export default function PersonalAccount5() {
       </div>
 
       {/* Scrollable Form Section */}
-      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-8 flex-1 overflow-y-auto relative" style={{marginTop: '200px', marginBottom: '100px'}}>
+      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-8 flex-1 overflow-y-auto relative mt-48 mb-24">
         <div className="flex h-auto flex-col items-start gap-8 self-stretch relative">
           {/* Inbound Section */}
           <div className="flex flex-col items-start gap-6 self-stretch relative">
