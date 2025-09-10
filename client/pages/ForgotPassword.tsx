@@ -103,7 +103,7 @@ export default function ForgotPassword() {
           </div>
 
           {/* Login Link */}
-          <div className="flex justify-center items-center gap-1 self-stretch relative">
+          <div className="flex justify-center items-center gap-1 self-stretch relative flex-col sm:flex-row sm:gap-1 sm:justify-center">
             <span className="text-[#A0A0AB] text-xs font-medium leading-4 uppercase">
               REMEMBERED PASSWORD?
             </span>
