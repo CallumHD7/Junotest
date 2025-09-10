@@ -41,7 +41,7 @@ export default function PersonalAccount4() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Main Content */}
-      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-7 flex-1 self-stretch relative">
+      <div className="flex px-4 py-6 flex-col items-start gap-7 flex-1 self-stretch relative">
         {/* Header with Back and Skip */}
         <div className="flex justify-between items-center self-stretch relative">
           <button 
