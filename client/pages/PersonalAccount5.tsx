@@ -121,7 +121,9 @@ export default function PersonalAccount5() {
                 <select
                   value={formData.inboundTransactions}
                   onChange={(e) => handleInputChange("inboundTransactions", e.target.value)}
-                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                  className={`flex-1 bg-transparent text-sm font-medium leading-5 uppercase border-none outline-none appearance-none ${
+                    formData.inboundTransactions ? "text-white" : "text-[#A0A0AB]"
+                  }`}
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="1-5" className="bg-[#3F3F46] text-white">1-5</option>
