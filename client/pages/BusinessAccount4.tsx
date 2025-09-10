@@ -20,7 +20,7 @@ export default function BusinessAccount4() {
   };
 
   const handleSkip = () => {
-    navigate("/businessaccount5");
+    navigate("/dashboard_fiat");
   };
 
   const handleFileUpload = (field: string, file: File | null) => {

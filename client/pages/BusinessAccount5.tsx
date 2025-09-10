@@ -14,7 +14,7 @@ export default function BusinessAccount5() {
   };
 
   const handleSkip = () => {
-    navigate("/businessaccount6");
+    navigate("/dashboard_fiat");
   };
 
   const handleInputChange = (field: string, value: string) => {

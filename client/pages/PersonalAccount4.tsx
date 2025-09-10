@@ -14,7 +14,7 @@ export default function PersonalAccount4() {
   };
 
   const handleSkip = () => {
-    navigate("/personalaccount5");
+    navigate("/dashboard_fiat");
   };
 
   const handleInputChange = (field: string, value: string) => {

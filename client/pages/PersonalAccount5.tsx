@@ -30,8 +30,6 @@ export default function PersonalAccount5() {
   };
 
   const handleSkip = () => {
-    // Navigate to completion or dashboard
-    console.log("Skipping transaction activity");
     navigate("/dashboard_fiat");
   };
 
