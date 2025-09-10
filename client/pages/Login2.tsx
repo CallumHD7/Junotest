@@ -22,8 +22,8 @@ export default function Login2() {
   const handleLogin = () => {
     // Handle login logic here
     console.log("Login with:", { email: userEmail, password, rememberMe });
-    // Navigate to dashboard or main app
-    navigate("/dashboard");
+    // Navigate to 2FA page for verification
+    navigate("/two-factor-auth");
   };
 
   const handleForgotPassword = () => {
