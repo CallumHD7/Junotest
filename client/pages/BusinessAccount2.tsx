@@ -5,6 +5,7 @@ export default function BusinessAccount2() {
   const navigate = useNavigate();
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [email] = useState("callum@gmail.com"); // This would come from previous form or state
+  const [isLoading, setIsLoading] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleBack = () => {
@@ -35,9 +36,12 @@ export default function BusinessAccount2() {
   const handleSubmit = () => {
     const otpCode = otp.join("");
     if (otpCode.length === 6) {
-      console.log("OTP submitted:", otpCode);
-      // Navigate to next step in business account flow
-      navigate("/businessaccount3");
+      setIsLoading(true);
+      // Simulate API call
+      setTimeout(() => {
+        setIsLoading(false);
+        navigate("/businessaccount3");
+      }, 2000);
     }
   };
 
@@ -144,14 +148,18 @@ export default function BusinessAccount2() {
             </div>
 
             {/* Submit Button */}
-            <button 
+            <button
               onClick={handleSubmit}
-              disabled={otp.join("").length !== 6}
-              className="flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg bg-white transition-opacity hover:opacity-90 disabled:opacity-50"
+              disabled={otp.join("").length !== 6 || isLoading}
+              className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
+                otp.join("").length === 6 && !isLoading ? "bg-white hover:opacity-90" : "bg-[#D1D1D6] cursor-not-allowed"
+              }`}
             >
-              <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">
-                SUBMIT
-              </span>
+              {isLoading ? (
+                <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
+              ) : (
+                <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">SUBMIT</span>
+              )}
             </button>
           </div>
 
