@@ -152,7 +152,7 @@ export default function CreateNewPassword() {
       {/* Password Updated Modal */}
       {showSuccessModal && (
         <div className="fixed inset-0 z-50 flex flex-col justify-center items-center px-2 bg-[rgba(0,0,0,0.56)]" onClick={handleModalClose}>
-          <div className="flex flex-col items-start self-stretch rounded-lg border border-[#51525C] bg-[#26272B] relative" onClick={(e) => e.stopPropagation()}>
+          <div className="flex flex-col items-start self-stretch rounded-lg border border-[#51525C] bg-[#26272B] relative overflow-hidden" onClick={(e) => e.stopPropagation()}>
             {/* Modal Content */}
             <div className="flex p-5 flex-col items-center gap-6 self-stretch relative">
               <div className="flex flex-col items-center gap-4 self-stretch relative">
