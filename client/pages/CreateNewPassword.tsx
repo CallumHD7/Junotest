@@ -149,11 +149,6 @@ export default function CreateNewPassword() {
         </div>
       </div>
 
-      {/* Home Indicator */}
-      <div className="flex w-full h-10 py-7 justify-center items-center flex-shrink-0 relative">
-        <div className="w-[100px] h-1 flex-shrink-0 rounded-[100px] bg-white"></div>
-      </div>
-
       {/* Password Updated Modal */}
       {showSuccessModal && (
         <div className="fixed inset-0 z-50 flex flex-col justify-center items-center px-2 bg-[rgba(0,0,0,0.56)]" onClick={handleModalClose}>
