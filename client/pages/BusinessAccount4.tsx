@@ -127,7 +127,7 @@ export default function BusinessAccount4() {
       </div>
 
       {/* Form Section */}
-      <div className="flex px-4 py-2 pb-24 pt-48 flex-col items-start gap-6 flex-1 self-stretch relative">
+      <div className="flex px-4 py-2 pb-6 pt-48 flex-col items-start gap-6 flex-1 self-stretch relative">
         <div className="flex flex-col items-start gap-6 self-stretch relative mt-9 sm:mt-0">
           {/* Info Box */}
           <div className="flex px-3 py-3 items-center gap-3 self-stretch rounded-lg bg-[#333437] sm:bg-transparent relative">
