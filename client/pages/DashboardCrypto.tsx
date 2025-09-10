@@ -45,9 +45,12 @@ export default function DashboardCrypto() {
 
         {/* Segmented Control */}
         <div className="flex p-0.5 items-center gap-1 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-          <div className="flex w-20 px-4 py-1.5 justify-center items-center gap-2.5 rounded-[7px]">
+          <button
+            onClick={() => navigate("/dashboard_fiat")}
+            className="flex w-20 px-4 py-1.5 justify-center items-center gap-2.5 rounded-[7px]"
+          >
             <span className="text-[#51525C] text-center text-xs font-medium leading-[18px] tracking-[0.06px]">FIAT</span>
-          </div>
+          </button>
           <div className="flex w-20 px-4 py-1.5 justify-center items-center gap-2.5 rounded-[7px] border-[0.5px] border-black/[0.04] bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)]">
             <span className="text-[#18181B] text-center text-xs font-bold leading-[18px] tracking-[0.06px]">CRYPTO</span>
           </div>
