@@ -383,7 +383,9 @@ export default function BusinessAccount6() {
                 <select
                   value={formData.fxUsdValue}
                   onChange={(e) => handleInputChange("fxUsdValue", e.target.value)}
-                  className="flex-1 bg-transparent text-white text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                  className={`flex-1 bg-transparent text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none ${
+                    formData.fxUsdValue ? "text-white" : "text-[#A0A0AB]"
+                  }`}
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="under-1000" className="bg-[#3F3F46] text-white">UNDER $1,000</option>
