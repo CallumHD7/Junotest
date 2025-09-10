@@ -172,9 +172,9 @@ export default function Login2() {
             <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
               DON'T HAVE AN ACCOUNT?
             </span>
-            <button 
+            <button
               onClick={handleSignUp}
-              className="text-white text-[12px] font-bold uppercase transition-opacity hover:opacity-70"
+              className="text-white text-[14px] font-bold uppercase transition-opacity hover:opacity-70 opacity-[0.86252]"
             >
               SIGN UP
             </button>
