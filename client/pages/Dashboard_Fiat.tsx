@@ -163,23 +163,28 @@ export default function Dashboard_Fiat() {
     <div className="w-full min-h-screen bg-[#F4F4F5] flex flex-col pb-[86px]">
 
       {/* Header */}
-      <div className="flex justify-between items-center w-full h-13 px-4 py-2.5 relative">
+      <div className="flex justify-between items-center w-full h-[52px] px-4 py-[15px] relative bg-white rounded-b-[4px]">
         {/* Juno Logo */}
         <div className="flex items-center">
-          <span className="text-[#18181B] text-[20px] font-semibold">juno</span>
+          <svg width="48" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35.7188 11.3464C35.7188 7.35977 38.2487 4.57422 42.0054 4.57422C45.6599 4.57422 48.1643 7.28311 48.1643 11.3209C48.1643 15.3587 45.6599 18.0676 41.9799 18.0676C38.2999 18.0676 35.7188 15.3587 35.7188 11.3464ZM38.351 11.3464C38.351 13.9276 39.8587 15.5887 41.9543 15.5887C44.0754 15.5887 45.5321 13.9276 45.5321 11.3209C45.5321 8.73977 44.1265 7.02755 42.0054 7.02755C39.8843 7.02755 38.351 8.73977 38.351 11.3464Z" fill="#18181B"/>
+            <path d="M22.7031 4.95755H25.3865V8.22866C25.9231 5.95422 27.5331 4.57422 29.7565 4.57422C32.4909 4.57422 33.7176 6.69533 33.7176 9.78755V17.6587H31.0342V10.7076C31.0342 8.20311 30.2165 6.84866 28.3765 6.84866C26.6387 6.84866 25.4631 8.04978 25.3865 9.88977V17.6587H22.7031V4.95755Z" fill="#18181B"/>
+            <path d="M20.0301 4.98438V17.6599H17.3467V14.4399C16.7845 16.6888 15.1745 18.0433 12.9767 18.0433C10.2678 18.0433 9.01562 15.9222 9.01562 12.8299V4.98438H11.699V11.9099C11.699 14.4399 12.5167 15.7688 14.3567 15.7688C16.0434 15.7688 17.219 14.6444 17.3467 12.881V4.98438H20.0301Z" fill="#18181B"/>
+            <path d="M3.75667 0H6.59333V2.81111H3.75667V0ZM3.83333 4.98333H6.51667V18.0933C6.51667 20.8022 5.52 23 2.78556 23C1.45667 23 0.613333 22.3867 0 21.7989L0.971111 19.5756C1.38 20.0867 1.76333 20.4956 2.45333 20.4956C3.78222 20.4956 3.83333 19.0389 3.83333 17.1478V4.98333Z" fill="#18181B"/>
+          </svg>
         </div>
 
-        {/* FIAT/CRYPTO Toggle */}
-        <div className="flex p-0.5 items-center gap-1 rounded-lg bg-[#E4E4E7]">
+        {/* FIAT/CRYPTO Segmented Picker */}
+        <div className="inline-flex p-[2px] items-center gap-1 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
           <button
             onClick={() => setSelectedView("fiat")}
-            className={`flex px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] ${
+            className={`flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] ${
               selectedView === "fiat"
-                ? "bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border border-black/[0.04]"
+                ? "bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border-[0.5px] border-black/[0.04]"
                 : ""
             }`}
           >
-            <span className={`text-center text-xs font-bold leading-[18px] tracking-[0.06px] ${
+            <span className={`text-center font-inter text-xs font-bold leading-[18px] tracking-[0.06px] ${
               selectedView === "fiat" ? "text-[#18181B]" : "text-[#51525C]"
             }`}>
               FIAT
@@ -187,26 +192,27 @@ export default function Dashboard_Fiat() {
           </button>
           <button
             onClick={() => navigate("/dashboard-crypto")}
-            className={`flex px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] ${
+            className={`flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] ${
               selectedView === "crypto"
-                ? "bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border border-black/[0.04]"
+                ? "bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border-[0.5px] border-black/[0.04]"
                 : ""
             }`}
           >
-            <span className={`text-center text-xs font-medium leading-[18px] tracking-[0.06px] ${
-              selectedView === "crypto" ? "text-[#18181B]" : "text-[#51525C]"
-            }`}>
+            <span className={`text-center font-inter text-xs ${
+              selectedView === "crypto" ? "text-[#18181B] font-bold" : "text-[#51525C] font-medium"
+            } leading-[18px] tracking-[0.06px]`}>
               CRYPTO
             </span>
           </button>
         </div>
 
-        {/* Profile Icon */}
-        <div className="w-8 h-8 rounded-full bg-[#E4E4E7] flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
-            <path d="M21.3307 13.3333C21.3307 14.7478 20.7688 16.1044 19.7686 17.1046C18.7684 18.1048 17.4119 18.6667 15.9974 18.6667C14.5829 18.6667 13.2264 18.1048 12.2262 17.1046C11.226 16.1044 10.6641 14.7478 10.6641 13.3333C10.6641 11.9188 11.226 10.5623 12.2262 9.5621C13.2264 8.5619 14.5829 8 15.9974 8C17.4119 8 18.7684 8.5619 19.7686 9.5621C20.7688 10.5623 21.3307 11.9188 21.3307 13.3333Z" fill="#18181B"/>
-            <path fillRule="evenodd" clipRule="evenodd" d="M15.4534 29.324C8.34206 29.0386 2.66406 23.1826 2.66406 16.0013C2.66406 8.6373 8.6334 2.66797 15.9974 2.66797C23.3614 2.66797 29.3307 8.6373 29.3307 16.0013C29.3307 23.3653 23.3614 29.3346 15.9974 29.3346C15.9365 29.335 15.8756 29.335 15.8147 29.3346C15.6941 29.3346 15.5734 29.3306 15.4534 29.324ZM7.4414 24.4146C7.34171 24.1283 7.30777 23.8233 7.34212 23.5221C7.37646 23.2209 7.4782 22.9313 7.63978 22.6748C7.80136 22.4183 8.01864 22.2015 8.27548 22.0405C8.53232 21.8794 8.82213 21.7783 9.1234 21.7446C14.3207 21.1693 17.7061 21.2213 22.8781 21.7566C23.1797 21.7881 23.4703 21.8879 23.7275 22.0486C23.9848 22.2092 24.202 22.4265 24.3626 22.6838C24.5232 22.9411 24.6229 23.2316 24.6543 23.5333C24.6856 23.835 24.6477 24.1398 24.5434 24.4246C26.76 22.1819 28.0014 19.1546 27.9974 16.0013C27.9974 9.37397 22.6247 4.0013 15.9974 4.0013C9.37006 4.0013 3.9974 9.37397 3.9974 16.0013C3.9974 19.2786 5.3114 22.2493 7.4414 24.4146Z" fill="#18181B"/>
+        {/* Notification Bell */}
+        <div className="w-6 h-6 flex-shrink-0 relative">
+          <svg width="18" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-[3px] top-[2px]">
+            <path d="M19.0231 14.6102C18.4894 13.691 17.6961 11.0899 17.6961 7.69264C17.6961 5.65242 16.8857 3.69577 15.443 2.25312C14.0004 0.810472 12.0437 0 10.0035 0C7.96328 0 6.00662 0.810472 4.56397 2.25312C3.12132 3.69577 2.31085 5.65242 2.31085 7.69264C2.31085 11.0909 1.51659 13.691 0.982909 14.6102C0.846625 14.844 0.774375 15.1095 0.773447 15.38C0.772518 15.6505 0.842943 15.9165 0.977619 16.1512C1.1123 16.3858 1.30646 16.5808 1.54053 16.7164C1.77461 16.8521 2.04031 16.9236 2.31085 16.9238H6.23506C6.41254 17.7923 6.88453 18.5728 7.57121 19.1333C8.25788 19.6938 9.11708 20 10.0035 20C10.8899 20 11.7491 19.6938 12.4358 19.1333C13.1224 18.5728 13.5944 17.7923 13.7719 16.9238H17.6961C17.9666 16.9234 18.2322 16.8518 18.4661 16.7161C18.7001 16.5804 18.8941 16.3854 19.0286 16.1508C19.1632 15.9161 19.2335 15.6502 19.2326 15.3798C19.2316 15.1093 19.1594 14.8439 19.0231 14.6102ZM10.0035 18.4623C9.52638 18.4622 9.06103 18.3142 8.67151 18.0386C8.28199 17.7631 7.98744 17.3736 7.8284 16.9238H12.1786C12.0195 17.3736 11.725 17.7631 11.3355 18.0386C10.946 18.3142 10.4806 18.4622 10.0035 18.4623ZM2.31085 15.3853C3.05127 14.1121 3.84938 11.162 3.84938 7.69264C3.84938 6.06047 4.49776 4.49515 5.65188 3.34103C6.806 2.18691 8.37132 1.53853 10.0035 1.53853C11.6357 1.53853 13.201 2.18691 14.3551 3.34103C15.5092 4.49515 16.1576 6.06047 16.1576 7.69264C16.1576 11.1591 16.9538 14.1093 17.6961 15.3853H2.31085Z" fill="#18181B"/>
           </svg>
+          {/* Notification Dot */}
+          <div className="absolute top-[1px] right-0 w-2 h-2 flex-shrink-0 rounded-full border border-white bg-[#F04438]"></div>
         </div>
       </div>
 
