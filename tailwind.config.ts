@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(186.51% 100% at 50.13% 0%, var(--tw-gradient-stops))',
       },
