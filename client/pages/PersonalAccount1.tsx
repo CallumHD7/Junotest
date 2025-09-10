@@ -36,7 +36,7 @@ export default function PersonalAccount1() {
   return (
     <div className="flex flex-col w-full h-screen overflow-y-auto bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Main Content */}
-      <div className="sticky top-0 z-30 flex px-4 py-6 md:p-6 flex-col items-start gap-7 self-stretch bg-[#26272B] sm:bg-[#26272B]/95">
+      <div className="sticky top-0 z-30 flex px-4 py-6 flex-col items-start gap-7 self-stretch bg-[#26272B]/95">
         {/* Back Button */}
         <button 
           onClick={handleBack}
@@ -70,7 +70,7 @@ export default function PersonalAccount1() {
       </div>
 
       {/* Form Section */}
-      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-8 flex-1 self-stretch relative">
+      <div className="flex px-4 py-6 flex-col items-start gap-8 flex-1 self-stretch relative">
         <div className="flex flex-col items-start gap-6 self-stretch relative">
           {/* Full Name */}
           <div className="flex flex-col items-start gap-2 self-stretch relative">
