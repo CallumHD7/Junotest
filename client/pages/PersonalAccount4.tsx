@@ -96,7 +96,7 @@ export default function PersonalAccount4() {
                     <select
                       value={formData.accountPurpose}
                       onChange={(e) => handleInputChange("accountPurpose", e.target.value)}
-                      className="flex-1 bg-transparent text-[#A0A0AB] text-base font-medium leading-5 uppercase border-none outline-none appearance-none"
+                      className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
                     >
                       <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT REASON OPENING ACCOUNT</option>
                       <option value="personal-savings" className="bg-[#3F3F46] text-white">PERSONAL SAVINGS</option>
@@ -119,7 +119,7 @@ export default function PersonalAccount4() {
                       value={formData.fundFlow}
                       onChange={(e) => handleInputChange("fundFlow", e.target.value)}
                       placeholder="ENTER TEXT HERE"
-                      className="flex-1 bg-transparent text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none resize-none"
+                      className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none resize-none"
                       rows={3}
                     />
                   </div>
@@ -135,7 +135,7 @@ export default function PersonalAccount4() {
                       value={formData.sourceOfFunds}
                       onChange={(e) => handleInputChange("sourceOfFunds", e.target.value)}
                       placeholder="ENTER TEXT HERE"
-                      className="flex-1 bg-transparent text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none resize-none"
+                      className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none resize-none"
                       rows={3}
                     />
                   </div>
