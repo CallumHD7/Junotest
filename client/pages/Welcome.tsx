@@ -87,7 +87,7 @@ export default function Welcome() {
         <div className="flex flex-col gap-12 mt-0 items-stretch justify-start flex-none">
           {/* Text Content */}
           <div className="flex flex-col gap-4">
-            <h1 className="text-white text-[44px] sm:text-[42px] font-semibold leading-[48px] sm:leading-[44px] uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-1.05px' }}>
+            <h1 className="text-white text-[42px] font-semibold leading-[44px] uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-1.05px' }}>
               JUNO FOR PEOPLE AND COMPANIES
             </h1>
             <p className="text-[#D1D1D6] text-[16px] font-medium leading-[20px] uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -96,7 +96,7 @@ export default function Welcome() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col gap-3 w-full sm:w-auto">
+          <div className="flex flex-col gap-3 w-full">
             <button 
               onClick={handleGetStarted}
               className="w-full h-12 bg-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
