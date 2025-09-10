@@ -179,7 +179,7 @@ export default function CreateNewPassword() {
             <div className="flex items-start self-stretch relative">
               <button
                 onClick={handleReturnToLogin}
-                className="flex h-14 p-6 flex-col justify-center items-center gap-3 flex-1 border-t border-[#51525C] bg-[rgba(255,255,255,0.04)] transition-opacity hover:opacity-80"
+                className="flex h-14 p-6 flex-col justify-center items-center gap-3 flex-1 border-t border-[#51525C] bg-[#2F3033] sm:bg-[rgba(255,255,255,0.04)] transition-opacity hover:opacity-80"
               >
                 <span className="text-white text-center text-sm font-semibold leading-5">
                   RETURN TO LOG IN
