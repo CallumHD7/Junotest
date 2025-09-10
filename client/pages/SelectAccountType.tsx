@@ -49,6 +49,10 @@ export default function SelectAccountType() {
 
             {/* Account Type Cards */}
             <div className="flex flex-col justify-center items-start gap-2 self-stretch relative">
+              {/* Title */}
+              <h2 className="text-white text-base font-semibold leading-6 font-['Inter']">
+                Choose Your Account
+              </h2>
               {/* Personal Account Card */}
               <button
                 onClick={handlePersonalAccount}
