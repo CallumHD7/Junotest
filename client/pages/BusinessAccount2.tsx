@@ -68,7 +68,7 @@ export default function BusinessAccount2() {
   return (
     <div className="flex flex-col w-full h-screen overflow-y-auto bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Header Section */}
-      <div className="flex px-4 py-6 md:p-6 flex-col items-start gap-7 flex-1 self-stretch relative">
+      <div className="flex px-4 py-6 flex-col items-start gap-7 flex-1 self-stretch relative">
         {/* Back Button */}
         <button 
           onClick={handleBack}
@@ -106,7 +106,7 @@ export default function BusinessAccount2() {
             </div>
 
             {/* OTP Input Section */}
-            <div className="flex items-center gap-1 sm:gap-1 self-stretch relative">
+            <div className="flex items-center gap-1 self-stretch relative">
               {/* First 3 digits */}
               {otpValues.slice(0, 3).map((value, index) => (
                 <div key={index} className="flex h-[72px] flex-col justify-center items-center gap-2 flex-1 relative">
