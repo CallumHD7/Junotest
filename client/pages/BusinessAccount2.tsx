@@ -95,7 +95,7 @@ export default function BusinessAccount2() {
           <div className="flex flex-col items-start gap-8 self-stretch relative">
             {/* Header */}
             <div className="flex flex-col items-start gap-3 self-stretch relative">
-              <h1 className="self-stretch text-white text-[24px] font-semibold leading-[28px] uppercase">
+              <h1 className="self-stretch text-white font-semibold text-2xl leading-normal uppercase">
                 VERIFY BUSINESS EMAIL
               </h1>
               <p className="self-stretch text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase">
