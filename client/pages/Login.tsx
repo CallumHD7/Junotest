@@ -82,7 +82,7 @@ export default function Login() {
                   }`}
                 >
                   <span className={`text-[14px] font-bold uppercase ${
-                    email.trim() ? "text-[#18181B]" : "text-[#A0A0AB]"
+                    email.trim() ? "text-[#18181B]" : "text-[#D1D1D6]"
                   }`}>
                     CONTINUE
                   </span>
