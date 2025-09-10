@@ -27,8 +27,7 @@ export default function Login2() {
   };
 
   const handleForgotPassword = () => {
-    // Handle forgot password logic here
-    console.log("Forgot password for:", userEmail);
+    navigate("/forgot-password", { state: { email: userEmail } });
   };
 
   const handleSignUp = () => {
