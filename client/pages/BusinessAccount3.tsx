@@ -7,6 +7,7 @@ export default function BusinessAccount3() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleBack = () => {
     navigate("/businessaccount2");
@@ -14,9 +15,12 @@ export default function BusinessAccount3() {
 
   const handleContinue = () => {
     if (password && confirmPassword && password === confirmPassword) {
-      console.log("Password created successfully");
-      // Navigate to next step in business account flow
-      // navigate("/businessaccount4"); // Will be created in next step
+      setIsLoading(true);
+      // Simulate API call
+      setTimeout(() => {
+        setIsLoading(false);
+        // navigate("/businessaccount4"); // Next step when available
+      }, 2000);
     }
   };
 
@@ -118,14 +122,18 @@ export default function BusinessAccount3() {
               </div>
 
               {/* Continue Button */}
-              <button 
+              <button
                 onClick={handleContinue}
-                disabled={!isFormValid}
-                className="flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg bg-white transition-opacity hover:opacity-90 disabled:opacity-50"
+                disabled={!isFormValid || isLoading}
+                className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
+                  isFormValid && !isLoading ? "bg-white hover:opacity-90" : "bg-[#D1D1D6] cursor-not-allowed"
+                }`}
               >
-                <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">
-                  CONTINUE
-                </span>
+                {isLoading ? (
+                  <div className="w-6 h-6 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin"></div>
+                ) : (
+                  <span className="text-[#18181B] text-center text-sm font-semibold leading-5 uppercase">CONTINUE</span>
+                )}
               </button>
             </div>
           </div>
