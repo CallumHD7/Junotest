@@ -217,7 +217,7 @@ export default function Dashboard_Fiat() {
       </div>
 
       {/* Main Section with Background */}
-      <div className="w-full h-[606px] relative bg-cover bg-center bg-no-repeat" style={{
+      <div className="w-full h-[606px] relative bg-cover bg-center bg-no-repeat sm:h-[578px]" style={{
         backgroundImage: `url('https://api.builder.io/api/v1/image/assets/TEMP/6116bee6116639206902abace56bbafb288d1bc5?width=3428')`
       }}>
         {/* Circular Chart */}
