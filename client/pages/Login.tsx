@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div className="relative w-full min-h-screen bg-gradient-radial from-[#26272B] to-[#18181B] overflow-hidden">
       {/* Main Content */}
-      <div className="flex flex-col min-h-screen px-4 py-6 md:p-6">
+      <div className="flex flex-col min-h-screen px-4 py-6">
         {/* Back Button */}
         <button 
           onClick={handleBackClick}
@@ -105,7 +105,7 @@ export default function Login() {
           </div>
 
           {/* Footer */}
-          <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-end sm:gap-1 justify-center text-center mt-auto">
+          <div className="flex flex-col items-stretch gap-2 justify-center text-center mt-auto">
             <span className="text-[#A0A0AB] text-[12px] font-medium uppercase">
               DON'T HAVE AN ACCOUNT?
             </span>
