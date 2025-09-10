@@ -199,7 +199,7 @@ export default function BusinessAccount4() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex px-4 pt-6 pb-6 flex-col items-start gap-6 self-stretch border-t border-[#51525C] relative">
+      <div className="flex px-4 pt-6 pb-6 flex-col items-start gap-6 self-stretch border-t border-[#51525C] relative bg-[#26272B]">
         {/* Continue Button */}
         <button 
           onClick={handleContinue}
