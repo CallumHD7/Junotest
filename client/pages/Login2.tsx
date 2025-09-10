@@ -107,7 +107,7 @@ export default function Login2() {
                       type={showPassword ? "text" : "password"}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="•��••���•••"
+                      placeholder="••••••••"
                       className="w-full h-12 px-4 pr-12 bg-[#3F3F46] rounded-lg border border-transparent focus:border-[#A0A0AB] outline-none text-white text-[14px] placeholder-[#A0A0AB] font-medium transition-colors"
                     />
                     {/* Eye Icon */}
@@ -155,12 +155,12 @@ export default function Login2() {
                 </div>
 
                 {/* Login Button */}
-                <button
+                <button 
                   onClick={handleLogin}
                   disabled={!password.trim()}
                   className={`flex h-12 px-8 py-3 justify-center items-center gap-2 self-stretch rounded-lg transition-all ${
                     password.trim()
-                      ? "bg-white hover:opacity-90"
+                      ? "bg-white hover:opacity-90" 
                       : "bg-[#D1D1D6] cursor-not-allowed"
                   }`}
                 >
