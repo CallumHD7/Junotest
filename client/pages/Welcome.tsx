@@ -87,7 +87,7 @@ export default function Welcome() {
         <div className="flex flex-col gap-12 mt-auto sm:mt-0 items-start justify-end flex-1 sm:items-stretch sm:justify-start sm:flex-none">
           {/* Text Content */}
           <div className="flex flex-col gap-4">
-            <h1 className="text-white text-[40px] font-semibold leading-[44px] uppercase tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+            <h1 className="text-white text-[42px] sm:text-[40px] font-semibold leading-[44px] uppercase tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
               JUNO FOR PEOPLE AND COMPANIES
             </h1>
             <p className="text-[#D1D1D6] text-[16px] font-medium leading-[20px] uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
