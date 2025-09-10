@@ -82,7 +82,7 @@ export default function PersonalAccount1() {
               value={formData.fullName}
               onChange={(e) => handleInputChange("fullName", e.target.value)}
               placeholder="ENTER YOUR FULL NAME"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
 
@@ -96,7 +96,7 @@ export default function PersonalAccount1() {
               value={formData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
               placeholder="ENTER YOUR EMAIL"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
 
@@ -110,7 +110,7 @@ export default function PersonalAccount1() {
               value={formData.phone}
               onChange={(e) => handleInputChange("phone", e.target.value)}
               placeholder="ENTER YOUR PHONE"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
 
@@ -124,7 +124,7 @@ export default function PersonalAccount1() {
               value={formData.dateOfBirth}
               onChange={(e) => handleInputChange("dateOfBirth", e.target.value)}
               placeholder="DD/MM/YYYY"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
 
@@ -171,7 +171,7 @@ export default function PersonalAccount1() {
               value={formData.addressLine}
               onChange={(e) => handleInputChange("addressLine", e.target.value)}
               placeholder="ENTER ADDRESS LINE"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
 
@@ -185,7 +185,7 @@ export default function PersonalAccount1() {
               value={formData.city}
               onChange={(e) => handleInputChange("city", e.target.value)}
               placeholder="ENTER CITY"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
 
@@ -199,7 +199,7 @@ export default function PersonalAccount1() {
               value={formData.stateProvince}
               onChange={(e) => handleInputChange("stateProvince", e.target.value)}
               placeholder="ENTER STATE / PROVINCE / REGION"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
 
@@ -213,7 +213,7 @@ export default function PersonalAccount1() {
               value={formData.zipCode}
               onChange={(e) => handleInputChange("zipCode", e.target.value)}
               placeholder="ENTER ZIP / POSTAL CODE"
-              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-base font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+              className="flex h-12 px-4 justify-between items-center self-stretch rounded-lg bg-[#3F3F46] text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
             />
           </div>
         </div>
