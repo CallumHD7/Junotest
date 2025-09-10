@@ -53,7 +53,7 @@ export default function Login2() {
         </button>
 
         {/* Content Container */}
-        <div className="flex flex-col justify-between h-full">
+        <div className="flex flex-col h-full">
           {/* Header and Form Section */}
           <div className="flex flex-col gap-8">
             {/* Header */}
