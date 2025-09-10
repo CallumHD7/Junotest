@@ -82,11 +82,11 @@ export default function BusinessAccount5() {
                   <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                     ACCOUNT PURPOSE*
                   </label>
-                  <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+                  <div className="flex h-12 px-4 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                     <select
                       value={formData.accountPurpose}
                       onChange={(e) => handleInputChange("accountPurpose", e.target.value)}
-                      className="flex-1 bg-transparent text-[#A0A0AB] text-sm sm:text-base font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                      className="flex-1 bg-transparent text-white text-sm sm:text-base font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                     >
                       <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT REASON</option>
                       <option value="business-operations" className="bg-[#3F3F46] text-white">BUSINESS OPERATIONS</option>
