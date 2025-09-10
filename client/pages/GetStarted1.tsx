@@ -8,7 +8,7 @@ export default function GetStarted1() {
   };
 
   const handleSkip = () => {
-    navigate("/dashboard_fiat");
+    navigate("/select-account-type");
   };
 
   const handleNext = () => {
