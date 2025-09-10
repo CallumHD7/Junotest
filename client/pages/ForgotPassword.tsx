@@ -28,7 +28,7 @@ export default function ForgotPassword() {
 
   const handleModalContinue = () => {
     setShowModal(false);
-    navigate("/login");
+    navigate("/create-new-password");
   };
 
   const handleLogIn = () => {
