@@ -107,7 +107,7 @@ export default function BusinessAccount2() {
                     value={digit}
                     onChange={(e) => handleOtpChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
-                    className={`w-full h-[72px] px-2 py-1 rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border border-transparent outline-none transition-colors ${
+                    className={`w-full h-[72px] px-2 py-1 rounded-lg text-center text-[64px] font-medium leading-[72px] tracking-[-1.04px] border border-transparent outline-none transition-colors ${
                       digit 
                         ? "bg-[#26272B] text-white border-white" 
                         : "bg-[#3F3F46] text-[#A0A0AB] focus:border-white focus:bg-[#26272B] focus:text-white"
@@ -133,7 +133,7 @@ export default function BusinessAccount2() {
                     value={digit}
                     onChange={(e) => handleOtpChange(index + 3, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index + 3, e)}
-                    className={`w-full h-[72px] px-2 py-1 rounded-lg text-center text-[52px] font-medium leading-[60px] tracking-[-1.04px] border border-transparent outline-none transition-colors ${
+                    className={`w-full h-[72px] px-2 py-1 rounded-lg text-center text-[64px] font-medium leading-[72px] tracking-[-1.04px] border border-transparent outline-none transition-colors ${
                       digit 
                         ? "bg-[#26272B] text-white border-white" 
                         : "bg-[#3F3F46] text-[#A0A0AB] focus:border-white focus:bg-[#26272B] focus:text-white"
