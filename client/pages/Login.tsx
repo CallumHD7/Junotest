@@ -72,11 +72,18 @@ export default function Login() {
                 </div>
 
                 {/* Continue Button */}
-                <button 
+                <button
                   onClick={handleContinue}
-                  className="w-full h-12 bg-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
+                  disabled={!email.trim()}
+                  className={`w-full h-12 rounded-lg flex items-center justify-center transition-all ${
+                    email.trim()
+                      ? "bg-white hover:opacity-90 cursor-pointer"
+                      : "bg-[#3F3F46] cursor-not-allowed"
+                  }`}
                 >
-                  <span className="text-[#18181B] text-[14px] font-bold uppercase">
+                  <span className={`text-[14px] font-bold uppercase ${
+                    email.trim() ? "text-[#18181B]" : "text-[#A0A0AB]"
+                  }`}>
                     CONTINUE
                   </span>
                 </button>
