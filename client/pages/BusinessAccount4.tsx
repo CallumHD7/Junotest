@@ -84,7 +84,7 @@ export default function BusinessAccount4() {
   return (
     <div className="flex flex-col w-full h-screen overflow-y-auto bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Header Section - Fixed */}
-      <div className="fixed top-0 left-0 right-0 z-20 flex px-4 py-6 flex-col items-start gap-7 bg-[rgba(38,39,43,0.95)] sm:bg-transparent">
+      <div className="fixed top-0 left-0 right-0 z-20 flex px-4 py-6 flex-col items-start gap-7 bg-[rgba(38,39,43,1)] sm:bg-[rgba(38,39,43,0.95)]">
         {/* Header Row */}
         <div className="flex justify-between items-center self-stretch relative">
           <button 
