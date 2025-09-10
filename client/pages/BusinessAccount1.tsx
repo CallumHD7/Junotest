@@ -30,7 +30,7 @@ export default function BusinessAccount1() {
   const handleContinue = () => {
     // Validate form and proceed to next step
     console.log("Business form data:", formData);
-    // navigate("/businessaccount2"); // Will be created in next step
+    navigate("/businessaccount2");
   };
 
   return (
