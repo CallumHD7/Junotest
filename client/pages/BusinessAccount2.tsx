@@ -167,7 +167,7 @@ export default function BusinessAccount2() {
             {/* Submit Button */}
             <button
               onClick={handleSubmit}
-              disabled={otp.join("").length !== 6 || isLoading}
+              disabled={!isComplete || isLoading}
               className={`flex h-12 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-all ${
                 otp.join("").length === 6 && !isLoading ? "bg-white hover:opacity-90" : "bg-[#D1D1D6] cursor-not-allowed"
               }`}
