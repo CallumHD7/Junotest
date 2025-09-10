@@ -42,15 +42,28 @@ export default function GetStarted1() {
         <div className="flex flex-col items-start gap-12 flex-1 self-stretch relative">
           {/* Main Section */}
           <div className="flex flex-col items-start gap-8 flex-1 self-stretch relative">
-            {/* Mobile Banking Interface */}
-            <div className="flex-1 self-stretch rounded-lg border border-transparent relative flex items-center justify-center min-h-[400px] max-h-[500px] p-4">
-              <div className="relative w-full max-w-[400px] h-full flex items-center justify-center">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F10800d5a2d9b4cc99b25cb4523b8b2d9?format=webp&width=800"
-                  alt="Mobile banking app interface showing currency balances"
-                  className="w-full h-full object-contain max-w-full max-h-full"
-                />
-              </div>
+            {/* Main Graphic - Empty Gradient Box */}
+            <div className="flex-1 self-stretch rounded-lg bg-gradient-to-b from-transparent to-[rgba(26,138,126,0.4)] relative overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F04f6196d4bb54bd2ae553b0a77d452d2?format=webp&width=800"
+                alt=""
+                className="absolute left-0 right-0 bottom-0 top-[28px] w-full h-full object-cover z-0 select-none pointer-events-none scale-[1.6] origin-center translate-y-[40px]"
+                style={{ objectPosition: 'left 48px top 8px' }}
+                aria-hidden="true"
+              />
+              {/* Floating Avatars */}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F3fd48c4c5e374f3481189d7768775ad1?format=webp&width=800"
+                alt=""
+                className="absolute z-20 w-[84px] h-[84px] top-[76px] left-[8px] select-none pointer-events-none drop-shadow-xl animate-[bob_3.6s_ease-in-out_infinite]"
+                                aria-hidden="true"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F0ffd9a45e73b4db08f33194b16f5ad51?format=webp&width=800"
+                alt=""
+                className="absolute z-20 w-[96px] h-[96px] bottom-[-16px] right-[12px] select-none pointer-events-none drop-shadow-xl animate-[bob_4.2s_ease-in-out_infinite]"
+                                aria-hidden="true"
+              />
             </div>
 
             {/* Text Content - Left Aligned */}
