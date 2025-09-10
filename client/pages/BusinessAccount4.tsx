@@ -127,7 +127,7 @@ export default function BusinessAccount4() {
       </div>
 
       {/* Form Section */}
-      <div className="flex px-4 py-2 pb-0 flex-col items-start gap-6 flex-1 self-stretch relative">
+      <div className="flex px-4 py-2 pb-24 flex-col items-start gap-6 flex-1 self-stretch relative">
         <div className="flex flex-col items-start gap-6 self-stretch relative max-h-[399px] overflow-y-auto">
           {/* Info Box */}
           <div className="flex px-3 py-3 items-center gap-3 self-stretch rounded-lg bg-[#333437] sm:bg-transparent relative">
@@ -198,8 +198,8 @@ export default function BusinessAccount4() {
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="flex px-4 pt-6 pb-6 flex-col items-start gap-6 self-stretch border-t border-[#51525C] relative bg-[#26272B]">
+      {/* Bottom Section - Fixed */}
+      <div className="fixed bottom-0 left-0 right-0 z-10 flex px-4 pt-6 pb-6 flex-col items-start gap-6 border-t border-[#51525C] bg-[#26272B]">
         {/* Continue Button */}
         <button 
           onClick={handleContinue}
