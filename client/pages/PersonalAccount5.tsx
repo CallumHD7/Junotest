@@ -299,7 +299,9 @@ export default function PersonalAccount5() {
                 <select
                   value={formData.outboundCurrencies}
                   onChange={(e) => handleInputChange("outboundCurrencies", e.target.value)}
-                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                  className={`flex-1 bg-transparent text-sm font-medium leading-5 uppercase border-none outline-none appearance-none ${
+                    formData.outboundCurrencies ? "text-white" : "text-[#A0A0AB]"
+                  }`}
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="usd" className="bg-[#3F3F46] text-white">USD</option>
