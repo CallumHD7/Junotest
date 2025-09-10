@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function BusinessAccount6() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     // Inbound
     inboundTransactions: "",
