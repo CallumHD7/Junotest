@@ -129,9 +129,18 @@
 
 /* Global button typography - Inter, 14px, medium */
 @layer base {
+  /* Ensure Inter font is the default for the entire app */
+  html,
+  body,
+  * {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji" !important;
+  }
+
+  /* Button-specific typography overrides */
   button,
   .btn,
-  [data-ui-button] {
+  [data-ui-button],
+  [role="button"] {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji" !important;
     font-size: 14px !important;
     font-weight: 500 !important;
@@ -139,15 +148,23 @@
     letter-spacing: 0.02em !important;
   }
 
-  /* Force consistent styling across nested spans/labels */
-  button span,
-  button div,
-  [data-ui-button] span,
-  [data-ui-button] div {
+  /* Force consistent styling across ALL button content */
+  button *,
+  .btn *,
+  [data-ui-button] *,
+  [role="button"] * {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji" !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.02em !important;
+  }
+
+  /* Override any font-semibold or font-bold on buttons */
+  button.font-semibold,
+  button .font-semibold,
+  button.font-bold,
+  button .font-bold {
+    font-weight: 500 !important;
   }
 }
