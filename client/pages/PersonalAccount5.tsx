@@ -61,7 +61,7 @@ export default function PersonalAccount5() {
   return (
     <div className="flex flex-col w-full h-screen bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
       {/* Header Section - Fixed */}
-      <div className="fixed top-0 left-0 right-0 z-10 flex px-4 py-6 flex-col items-start gap-7 bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B]">
+      <div className="fixed top-0 left-0 right-0 z-10 flex px-4 py-6 flex-col items-start gap-7 bg-[#26272B]">
         {/* Header with Back and Skip */}
         <div className="flex justify-between items-center self-stretch relative">
           <button 
