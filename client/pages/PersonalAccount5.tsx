@@ -196,14 +196,20 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Top Jurisdictions you will receive funds from*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
-                <input
-                  type="text"
+              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
+                <select
                   value={formData.inboundJurisdictions}
                   onChange={(e) => handleInputChange("inboundJurisdictions", e.target.value)}
-                  placeholder="SELECT CURRENCIES"
-                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
-                />
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                >
+                  <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT JURISDICTIONS</option>
+                  <option value="usa" className="bg-[#3F3F46] text-white">USA</option>
+                  <option value="uk" className="bg-[#3F3F46] text-white">UK</option>
+                  <option value="eu" className="bg-[#3F3F46] text-white">EU</option>
+                  <option value="canada" className="bg-[#3F3F46] text-white">CANADA</option>
+                  <option value="other" className="bg-[#3F3F46] text-white">OTHER</option>
+                </select>
+                <ChevronDownIcon />
               </div>
             </div>
 
@@ -235,14 +241,19 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Estimated number of outbound transactions per month*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
-                <input
-                  type="text"
+              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
+                <select
                   value={formData.outboundTransactions}
                   onChange={(e) => handleInputChange("outboundTransactions", e.target.value)}
-                  placeholder="SELECT AMOUNT"
-                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
-                />
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                >
+                  <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
+                  <option value="1-5" className="bg-[#3F3F46] text-white">1-5</option>
+                  <option value="6-20" className="bg-[#3F3F46] text-white">6-20</option>
+                  <option value="21-50" className="bg-[#3F3F46] text-white">21-50</option>
+                  <option value="50+" className="bg-[#3F3F46] text-white">50+</option>
+                </select>
+                <ChevronDownIcon />
               </div>
             </div>
 
@@ -251,14 +262,19 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Average USD value of each outbound transaction*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
-                <input
-                  type="text"
+              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
+                <select
                   value={formData.outboundUsdValue}
                   onChange={(e) => handleInputChange("outboundUsdValue", e.target.value)}
-                  placeholder="SELECT AMOUNT"
-                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
-                />
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                >
+                  <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
+                  <option value="under-1000" className="bg-[#3F3F46] text-white">UNDER $1,000</option>
+                  <option value="1000-5000" className="bg-[#3F3F46] text-white">$1,000 - $5,000</option>
+                  <option value="5000-25000" className="bg-[#3F3F46] text-white">$5,000 - $25,000</option>
+                  <option value="25000+" className="bg-[#3F3F46] text-white">$25,000+</option>
+                </select>
+                <ChevronDownIcon />
               </div>
             </div>
 
@@ -267,14 +283,19 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Main outbound currencies*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
-                <input
-                  type="text"
+              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
+                <select
                   value={formData.outboundCurrencies}
                   onChange={(e) => handleInputChange("outboundCurrencies", e.target.value)}
-                  placeholder="SELECT CURRENCIES"
-                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
-                />
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                >
+                  <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
+                  <option value="usd" className="bg-[#3F3F46] text-white">USD</option>
+                  <option value="eur" className="bg-[#3F3F46] text-white">EUR</option>
+                  <option value="gbp" className="bg-[#3F3F46] text-white">GBP</option>
+                  <option value="multiple" className="bg-[#3F3F46] text-white">MULTIPLE</option>
+                </select>
+                <ChevronDownIcon />
               </div>
             </div>
 
