@@ -128,7 +128,7 @@ export default function BusinessAccount4() {
 
       {/* Form Section */}
       <div className="flex px-4 py-2 pb-24 flex-col items-start gap-6 flex-1 self-stretch relative">
-        <div className="flex flex-col items-start gap-6 self-stretch relative max-h-[399px] overflow-y-auto">
+        <div className="flex flex-col items-start gap-6 self-stretch relative">
           {/* Info Box */}
           <div className="flex px-3 py-3 items-center gap-3 self-stretch rounded-lg bg-[#333437] sm:bg-transparent relative">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
