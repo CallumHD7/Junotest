@@ -434,10 +434,10 @@ export default function BusinessAccount6() {
             {/* Modal Content */}
             <div className="flex p-5 flex-col items-center gap-6 self-stretch">
               <div className="flex flex-col items-center gap-4 self-stretch">
-                <h2 className="self-stretch text-white text-[18px] font-semibold leading-[28px] tracking-[0.18px] uppercase text-center">
+                <h2 className="self-start text-white text-[18px] font-semibold leading-[28px] tracking-[0.18px] uppercase text-left sm:self-stretch sm:text-center">
                   CONFIRM DOCUMENT AUTHORIZATION
                 </h2>
-                <p className="self-stretch text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase text-center">
+                <p className="self-stretch text-[#D1D1D6] text-[14px] font-medium leading-[20px] uppercase text-left sm:text-center">
                   BY CLICKING BELOW, YOU CONFIRM THAT YOU HAVE THE LEGAL AUTHORITY TO SHARE THE ATTACHED BUSINESS DOCUMENTS AND THAT YOU ARE AN AUTHORIZED REPRESENTATIVE OF THE ORGANIZATION.
                 </p>
               </div>
