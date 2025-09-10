@@ -117,11 +117,11 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Estimated number of inbound transactions per month*
               </label>
-              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.inboundTransactions}
                   onChange={(e) => handleInputChange("inboundTransactions", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="1-5" className="bg-[#3F3F46] text-white">1-5</option>
@@ -138,11 +138,11 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Average USD value of each inbound transaction*
               </label>
-              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.inboundUsdValue}
                   onChange={(e) => handleInputChange("inboundUsdValue", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT AMOUNT</option>
                   <option value="under-1000" className="bg-[#3F3F46] text-white">UNDER $1,000</option>
@@ -159,11 +159,11 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Main inbound currencies*
               </label>
-              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-3 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <select
                   value={formData.inboundCurrencies}
                   onChange={(e) => handleInputChange("inboundCurrencies", e.target.value)}
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase border-none outline-none appearance-none"
                 >
                   <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT CURRENCIES</option>
                   <option value="usd" className="bg-[#3F3F46] text-white">USD</option>
@@ -180,7 +180,7 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Additional inbound currency requirements
               </label>
-              <div className="flex h-[88px] px-4 py-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-[88px] px-4 py-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <textarea
                   value={formData.additionalInboundRequirements}
                   onChange={(e) => handleInputChange("additionalInboundRequirements", e.target.value)}
@@ -196,13 +196,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Top Jurisdictions you will receive funds from*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.inboundJurisdictions}
                   onChange={(e) => handleInputChange("inboundJurisdictions", e.target.value)}
                   placeholder="SELECT CURRENCIES"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Top entities / individuals that will send funds into your Juno Money Account*
               </label>
-              <div className="flex h-[88px] px-4 pt-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-[88px] px-4 pt-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <textarea
                   value={formData.inboundEntities}
                   onChange={(e) => handleInputChange("inboundEntities", e.target.value)}
@@ -235,13 +235,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Estimated number of outbound transactions per month*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.outboundTransactions}
                   onChange={(e) => handleInputChange("outboundTransactions", e.target.value)}
                   placeholder="SELECT AMOUNT"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
@@ -251,13 +251,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Average USD value of each outbound transaction*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.outboundUsdValue}
                   onChange={(e) => handleInputChange("outboundUsdValue", e.target.value)}
                   placeholder="SELECT AMOUNT"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
@@ -267,13 +267,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Main outbound currencies*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.outboundCurrencies}
                   onChange={(e) => handleInputChange("outboundCurrencies", e.target.value)}
                   placeholder="SELECT CURRENCIES"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Additional outbound currency requirements
               </label>
-              <div className="flex h-[88px] px-4 pt-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-[88px] px-4 pt-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <textarea
                   value={formData.additionalOutboundRequirements}
                   onChange={(e) => handleInputChange("additionalOutboundRequirements", e.target.value)}
@@ -299,13 +299,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Top Jurisdictions you will send funds to*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.outboundJurisdictions}
                   onChange={(e) => handleInputChange("outboundJurisdictions", e.target.value)}
                   placeholder="SELECT CURRENCIES"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Top beneficiaries that will receive funds from your Juno Money*
               </label>
-              <div className="flex h-[88px] px-4 pt-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-[88px] px-4 pt-[14px] justify-between items-start self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <textarea
                   value={formData.outboundBeneficiaries}
                   onChange={(e) => handleInputChange("outboundBeneficiaries", e.target.value)}
@@ -338,13 +338,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Number of FX transactions per month*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.fxTransactions}
                   onChange={(e) => handleInputChange("fxTransactions", e.target.value)}
                   placeholder="SELECT AMOUNT"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
@@ -354,13 +354,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Average USD value of each FX transaction*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.fxUsdValue}
                   onChange={(e) => handleInputChange("fxUsdValue", e.target.value)}
                   placeholder="SELECT AMOUNT"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
@@ -370,13 +370,13 @@ export default function PersonalAccount5() {
               <label className="self-stretch text-[#D1D1D6] text-xs font-medium leading-4 uppercase">
                 Main FX pairs*
               </label>
-              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] relative">
+              <div className="flex h-12 px-3 pr-0 items-center gap-3 self-stretch rounded-lg bg-[#3F3F46] border border-transparent focus-within:border-[#A0A0AB] transition-colors relative">
                 <input
                   type="text"
                   value={formData.fxPairs}
                   onChange={(e) => handleInputChange("fxPairs", e.target.value)}
                   placeholder="SELECT MAIN FX PAIRS"
-                  className="flex-1 bg-transparent text-[#A0A0AB] text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
+                  className="flex-1 bg-transparent text-white text-sm font-medium leading-5 uppercase placeholder-[#A0A0AB] border-none outline-none"
                 />
               </div>
             </div>
