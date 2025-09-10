@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function BusinessAccount2() {
   const navigate = useNavigate();
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
+  const [focusedIndex, setFocusedIndex] = useState(0);
   const [email] = useState("callum@gmail.com"); // This would come from previous form or state
   const [isLoading, setIsLoading] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -13,28 +14,32 @@ export default function BusinessAccount2() {
   };
 
   const handleOtpChange = (index: number, value: string) => {
-    // Only allow single digits
-    if (value.length > 1) return;
-    
-    const newOtp = [...otp];
-    newOtp[index] = value;
-    setOtp(newOtp);
+    if (value.length <= 1 && /^[0-9]*$/.test(value)) {
+      const newOtpValues = [...otpValues];
+      newOtpValues[index] = value;
+      setOtpValues(newOtpValues);
 
-    // Auto-focus next input
-    if (value && index < 5) {
-      inputRefs.current[index + 1]?.focus();
+      // Auto-focus next input
+      if (value && index < 5) {
+        inputRefs.current[index + 1]?.focus();
+        setFocusedIndex(index + 1);
+      }
     }
   };
 
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
-    // Handle backspace to move to previous input
-    if (e.key === "Backspace" && !otp[index] && index > 0) {
+    if (e.key === "Backspace" && !otpValues[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
+      setFocusedIndex(index - 1);
     }
   };
 
+  const handleFocus = (index: number) => {
+    setFocusedIndex(index);
+  };
+
   const handleSubmit = () => {
-    const otpCode = otp.join("");
+    const otpCode = otpValues.join("");
     if (otpCode.length === 6) {
       setIsLoading(true);
       // Simulate API call
@@ -47,15 +52,18 @@ export default function BusinessAccount2() {
 
   const handleResendCode = () => {
     console.log("Resending verification code to:", email);
-    // Reset OTP inputs
-    setOtp(["", "", "", "", "", ""]);
+    // Reset OTP values
+    setOtpValues(["", "", "", "", "", ""]);
+    setFocusedIndex(0);
     inputRefs.current[0]?.focus();
   };
 
   useEffect(() => {
-    // Focus first input on mount
+    // Focus the first input on mount
     inputRefs.current[0]?.focus();
   }, []);
+
+  const isComplete = otpValues.every(value => value !== "");
 
   return (
     <div className="flex flex-col w-full h-screen overflow-y-auto bg-gradient-radial from-[#26272B] via-[#26272B] to-[#18181B] relative">
