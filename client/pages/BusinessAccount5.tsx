@@ -15,7 +15,7 @@ export default function BusinessAccount5() {
   };
 
   const handleSkip = () => {
-    navigate("/dashboard_fiat");
+    navigate("/businessaccount6");
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -30,7 +30,7 @@ export default function BusinessAccount5() {
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      navigate("/dashboard_fiat");
+      navigate("/businessaccount6");
     }, 2000);
   };
 
