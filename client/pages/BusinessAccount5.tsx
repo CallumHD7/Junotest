@@ -86,9 +86,9 @@ export default function BusinessAccount5() {
                     <select
                       value={formData.accountPurpose}
                       onChange={(e) => handleInputChange("accountPurpose", e.target.value)}
-                      className="flex-1 bg-transparent text-[#A0A0AB] text-[14px] font-medium leading-[20px] uppercase border-none outline-none appearance-none"
+                      className="flex-1 bg-transparent text-[#A0A0AB] text-sm sm:text-base font-medium leading-[20px] uppercase border-none outline-none appearance-none"
                     >
-                      <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT REASON OPENING ACCOUNT</option>
+                      <option value="" className="bg-[#3F3F46] text-[#A0A0AB]">SELECT REASON</option>
                       <option value="business-operations" className="bg-[#3F3F46] text-white">BUSINESS OPERATIONS</option>
                       <option value="international-trade" className="bg-[#3F3F46] text-white">INTERNATIONAL TRADE</option>
                       <option value="investment-activities" className="bg-[#3F3F46] text-white">INVESTMENT ACTIVITIES</option>
