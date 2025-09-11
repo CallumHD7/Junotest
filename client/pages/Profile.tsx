@@ -53,9 +53,9 @@ export default function Profile() {
 
       {/* Header */}
       <div className="flex h-[52px] px-4 py-[14px] items-center justify-between bg-white border-b border-black/12 rounded-b-lg">
-        <button 
+        <button
           onClick={handleBack}
-          className="w-6 h-6 transition-opacity hover:opacity-70"
+          className="w-6 h-6"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="#18181B"/>
@@ -84,9 +84,9 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <button 
+          <button
             onClick={handleLogout}
-            className="w-6 h-6 transition-opacity hover:opacity-70"
+            className="w-6 h-6"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M3 21V3H12V5H5V19H12V21H3ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z" fill="#18181B"/>
