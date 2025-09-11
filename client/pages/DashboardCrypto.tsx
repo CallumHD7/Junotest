@@ -355,7 +355,7 @@ export default function DashboardCrypto() {
               </div>
 
               {/* Additional Saved Addresses... */}
-              <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div className="flex w-[calc(50%-0.25rem)] min-w-0 h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
                 <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
                   <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
                     <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
