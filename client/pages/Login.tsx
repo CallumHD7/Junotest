@@ -32,7 +32,7 @@ export default function Login() {
         {/* Back Button */}
         <button 
           onClick={handleBackClick}
-          className="w-6 h-6 mb-6 transition-opacity hover:opacity-70"
+          className="w-6 h-6 mb-6"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
@@ -116,7 +116,7 @@ export default function Login() {
             </span>
             <button
               onClick={handleSignUp}
-              className="text-white text-[12px] font-bold uppercase transition-opacity hover:opacity-70"
+              className="text-white text-[12px] font-bold uppercase"
             >
               SIGN UP
             </button>
