@@ -143,7 +143,7 @@ export default function DashboardCrypto() {
 
 
       {/* Main Content Wrapper */}
-      <div className="flex w-full p-1 flex-col items-start gap-1 rounded-t-[12px] border-t border-black/[0.12] bg-[#F4F4F5] min-h-[2264px]">
+      <div className="flex w-full p-1 flex-col items-start gap-1 rounded-t-[12px] border-t border-black/[0.12] bg-[#F4F4F5]">
         
         {/* Balances Section */}
         <div className="flex flex-col justify-center items-start self-stretch">
