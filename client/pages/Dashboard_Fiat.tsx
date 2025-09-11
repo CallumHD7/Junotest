@@ -299,8 +299,8 @@ export default function Dashboard_Fiat() {
       </div>
 
 
-      {/* Content Wrapper */}
-      <div className="flex flex-col p-1 gap-1 border-t border-black/12 bg-[#F4F4F5] -mt-4 relative z-10 overflow-visible">
+      {/* Main Content Wrapper */}
+      <div className="flex w-full p-1 flex-col items-start gap-1 rounded-t-[12px] border-t border-black/[0.12] bg-[#F4F4F5] min-h-[2264px]">
         {/* Balances Section */}
         <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1">
           <div className="flex p-3 items-center gap-1">
