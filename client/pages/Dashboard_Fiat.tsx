@@ -676,7 +676,7 @@ export default function Dashboard_Fiat() {
         {/* Bank */}
         <button
           onClick={() => navigate("/saved-bank-accounts")}
-          className="flex flex-col justify-center items-center gap-1 flex-1 self-stretch rounded-md"
+          className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg"
         >
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
             <path d="M7 10H5V17H7V10ZM13 10H11V17H13V10ZM21.5 19H2.5V21H21.5V19ZM19 10H17V17H19V10ZM12 3.26L17.21 6H6.79L12 3.26ZM12 1L2.5 6V8H21.5V6L12 1Z" fill="#51525C"/>
