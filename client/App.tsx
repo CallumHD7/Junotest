@@ -31,6 +31,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import TwoFactorAuth from "./pages/TwoFactorAuth";
 import CreateNewPassword from "./pages/CreateNewPassword";
 import DashboardCrypto from "./pages/DashboardCrypto";
+import TransactionHistory from "./pages/TransactionHistory";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
