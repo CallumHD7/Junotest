@@ -293,8 +293,8 @@ export default function TransactionHistory2() {
 
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
-        <button 
-          onClick={() => navigate("/dashboard-crypto")}
+        <button
+          onClick={() => navigate("/dashboard_fiat")}
           className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg"
         >
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
