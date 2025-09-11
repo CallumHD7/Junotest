@@ -160,7 +160,7 @@ export default function Dashboard_Fiat() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col pb-[86px]">
+    <div className="w-full min-h-[714px] bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col">
 
       {/* Main Section with Background - Complete Figma Design */}
       <div className="w-full h-[606px] relative overflow-hidden">
@@ -446,7 +446,7 @@ export default function Dashboard_Fiat() {
         </div>
 
         {/* Saved Bank Accounts */}
-        <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1">
+        <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1 w-full">
           <div className="flex p-3 items-center gap-2">
             <div className="flex items-center gap-1 flex-1">
               <h2 className="text-[#3F3F46] text-sm font-bold leading-5">SAVED BANK ACCOUNTS</h2>
@@ -509,7 +509,7 @@ export default function Dashboard_Fiat() {
         </div>
 
         {/* Transactions */}
-        <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1">
+        <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1 w-full">
           <div className="flex p-3 flex-col gap-3">
             <h2 className="text-[#3F3F46] text-sm font-bold leading-5">TRANSACTIONS</h2>
             
@@ -588,7 +588,7 @@ export default function Dashboard_Fiat() {
         </div>
 
         {/* Statements */}
-        <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1">
+        <div className="flex flex-col bg-white rounded-lg border border-black/12 mb-1 w-full">
           <div className="flex p-3 items-center gap-2">
             <h2 className="flex-1 text-[#3F3F46] text-sm font-bold leading-5">STATEMENTS</h2>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
