@@ -310,7 +310,7 @@ export default function Dashboard_Fiat() {
             </svg>
           </div>
 
-          <div className="flex flex-col gap-1 px-1 pb-1">
+          <div className="flex flex-col items-start gap-1 self-stretch">
             {/* American Dollar */}
             <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
               {/* Background blur effect */}
