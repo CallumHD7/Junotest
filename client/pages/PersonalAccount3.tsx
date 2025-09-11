@@ -38,7 +38,7 @@ export default function PersonalAccount3() {
     <button
       type="button"
       onClick={onClick}
-      className="w-6 h-6 transition-opacity hover:opacity-70"
+      className="w-6 h-6"
     >
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path 
@@ -60,7 +60,7 @@ export default function PersonalAccount3() {
         {/* Back Button */}
         <button 
           onClick={handleBack}
-          className="w-6 h-6 relative transition-opacity hover:opacity-70"
+          className="w-6 h-6 relative"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
