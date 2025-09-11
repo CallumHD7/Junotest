@@ -429,11 +429,8 @@ export default function Dashboard_Fiat() {
             </div>
 
             {/* Australian Dollar */}
-            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
-              {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0091FF] opacity-40 blur-[99.5px]"></div>
-
-              <div className="flex items-center gap-3 relative z-10">
+            <div className="flex p-[18px] px-3 flex-col items-start gap-3 self-stretch rounded-lg border border-black/[0.12] bg-white">
+              <div className="flex items-center gap-3 self-stretch">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
                   <path d="M44 22C44 34.1502 34.1502 44 22 44C9.84981 44 0 34.1502 0 22C0 22.0052 22 0.00249219 22 0C34.1502 0 44 9.84981 44 22Z" fill="#0052B4"/>
                   <path d="M21.9414 21.9998H22.0003C22.0003 21.9798 22.0003 21.9608 22.0003 21.9409C21.9807 21.9606 21.9611 21.9802 21.9414 21.9998Z" fill="#F0F0F0"/>
@@ -447,19 +444,20 @@ export default function Dashboard_Fiat() {
                   <path d="M37.8444 15.3042L38.4481 16.5666L39.8114 16.2514L39.2009 17.5105L40.2972 18.3799L38.9321 18.6876L38.9359 20.0868L37.8444 19.2114L36.7529 20.0868L36.7565 18.6876L35.3916 18.3799L36.4879 17.5105L35.8774 16.2514L37.2406 16.5666L37.8444 15.3042Z" fill="#F0F0F0"/>
                   <path d="M34.3367 22L34.8115 23.4615H36.3483L35.105 24.3647L35.58 25.8261L34.3367 24.9229L33.0936 25.8261L33.5684 24.3647L32.3252 23.4615H33.8618L34.3367 22Z" fill="#F0F0F0"/>
                 </svg>
-                <div className="flex-1">
-                  <div className="text-[#18181B] text-sm font-bold leading-5">AUSTRALIAN DOLLAR</div>
-                  <div className="text-[#51525C] text-sm font-medium leading-5">AU$</div>
+                <div className="flex w-[100px] flex-col justify-center items-start gap-0.5">
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">AUSTRALIAN DOLLAR</div>
+                  <div className="w-[79px] text-[#51525C] text-sm font-medium leading-5">AU$</div>
                 </div>
-                <div className="flex flex-col items-end gap-0.5">
-                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">AU$5,000.00</div>
-                  <div className="text-[#51525C] text-sm font-medium leading-5 text-right">$2,500.00</div>
+                <div className="flex flex-col justify-center items-end gap-0.5 flex-1">
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">AU$5,000.00</div>
+                  <div className="text-[#51525C] text-right text-sm font-medium leading-5">$2,500.00</div>
                 </div>
               </div>
-              <div className="flex flex-col gap-1 relative z-10">
+              <div className="flex flex-col justify-center items-start gap-1 self-stretch">
                 <div className="text-[#18181B] text-sm font-medium leading-5">10%</div>
-                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
-                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#0091FF]" style={{width: "10%"}}></div>
+                <div className="h-1 self-stretch relative">
+                  <div className="w-full h-1 rounded-[1px] bg-[#E4E4E7] absolute left-0 top-0"></div>
+                  <div className="w-[40px] h-1 rounded-[1px] bg-[#0091FF] absolute left-0 top-0"></div>
                 </div>
               </div>
             </div>
