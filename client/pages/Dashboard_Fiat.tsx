@@ -672,7 +672,7 @@ export default function Dashboard_Fiat() {
 
         {/* Bank */}
         <button
-          onClick={() => setSelectedTab("bank")}
+          onClick={() => navigate("/saved-bank-accounts")}
           className="flex flex-col justify-center items-center gap-1 flex-1 self-stretch rounded-md"
         >
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
