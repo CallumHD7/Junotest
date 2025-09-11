@@ -225,8 +225,8 @@ export default function Balances() {
             <path d="M18.1016 7.00191V5.60491C18.1015 5.29841 18.0309 4.99604 17.8954 4.72113C17.7599 4.44622 17.563 4.20614 17.3199 4.01942C17.0769 3.83271 16.7942 3.70435 16.4936 3.64427C16.1931 3.58419 15.8827 3.59399 15.5866 3.67291L4.58656 6.60591C4.16062 6.71942 3.7841 6.97047 3.51555 7.32004C3.247 7.6696 3.10146 8.0981 3.10156 8.53891V9.00191" stroke="#18181B" strokeWidth="1.8"/>
           </svg>
         </div>
-        <button 
-          onClick={() => navigate("/dashboard_fiat")}
+        <button
+          onClick={() => navigate("/saved-bank-accounts")}
           className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg"
         >
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
