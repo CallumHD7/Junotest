@@ -36,6 +36,7 @@ import TransactionHistory2 from "./pages/TransactionHistory2";
 import AddressBook from "./pages/AddressBook";
 import Balances from "./pages/Balances";
 import SavedBankAccounts from "./pages/SavedBankAccounts";
+import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
