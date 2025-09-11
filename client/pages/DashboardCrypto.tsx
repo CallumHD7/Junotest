@@ -624,11 +624,6 @@ export default function DashboardCrypto() {
             </div>
           </div>
 
-          <div className="flex p-3 flex-col items-start gap-2.5 self-stretch">
-            <div className="flex h-10 py-3 justify-center items-center gap-2.5 self-stretch rounded bg-[#E4E4E7]">
-              <div className="text-[#18181B] text-center text-sm font-semibold leading-5">SEE ALL</div>
-            </div>
-          </div>
         </div>
 
       </div>
