@@ -525,7 +525,7 @@ export default function DashboardCrypto() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F24ba5e2c5a3c404cbd6e847f6e8c1f23?format=webp&width=800"
                     alt="Exchange icon"
-                    className="w-4 h-4"
+                    className="w-[22px] h-[22px]"
                   />
                 </div>
                 <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
