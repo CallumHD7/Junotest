@@ -574,9 +574,8 @@ export default function Dashboard_Fiat() {
 
               {/* FX Transaction */}
               <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
-                <div className="w-11 h-11 fill-[#E4E4E7] relative">
-                  <rect width="44" height="44" rx="22" fill="#E4E4E7"/>
-                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none" className="w-[14px] h-[15px] flex-shrink-0 fill-[#18181B] stroke-[#18181B] absolute left-[15px] top-[14px]">
+                <div className="flex w-11 h-11 p-[11px] justify-center items-center rounded-full bg-[#E4E4E7] relative">
+                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M10.6837 2.10844L11.4739 1.30078L15.2439 5.07192L11.4739 8.84307L10.6842 8.03597L13.0876 5.63319H1.26562V4.51066H13.0876L10.6837 2.10844ZM0.75 12.9266L4.5217 9.15547L5.31084 9.96257L2.9075 12.3653H14.7294V13.4879H2.90807L5.31084 15.8907L4.5217 16.6978L0.75 12.9266Z" fill="#18181B"/>
                   </svg>
                 </div>
