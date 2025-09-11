@@ -79,6 +79,7 @@ const App = () => (
           <Route path="/AddressBook" element={<AddressBook />} />
           <Route path="/Balances" element={<Balances />} />
           <Route path="/saved-bank-accounts" element={<SavedBankAccounts />} />
+          <Route path="/notifications" element={<Notifications />} />
           <Route path="/profile" element={<Profile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
