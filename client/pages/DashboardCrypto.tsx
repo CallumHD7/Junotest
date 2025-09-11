@@ -65,13 +65,15 @@ export default function DashboardCrypto() {
             <path d="M74.7175 274.375C45.0103 256.394 22.7204 228.374 11.8804 195.384C1.04053 162.394 2.3667 126.613 15.619 94.5164" stroke="#26A17B" strokeWidth="9.23077"/>
             <path d="M104.149 12.0348C118.615 7.22716 133.748 4.72462 148.992 4.61888" stroke="#EF0027" strokeWidth="9.23077"/>
             <path d="M42.8058 51.7855C59.3013 33.7818 80.0657 20.2228 103.183 12.3597" stroke="#2775CA" strokeWidth="9.23077"/>
-            <text fill="#18181B" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Inter" fontSize="40" fontWeight="600" letterSpacing="0em">
-              <tspan x="59.3945" y="163.198">3,749,002</tspan>
-            </text>
-            <text fill="#18181B" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Inter" fontSize="24" fontWeight="500" letterSpacing="0em">
-              <tspan x="43.9492" y="163.198">$</tspan>
-            </text>
           </svg>
+
+          {/* Center Text */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex items-baseline">
+              <span className="text-[#18181B] text-2xl font-medium">$</span>
+              <span className="text-[#18181B] text-[40px] font-semibold">3,749,002</span>
+            </div>
+          </div>
         </div>
 
         {/* Action Buttons */}
