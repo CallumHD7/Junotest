@@ -212,8 +212,95 @@ export default function Dashboard_Fiat() {
         </div>
       </div>
 
-      {/* Main Section with Background */}
-      <div className="w-full h-[606px] relative bg-cover bg-center bg-no-repeat sm:h-[578px]" style={{
+      {/* Main Section with Background - Figma Design */}
+      <div className="w-full h-[606px] relative overflow-hidden">
+        {/* Background Image */}
+        <img
+          src="https://api.builder.io/api/v1/image/assets/TEMP/7ed3626e5fd68fb59d57da840973416611507357?width=3428"
+          alt=""
+          className="absolute w-full h-full object-cover"
+        />
+
+        {/* Circular Chart */}
+        <div className="absolute left-1/2 top-[124px] transform -translate-x-1/2 w-[300px] h-[300px]">
+          <svg width="301" height="300" viewBox="0 0 301 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M150.5 4.61538C169.592 4.61538 188.497 8.37587 206.136 15.6821C223.775 22.9884 239.802 33.6973 253.302 47.1976C266.803 60.6978 277.512 76.7248 284.818 94.3637C292.124 112.003 295.885 130.908 295.885 150C295.885 169.092 292.124 187.997 284.818 205.636C277.512 223.275 266.803 239.302 253.302 252.802C239.802 266.303 223.775 277.012 206.136 284.318C188.497 291.624 169.592 295.385 150.5 295.385" stroke="#0067E1" strokeWidth="9.23077"/>
+            <path d="M149.58 295.382C123.664 295.218 98.2626 288.129 76.0065 274.85" stroke="#FF002E" strokeWidth="9.23077"/>
+            <path d="M16.501 93.6001C22.8095 78.6118 31.588 64.7881 42.4708 52.7047" stroke="#FF0004" strokeWidth="9.23077"/>
+            <path d="M75.2175 274.375C45.5103 256.394 23.2204 228.374 12.3804 195.384C1.54053 162.394 2.8667 126.613 16.119 94.5164" stroke="#0074FF" strokeWidth="9.23077"/>
+            <path d="M104.649 12.0348C119.115 7.22716 134.248 4.72462 149.492 4.61888" stroke="#6DA544" strokeWidth="9.23077"/>
+            <path d="M43.3058 51.7855C59.8013 33.7818 80.5657 20.2228 103.683 12.3597" stroke="#0091FF" strokeWidth="9.23077"/>
+          </svg>
+
+          {/* Center Text */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex items-baseline">
+              <span className="text-[#18181B] text-2xl font-medium">$</span>
+              <span className="text-[#18181B] text-[40px] font-semibold">3,749,002</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-3 px-3 pb-[40px]">
+          <div className="flex items-center gap-3">
+            {/* Deposit */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M12.4268 25.0768L26.5689 10.9346" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12.4277 12.7017V25.076H24.8021" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">DEPOSIT</span>
+            </div>
+
+            {/* Withdraw */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M26.5684 10.9364L12.4262 25.0786" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M26.5674 23.3115V10.9372H14.193" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">WITHDRAW</span>
+            </div>
+
+            {/* TPP's */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
+                  <path d="M18.8255 9.45677H12.1755M18.8255 13.8901H12.1755M18.8255 18.3234H14.3922M7.74219 5.02344H23.2589V24.9734L22.1151 23.9937C21.7133 23.6494 21.2017 23.4601 20.6726 23.4601C20.1435 23.4601 19.6318 23.6494 19.2301 23.9937L18.0863 24.9734L16.9436 23.9937C16.5418 23.6491 16.0299 23.4596 15.5005 23.4596C14.9712 23.4596 14.4593 23.6491 14.0575 23.9937L12.9148 24.9734L11.771 23.9937C11.3692 23.6494 10.8576 23.4601 10.3285 23.4601C9.79938 23.4601 9.28773 23.6494 8.88599 23.9937L7.74219 24.9734V5.02344Z" stroke="#18181B" strokeWidth="2.17636" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">TPP'S</span>
+            </div>
+
+            {/* Transfer */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
+                  <path d="M5.92925 24.6525L25.9835 16.0561C26.1909 15.9678 26.3676 15.8205 26.4919 15.6325C26.6161 15.4445 26.6824 15.2242 26.6824 14.9988C26.6824 14.7735 26.6161 14.5531 26.4919 14.3651C26.3676 14.1771 26.1909 14.0298 25.9835 13.9415L5.92925 5.34517C5.7556 5.26943 5.56583 5.23811 5.37705 5.25404C5.18827 5.26997 5.00643 5.33265 4.84793 5.43641C4.68943 5.54018 4.55925 5.68178 4.46914 5.84843C4.37904 6.01508 4.33184 6.20154 4.3318 6.39098L4.32031 11.689C4.32031 12.2636 4.74553 12.7578 5.32015 12.8267L21.559 14.9988L5.32015 17.1594C4.74553 17.2398 4.32031 17.734 4.32031 18.3086L4.3318 23.6066C4.3318 24.4226 5.17075 24.9857 5.92925 24.6525Z" fill="#18181B"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">TRANSFER</span>
+            </div>
+
+            {/* More */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
+                  <path d="M5.5 15C5.5 15.3315 5.6317 15.6495 5.86612 15.8839C6.10054 16.1183 6.41848 16.25 6.75 16.25C7.08152 16.25 7.39946 16.1183 7.63388 15.8839C7.8683 15.6495 8 15.3315 8 15C8 14.6685 7.8683 14.3505 7.63388 14.1161C7.39946 13.8817 7.08152 13.75 6.75 13.75C6.41848 13.75 6.10054 13.8817 5.86612 14.1161C5.6317 14.3505 5.5 14.6685 5.5 15ZM14.25 15C14.25 15.3315 14.3817 15.6495 14.6161 15.8839C14.8505 16.1183 15.1685 16.25 15.5 16.25C15.8315 16.25 16.1495 16.1183 16.3839 15.8839C16.6183 15.6495 16.75 15.3315 16.75 15C16.75 14.6685 16.6183 14.3505 16.3839 14.1161C16.1495 13.8817 15.8315 13.75 15.5 13.75C15.1685 13.75 14.8505 13.8817 14.6161 14.1161C14.3817 14.3505 14.25 14.6685 14.25 15ZM23 15C23 15.3315 23.1317 15.6495 23.3661 15.8839C23.6005 16.1183 23.9185 16.25 24.25 16.25C24.5815 16.25 24.8995 16.1183 25.1339 15.8839C25.3683 15.6495 25.5 15.3315 25.5 15C25.5 14.6685 25.3683 14.3505 25.1339 14.1161C24.8995 13.8817 24.5815 13.75 24.25 13.75C23.9185 13.75 23.6005 13.8817 23.3661 14.1161C23.1317 14.3505 23 14.6685 23 15Z" stroke="#18181B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">MORE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Original Main Section with Background */}
+      <div className="w-full h-[606px] relative bg-cover bg-center bg-no-repeat sm:h-[578px] hidden" style={{
         backgroundImage: `url('https://api.builder.io/api/v1/image/assets/TEMP/6116bee6116639206902abace56bbafb288d1bc5?width=3428')`
       }}>
         {/* Circular Chart */}
