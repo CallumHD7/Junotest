@@ -163,7 +163,7 @@ export default function Dashboard_Fiat() {
     <div className="w-full min-h-screen bg-[#F4F4F5] flex flex-col pb-[86px]">
 
       {/* Header */}
-      <div className="flex justify-between items-center w-full h-[52px] px-4 py-[15px] relative bg-white rounded-b-[4px]">
+      <div className="flex justify-between items-center w-full h-[52px] px-4 py-[15px] relative rounded-b-[4px]">
         {/* Juno Logo */}
         <div className="flex items-center">
           <svg width="48" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,18 +175,16 @@ export default function Dashboard_Fiat() {
         </div>
 
         {/* FIAT/CRYPTO Segmented Picker */}
-        <div className="inline-flex p-[2px] items-center gap-1 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
+        <div className="inline-flex p-[2px] items-center gap-1 rounded-lg backdrop-blur-[12px]">
           <button
             onClick={() => setSelectedView("fiat")}
             className={`flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] ${
               selectedView === "fiat"
-                ? "bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border-[0.5px] border-black/[0.04]"
+                ? "shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border-[0.5px] border-black/[0.04]"
                 : ""
             }`}
           >
-            <span className={`text-center font-inter text-xs font-bold leading-[18px] tracking-[0.06px] ${
-              selectedView === "fiat" ? "text-[#18181B]" : "text-[#51525C]"
-            }`}>
+            <span className="text-center font-inter text-xs font-bold leading-[18px] tracking-[0.06px]">
               FIAT
             </span>
           </button>
@@ -194,13 +192,11 @@ export default function Dashboard_Fiat() {
             onClick={() => navigate("/dashboard-crypto")}
             className={`flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] ${
               selectedView === "crypto"
-                ? "bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border-[0.5px] border-black/[0.04]"
+                ? "shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border-[0.5px] border-black/[0.04]"
                 : ""
             }`}
           >
-            <span className={`text-center font-inter text-xs ${
-              selectedView === "crypto" ? "text-[#18181B] font-bold" : "text-[#51525C] font-medium"
-            } leading-[18px] tracking-[0.06px]`}>
+            <span className="text-center font-inter text-xs font-medium leading-[18px] tracking-[0.06px]">
               CRYPTO
             </span>
           </button>
