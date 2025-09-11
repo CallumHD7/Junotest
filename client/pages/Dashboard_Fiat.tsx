@@ -160,7 +160,7 @@ export default function Dashboard_Fiat() {
   };
 
   return (
-    <div className="w-full min-h-[714px] bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col pb-[74px]">
+    <div className="w-full min-h-[714px] bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col pb-[70px]">
 
       {/* Main Section with Background - Complete Figma Design */}
       <div className="w-full h-[606px] relative overflow-hidden">
