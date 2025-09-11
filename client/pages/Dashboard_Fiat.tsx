@@ -88,7 +88,7 @@ export default function Dashboard_Fiat() {
       swift: "NWBKGB2L"
     },
     {
-      flag: "🇺🇸",
+      flag: "��🇸",
       name: "Emma Romano",
       swift: "NWBKGB2L"
     }
@@ -260,8 +260,8 @@ export default function Dashboard_Fiat() {
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Ff0189caaeb1c4325a1764610c400841d?format=webp&width=800"
-                  alt="RECEIVE icon"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F54af6e57111f41e78b75ae15f5e780ca?format=webp&width=800"
+                  alt="TPP's icon"
                   width="30"
                   height="30"
                 />
