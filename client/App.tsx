@@ -34,6 +34,7 @@ import DashboardCrypto from "./pages/DashboardCrypto";
 import TransactionHistory from "./pages/TransactionHistory";
 import AddressBook from "./pages/AddressBook";
 import Balances from "./pages/Balances";
+import SavedBankAccounts from "./pages/SavedBankAccounts";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
