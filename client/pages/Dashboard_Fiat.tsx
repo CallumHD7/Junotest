@@ -775,6 +775,178 @@ export default function Dashboard_Fiat() {
           </div>
         </div>
 
+        {/* Statements Section */}
+        <div className="flex flex-col items-center self-stretch rounded-lg border border-black/[0.12] bg-white w-full">
+          {/* Header */}
+          <div className="flex p-3 items-center gap-2 self-stretch">
+            <div className="flex items-center gap-1 flex-1">
+              <h2 className="text-[#3F3F46] text-sm font-bold leading-5">STATEMENTS</h2>
+            </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4.5V19.5M19.5 12H4.5" stroke="#3F3F46" strokeWidth="1.95" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+
+          {/* Statement List */}
+          <div className="flex flex-col items-start self-stretch">
+            {/* UK Statement */}
+            <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
+              <div className="flex items-center gap-5 flex-1">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative flex items-center justify-center">
+                  {/* Document Icon */}
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
+                  </svg>
+                  {/* UK Flag Circle */}
+                  <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full border-2 border-white overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F102b85650909444dbc3c8db22e9ca9ff?format=webp&width=800"
+                      alt="UK Flag"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-start flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-bold leading-5">$45,000.00</div>
+                </div>
+                <div className="flex p-1 justify-center items-center">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#3F3F46"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+            {/* EU Statement */}
+            <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
+              <div className="flex items-center gap-5 flex-1">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative flex items-center justify-center">
+                  {/* Document Icon */}
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
+                  </svg>
+                  {/* EU Flag Circle */}
+                  <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full border-2 border-white overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F2f5d338fa20e43528176435702e60a34?format=webp&width=800"
+                      alt="EU Flag"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-start flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-bold leading-5">$45,000.00</div>
+                </div>
+                <div className="flex p-1 justify-center items-center">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#3F3F46"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+            {/* US Statement */}
+            <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
+              <div className="flex items-center gap-5 flex-1">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative flex items-center justify-center">
+                  {/* Document Icon */}
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
+                  </svg>
+                  {/* US Flag Circle */}
+                  <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full border-2 border-white overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fec34e97072a6467099c719b5d7bccdb3?format=webp&width=800"
+                      alt="US Flag"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-start flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-bold leading-5">$45,000.00</div>
+                </div>
+                <div className="flex p-1 justify-center items-center">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#3F3F46"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+            {/* Australia Statement */}
+            <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
+              <div className="flex items-center gap-5 flex-1">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative flex items-center justify-center">
+                  {/* Document Icon */}
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
+                  </svg>
+                  {/* Australia Flag Circle */}
+                  <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full border-2 border-white overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Ff106ff12c6be4a868f7e3e785de21827?format=webp&width=800"
+                      alt="Australia Flag"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-start flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-bold leading-5">$45,000.00</div>
+                </div>
+                <div className="flex p-1 justify-center items-center">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#3F3F46"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
+            {/* Switzerland Statement */}
+            <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
+              <div className="flex items-center gap-5 flex-1">
+                <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative flex items-center justify-center">
+                  {/* Document Icon */}
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
+                  </svg>
+                  {/* Switzerland Flag Circle */}
+                  <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full border-2 border-white overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fe7c318c6d86d4e0090928a7dc7050972?format=webp&width=800"
+                      alt="Switzerland Flag"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-start flex-1">
+                  <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                  <div className="text-[#18181B] text-sm font-bold leading-5">$45,000.00</div>
+                </div>
+                <div className="flex p-1 justify-center items-center">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#3F3F46"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* See All Button */}
+          <div className="flex p-3 flex-col items-start gap-2.5 self-stretch">
+            <div className="flex h-10 py-3 px-0 justify-center items-center gap-2.5 self-stretch rounded bg-[#E4E4E7]">
+              <div className="text-[#18181B] text-center text-sm font-bold leading-5">SEE ALL</div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       {/* Bottom Navigation */}
