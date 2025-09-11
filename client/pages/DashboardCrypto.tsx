@@ -103,7 +103,7 @@ export default function DashboardCrypto() {
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Ff80630e9e53246208c512f7a7af1bf53?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Ff0189caaeb1c4325a1764610c400841d?format=webp&width=800"
                   alt="RECEIVE icon"
                   width="30"
                   height="30"
