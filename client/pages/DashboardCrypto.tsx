@@ -669,6 +669,8 @@ export default function DashboardCrypto() {
                 </div>
               </div>
 
+              <div className="h-px self-stretch bg-[#E4E4E7]"></div>
+
               {/* Statement 3 */}
               <div className="flex h-[76px] px-3 items-center gap-[18px] self-stretch">
                 <div className="flex items-center gap-5 flex-1">
