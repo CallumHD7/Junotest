@@ -6,125 +6,129 @@ export default function DashboardCrypto() {
 
   return (
     <div className="w-full min-h-screen bg-[#F4F4F5] flex flex-col">
-      {/* Header */}
-      <div className="w-full h-[52px] rounded-b-[4px] flex items-center justify-between px-4 py-[15px]">
-        {/* Juno Logo */}
-        <div className="flex items-center">
-          <svg width="48" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M35.7188 11.3464C35.7188 7.35977 38.2487 4.57422 42.0054 4.57422C45.6599 4.57422 48.1643 7.28311 48.1643 11.3209C48.1643 15.3587 45.6599 18.0676 41.9799 18.0676C38.2999 18.0676 35.7188 15.3587 35.7188 11.3464ZM38.351 11.3464C38.351 13.9276 39.8587 15.5887 41.9543 15.5887C44.0754 15.5887 45.5321 13.9276 45.5321 11.3209C45.5321 8.73977 44.1265 7.02755 42.0054 7.02755C39.8843 7.02755 38.351 8.73977 38.351 11.3464Z" fill="#18181B"/>
-            <path d="M22.7031 4.95755H25.3865V8.22866C25.9231 5.95422 27.5331 4.57422 29.7565 4.57422C32.4909 4.57422 33.7176 6.69533 33.7176 9.78755V17.6587H31.0342V10.7076C31.0342 8.20311 30.2165 6.84866 28.3765 6.84866C26.6387 6.84866 25.4631 8.04978 25.3865 9.88977V17.6587H22.7031V4.95755Z" fill="#18181B"/>
-            <path d="M20.0301 4.98438V17.6599H17.3467V14.4399C16.7845 16.6888 15.1745 18.0433 12.9767 18.0433C10.2678 18.0433 9.01562 15.9222 9.01562 12.8299V4.98438H11.699V11.9099C11.699 14.4399 12.5167 15.7688 14.3567 15.7688C16.0434 15.7688 17.219 14.6444 17.3467 12.881V4.98438H20.0301Z" fill="#18181B"/>
-            <path d="M3.75667 0H6.59333V2.81111H3.75667V0ZM3.83333 4.98333H6.51667V18.0933C6.51667 20.8022 5.52 23 2.78556 23C1.45667 23 0.613333 22.3867 0 21.7989L0.971111 19.5756C1.38 20.0867 1.76333 20.4956 2.45333 20.4956C3.78222 20.4956 3.83333 19.0389 3.83333 17.1478V4.98333Z" fill="#18181B"/>
-          </svg>
-        </div>
-
-        {/* Segmented Picker */}
-        <div className="inline-flex p-[2px] items-center gap-1 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-          <button
-            onClick={() => navigate("/dashboard_fiat")}
-            className="flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px]"
-          >
-            <span className="text-[#51525C] text-center font-inter text-xs font-medium leading-[18px] tracking-[0.06px]">FIAT</span>
-          </button>
-          <div className="flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] border-[0.5px] border-black/[0.04] bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)]">
-            <span className="text-[#18181B] text-center font-inter text-xs font-bold leading-[18px] tracking-[0.06px]">CRYPTO</span>
-          </div>
-        </div>
-
-        {/* Notification Bell */}
-        <div className="w-6 h-6 flex-shrink-0 relative">
-          <svg width="18" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-[3px] top-[2px]">
-            <path d="M19.0231 14.6102C18.4894 13.691 17.6961 11.0899 17.6961 7.69264C17.6961 5.65242 16.8857 3.69577 15.443 2.25312C14.0004 0.810472 12.0437 0 10.0035 0C7.96328 0 6.00662 0.810472 4.56397 2.25312C3.12132 3.69577 2.31085 5.65242 2.31085 7.69264C2.31085 11.0909 1.51659 13.691 0.982909 14.6102C0.846625 14.844 0.774375 15.1095 0.773447 15.38C0.772518 15.6505 0.842943 15.9165 0.977619 16.1512C1.1123 16.3858 1.30646 16.5808 1.54053 16.7164C1.77461 16.8521 2.04031 16.9236 2.31085 16.9238H6.23506C6.41254 17.7923 6.88453 18.5728 7.57121 19.1333C8.25788 19.6938 9.11708 20 10.0035 20C10.8899 20 11.7491 19.6938 12.4358 19.1333C13.1224 18.5728 13.5944 17.7923 13.7719 16.9238H17.6961C17.9666 16.9234 18.2322 16.8518 18.4661 16.7161C18.7001 16.5804 18.8941 16.3854 19.0286 16.1508C19.1632 15.9161 19.2335 15.6502 19.2326 15.3798C19.2316 15.1093 19.1594 14.8439 19.0231 14.6102ZM10.0035 18.4623C9.52638 18.4622 9.06103 18.3142 8.67151 18.0386C8.28199 17.7631 7.98744 17.3736 7.8284 16.9238H12.1786C12.0195 17.3736 11.725 17.7631 11.3355 18.0386C10.946 18.3142 10.4806 18.4622 10.0035 18.4623ZM2.31085 15.3853C3.05127 14.1121 3.84938 11.162 3.84938 7.69264C3.84938 6.06047 4.49776 4.49515 5.65188 3.34103C6.806 2.18691 8.37132 1.53853 10.0035 1.53853C11.6357 1.53853 13.201 2.18691 14.3551 3.34103C15.5092 4.49515 16.1576 6.06047 16.1576 7.69264C16.1576 11.1591 16.9538 14.1093 17.6961 15.3853H2.31085Z" fill="#18181B"/>
-          </svg>
-          <div className="absolute top-[1px] right-0 w-2 h-2 flex-shrink-0 rounded-full border border-white bg-[#F04438]"></div>
-        </div>
-      </div>
-
-      {/* Main Section with Background */}
-      <div className="relative w-full h-[606px] overflow-hidden">
+      {/* Main Section with Background - Complete Figma Design */}
+      <div className="w-full h-[606px] relative overflow-hidden">
         {/* Background Image */}
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/057a2aa8f9173cb3b88ed4fe25720bf7dac8f3f5?width=3428"
+          src="https://api.builder.io/api/v1/image/assets/TEMP/7ed3626e5fd68fb59d57da840973416611507357?width=3428"
           alt=""
-          className="absolute w-[1714px] h-[1143px] object-cover -left-[669px] -top-[402px]"
+          className="absolute w-full h-full object-cover"
         />
 
-        {/* Central Circle Chart */}
-        <div className="absolute left-[37px] top-[144px] w-[300px] h-[300px]">
-          {/* Circle Progress Bars */}
-          <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
-            <path d="M150 4.61538C169.092 4.61538 187.997 8.37587 205.636 15.6821C223.275 22.9884 239.302 33.6973 252.802 47.1976C266.303 60.6978 277.012 76.7248 284.318 94.3637C291.624 112.003 295.385 130.908 295.385 150C295.385 169.092 291.624 187.997 284.318 205.636C277.012 223.275 266.303 239.302 252.802 252.802C239.302 266.303 223.275 277.012 205.636 284.318C187.997 291.624 169.092 295.385 150 295.385" stroke="#F7931A" strokeWidth="9.23077"/>
-            <path d="M149.08 295.382C123.164 295.218 97.7626 288.129 75.5065 274.85" stroke="#345D9D" strokeWidth="9.23077"/>
-            <path d="M16.001 93.6001C22.3095 78.6118 31.088 64.7881 41.9708 52.7047" stroke="#627EEA" strokeWidth="9.23077"/>
-            <path d="M74.7175 274.375C45.0103 256.394 22.7204 228.374 11.8804 195.384C1.04053 162.394 2.3667 126.613 15.619 94.5164" stroke="#26A17B" strokeWidth="9.23077"/>
-            <path d="M104.149 12.0348C118.615 7.22716 133.748 4.72462 148.992 4.61888" stroke="#EF0027" strokeWidth="9.23077"/>
-            <path d="M42.8058 51.7855C59.3013 33.7818 80.0657 20.2228 103.183 12.3597" stroke="#2775CA" strokeWidth="9.23077"/>
+        {/* Header within Main Section */}
+        <div className="w-full h-[52px] flex items-center justify-between px-4 py-[15px] relative rounded-b-[4px] top-2">
+          {/* Juno Logo */}
+          <div className="flex items-center">
+            <svg width="48" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M35.7188 11.3464C35.7188 7.35977 38.2487 4.57422 42.0054 4.57422C45.6599 4.57422 48.1643 7.28311 48.1643 11.3209C48.1643 15.3587 45.6599 18.0676 41.9799 18.0676C38.2999 18.0676 35.7188 15.3587 35.7188 11.3464ZM38.351 11.3464C38.351 13.9276 39.8587 15.5887 41.9543 15.5887C44.0754 15.5887 45.5321 13.9276 45.5321 11.3209C45.5321 8.73977 44.1265 7.02755 42.0054 7.02755C39.8843 7.02755 38.351 8.73977 38.351 11.3464Z" fill="#18181B"/>
+              <path d="M22.7031 4.95755H25.3865V8.22866C25.9231 5.95422 27.5331 4.57422 29.7565 4.57422C32.4909 4.57422 33.7176 6.69533 33.7176 9.78755V17.6587H31.0342V10.7076C31.0342 8.20311 30.2165 6.84866 28.3765 6.84866C26.6387 6.84866 25.4631 8.04978 25.3865 9.88977V17.6587H22.7031V4.95755Z" fill="#18181B"/>
+              <path d="M20.0301 4.98438V17.6599H17.3467V14.4399C16.7845 16.6888 15.1745 18.0433 12.9767 18.0433C10.2678 18.0433 9.01562 15.9222 9.01562 12.8299V4.98438H11.699V11.9099C11.699 14.4399 12.5167 15.7688 14.3567 15.7688C16.0434 15.7688 17.219 14.6444 17.3467 12.881V4.98438H20.0301Z" fill="#18181B"/>
+              <path d="M3.75667 0H6.59333V2.81111H3.75667V0ZM3.83333 4.98333H6.51667V18.0933C6.51667 20.8022 5.52 23 2.78556 23C1.45667 23 0.613333 22.3867 0 21.7989L0.971111 19.5756C1.38 20.0867 1.76333 20.4956 2.45333 20.4956C3.78222 20.4956 3.83333 19.0389 3.83333 17.1478V4.98333Z" fill="#18181B"/>
+            </svg>
+          </div>
+
+          {/* FIAT/CRYPTO Segmented Picker */}
+          <div className="inline-flex p-[2px] items-center gap-1 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
+            <button
+              onClick={() => navigate("/dashboard_fiat")}
+              className="flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px]"
+            >
+              <span className="text-center font-inter text-xs font-medium leading-[18px] tracking-[0.06px] text-[#51525C]">
+                FIAT
+              </span>
+            </button>
+            <button
+              className="flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)] border-[0.5px] border-black/[0.04]"
+            >
+              <span className="text-center font-inter text-xs font-bold leading-[18px] tracking-[0.06px] text-[#18181B]">
+                CRYPTO
+              </span>
+            </button>
+          </div>
+
+          {/* Notification Bell */}
+          <div className="w-6 h-6 flex-shrink-0 relative">
+            <svg width="18" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-[3px] top-[2px]">
+              <path d="M19.0231 14.6102C18.4894 13.691 17.6961 11.0899 17.6961 7.69264C17.6961 5.65242 16.8857 3.69577 15.443 2.25312C14.0004 0.810472 12.0437 0 10.0035 0C7.96328 0 6.00662 0.810472 4.56397 2.25312C3.12132 3.69577 2.31085 5.65242 2.31085 7.69264C2.31085 11.0909 1.51659 13.691 0.982909 14.6102C0.846625 14.844 0.774375 15.1095 0.773447 15.38C0.772518 15.6505 0.842943 15.9165 0.977619 16.1512C1.1123 16.3858 1.30646 16.5808 1.54053 16.7164C1.77461 16.8521 2.04031 16.9236 2.31085 16.9238H6.23506C6.41254 17.7923 6.88453 18.5728 7.57121 19.1333C8.25788 19.6938 9.11708 20 10.0035 20C10.8899 20 11.7491 19.6938 12.4358 19.1333C13.1224 18.5728 13.5944 17.7923 13.7719 16.9238H17.6961C17.9666 16.9234 18.2322 16.8518 18.4661 16.7161C18.7001 16.5804 18.8941 16.3854 19.0286 16.1508C19.1632 15.9161 19.2335 15.6502 19.2326 15.3798C19.2316 15.1093 19.1594 14.8439 19.0231 14.6102ZM10.0035 18.4623C9.52638 18.4622 9.06103 18.3142 8.67151 18.0386C8.28199 17.7631 7.98744 17.3736 7.8284 16.9238H12.1786C12.0195 17.3736 11.725 17.7631 11.3355 18.0386C10.946 18.3142 10.4806 18.4622 10.0035 18.4623ZM2.31085 15.3853C3.05127 14.1121 3.84938 11.162 3.84938 7.69264C3.84938 6.06047 4.49776 4.49515 5.65188 3.34103C6.806 2.18691 8.37132 1.53853 10.0035 1.53853C11.6357 1.53853 13.201 2.18691 14.3551 3.34103C15.5092 4.49515 16.1576 6.06047 16.1576 7.69264C16.1576 11.1591 16.9538 14.1093 17.6961 15.3853H2.31085Z" fill="#18181B"/>
+            </svg>
+            {/* Notification Dot */}
+            <div className="absolute top-[1px] right-0 w-2 h-2 flex-shrink-0 rounded-full border border-white bg-[#F04438]"></div>
+          </div>
+        </div>
+
+        {/* Circular Chart */}
+        <div className="absolute left-1/2 top-[124px] transform -translate-x-1/2 w-[300px] h-[300px]">
+          <svg width="301" height="300" viewBox="0 0 301 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M150.5 4.61538C169.592 4.61538 188.497 8.37587 206.136 15.6821C223.775 22.9884 239.802 33.6973 253.302 47.1976C266.803 60.6978 277.512 76.7248 284.818 94.3637C292.124 112.003 295.885 130.908 295.885 150C295.885 169.092 292.124 187.997 284.818 205.636C277.512 223.275 266.803 239.302 253.302 252.802C239.802 266.303 223.775 277.012 206.136 284.318C188.497 291.624 169.592 295.385 150.5 295.385" stroke="#0067E1" strokeWidth="9.23077"/>
+            <path d="M149.58 295.382C123.664 295.218 98.2626 288.129 76.0065 274.85" stroke="#FF002E" strokeWidth="9.23077"/>
+            <path d="M16.501 93.6001C22.8095 78.6118 31.588 64.7881 42.4708 52.7047" stroke="#FF0004" strokeWidth="9.23077"/>
+            <path d="M75.2175 274.375C45.5103 256.394 23.2204 228.374 12.3804 195.384C1.54053 162.394 2.8667 126.613 16.119 94.5164" stroke="#0074FF" strokeWidth="9.23077"/>
+            <path d="M104.649 12.0348C119.115 7.22716 134.248 4.72462 149.492 4.61888" stroke="#6DA544" strokeWidth="9.23077"/>
+            <path d="M43.3058 51.7855C59.8013 33.7818 80.5657 20.2228 103.683 12.3597" stroke="#0091FF" strokeWidth="9.23077"/>
           </svg>
 
-          {/* Center Amount */}
+          {/* Center Text */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="flex items-baseline">
-                <span className="text-[#18181B] text-2xl font-medium">$</span>
-                <span className="text-[#18181B] text-[40px] font-semibold">3,749,002</span>
-              </div>
+            <div className="flex items-baseline">
+              <span className="text-[#18181B] text-2xl font-medium">$</span>
+              <span className="text-[#18181B] text-[40px] font-semibold">3,749,002</span>
             </div>
           </div>
         </div>
 
-        {/* Actions */}
+        {/* Action Buttons */}
         <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-3 px-3 pb-[40px]">
           <div className="flex items-center gap-3">
-            {/* BUY */}
+            {/* Deposit */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M23.4248 37.0763L37.5669 22.9341" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M23.4297 24.6992V37.0736H35.8041" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12.4268 25.0768L26.5689 10.9346" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12.4277 12.7017V25.076H24.8021" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">BUY</span>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">DEPOSIT</span>
             </div>
 
-            {/* SELL */}
+            {/* Withdraw */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M37.5752 22.9355L23.4331 37.0776" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M37.5703 35.3125L37.5703 22.9381L25.1959 22.9381" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M26.5684 10.9364L12.4262 25.0786" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M26.5674 23.3115V10.9372H14.193" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">SELL</span>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">WITHDRAW</span>
             </div>
 
-            {/* RECEIVE */}
+            {/* TPP's */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
-                <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
-                  <path d="M0.5 8.88889H9.38889V0H0.5V8.88889ZM2.72222 2.22222H7.16667V6.66667H2.72222V2.22222ZM0.5 20H9.38889V11.1111H0.5V20ZM2.72222 13.3333H7.16667V17.7778H2.72222V13.3333ZM11.6111 0V8.88889H20.5V0H11.6111ZM18.2778 6.66667H13.8333V2.22222H18.2778V6.66667ZM18.2778 17.7778H20.5V20H18.2778V17.7778ZM11.6111 11.1111H13.8333V13.3333H11.6111V11.1111ZM13.8333 13.3333H16.0556V15.5556H13.8333V13.3333ZM11.6111 15.5556H13.8333V17.7778H11.6111V15.5556ZM13.8333 17.7778H16.0556V20H13.8333V17.7778ZM16.0556 15.5556H18.2778V17.7778H16.0556V15.5556ZM16.0556 11.1111H18.2778V13.3333H16.0556V11.1111ZM18.2778 13.3333H20.5V15.5556H18.2778V13.3333Z" fill="#18181B"/>
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
+                  <path d="M18.8255 9.45677H12.1755M18.8255 13.8901H12.1755M18.8255 18.3234H14.3922M7.74219 5.02344H23.2589V24.9734L22.1151 23.9937C21.7133 23.6494 21.2017 23.4601 20.6726 23.4601C20.1435 23.4601 19.6318 23.6494 19.2301 23.9937L18.0863 24.9734L16.9436 23.9937C16.5418 23.6491 16.0299 23.4596 15.5005 23.4596C14.9712 23.4596 14.4593 23.6491 14.0575 23.9937L12.9148 24.9734L11.771 23.9937C11.3692 23.6494 10.8576 23.4601 10.3285 23.4601C9.79938 23.4601 9.28773 23.6494 8.88599 23.9937L7.74219 24.9734V5.02344Z" stroke="#18181B" strokeWidth="2.17636" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">RECEIVE</span>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">TPP'S</span>
             </div>
 
-            {/* EXCHANGE */}
+            {/* Transfer */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
-                <svg width="21" height="24" viewBox="0 0 21 24" fill="none">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M14.1631 2.60136L15.2407 1.5L20.3816 6.64247L15.2407 11.7849L14.1638 10.6843L17.4411 7.40783H1.32031V5.8771H17.4411L14.1631 2.60136ZM0.617188 17.3531L5.76042 12.2107L6.83652 13.3113L3.55924 16.5878H19.6801V18.1185H3.56L6.83652 21.395L5.76042 22.4956L0.617188 17.3531Z" fill="#18181B"/>
-                </svg>
-              </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">EXCHANGE</span>
-            </div>
-
-            {/* SEND */}
-            <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
                   <path d="M5.92925 24.6525L25.9835 16.0561C26.1909 15.9678 26.3676 15.8205 26.4919 15.6325C26.6161 15.4445 26.6824 15.2242 26.6824 14.9988C26.6824 14.7735 26.6161 14.5531 26.4919 14.3651C26.3676 14.1771 26.1909 14.0298 25.9835 13.9415L5.92925 5.34517C5.7556 5.26943 5.56583 5.23811 5.37705 5.25404C5.18827 5.26997 5.00643 5.33265 4.84793 5.43641C4.68943 5.54018 4.55925 5.68178 4.46914 5.84843C4.37904 6.01508 4.33184 6.20154 4.3318 6.39098L4.32031 11.689C4.32031 12.2636 4.74553 12.7578 5.32015 12.8267L21.559 14.9988L5.32015 17.1594C4.74553 17.2398 4.32031 17.734 4.32031 18.3086L4.3318 23.6066C4.3318 24.4226 5.17075 24.9857 5.92925 24.6525Z" fill="#18181B"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">SEND</span>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">TRANSFER</span>
+            </div>
+
+            {/* More */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
+                  <path d="M5.5 15C5.5 15.3315 5.6317 15.6495 5.86612 15.8839C6.10054 16.1183 6.41848 16.25 6.75 16.25C7.08152 16.25 7.39946 16.1183 7.63388 15.8839C7.8683 15.6495 8 15.3315 8 15C8 14.6685 7.8683 14.3505 7.63388 14.1161C7.39946 13.8817 7.08152 13.75 6.75 13.75C6.41848 13.75 6.10054 13.8817 5.86612 14.1161C5.6317 14.3505 5.5 14.6685 5.5 15ZM14.25 15C14.25 15.3315 14.3817 15.6495 14.6161 15.8839C14.8505 16.1183 15.1685 16.25 15.5 16.25C15.8315 16.25 16.1495 16.1183 16.3839 15.8839C16.6183 15.6495 16.75 15.3315 16.75 15C16.75 14.6685 16.6183 14.3505 16.3839 14.1161C16.1495 13.8817 15.8315 13.75 15.5 13.75C15.1685 13.75 14.8505 13.8817 14.6161 14.1161C14.3817 14.3505 14.25 14.6685 14.25 15ZM23 15C23 15.3315 23.1317 15.6495 23.3661 15.8839C23.6005 16.1183 23.9185 16.25 24.25 16.25C24.5815 16.25 24.8995 16.1183 25.1339 15.8839C25.3683 15.6495 25.5 15.3315 25.5 15C25.5 14.6685 25.3683 14.3505 25.1339 14.1161C24.8995 13.8817 24.5815 13.75 24.25 13.75C23.9185 13.75 23.6005 13.8817 23.3661 14.1161C23.1317 14.3505 23 14.6685 23 15Z" stroke="#18181B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">MORE</span>
             </div>
           </div>
         </div>
