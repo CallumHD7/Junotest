@@ -75,6 +75,7 @@ const App = () => (
           <Route path="/TransactionHistory" element={<TransactionHistory />} />
           <Route path="/AddressBook" element={<AddressBook />} />
           <Route path="/Balances" element={<Balances />} />
+          <Route path="/saved-bank-accounts" element={<SavedBankAccounts />} />
           <Route path="/profile" element={<Profile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
