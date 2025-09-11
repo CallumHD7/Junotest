@@ -73,6 +73,7 @@ const App = () => (
           <Route path="/dashboard-crypto" element={<DashboardCrypto />} />
           <Route path="/TransactionHistory" element={<TransactionHistory />} />
           <Route path="/AddressBook" element={<AddressBook />} />
+          <Route path="/Balances" element={<Balances />} />
           <Route path="/profile" element={<Profile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
