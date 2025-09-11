@@ -468,7 +468,7 @@ export default function Dashboard_Fiat() {
                 <svg width="19" height="20" viewBox="0 0 20 20" fill="none" className="absolute left-3 top-3">
                   <path d="M4.99406 9.01156H3.01406V15.9416H4.99406V9.01156ZM10.9341 9.01156H8.95406V15.9416H10.9341V9.01156ZM19.3491 17.9216H0.539062V19.9016H19.3491V17.9216ZM16.8741 9.01156H14.8941V15.9416H16.8741V9.01156ZM9.94406 2.33896L15.102 5.05156H4.78616L9.94406 2.33896ZM9.94406 0.101562L0.539062 5.05156V7.03156H19.3491V5.05156L9.94406 0.101562Z" fill="#26272B"/>
                 </svg>
-                <div className="absolute -top-1 -right-1 w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
+                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
                   🇬🇧
                 </div>
               </div>
