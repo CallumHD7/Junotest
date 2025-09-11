@@ -317,7 +317,7 @@ export default function Dashboard_Fiat() {
             {/* American Dollar */}
             <div className="flex p-[18px] px-3 flex-col items-start gap-3 self-stretch rounded-lg border border-black/[0.12] bg-white">
               <div className="flex items-center gap-3 self-stretch">
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                <svg width="50" height="44" viewBox="0 0 44 44" fill="none">
                   <mask id="mask0_us" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
                     <path d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="white"/>
                   </mask>
@@ -328,7 +328,7 @@ export default function Dashboard_Fiat() {
                     <path d="M16.0703 20.8828L20.9688 17.3594H14.9531L19.8516 20.8828L17.9609 15.125L16.0703 20.8828ZM9.10938 20.8828L14.0078 17.3594H7.99219L12.8906 20.8828L11 15.125L9.10938 20.8828ZM2.14844 20.8828L7.04688 17.3594H1.03125L5.92969 20.8828L4.03906 15.125L2.14844 20.8828ZM16.0703 13.9219L20.9688 10.3984H14.9531L19.8516 13.9219L17.9609 8.16406L16.0703 13.9219ZM9.10938 13.9219L14.0078 10.3984H7.99219L12.8906 13.9219L11 8.16406L9.10938 13.9219ZM2.14844 13.9219L7.04688 10.3984H1.03125L5.92969 13.9219L4.03906 8.16406L2.14844 13.9219ZM16.0703 6.875L20.9688 3.35156H14.9531L19.8516 6.875L17.9609 1.11719L16.0703 6.875ZM9.10938 6.875L14.0078 3.35156H7.99219L12.8906 6.875L11 1.11719L9.10938 6.875ZM2.14844 6.875L7.04688 3.35156H1.03125L5.92969 6.875L4.03906 1.11719L2.14844 6.875Z" fill="#EEEEEE"/>
                   </g>
                 </svg>
-                <div className="flex w-[100px] flex-col justify-center items-start gap-0.5">
+                <div className="flex w-full flex-col justify-center items-start gap-0.5">
                   <div className="text-[#18181B] text-sm font-semibold leading-5">AMERICAN DOLLAR</div>
                   <div className="w-[79px] text-[#51525C] text-sm font-medium leading-5">USD</div>
                 </div>
