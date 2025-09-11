@@ -122,8 +122,9 @@ export default function DashboardCrypto() {
             {/* EXCHANGE */}
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
-                <svg width="20" height="21" viewBox="0 0 21 24" fill="none">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M14.1631 2.60136L15.2407 1.5L20.3816 6.64247L15.2407 11.7849L14.1638 10.6843L17.4411 7.40783H1.32031V5.8771H17.4411L14.1631 2.60136ZM0.617188 17.3531L5.76042 12.2107L6.83652 13.3113L3.55924 16.5878H19.6801V18.1185H3.56L6.83652 21.395L5.76042 22.4956L0.617188 17.3531Z" fill="#18181B"/>
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 16L17 16M17 16L13 12M17 16L13 20" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M17 8L7 8M7 8L11 12M7 8L11 4" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">EXCHANGE</span>
