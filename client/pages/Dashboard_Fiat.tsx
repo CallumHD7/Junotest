@@ -682,7 +682,7 @@ export default function Dashboard_Fiat() {
 
         {/* History */}
         <button
-          onClick={() => setSelectedTab("history")}
+          onClick={() => navigate("/TransactionHistory2")}
           className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg"
         >
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
