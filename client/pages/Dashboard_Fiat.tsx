@@ -103,7 +103,7 @@ export default function Dashboard_Fiat() {
       status: "failed"
     },
     {
-      icon: "���",
+      icon: "����",
       type: "PAYMENT OUT",
       date: "24.05.21 16:55",
       amount: "99,082.90 USD",
@@ -441,6 +441,162 @@ export default function Dashboard_Fiat() {
                   <div className="w-[40px] h-1 rounded-[1px] bg-[#0091FF] absolute left-0 top-0"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Saved Bank Accounts Section */}
+        <div className="flex flex-col items-center self-stretch rounded-lg border border-black/[0.12] bg-white w-full mb-1">
+          {/* Header */}
+          <div className="flex p-3 items-center gap-2 self-stretch">
+            <div className="flex items-center gap-1 flex-1">
+              <h2 className="text-[#3F3F46] text-sm font-bold leading-5">SAVED BANK ACCOUNTS</h2>
+              <div className="flex w-4 h-4 px-0.5 flex-col justify-center items-center rounded bg-[#E4E4E7]">
+                <span className="text-[#18181B] text-center text-[8px] font-bold leading-3 tracking-[0.16px]">9</span>
+              </div>
+            </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4.5V19.5M19.5 12H4.5" stroke="#3F3F46" strokeWidth="1.95" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+
+          {/* Bank Accounts Grid */}
+          <div className="flex px-3 pb-3 items-start content-start gap-1 self-stretch flex-wrap">
+            {/* Bank Account Card 1 - Leonardo Bianchi */}
+            <div className="flex w-[calc(50%-2px)] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div className="w-11 h-11 flex-shrink-0 rounded-full bg-[#E4E4E7] relative">
+                <svg width="19" height="20" viewBox="0 0 20 20" fill="none" className="absolute left-3 top-3">
+                  <path d="M4.99406 9.01156H3.01406V15.9416H4.99406V9.01156ZM10.9341 9.01156H8.95406V15.9416H10.9341V9.01156ZM19.3491 17.9216H0.539062V19.9016H19.3491V17.9216ZM16.8741 9.01156H14.8941V15.9416H16.8741V9.01156ZM9.94406 2.33896L15.102 5.05156H4.78616L9.94406 2.33896ZM9.94406 0.101562L0.539062 5.05156V7.03156H19.3491V5.05156L9.94406 0.101562Z" fill="#26272B"/>
+                </svg>
+                <div className="absolute -top-1 -right-1 w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
+                  🇬🇧
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-1 self-stretch">
+                <div className="self-stretch text-[#51525C] text-[10px] font-medium leading-3 uppercase">LANdlord</div>
+                <div className="self-stretch text-[#18181B] text-sm font-bold leading-5 uppercase">Leonardo Bianchi</div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">ACC: </span>
+                  <span className="text-[#18181B]">1331926819</span>
+                </div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">SORT: </span>
+                  <span className="text-[#18181B]">12-34-56</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bank Account Card 2 - Emma Romano */}
+            <div className="flex w-[calc(50%-2px)] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div className="w-11 h-11 flex-shrink-0 rounded-full bg-[#E4E4E7] relative">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" className="absolute left-3 top-3">
+                  <path d="M4.49406 9.01156H2.51406V15.9416H4.49406V9.01156ZM10.4341 9.01156H8.45406V15.9416H10.4341V9.01156ZM18.8491 17.9216H0.0390625V19.9016H18.8491V17.9216ZM16.3741 9.01156H14.3941V15.9416H16.3741V9.01156ZM9.44406 2.33896L14.602 5.05156H4.28616L9.44406 2.33896ZM9.44406 0.101562L0.0390625 5.05156V7.03156H18.8491V5.05156L9.44406 0.101562Z" fill="#26272B"/>
+                </svg>
+                <div className="absolute -top-1 -right-1 w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
+                  🇺🇸
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-1 self-stretch">
+                <div className="self-stretch text-[#18181B] text-sm font-bold leading-5 uppercase">Emma Romano</div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">SWIFT: </span>
+                  <span className="text-[#18181B]">NWBKGB2L</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bank Account Card 3 - Alexandra Smith */}
+            <div className="flex w-[calc(50%-2px)] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div className="w-11 h-11 flex-shrink-0 rounded-full bg-[#E4E4E7] relative">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute left-3 top-3">
+                  <path d="M4.99406 9.01156H3.01406V15.9416H4.99406V9.01156ZM10.9341 9.01156H8.95406V15.9416H10.9341V9.01156ZM19.3491 17.9216H0.539062V19.9016H19.3491V17.9216ZM16.8741 9.01156H14.8941V15.9416H16.8741V9.01156ZM9.94406 2.33896L15.102 5.05156H4.78616L9.94406 2.33896ZM9.94406 0.101562L0.539062 5.05156V7.03156H19.3491V5.05156L9.94406 0.101562Z" fill="#26272B"/>
+                </svg>
+                <div className="absolute -top-1 -right-1 w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
+                  🇺🇸
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-1 self-stretch">
+                <div className="self-stretch text-[#51525C] text-[10px] font-medium leading-3 uppercase">Wedding fund</div>
+                <div className="self-stretch text-[#18181B] text-sm font-bold leading-5 uppercase">Alexandra Smith</div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">IBAN: </span>
+                  <span className="text-[#18181B]">GB29NWBK...8193</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bank Account Card 4 - Leonardo Rossi */}
+            <div className="flex w-[calc(50%-2px)] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div className="w-11 h-11 flex-shrink-0 rounded-full bg-[#E4E4E7] relative">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" className="absolute left-3 top-3">
+                  <path d="M4.49406 9.01156H2.51406V15.9416H4.49406V9.01156ZM10.4341 9.01156H8.45406V15.9416H10.4341V9.01156ZM18.8491 17.9216H0.0390625V19.9016H18.8491V17.9216ZM16.3741 9.01156H14.3941V15.9416H16.3741V9.01156ZM9.44406 2.33896L14.602 5.05156H4.28616L9.44406 2.33896ZM9.44406 0.101562L0.0390625 5.05156V7.03156H18.8491V5.05156L9.44406 0.101562Z" fill="#26272B"/>
+                </svg>
+                <div className="absolute -top-1 -right-1 w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
+                  🇬🇧
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-1 self-stretch">
+                <div className="self-stretch text-[#51525C] text-[10px] font-medium leading-3 uppercase">ROSSI</div>
+                <div className="self-stretch text-[#18181B] text-sm font-bold leading-5 uppercase">Leonardo Rossi</div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">IBAN: </span>
+                  <span className="text-[#18181B]">GB29NWBK...8193</span>
+                </div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">SWIFT: </span>
+                  <span className="text-[#18181B]">NWBKGB2L</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bank Account Card 5 - Michael Johnson */}
+            <div className="flex w-[calc(50%-2px)] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div className="w-11 h-11 flex-shrink-0 rounded-full bg-[#E4E4E7] relative">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute left-3 top-3">
+                  <path d="M4.99406 9.01156H3.01406V15.9416H4.99406V9.01156ZM10.9341 9.01156H8.95406V15.9416H10.9341V9.01156ZM19.3491 17.9216H0.539062V19.9016H19.3491V17.9216ZM16.8741 9.01156H14.8941V15.9416H16.8741V9.01156ZM9.94406 2.33896L15.102 5.05156H4.78616L9.94406 2.33896ZM9.94406 0.101562L0.539062 5.05156V7.03156H19.3491V5.05156L9.94406 0.101562Z" fill="#26272B"/>
+                </svg>
+                <div className="absolute -top-1 -right-1 w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
+                  🇬🇧
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-1 self-stretch">
+                <div className="self-stretch text-[#51525C] text-[10px] font-medium leading-3 uppercase">Mortgage</div>
+                <div className="self-stretch text-[#18181B] text-sm font-bold leading-5 uppercase">Michael Johnson</div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">ACC: </span>
+                  <span className="text-[#18181B]">1331926819</span>
+                </div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">SWIFT: </span>
+                  <span className="text-[#18181B]">NWBKGB2L</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bank Account Card 6 - Emma Romano (duplicate) */}
+            <div className="flex w-[calc(50%-2px)] h-44 p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
+              <div className="w-11 h-11 flex-shrink-0 rounded-full bg-[#E4E4E7] relative">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" className="absolute left-3 top-3">
+                  <path d="M4.49406 9.01156H2.51406V15.9416H4.49406V9.01156ZM10.4341 9.01156H8.45406V15.9416H10.4341V9.01156ZM18.8491 17.9216H0.0390625V19.9016H18.8491V17.9216ZM16.3741 9.01156H14.3941V15.9416H16.3741V9.01156ZM9.44406 2.33896L14.602 5.05156H4.28616L9.44406 2.33896ZM9.44406 0.101562L0.0390625 5.05156V7.03156H18.8491V5.05156L9.44406 0.101562Z" fill="#26272B"/>
+                </svg>
+                <div className="absolute -top-1 -right-1 w-[22px] h-[22px] rounded-full border-[1.837px] border-white">
+                  🇺🇸
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-1 self-stretch">
+                <div className="self-stretch text-[#18181B] text-sm font-bold leading-5 uppercase">Emma Romano</div>
+                <div className="self-stretch text-xs font-medium leading-4">
+                  <span className="text-[#51525C]">SWIFT: </span>
+                  <span className="text-[#18181B]">NWBKGB2L</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* See All Button */}
+          <div className="flex p-3 flex-col items-start gap-2.5 self-stretch">
+            <div className="flex h-10 py-3 px-0 justify-center items-center gap-2.5 self-stretch rounded bg-[#E4E4E7]">
+              <div className="text-[#18181B] text-center text-sm font-bold leading-5">SEE ALL</div>
             </div>
           </div>
         </div>
