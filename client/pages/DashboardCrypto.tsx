@@ -83,7 +83,7 @@ export default function DashboardCrypto() {
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 5V19M19 12L12 19L5 12" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M7 7L17 17M17 17H9M17 17V9" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">BUY</span>
