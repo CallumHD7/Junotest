@@ -585,10 +585,12 @@ export default function DashboardCrypto() {
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" className="absolute left-[11px] top-[11px]">
                       <path d="M13.8484 3.40391H5.29844V18.6039H16.6984V6.25391H13.8484V3.40391ZM5.29844 1.50391H14.7984L18.5984 5.30391V18.6039C18.5984 19.1078 18.3983 19.5911 18.0419 19.9474C17.6856 20.3037 17.2023 20.5039 16.6984 20.5039H5.29844C4.79453 20.5039 4.31125 20.3037 3.95493 19.9474C3.59862 19.5911 3.39844 19.1078 3.39844 18.6039V3.40391C3.39844 2.89999 3.59862 2.41672 3.95493 2.0604C4.31125 1.70408 4.79453 1.50391 5.29844 1.50391ZM7.19844 10.0539H14.7984V11.9539H7.19844V10.0539ZM7.19844 13.8539H14.7984V15.7539H7.19844V13.8539Z" fill="#18181B"/>
                     </svg>
-                    <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
-                        <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
-                      </svg>
+                    <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute left-7 -top-1 flex items-center justify-center">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F11a8c775e7204e4584ab67368fd1752e?format=webp&width=800"
+                        alt="Vector icon"
+                        className="w-[10px] -ml-px"
+                      />
                     </div>
                   </div>
                   <div className="flex flex-col justify-center items-start flex-1">
