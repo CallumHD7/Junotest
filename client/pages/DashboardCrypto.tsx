@@ -375,11 +375,7 @@ export default function DashboardCrypto() {
                   <svg width="25" height="20" viewBox="0 0 25 20" fill="none" className="absolute left-2.5 top-3">
                     <path d="M20 0H5C2.2375 0 0 2.2375 0 5V15C0 17.7625 2.2375 20 5 20H20C22.7625 20 25 17.7625 25 15V5C25 2.2375 22.7625 0 20 0ZM17.675 12.2125C17.375 12.4625 16.9625 12.5625 16.575 12.4625L2.6875 9.0625C3.0625 8.15 3.95 7.5 5 7.5H20C20.8375 7.5 21.575 7.925 22.0375 8.55L17.675 12.2125ZM5 2.5H20C21.375 2.5 22.5 3.625 22.5 5V5.6875C21.7625 5.2625 20.9125 5 20 5H5C4.0875 5 3.2375 5.2625 2.5 5.6875V5C2.5 3.625 3.625 2.5 5 2.5Z" fill="#26272B"/>
                   </svg>
-                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute right-0 -top-1">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="absolute left-1 top-1">
-                      <path d="M7.00005 13C10.3137 13 13.0001 10.3137 13.0001 7C13.0001 3.68629 10.3137 1 7.00005 1C3.68634 1 1.00005 3.68629 1.00005 7C1.00005 10.3137 3.68634 13 7.00005 13Z" fill="#F7931A"/>
-                    </svg>
-                  </div>
+                  <div className="w-6 h-6 rounded-full border-2 border-white bg-[#F7931A] absolute left-7 -top-1"></div>
                 </div>
                 <div className="flex flex-col items-start gap-1 self-stretch">
                   <div className="self-stretch text-[#18181B] text-sm font-semibold leading-5 uppercase">MAYA'S ETHER HAVEN</div>
