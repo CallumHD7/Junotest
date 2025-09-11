@@ -446,7 +446,7 @@ export default function Dashboard_Fiat() {
         </div>
 
         {/* Saved Bank Accounts Section */}
-        <div className="flex flex-col items-center self-stretch rounded-lg border border-black/[0.12] bg-white w-full mb-1">
+        <div className="flex flex-col items-center self-stretch rounded-lg border border-black/[0.12] bg-white w-full">
           {/* Header */}
           <div className="flex p-3 items-center gap-2 self-stretch">
             <div className="flex items-center gap-1 flex-1">
