@@ -312,11 +312,8 @@ export default function Dashboard_Fiat() {
 
           <div className="flex flex-col items-start gap-1 self-stretch">
             {/* American Dollar */}
-            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
-              {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#0067E1] opacity-40 blur-[99.5px]"></div>
-
-              <div className="flex items-center gap-3 relative z-10">
+            <div className="flex p-[18px] px-3 flex-col items-start gap-3 self-stretch rounded-lg border border-black/[0.12] bg-white">
+              <div className="flex items-center gap-3 self-stretch">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
                   <mask id="mask0_us" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
                     <path d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="white"/>
@@ -328,28 +325,26 @@ export default function Dashboard_Fiat() {
                     <path d="M16.0703 20.8828L20.9688 17.3594H14.9531L19.8516 20.8828L17.9609 15.125L16.0703 20.8828ZM9.10938 20.8828L14.0078 17.3594H7.99219L12.8906 20.8828L11 15.125L9.10938 20.8828ZM2.14844 20.8828L7.04688 17.3594H1.03125L5.92969 20.8828L4.03906 15.125L2.14844 20.8828ZM16.0703 13.9219L20.9688 10.3984H14.9531L19.8516 13.9219L17.9609 8.16406L16.0703 13.9219ZM9.10938 13.9219L14.0078 10.3984H7.99219L12.8906 13.9219L11 8.16406L9.10938 13.9219ZM2.14844 13.9219L7.04688 10.3984H1.03125L5.92969 13.9219L4.03906 8.16406L2.14844 13.9219ZM16.0703 6.875L20.9688 3.35156H14.9531L19.8516 6.875L17.9609 1.11719L16.0703 6.875ZM9.10938 6.875L14.0078 3.35156H7.99219L12.8906 6.875L11 1.11719L9.10938 6.875ZM2.14844 6.875L7.04688 3.35156H1.03125L5.92969 6.875L4.03906 1.11719L2.14844 6.875Z" fill="#EEEEEE"/>
                   </g>
                 </svg>
-                <div className="flex-1">
-                  <div className="text-[#18181B] text-sm font-bold leading-5">AMERICAN DOLLAR</div>
-                  <div className="text-[#51525C] text-sm font-medium leading-5">USD</div>
+                <div className="flex w-[100px] flex-col justify-center items-start gap-0.5">
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">AMERICAN DOLLAR</div>
+                  <div className="w-[79px] text-[#51525C] text-sm font-medium leading-5">USD</div>
                 </div>
-                <div className="flex flex-col items-end gap-0.5">
-                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">$44,955.02</div>
+                <div className="flex flex-col justify-center items-end gap-0.5 flex-1">
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">$44,955.02</div>
                 </div>
               </div>
-              <div className="flex flex-col gap-1 relative z-10">
+              <div className="flex flex-col justify-center items-start gap-1 self-stretch">
                 <div className="text-[#18181B] text-sm font-medium leading-5">65.6%</div>
-                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
-                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#0067E1]" style={{width: "65.6%"}}></div>
+                <div className="h-1 self-stretch relative">
+                  <div className="w-full h-1 rounded-[1px] bg-[#E4E4E7] absolute left-0 top-0"></div>
+                  <div className="w-[227px] h-1 rounded-[1px] bg-[#0067E1] absolute left-0 top-0"></div>
                 </div>
               </div>
             </div>
 
             {/* British Pound */}
-            <div className="flex flex-col p-[18px] gap-3 rounded-lg border border-black/12 bg-white relative overflow-hidden">
-              {/* Background blur effect */}
-              <div className="absolute -left-[50px] -top-[50px] w-[100px] h-[100px] rounded-full bg-[#FF002E] opacity-40 blur-[99.5px]"></div>
-
-              <div className="flex items-center gap-3 relative z-10">
+            <div className="flex p-[18px] px-3 flex-col items-start gap-3 self-stretch rounded-lg border border-black/[0.12] bg-white">
+              <div className="flex items-center gap-3 self-stretch">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
                   <mask id="mask0_uk" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
                     <path d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="white"/>
@@ -360,19 +355,20 @@ export default function Dashboard_Fiat() {
                     <path d="M0 0V3.86719L11.2578 15.125H15.125L0 0ZM17.875 0V17.875H0V26.125H17.875V44H26.125V26.125H44V17.875H26.125V0H17.875ZM40.1328 0L28.875 11.2578V15.125L44 0H40.1328ZM15.125 28.875L0 44H3.86719L15.125 32.7422V28.875ZM28.875 28.875L44 44V40.1328L32.7422 28.875H28.875Z" fill="#D80027"/>
                   </g>
                 </svg>
-                <div className="flex-1">
-                  <div className="text-[#18181B] text-sm font-bold leading-5">BRITISH POUND</div>
-                  <div className="text-[#51525C] text-sm font-medium leading-5">GBP</div>
+                <div className="flex w-[100px] flex-col justify-center items-start gap-0.5">
+                  <div className="text-[#18181B] text-sm font-semibold leading-5">BRITISH POUND</div>
+                  <div className="w-[79px] text-[#51525C] text-sm font-medium leading-5">GBP</div>
                 </div>
-                <div className="flex flex-col items-end gap-0.5">
-                  <div className="text-[#18181B] text-sm font-bold leading-5 text-right">£2,500.00</div>
-                  <div className="text-[#51525C] text-sm font-medium leading-5 text-right">$3,000.00</div>
+                <div className="flex flex-col justify-center items-end gap-0.5 flex-1">
+                  <div className="text-[#18181B] text-right text-sm font-semibold leading-5">£2,500.00</div>
+                  <div className="text-[#51525C] text-right text-sm font-medium leading-5">$3,000.00</div>
                 </div>
               </div>
-              <div className="flex flex-col gap-1 relative z-10">
+              <div className="flex flex-col justify-center items-start gap-1 self-stretch">
                 <div className="text-[#18181B] text-sm font-medium leading-5">12.2%</div>
-                <div className="h-1 bg-[#E4E4E7] rounded-[1px] relative">
-                  <div className="h-1 rounded-[1px] absolute left-0 top-0 bg-[#FF002E]" style={{width: "12.2%"}}></div>
+                <div className="h-1 self-stretch relative">
+                  <div className="w-full h-1 rounded-[1px] bg-[#E4E4E7] absolute left-0 top-0"></div>
+                  <div className="w-[44px] h-1 rounded-[1px] bg-[#FF002E] absolute left-0 top-0"></div>
                 </div>
               </div>
             </div>
