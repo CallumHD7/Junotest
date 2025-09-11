@@ -74,6 +74,7 @@ const App = () => (
           <Route path="/create-new-password" element={<CreateNewPassword />} />
           <Route path="/dashboard-crypto" element={<DashboardCrypto />} />
           <Route path="/TransactionHistory" element={<TransactionHistory />} />
+          <Route path="/TransactionHistory2" element={<TransactionHistory2 />} />
           <Route path="/AddressBook" element={<AddressBook />} />
           <Route path="/Balances" element={<Balances />} />
           <Route path="/saved-bank-accounts" element={<SavedBankAccounts />} />
