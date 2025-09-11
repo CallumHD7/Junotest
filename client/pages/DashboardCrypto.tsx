@@ -6,41 +6,81 @@ export default function DashboardCrypto() {
 
   return (
     <div className="w-full min-h-screen bg-[#F4F4F5] flex flex-col">
-      {/* Header */}
-      <div className="w-full h-[52px] px-4 py-2 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center">
-          <h1 className="text-[#18181B] text-[24px] font-semibold">juno</h1>
+      {/* Status Bar */}
+      <div className="w-full h-11 px-5 py-3 flex justify-between items-center">
+        {/* Time */}
+        <div className="flex justify-center items-center bg-white/20 backdrop-blur-sm rounded-[20px] px-3 py-1">
+          <span className="text-[#18181B] text-center font-semibold text-[17px] leading-[22px] tracking-[-0.408px]">
+            9:41
+          </span>
         </div>
 
-        {/* Segmented Control */}
-        <div className="flex p-0.5 items-center gap-1 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-          <button
-            onClick={() => navigate("/dashboard_fiat")}
-            className="flex w-20 px-4 py-1.5 justify-center items-center gap-2.5 rounded-[7px]"
-          >
-            <span className="text-[#51525C] text-center text-xs font-medium leading-[18px] tracking-[0.06px]">FIAT</span>
-          </button>
-          <div className="flex w-20 px-4 py-1.5 justify-center items-center gap-2.5 rounded-[7px] border-[0.5px] border-black/[0.04] bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)]">
-            <span className="text-[#18181B] text-center text-xs font-bold leading-[18px] tracking-[0.06px]">CRYPTO</span>
-          </div>
-        </div>
-
-        {/* Notification */}
-        <div className="relative w-6 h-6">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="w-[18px] h-5 absolute left-[3px] top-[2px]">
-            <path d="M19.0231 14.6102C18.4894 13.691 17.6961 11.0899 17.6961 7.69264C17.6961 5.65242 16.8857 3.69577 15.443 2.25312C14.0004 0.810472 12.0437 0 10.0035 0C7.96328 0 6.00662 0.810472 4.56397 2.25312C3.12132 3.69577 2.31085 5.65242 2.31085 7.69264C2.31085 11.0909 1.51659 13.691 0.982909 14.6102C0.846625 14.844 0.774375 15.1095 0.773447 15.38C0.772518 15.6505 0.842943 15.9165 0.977619 16.1512C1.1123 16.3858 1.30646 16.5808 1.54053 16.7164C1.77461 16.8521 2.04031 16.9236 2.31085 16.9238H6.23506C6.41254 17.7923 6.88453 18.5728 7.57121 19.1333C8.25788 19.6938 9.11708 20 10.0035 20C10.8899 20 11.7491 19.6938 12.4358 19.1333C13.1224 18.5728 13.5944 17.7923 13.7719 16.9238H17.6961C17.9666 16.9234 18.2322 16.8518 18.4661 16.7161C18.7001 16.5804 18.8941 16.3854 19.0286 16.1508C19.1632 15.9161 19.2335 15.6502 19.2326 15.3798C19.2316 15.1093 19.1594 14.8439 19.0231 14.6102ZM10.0035 18.4623C9.52638 18.4622 9.06103 18.3142 8.67151 18.0386C8.28199 17.7631 7.98744 17.3736 7.8284 16.9238H12.1786C12.0195 17.3736 11.725 17.7631 11.3355 18.0386C10.946 18.3142 10.4806 18.4622 10.0035 18.4623ZM2.31085 15.3853C3.05127 14.1121 3.84938 11.162 3.84938 7.69264C3.84938 6.06047 4.49776 4.49515 5.65188 3.34103C6.806 2.18691 8.37132 1.53853 10.0035 1.53853C11.6357 1.53853 13.201 2.18691 14.3551 3.34103C15.5092 4.49515 16.1576 6.06047 16.1576 7.69264C16.1576 11.1591 16.9538 14.1093 17.6961 15.3853H2.31085Z" fill="#18181B"/>
+        {/* Status Icons */}
+        <div className="flex items-center gap-1">
+          {/* Signal Icon */}
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+            <path fillRule="evenodd" clipRule="evenodd" d="M12 4H13C13.5523 4 14 4.44772 14 5V11C14 11.5523 13.5523 12 13 12H12C11.4477 12 11 11.5523 11 11V5C11 4.44772 11.4477 4 12 4Z" fill="#18181B"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M7.5 6H8.5C9.05228 6 9.5 6.44772 9.5 7V11C9.5 11.5523 9.05228 12 8.5 12H7.5C6.94772 12 6.5 11.5523 6.5 11V7C6.5 6.44772 6.94772 6 7.5 6Z" fill="#18181B"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M3 7.5H4C4.55228 7.5 5 7.94772 5 8.5V11C5 11.5523 4.55228 12 4 12H3C2.44772 12 2 11.5523 2 11V8.5C2 7.94772 2.44772 7.5 3 7.5Z" fill="#18181B"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M16.5 2H17.5C18.0523 2 18.5 2.44772 18.5 3V11C18.5 11.5523 18.0523 12 17.5 12H16.5C15.9477 12 15.5 11.5523 15.5 11V3C15.5 2.44772 15.9477 2 16.5 2Z" fill="#3C3C43" fillOpacity="0.18"/>
           </svg>
-          <div className="w-2 h-2 absolute right-0 top-0 rounded-full border border-white bg-[#F04438]"></div>
+
+          {/* WiFi Icon */}
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+            <path d="M8.13198 8.94141C8.77147 8.94141 9.39286 9.10945 9.94037 9.42987L10.1622 9.5597C10.3304 9.65813 10.36 9.88848 10.2221 10.026L8.328 11.9148C8.21166 12.0308 8.02303 12.0308 7.90669 11.9148L6.02478 10.0381C5.88749 9.90122 5.91611 9.67204 6.08287 9.57289L6.30222 9.44247C6.85476 9.11394 7.48403 8.94141 8.13198 8.94141Z" fill="#18181B"/>
+            <path d="M8.13657 5.46875C9.72741 5.46875 11.2548 5.99649 12.4991 6.97382L12.675 7.11194C12.8152 7.22205 12.8275 7.42955 12.7013 7.55539L11.5705 8.68302C11.4659 8.78732 11.3004 8.7993 11.1818 8.71116L11.044 8.60871C10.2036 7.98413 9.19024 7.6491 8.13657 7.6491C7.07642 7.6491 6.05714 7.9883 5.21396 8.62005L5.07597 8.72343C4.95737 8.8123 4.79127 8.8006 4.68637 8.69599L3.55601 7.56877C3.43008 7.44319 3.44204 7.23622 3.58159 7.1259L3.75644 6.98766C5.00369 6.00163 6.53806 5.46875 8.13657 5.46875Z" fill="#18181B"/>
+            <path d="M8.13272 2C10.6574 2 13.0717 2.89057 14.9828 4.52294L15.1459 4.66228C15.2777 4.77488 15.2855 4.97558 15.1627 5.09797L14.0356 6.22195C13.9264 6.33084 13.7519 6.33847 13.6336 6.23952L13.494 6.12283C11.9894 4.86472 10.1035 4.18035 8.13272 4.18035C6.15517 4.18035 4.26327 4.86943 2.75641 6.13541L2.6168 6.2527C2.4985 6.3521 2.32359 6.34466 2.2142 6.23557L1.08726 5.11176C0.964693 4.98954 0.972236 4.78918 1.10365 4.67646L1.26614 4.53708C3.17953 2.89589 5.60056 2 8.13272 2Z" fill="#18181B"/>
+          </svg>
+
+          {/* Battery Icon */}
+          <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+            <path d="M24 5C24.5523 5 25 5.44772 25 6V8C25 8.55228 24.5523 9 24 9V5Z" fill="#3C3C43" fillOpacity="0.6"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M3 1H20C21.6569 1 23 2.34315 23 4V10C23 11.6569 21.6569 13 20 13H3C1.34315 13 0 11.6569 0 10V4C0 2.34315 1.34315 1 3 1ZM3 2C1.89543 2 1 2.89543 1 4V10C1 11.1046 1.89543 12 3 12H20C21.1046 12 22 11.1046 22 10V4C22 2.89543 21.1046 2 20 2H3Z" fill="#3C3C43" fillOpacity="0.6"/>
+            <rect x="2" y="3" width="19" height="8" rx="1" fill="#18181B"/>
+          </svg>
         </div>
       </div>
 
-      {/* Main Content Area with Background */}
+      {/* Header */}
+      <div className="w-full h-[52px] rounded-b-[4px] flex items-center justify-between px-4 py-[15px]">
+        {/* Juno Logo */}
+        <div className="flex items-center">
+          <svg width="48" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35.7188 11.3464C35.7188 7.35977 38.2487 4.57422 42.0054 4.57422C45.6599 4.57422 48.1643 7.28311 48.1643 11.3209C48.1643 15.3587 45.6599 18.0676 41.9799 18.0676C38.2999 18.0676 35.7188 15.3587 35.7188 11.3464ZM38.351 11.3464C38.351 13.9276 39.8587 15.5887 41.9543 15.5887C44.0754 15.5887 45.5321 13.9276 45.5321 11.3209C45.5321 8.73977 44.1265 7.02755 42.0054 7.02755C39.8843 7.02755 38.351 8.73977 38.351 11.3464Z" fill="#18181B"/>
+            <path d="M22.7031 4.95755H25.3865V8.22866C25.9231 5.95422 27.5331 4.57422 29.7565 4.57422C32.4909 4.57422 33.7176 6.69533 33.7176 9.78755V17.6587H31.0342V10.7076C31.0342 8.20311 30.2165 6.84866 28.3765 6.84866C26.6387 6.84866 25.4631 8.04978 25.3865 9.88977V17.6587H22.7031V4.95755Z" fill="#18181B"/>
+            <path d="M20.0301 4.98438V17.6599H17.3467V14.4399C16.7845 16.6888 15.1745 18.0433 12.9767 18.0433C10.2678 18.0433 9.01562 15.9222 9.01562 12.8299V4.98438H11.699V11.9099C11.699 14.4399 12.5167 15.7688 14.3567 15.7688C16.0434 15.7688 17.219 14.6444 17.3467 12.881V4.98438H20.0301Z" fill="#18181B"/>
+            <path d="M3.75667 0H6.59333V2.81111H3.75667V0ZM3.83333 4.98333H6.51667V18.0933C6.51667 20.8022 5.52 23 2.78556 23C1.45667 23 0.613333 22.3867 0 21.7989L0.971111 19.5756C1.38 20.0867 1.76333 20.4956 2.45333 20.4956C3.78222 20.4956 3.83333 19.0389 3.83333 17.1478V4.98333Z" fill="#18181B"/>
+          </svg>
+        </div>
+
+        {/* Segmented Picker */}
+        <div className="inline-flex p-[2px] items-center gap-1 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
+          <button
+            onClick={() => navigate("/dashboard_fiat")}
+            className="flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px]"
+          >
+            <span className="text-[#51525C] text-center font-inter text-xs font-medium leading-[18px] tracking-[0.06px]">FIAT</span>
+          </button>
+          <div className="flex w-20 px-[18px] py-1.5 justify-center items-center gap-2.5 rounded-[7px] border-[0.5px] border-black/[0.04] bg-white shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)]">
+            <span className="text-[#18181B] text-center font-inter text-xs font-bold leading-[18px] tracking-[0.06px]">CRYPTO</span>
+          </div>
+        </div>
+
+        {/* Notification Bell */}
+        <div className="w-6 h-6 flex-shrink-0 relative">
+          <svg width="18" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-[3px] top-[2px]">
+            <path d="M19.0231 14.6102C18.4894 13.691 17.6961 11.0899 17.6961 7.69264C17.6961 5.65242 16.8857 3.69577 15.443 2.25312C14.0004 0.810472 12.0437 0 10.0035 0C7.96328 0 6.00662 0.810472 4.56397 2.25312C3.12132 3.69577 2.31085 5.65242 2.31085 7.69264C2.31085 11.0909 1.51659 13.691 0.982909 14.6102C0.846625 14.844 0.774375 15.1095 0.773447 15.38C0.772518 15.6505 0.842943 15.9165 0.977619 16.1512C1.1123 16.3858 1.30646 16.5808 1.54053 16.7164C1.77461 16.8521 2.04031 16.9236 2.31085 16.9238H6.23506C6.41254 17.7923 6.88453 18.5728 7.57121 19.1333C8.25788 19.6938 9.11708 20 10.0035 20C10.8899 20 11.7491 19.6938 12.4358 19.1333C13.1224 18.5728 13.5944 17.7923 13.7719 16.9238H17.6961C17.9666 16.9234 18.2322 16.8518 18.4661 16.7161C18.7001 16.5804 18.8941 16.3854 19.0286 16.1508C19.1632 15.9161 19.2335 15.6502 19.2326 15.3798C19.2316 15.1093 19.1594 14.8439 19.0231 14.6102ZM10.0035 18.4623C9.52638 18.4622 9.06103 18.3142 8.67151 18.0386C8.28199 17.7631 7.98744 17.3736 7.8284 16.9238H12.1786C12.0195 17.3736 11.725 17.7631 11.3355 18.0386C10.946 18.3142 10.4806 18.4622 10.0035 18.4623ZM2.31085 15.3853C3.05127 14.1121 3.84938 11.162 3.84938 7.69264C3.84938 6.06047 4.49776 4.49515 5.65188 3.34103C6.806 2.18691 8.37132 1.53853 10.0035 1.53853C11.6357 1.53853 13.201 2.18691 14.3551 3.34103C15.5092 4.49515 16.1576 6.06047 16.1576 7.69264C16.1576 11.1591 16.9538 14.1093 17.6961 15.3853H2.31085Z" fill="#18181B"/>
+          </svg>
+          <div className="absolute top-[1px] right-0 w-2 h-2 flex-shrink-0 rounded-full border border-white bg-[#F04438]"></div>
+        </div>
+      </div>
+
+      {/* Main Section with Background */}
       <div className="relative w-full h-[606px] overflow-hidden">
         {/* Background Image */}
-        <img 
-          src="https://api.builder.io/api/v1/image/assets/TEMP/057a2aa8f9173cb3b88ed4fe25720bf7dac8f3f5?width=3428" 
-          alt="" 
+        <img
+          src="https://api.builder.io/api/v1/image/assets/TEMP/057a2aa8f9173cb3b88ed4fe25720bf7dac8f3f5?width=3428"
+          alt=""
           className="absolute w-[1714px] h-[1143px] object-cover -left-[669px] -top-[402px]"
         />
 
@@ -60,9 +100,66 @@ export default function DashboardCrypto() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <div className="flex items-baseline">
-                <span className="text-[#18181B] text-2xl font-medium leading-[163.198px]">$</span>
-                <span className="text-[#18181B] text-[40px] font-semibold leading-[163.198px]">3,749,002</span>
+                <span className="text-[#18181B] text-2xl font-medium">$</span>
+                <span className="text-[#18181B] text-[40px] font-semibold">3,749,002</span>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-3 px-3 pb-[40px]">
+          <div className="flex items-center gap-3">
+            {/* BUY */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M23.4248 37.0763L37.5669 22.9341" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M23.4297 24.6992V37.0736H35.8041" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">BUY</span>
+            </div>
+
+            {/* SELL */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M37.5752 22.9355L23.4331 37.0776" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M37.5703 35.3125L37.5703 22.9381L25.1959 22.9381" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">SELL</span>
+            </div>
+
+            {/* RECEIVE */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                  <path d="M0.5 8.88889H9.38889V0H0.5V8.88889ZM2.72222 2.22222H7.16667V6.66667H2.72222V2.22222ZM0.5 20H9.38889V11.1111H0.5V20ZM2.72222 13.3333H7.16667V17.7778H2.72222V13.3333ZM11.6111 0V8.88889H20.5V0H11.6111ZM18.2778 6.66667H13.8333V2.22222H18.2778V6.66667ZM18.2778 17.7778H20.5V20H18.2778V17.7778ZM11.6111 11.1111H13.8333V13.3333H11.6111V11.1111ZM13.8333 13.3333H16.0556V15.5556H13.8333V13.3333ZM11.6111 15.5556H13.8333V17.7778H11.6111V15.5556ZM13.8333 17.7778H16.0556V20H13.8333V17.7778ZM16.0556 15.5556H18.2778V17.7778H16.0556V15.5556ZM16.0556 11.1111H18.2778V13.3333H16.0556V11.1111ZM18.2778 13.3333H20.5V15.5556H18.2778V13.3333Z" fill="#18181B"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">RECEIVE</span>
+            </div>
+
+            {/* EXCHANGE */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
+                <svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M14.1631 2.60136L15.2407 1.5L20.3816 6.64247L15.2407 11.7849L14.1638 10.6843L17.4411 7.40783H1.32031V5.8771H17.4411L14.1631 2.60136ZM0.617188 17.3531L5.76042 12.2107L6.83652 13.3113L3.55924 16.5878H19.6801V18.1185H3.56L6.83652 21.395L5.76042 22.4956L0.617188 17.3531Z" fill="#18181B"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">EXCHANGE</span>
+            </div>
+
+            {/* SEND */}
+            <div className="flex flex-col items-center gap-2.5">
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center backdrop-blur-[12px]">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <path d="M5.92925 24.6525L25.9835 16.0561C26.1909 15.9678 26.3676 15.8205 26.4919 15.6325C26.6161 15.4445 26.6824 15.2242 26.6824 14.9988C26.6824 14.7735 26.6161 14.5531 26.4919 14.3651C26.3676 14.1771 26.1909 14.0298 25.9835 13.9415L5.92925 5.34517C5.7556 5.26943 5.56583 5.23811 5.37705 5.25404C5.18827 5.26997 5.00643 5.33265 4.84793 5.43641C4.68943 5.54018 4.55925 5.68178 4.46914 5.84843C4.37904 6.01508 4.33184 6.20154 4.3318 6.39098L4.32031 11.689C4.32031 12.2636 4.74553 12.7578 5.32015 12.8267L21.559 14.9988L5.32015 17.1594C4.74553 17.2398 4.32031 17.734 4.32031 18.3086L4.3318 23.6066C4.3318 24.4226 5.17075 24.9857 5.92925 24.6525Z" fill="#18181B"/>
+                </svg>
+              </div>
+              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">SEND</span>
             </div>
           </div>
         </div>
