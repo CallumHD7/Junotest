@@ -115,10 +115,12 @@ export default function DashboardCrypto() {
             {/* EXCHANGE */}
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 16L17 16M17 16L13 12M17 16L13 20" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M17 8L7 8M7 8L11 12M7 8L11 4" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F2866d1bdcec84112831ff2170b392fa6?format=webp&width=800"
+                  alt="EXCHANGE icon"
+                  width="30"
+                  height="30"
+                />
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">EXCHANGE</span>
             </div>
