@@ -646,11 +646,6 @@ export default function Dashboard_Fiat() {
             ))}
           </div>
 
-          <div className="flex p-3 flex-col gap-2">
-            <button className="flex h-10 px-0 py-3 justify-center items-center gap-2.5 rounded bg-[#E4E4E7]">
-              <span className="text-[#18181B] text-center text-sm font-bold leading-5">SEE ALL</span>
-            </button>
-          </div>
         </div>
       </div>
 
