@@ -324,7 +324,7 @@ export default function DashboardCrypto() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F11a8c775e7204e4584ab67368fd1752e?format=webp&width=800"
                       alt="Vector icon"
-                      className="w-3 h-3"
+                      className="w-[10px] -ml-px"
                     />
                   </div>
                 </div>
