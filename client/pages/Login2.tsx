@@ -45,7 +45,7 @@ export default function Login2() {
         {/* Back Button */}
         <button 
           onClick={handleBackClick}
-          className="w-6 h-6 mb-6 transition-opacity hover:opacity-70"
+          className="w-6 h-6 mb-6"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
@@ -87,7 +87,7 @@ export default function Login2() {
                 {/* Edit Button */}
                 <button 
                   onClick={handleEditEmail}
-                  className="w-6 h-6 transition-opacity hover:opacity-70"
+                  className="w-6 h-6"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M13.9453 9.16704L14.833 10.0547L6.25862 18.6102H5.38985V17.7414L13.9453 9.16704ZM17.3449 3.50116C17.1088 3.50116 16.8633 3.59559 16.6838 3.77501L14.9557 5.5031L18.4969 9.04428L20.225 7.31619C20.5933 6.9479 20.5933 6.3341 20.225 5.9847L18.0153 3.77501C17.8265 3.58615 17.5904 3.50116 17.3449 3.50116ZM13.9453 6.51352L3.50122 16.9576V20.4988H7.0424L17.4865 10.0547L13.9453 6.51352Z" fill="white"/>
@@ -114,7 +114,7 @@ export default function Login2() {
                     <button
                       type="button"
                       onClick={togglePasswordVisibility}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 transition-opacity hover:opacity-70"
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6"
                     >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M12.0001 19.5C5.52228 19.5 2.47783 12.6222 2.3445 12.3333C2.30049 12.2277 2.27783 12.1144 2.27783 12C2.27783 11.8856 2.30049 11.7723 2.3445 11.6667C2.47783 11.3778 5.52228 4.5 12.0001 4.5C18.4778 4.5 21.5223 11.3778 21.6556 11.6667C21.6996 11.7723 21.7223 11.8856 21.7223 12C21.7223 12.1144 21.6996 12.2277 21.6556 12.3333C21.5223 12.6222 18.4778 19.5 12.0001 19.5ZM4.03339 12C4.68894 13.2778 7.36672 17.8333 12.0001 17.8333C16.6334 17.8333 19.3112 13.2778 19.9667 12C19.3112 10.7222 16.6334 6.16667 12.0001 6.16667C7.36672 6.16667 4.68894 10.7222 4.03339 12Z" fill="#D1D1D6"/>
@@ -148,7 +148,7 @@ export default function Login2() {
 
                   <button 
                     onClick={handleForgotPassword}
-                    className="text-white text-[12px] font-bold uppercase leading-[16px] transition-opacity hover:opacity-70"
+                    className="text-white text-[12px] font-bold uppercase leading-[16px]"
                   >
                     FORGOT PASSWORD
                   </button>
@@ -182,7 +182,7 @@ export default function Login2() {
           </span>
           <button
             onClick={handleSignUp}
-            className="text-white text-[14px] font-bold uppercase transition-opacity hover:opacity-70 opacity-[0.86252]"
+            className="text-white text-[14px] font-bold uppercase opacity-[0.86252]"
           >
             SIGN UP
           </button>
