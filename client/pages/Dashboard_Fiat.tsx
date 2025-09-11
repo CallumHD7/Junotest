@@ -234,58 +234,65 @@ export default function Dashboard_Fiat() {
         </div>
 
         {/* Action Buttons */}
-        <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-3 px-3 pb-[40px]">
+        <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-2.5 px-3 pb-[40px]">
           <div className="flex items-center gap-3">
-            {/* Deposit */}
+            {/* BUY */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M12.4268 25.0768L26.5689 10.9346" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M12.4277 12.7017V25.076H24.8021" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7L17 17M17 17H9M17 17V9" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">DEPOSIT</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">BUY</span>
             </div>
 
-            {/* Withdraw */}
+            {/* SELL */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M26.5684 10.9364L12.4262 25.0786" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M26.5674 23.3115V10.9372H14.193" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">WITHDRAW</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">SELL</span>
             </div>
 
-            {/* TPP's */}
+            {/* RECEIVE */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
-                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
-                  <path d="M18.8255 9.45677H12.1755M18.8255 13.8901H12.1755M18.8255 18.3234H14.3922M7.74219 5.02344H23.2589V24.9734L22.1151 23.9937C21.7133 23.6494 21.2017 23.4601 20.6726 23.4601C20.1435 23.4601 19.6318 23.6494 19.2301 23.9937L18.0863 24.9734L16.9436 23.9937C16.5418 23.6491 16.0299 23.4596 15.5005 23.4596C14.9712 23.4596 14.4593 23.6491 14.0575 23.9937L12.9148 24.9734L11.771 23.9937C11.3692 23.6494 10.8576 23.4601 10.3285 23.4601C9.79938 23.4601 9.28773 23.6494 8.88599 23.9937L7.74219 24.9734V5.02344Z" stroke="#18181B" strokeWidth="2.17636" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Ff0189caaeb1c4325a1764610c400841d?format=webp&width=800"
+                  alt="RECEIVE icon"
+                  width="30"
+                  height="30"
+                />
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">TPP'S</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">RECEIVE</span>
             </div>
 
-            {/* Transfer */}
+            {/* EXCHANGE */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
-                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
-                  <path d="M5.92925 24.6525L25.9835 16.0561C26.1909 15.9678 26.3676 15.8205 26.4919 15.6325C26.6161 15.4445 26.6824 15.2242 26.6824 14.9988C26.6824 14.7735 26.6161 14.5531 26.4919 14.3651C26.3676 14.1771 26.1909 14.0298 25.9835 13.9415L5.92925 5.34517C5.7556 5.26943 5.56583 5.23811 5.37705 5.25404C5.18827 5.26997 5.00643 5.33265 4.84793 5.43641C4.68943 5.54018 4.55925 5.68178 4.46914 5.84843C4.37904 6.01508 4.33184 6.20154 4.3318 6.39098L4.32031 11.689C4.32031 12.2636 4.74553 12.7578 5.32015 12.8267L21.559 14.9988L5.32015 17.1594C4.74553 17.2398 4.32031 17.734 4.32031 18.3086L4.3318 23.6066C4.3318 24.4226 5.17075 24.9857 5.92925 24.6525Z" fill="#18181B"/>
-                </svg>
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F2866d1bdcec84112831ff2170b392fa6?format=webp&width=800"
+                  alt="EXCHANGE icon"
+                  width="30"
+                  height="30"
+                />
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">TRANSFER</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">EXCHANGE</span>
             </div>
 
-            {/* More */}
+            {/* SEND */}
             <div className="flex flex-col items-center gap-2.5">
-              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center">
-                <svg width="31" height="30" viewBox="0 0 31 30" fill="none">
-                  <path d="M5.5 15C5.5 15.3315 5.6317 15.6495 5.86612 15.8839C6.10054 16.1183 6.41848 16.25 6.75 16.25C7.08152 16.25 7.39946 16.1183 7.63388 15.8839C7.8683 15.6495 8 15.3315 8 15C8 14.6685 7.8683 14.3505 7.63388 14.1161C7.39946 13.8817 7.08152 13.75 6.75 13.75C6.41848 13.75 6.10054 13.8817 5.86612 14.1161C5.6317 14.3505 5.5 14.6685 5.5 15ZM14.25 15C14.25 15.3315 14.3817 15.6495 14.6161 15.8839C14.8505 16.1183 15.1685 16.25 15.5 16.25C15.8315 16.25 16.1495 16.1183 16.3839 15.8839C16.6183 15.6495 16.75 15.3315 16.75 15C16.75 14.6685 16.6183 14.3505 16.3839 14.1161C16.1495 13.8817 15.8315 13.75 15.5 13.75C15.1685 13.75 14.8505 13.8817 14.6161 14.1161C14.3817 14.3505 14.25 14.6685 14.25 15ZM23 15C23 15.3315 23.1317 15.6495 23.3661 15.8839C23.6005 16.1183 23.9185 16.25 24.25 16.25C24.5815 16.25 24.8995 16.1183 25.1339 15.8839C25.3683 15.6495 25.5 15.3315 25.5 15C25.5 14.6685 25.3683 14.3505 25.1339 14.1161C24.8995 13.8817 24.5815 13.75 24.25 13.75C23.9185 13.75 23.6005 13.8817 23.3661 14.1161C23.1317 14.3505 23 14.6685 23 15Z" stroke="#18181B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F0642c1fd4a67408a8cae81eb8d879af7?format=webp&width=800"
+                  alt="SEND icon"
+                  width="30"
+                  height="30"
+                />
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-bold leading-normal">MORE</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">SEND</span>
             </div>
           </div>
         </div>
