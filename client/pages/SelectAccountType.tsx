@@ -26,7 +26,7 @@ export default function SelectAccountType() {
         {/* Back Button */}
         <button 
           onClick={handleBack}
-          className="w-6 h-6 relative transition-opacity hover:opacity-70"
+          className="w-6 h-6 relative"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="white"/>
@@ -119,7 +119,7 @@ export default function SelectAccountType() {
             </span>
             <button 
               onClick={handleLogIn}
-              className="text-white text-xs font-semibold leading-4 uppercase transition-opacity hover:opacity-70"
+              className="text-white text-xs font-semibold leading-4 uppercase"
             >
               LOG IN
             </button>
