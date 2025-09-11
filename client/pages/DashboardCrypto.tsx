@@ -102,19 +102,12 @@ export default function DashboardCrypto() {
             {/* RECEIVE */}
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                  <rect x="2" y="2" width="6" height="6" fill="#18181B"/>
-                  <rect x="16" y="2" width="6" height="6" fill="#18181B"/>
-                  <rect x="2" y="16" width="6" height="6" fill="#18181B"/>
-                  <rect x="4" y="4" width="2" height="2" fill="white"/>
-                  <rect x="18" y="4" width="2" height="2" fill="white"/>
-                  <rect x="4" y="18" width="2" height="2" fill="white"/>
-                  <rect x="16" y="16" width="2" height="2" fill="#18181B"/>
-                  <rect x="18" y="18" width="2" height="2" fill="#18181B"/>
-                  <rect x="20" y="16" width="2" height="2" fill="#18181B"/>
-                  <rect x="16" y="20" width="2" height="2" fill="#18181B"/>
-                  <rect x="20" y="20" width="2" height="2" fill="#18181B"/>
-                </svg>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Ff80630e9e53246208c512f7a7af1bf53?format=webp&width=800"
+                  alt="RECEIVE icon"
+                  width="30"
+                  height="30"
+                />
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">RECEIVE</span>
             </div>
