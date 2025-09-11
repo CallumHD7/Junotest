@@ -273,8 +273,8 @@ export default function Dashboard_Fiat() {
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F2866d1bdcec84112831ff2170b392fa6?format=webp&width=800"
-                  alt="EXCHANGE icon"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F634f0aaa75324047aa2bad214b7d5c12?format=webp&width=800"
+                  alt="TRANSFER icon"
                   width="30"
                   height="30"
                 />
