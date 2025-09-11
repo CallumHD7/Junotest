@@ -102,8 +102,18 @@ export default function DashboardCrypto() {
             {/* RECEIVE */}
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
-                <svg width="20" height="20" viewBox="0 0 21 20" fill="none">
-                  <path d="M0.5 8.88889H9.38889V0H0.5V8.88889ZM2.72222 2.22222H7.16667V6.66667H2.72222V2.22222ZM0.5 20H9.38889V11.1111H0.5V20ZM2.72222 13.3333H7.16667V17.7778H2.72222V13.3333ZM11.6111 0V8.88889H20.5V0H11.6111ZM18.2778 6.66667H13.8333V2.22222H18.2778V6.66667ZM18.2778 17.7778H20.5V20H18.2778V17.7778ZM11.6111 11.1111H13.8333V13.3333H11.6111V11.1111ZM13.8333 13.3333H16.0556V15.5556H13.8333V13.3333ZM11.6111 15.5556H13.8333V17.7778H11.6111V15.5556ZM13.8333 17.7778H16.0556V20H13.8333V17.7778ZM16.0556 15.5556H18.2778V17.7778H16.0556V15.5556ZM16.0556 11.1111H18.2778V13.3333H16.0556V11.1111ZM18.2778 13.3333H20.5V15.5556H18.2778V13.3333Z" fill="#18181B"/>
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="2" y="2" width="6" height="6" fill="#18181B"/>
+                  <rect x="16" y="2" width="6" height="6" fill="#18181B"/>
+                  <rect x="2" y="16" width="6" height="6" fill="#18181B"/>
+                  <rect x="4" y="4" width="2" height="2" fill="white"/>
+                  <rect x="18" y="4" width="2" height="2" fill="white"/>
+                  <rect x="4" y="18" width="2" height="2" fill="white"/>
+                  <rect x="16" y="16" width="2" height="2" fill="#18181B"/>
+                  <rect x="18" y="18" width="2" height="2" fill="#18181B"/>
+                  <rect x="20" y="16" width="2" height="2" fill="#18181B"/>
+                  <rect x="16" y="20" width="2" height="2" fill="#18181B"/>
+                  <rect x="20" y="20" width="2" height="2" fill="#18181B"/>
                 </svg>
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">RECEIVE</span>
