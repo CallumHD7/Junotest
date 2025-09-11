@@ -5,7 +5,7 @@ export default function DashboardCrypto() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col pb-1">
+    <div className="w-full bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col pb-[74px] pb-[calc(74px+env(safe-area-inset-bottom))]">
       {/* Main Section with Background - Complete Figma Design */}
       <div className="w-full h-[606px] relative overflow-hidden">
         {/* Background Image */}
