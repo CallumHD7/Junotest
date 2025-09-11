@@ -134,52 +134,6 @@ export default function DashboardCrypto() {
         </div>
       </div>
 
-      {/* Actions */}
-      <div className="flex w-full px-3 justify-center items-center gap-3 h-[82px]">
-        <div className="flex flex-col items-start gap-2.5">
-          <div className="flex items-center gap-3">
-            {/* BUY */}
-            <div className="flex w-[60px] h-[60px] p-2 flex-col justify-center items-center gap-0.5 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M23.4248 37.0763L37.5669 22.9341" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M23.4297 24.6992V37.0736H35.8041" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            {/* SELL */}
-            <div className="flex w-[60px] h-[60px] p-2 flex-col justify-center items-center gap-0.5 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M37.5752 22.9355L23.4331 37.0776" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M37.5703 35.3125L37.5703 22.9381L25.1959 22.9381" stroke="#18181B" strokeWidth="2.45455" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            {/* RECEIVE */}
-            <div className="flex w-[60px] h-[60px] p-2 flex-col justify-center items-center gap-0.5 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-              <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
-                <path d="M0.5 8.88889H9.38889V0H0.5V8.88889ZM2.72222 2.22222H7.16667V6.66667H2.72222V2.22222ZM0.5 20H9.38889V11.1111H0.5V20ZM2.72222 13.3333H7.16667V17.7778H2.72222V13.3333ZM11.6111 0V8.88889H20.5V0H11.6111ZM18.2778 6.66667H13.8333V2.22222H18.2778V6.66667ZM18.2778 17.7778H20.5V20H18.2778V17.7778ZM11.6111 11.1111H13.8333V13.3333H11.6111V11.1111ZM13.8333 13.3333H16.0556V15.5556H13.8333V13.3333ZM11.6111 15.5556H13.8333V17.7778H11.6111V15.5556ZM13.8333 17.7778H16.0556V20H13.8333V17.7778ZM16.0556 15.5556H18.2778V17.7778H16.0556V15.5556ZM16.0556 11.1111H18.2778V13.3333H16.0556V11.1111ZM18.2778 13.3333H20.5V15.5556H18.2778V13.3333Z" fill="#18181B"/>
-              </svg>
-            </div>
-            {/* EXCHANGE */}
-            <div className="flex w-[60px] h-[60px] p-2 flex-col justify-center items-center gap-0.5 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-              <svg width="21" height="24" viewBox="0 0 21 24" fill="none">
-                <path fillRule="evenodd" clipRule="evenodd" d="M14.1631 2.60136L15.2407 1.5L20.3816 6.64247L15.2407 11.7849L14.1638 10.6843L17.4411 7.40783H1.32031V5.8771H17.4411L14.1631 2.60136ZM0.617188 17.3531L5.76042 12.2107L6.83652 13.3113L3.55924 16.5878H19.6801V18.1185H3.56L6.83652 21.395L5.76042 22.4956L0.617188 17.3531Z" fill="#18181B"/>
-              </svg>
-            </div>
-            {/* SEND */}
-            <div className="flex w-[60px] h-[60px] p-2 flex-col justify-center items-center gap-0.5 rounded-lg bg-[#E4E4E7] backdrop-blur-[12px]">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <path d="M5.92925 24.6525L25.9835 16.0561C26.1909 15.9678 26.3676 15.8205 26.4919 15.6325C26.6161 15.4445 26.6824 15.2242 26.6824 14.9988C26.6824 14.7735 26.6161 14.5531 26.4919 14.3651C26.3676 14.1771 26.1909 14.0298 25.9835 13.9415L5.92925 5.34517C5.7556 5.26943 5.56583 5.23811 5.37705 5.25404C5.18827 5.26997 5.00643 5.33265 4.84793 5.43641C4.68943 5.54018 4.55925 5.68178 4.46914 5.84843C4.37904 6.01508 4.33184 6.20154 4.3318 6.39098L4.32031 11.689C4.32031 12.2636 4.74553 12.7578 5.32015 12.8267L21.559 14.9988L5.32015 17.1594C4.74553 17.2398 4.32031 17.734 4.32031 18.3086L4.3318 23.6066C4.3318 24.4226 5.17075 24.9857 5.92925 24.6525Z" fill="#18181B"/>
-              </svg>
-            </div>
-          </div>
-          <div className="flex items-center gap-3 self-stretch">
-            <div className="flex-1 text-[#51525C] text-center text-[10px] font-semibold leading-normal">BUY</div>
-            <div className="flex-1 text-[#51525C] text-center text-[10px] font-semibold leading-normal">SELL</div>
-            <div className="flex-1 text-[#51525C] text-center text-[10px] font-semibold leading-normal">RECIEVE</div>
-            <div className="flex-1 text-[#51525C] text-center text-[10px] font-semibold leading-normal">EXCHANGE</div>
-            <div className="flex-1 text-[#51525C] text-center text-[10px] font-semibold leading-normal">SEND</div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Content Wrapper */}
       <div className="flex w-full p-1 flex-col items-start gap-1 rounded-t-[12px] border-t border-black/[0.12] bg-[#F4F4F5] min-h-[2264px]">
