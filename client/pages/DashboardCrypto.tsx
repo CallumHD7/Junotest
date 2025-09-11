@@ -313,7 +313,7 @@ export default function DashboardCrypto() {
               </svg>
             </div>
 
-            <div className="flex px-3 items-start content-start gap-1 self-stretch flex-wrap">
+            <div className="flex px-3 pb-3 items-start content-start gap-1 self-stretch flex-wrap">
               {/* Saved Address 1 */}
               <div className="flex w-[169.5px] h-[140px] p-3 flex-col justify-between items-start rounded-md bg-[#F4F4F5]">
                 <div className="w-11 h-11 rounded-full bg-[#E4E4E7] relative">
