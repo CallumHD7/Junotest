@@ -191,7 +191,7 @@ export default function BusinessAccount2() {
             </p>
             <button 
               onClick={handleResendCode}
-              className="text-white text-xs font-semibold leading-4 uppercase transition-opacity hover:opacity-70"
+              className="text-white text-xs font-semibold leading-4 uppercase"
             >
               RESEND CODE
             </button>
