@@ -69,6 +69,7 @@ const App = () => (
           <Route path="/two-factor-auth" element={<TwoFactorAuth />} />
           <Route path="/create-new-password" element={<CreateNewPassword />} />
           <Route path="/dashboard-crypto" element={<DashboardCrypto />} />
+          <Route path="/TransactionHistory" element={<TransactionHistory />} />
           <Route path="/profile" element={<Profile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
