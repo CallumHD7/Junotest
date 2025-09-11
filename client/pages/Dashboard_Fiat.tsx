@@ -243,7 +243,7 @@ export default function Dashboard_Fiat() {
                   <path d="M7 7L17 17M17 17H9M17 17V9" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">BUY</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">DEPOSIT</span>
             </div>
 
             {/* SELL */}
@@ -253,7 +253,7 @@ export default function Dashboard_Fiat() {
                   <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">SELL</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">WITHDRAW</span>
             </div>
 
             {/* RECEIVE */}
@@ -266,7 +266,7 @@ export default function Dashboard_Fiat() {
                   height="30"
                 />
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">RECEIVE</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">TPP'S</span>
             </div>
 
             {/* EXCHANGE */}
@@ -279,7 +279,7 @@ export default function Dashboard_Fiat() {
                   height="30"
                 />
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">EXCHANGE</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">TRANSFER</span>
             </div>
 
             {/* SEND */}
@@ -292,7 +292,7 @@ export default function Dashboard_Fiat() {
                   height="30"
                 />
               </div>
-              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">SEND</span>
+              <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">MORE</span>
             </div>
           </div>
         </div>
