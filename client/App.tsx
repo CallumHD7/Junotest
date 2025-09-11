@@ -32,6 +32,7 @@ import TwoFactorAuth from "./pages/TwoFactorAuth";
 import CreateNewPassword from "./pages/CreateNewPassword";
 import DashboardCrypto from "./pages/DashboardCrypto";
 import TransactionHistory from "./pages/TransactionHistory";
+import AddressBook from "./pages/AddressBook";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
