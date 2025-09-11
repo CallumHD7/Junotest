@@ -128,9 +128,12 @@ export default function DashboardCrypto() {
             {/* SEND */}
             <div className="flex flex-col items-center gap-2.5">
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12L19 6L13 12L19 18L5 12Z" fill="#18181B"/>
-                </svg>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F0642c1fd4a67408a8cae81eb8d879af7?format=webp&width=800"
+                  alt="SEND icon"
+                  width="30"
+                  height="30"
+                />
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">SEND</span>
             </div>
