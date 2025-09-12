@@ -1122,8 +1122,8 @@ export default function Dashboard_Fiat() {
                 <label className="text-[#51525C] text-xs font-medium uppercase">DEPOSIT CURRENCY</label>
                 <div className="flex h-[52px] px-4 items-center gap-2 w-full rounded-lg bg-[#F4F4F5]">
                   <span className="flex-1 text-[#70707B] text-sm font-medium uppercase">SELECT DEPOSIT CURRENCY</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="transform rotate-90">
-                    <path d="M6.17864 8.70073C6.38017 8.4992 6.63666 8.39844 6.94811 8.39844C7.25956 8.39844 7.51604 8.4992 7.71757 8.70073L12.0046 12.9877L16.2916 8.70073C16.4931 8.4992 16.7496 8.39844 17.0611 8.39844C17.3725 8.39844 17.629 8.4992 17.8305 8.70073C18.032 8.90225 18.1328 9.15874 18.1328 9.47019C18.1328 9.78164 18.032 10.0381 17.8305 10.2397L12.774 15.2961C12.6641 15.4061 12.545 15.4841 12.4168 15.5303C12.2886 15.5764 12.1511 15.5992 12.0046 15.5984C11.858 15.5984 11.7206 15.5753 11.5924 15.5292C11.4641 15.483 11.345 15.4053 11.2351 15.2961L6.17864 10.2397C5.97712 10.0381 5.87635 9.78164 5.87635 9.47019C5.87635 9.15874 5.97712 8.90225 6.17864 8.70073Z" fill="#51525C"/>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 10L12 15L17 10" stroke="#51525C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </div>
