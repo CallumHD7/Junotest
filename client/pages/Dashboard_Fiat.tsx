@@ -125,7 +125,7 @@ export default function Dashboard_Fiat() {
       swift: "NWBKGB2L"
     },
     {
-      flag: "����",
+      flag: "������",
       name: "Emma Romano",
       swift: "NWBKGB2L"
     }
@@ -1086,7 +1086,7 @@ export default function Dashboard_Fiat() {
                       value={cryptoSendAmount}
                       onChange={(e) => handleCryptoSendChange(e.target.value)}
                       placeholder="0.00"
-                      className="text-[#18181B] text-right text-[28px] font-medium bg-transparent border-none outline-none w-32"
+                      className="text-[#18181B] text-right text-[36px] font-medium bg-transparent border-none outline-none w-48"
                     />
                   </div>
 
@@ -1142,7 +1142,7 @@ export default function Dashboard_Fiat() {
                       value={cryptoReceiveAmount}
                       onChange={(e) => handleCryptoReceiveChange(e.target.value)}
                       placeholder="0.00"
-                      className="text-[#18181B] text-right text-[28px] font-medium bg-transparent border-none outline-none w-32"
+                      className="text-[#18181B] text-right text-[36px] font-medium bg-transparent border-none outline-none w-48"
                     />
                   </div>
 
