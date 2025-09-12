@@ -1160,7 +1160,7 @@ export default function Dashboard_Fiat() {
                     />
 
                     {/* Dropdown */}
-                    <div className="absolute top-full mt-1 w-full z-50 flex flex-col rounded-lg border border-[#E4E4E7] bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.12)]">
+                    <div className="absolute top-full mt-1 w-full z-50 flex flex-col rounded-lg border border-[#E4E4E7] bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.12)] overflow-hidden">
                       {/* USD Option */}
                       <div
                         className={`flex p-3 items-center gap-2 cursor-pointer ${
@@ -1421,7 +1421,7 @@ export default function Dashboard_Fiat() {
                       />
 
                       {/* Dropdown */}
-                      <div className="absolute top-full mt-1 w-full z-50 flex flex-col rounded-lg border border-[#E4E4E7] bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.12)]">
+                      <div className="absolute top-full mt-1 w-full z-50 flex flex-col rounded-lg border border-[#E4E4E7] bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.12)] overflow-hidden">
                         {/* USD Option */}
                         <div
                           className={`flex p-3 items-center gap-2 cursor-pointer ${
