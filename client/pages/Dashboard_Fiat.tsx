@@ -1334,9 +1334,16 @@ export default function Dashboard_Fiat() {
             <div className="flex-1 p-4 flex flex-col justify-start items-start gap-8 md:justify-center md:items-center">
               {/* Currency Selection Display */}
               <div className="flex flex-col items-start gap-6 w-full">
-                <div className="flex flex-col items-start gap-2 w-full">
+                <div className="flex flex-col items-start gap-2 w-full relative">
                   <label className="text-[#51525C] text-xs font-medium uppercase">DEPOSIT CURRENCY</label>
-                  <div className="flex h-[52px] px-4 items-center gap-2 w-full rounded-lg bg-[#F4F4F5]">
+                  <div
+                    className={`flex h-[52px] px-4 items-center gap-2 w-full rounded-lg cursor-pointer transition-colors ${
+                      showIbanCurrencyDropdown
+                        ? 'bg-white border border-[#D1D1D6]'
+                        : 'bg-[#F4F4F5] border border-transparent'
+                    }`}
+                    onClick={() => setShowIbanCurrencyDropdown(!showIbanCurrencyDropdown)}
+                  >
                     {/* Flag Icon based on selected currency */}
                     {selectedCurrency === "AMERICAN DOLLAR (USD)" && (
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
