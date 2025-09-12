@@ -436,7 +436,7 @@ export default function Dashboard_Fiat() {
                   />
 
                   {/* Dropdown Menu */}
-                  <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 z-50 flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden">
+                  <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 max-sm:left-[-20px] max-sm:transform-none z-50 flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden">
                     {/* FX Option */}
                     <div
                       className={`flex px-3 py-3 items-center cursor-pointer transition-colors ${
