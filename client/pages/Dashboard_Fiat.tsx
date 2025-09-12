@@ -1168,6 +1168,8 @@ export default function Dashboard_Fiat() {
                         onClick={() => {
                           setSelectedCurrency("AMERICAN DOLLAR (USD)");
                           setShowCurrencyDropdown(false);
+                          setShowFiatDepositOverlay(false);
+                          setShowIbanDetailsOverlay(true);
                         }}
                       >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
