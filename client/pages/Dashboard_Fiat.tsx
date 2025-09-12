@@ -9,6 +9,11 @@ export default function Dashboard_Fiat() {
   const [showCurrencyDropdown, setShowCurrencyDropdown] = useState(false);
   const [showIbanCurrencyDropdown, setShowIbanCurrencyDropdown] = useState(false);
   const [showIbanDetailsOverlay, setShowIbanDetailsOverlay] = useState(false);
+  const [showCryptoDepositOverlay, setShowCryptoDepositOverlay] = useState(false);
+  const [showCryptoSendDropdown, setShowCryptoSendDropdown] = useState(false);
+  const [showCryptoReceiveDropdown, setShowCryptoReceiveDropdown] = useState(false);
+  const [selectedCryptoCurrency, setSelectedCryptoCurrency] = useState("BITCOIN (BTC)");
+  const [selectedFiatCurrency, setSelectedFiatCurrency] = useState("AMERICAN DOLLAR (USD)");
   const [selectedCurrency, setSelectedCurrency] = useState("AMERICAN DOLLAR (USD)");
   const [hasCurrencyBeenSelected, setHasCurrencyBeenSelected] = useState(false);
   const navigate = useNavigate();
