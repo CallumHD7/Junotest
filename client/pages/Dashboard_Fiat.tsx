@@ -22,7 +22,7 @@ export default function Dashboard_Fiat() {
   // Withdrawal overlay state
   const [showWithdrawalOverlay, setShowWithdrawalOverlay] = useState(false);
   const [withdrawalTab, setWithdrawalTab] = useState("new"); // "new" or "saved"
-  const [withdrawalAmount, setWithdrawalAmount] = useState("");
+  const [withdrawalAmount, setWithdrawalAmount] = useState("900.00");
   const [withdrawalCurrency, setWithdrawalCurrency] = useState("EUR");
   const [showWithdrawalCurrencyDropdown, setShowWithdrawalCurrencyDropdown] = useState(false);
 
