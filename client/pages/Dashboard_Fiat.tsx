@@ -211,7 +211,7 @@ export default function Dashboard_Fiat() {
   const statements = [
     { flag: "🇬🇧", date: "24.05.21 16:55", amount: "$45,000.00" },
     { flag: "🇪🇺", date: "24.05.21 16:55", amount: "$45,000.00" },
-    { flag: "��🇸", date: "24.05.21 16:55", amount: "$45,000.00" },
+    { flag: "🇺🇸", date: "24.05.21 16:55", amount: "$45,000.00" },
     { flag: "🇦🇺", date: "24.05.21 16:55", amount: "$45,000.00" },
     { flag: "🇨🇭", date: "24.05.21 16:55", amount: "$45,000.00" }
   ];
@@ -1163,7 +1163,7 @@ export default function Dashboard_Fiat() {
                             </clipPath>
                           </defs>
                         </svg>
-                        <span className="text-[#18181B] text-xl font-medium">selected element</span>
+                        <span className="text-[#18181B] text-xl font-medium">USD</span>
                       </div>
                       <svg
                         width="24"
