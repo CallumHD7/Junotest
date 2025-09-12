@@ -1266,6 +1266,131 @@ export default function Dashboard_Fiat() {
         </div>
       )}
 
+      {/* Transfer Overlay */}
+      {showTransferOverlay && (
+        <div className="fixed inset-0 bg-white flex flex-col z-50">
+          {/* Header */}
+          <div className="flex justify-between items-center p-4 flex-shrink-0">
+            <h2 className="text-[#18181B] text-lg font-semibold uppercase tracking-wider">TRANSFER</h2>
+            <button
+              onClick={() => setShowTransferOverlay(false)}
+              className="w-6 h-6 flex items-center justify-center"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M11.9969 13.4008L7.09687 18.3008C6.91354 18.4841 6.68021 18.5758 6.39687 18.5758C6.11354 18.5758 5.88021 18.4841 5.69687 18.3008C5.51354 18.1174 5.42188 17.8841 5.42188 17.6008C5.42188 17.3174 5.51354 17.0841 5.69687 16.9008L10.5969 12.0008L5.69687 7.10078C5.51354 6.91745 5.42188 6.68411 5.42188 6.40078C5.42188 6.11745 5.51354 5.88411 5.69687 5.70078C5.88021 5.51745 6.11354 5.42578 6.39687 5.42578C6.68021 5.42578 6.91354 5.51745 7.09687 5.70078L11.9969 10.6008L16.8969 5.70078C17.0802 5.51745 17.3135 5.42578 17.5969 5.42578C17.8802 5.42578 18.1135 5.51745 18.2969 5.70078C18.4802 5.88411 18.5719 6.11745 18.5719 6.40078C18.5719 6.68411 18.4802 6.91745 18.2969 7.10078L13.3969 12.0008L18.2969 16.9008C18.4802 17.0841 18.5719 17.3174 18.5719 17.6008C18.5719 17.8841 18.4802 18.1174 18.2969 18.3008C18.1135 18.4841 17.8802 18.5758 17.5969 18.5758C17.3135 18.5758 17.0802 18.4841 16.8969 18.3008L11.9969 13.4008Z" fill="#18181B"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 px-4 pb-6 flex flex-col gap-6">
+            {/* Currency Section */}
+            <div className="flex flex-col gap-4 p-5 rounded-lg bg-[#F4F4F5]">
+              <div className="text-[#51525C] text-xs font-medium uppercase">CURRENCY</div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  {/* Currency Dropdown */}
+                  <div
+                    className="flex items-center gap-2 cursor-pointer"
+                    onClick={() => setShowTransferCurrencyDropdown(!showTransferCurrencyDropdown)}
+                  >
+                    <div className="flex items-center gap-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clipPath="url(#clip0_16461_17730)">
+                          <mask id="mask0_16461_17730" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"/>
+                          </mask>
+                          <g mask="url(#mask0_16461_17730)">
+                            <path d="M0 0H24V24H0V0Z" fill="#0052B4"/>
+                            <path d="M11.9984 4.69531L12.3875 5.89062H13.6391L12.6219 6.62656L13.0109 7.82656L11.9937 7.08594L10.9766 7.82656L11.3656 6.62656L10.3484 5.89062H11.6047L11.9984 4.69531ZM6.83281 6.83281L7.95781 7.40469L8.84375 6.51406L8.64688 7.75625L9.76719 8.32812L8.525 8.525L8.32812 9.76719L7.75625 8.64219L6.51406 8.84375L7.40469 7.95312L6.83281 6.83281ZM4.69531 11.9984L5.89062 11.6094V10.3578L6.62656 11.375L7.82656 10.9859L7.08594 12.0031L7.82656 13.0203L6.62656 12.6313L5.89062 13.6484V12.3922L4.69531 11.9984ZM6.83281 17.1641L7.40469 16.0391L6.51406 15.1531L7.75625 15.35L8.32812 14.2297L8.525 15.4719L9.76719 15.6687L8.64219 16.2406L8.84375 17.4828L7.95312 16.5922L6.83281 17.1641ZM11.9984 19.3016L11.6094 18.1062H10.3578L11.375 17.3703L10.9859 16.1703L12.0031 16.9109L13.0203 16.1703L12.6313 17.3703L13.6484 18.1062H12.3922L11.9984 19.3016ZM17.1641 17.1641L16.0391 16.5922L15.1531 17.4828L15.35 16.2406L14.2297 15.6687L15.4719 15.4719L15.6687 14.2297L16.2406 15.3547L17.4828 15.1531L16.5922 16.0437L17.1641 17.1641ZM19.3016 11.9984L18.1062 12.3875V13.6391L17.3703 12.6219L16.1703 13.0109L16.9109 11.9937L16.1703 10.9766L17.3703 11.3656L18.1062 10.3484V11.6047L19.3016 11.9984ZM17.1641 6.83281L16.5922 7.95781L17.4828 8.84375L16.2406 8.64688L15.6687 9.76719L15.4719 8.525L14.2297 8.32812L15.3547 7.75625L15.1531 6.51406L16.0437 7.40469L17.1641 6.83281Z" fill="#FFDA44"/>
+                          </g>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_16461_17730">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span className="text-[#18181B] text-xl font-medium uppercase">EUR</span>
+                    </div>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className={`transition-transform ${showTransferCurrencyDropdown ? 'rotate-180' : ''}`}
+                    >
+                      <path d="M6.17864 8.70073C6.38017 8.4992 6.63666 8.39844 6.94811 8.39844C7.25956 8.39844 7.51604 8.4992 7.71757 8.70073L12.0046 12.9877L16.2916 8.70073C16.4931 8.4992 16.7496 8.39844 17.0611 8.39844C17.3725 8.39844 17.629 8.4992 17.8305 8.70073C18.032 8.90225 18.1328 9.15874 18.1328 9.47019C18.1328 9.78164 18.032 10.0381 17.8305 10.2397L12.774 15.2961C12.6641 15.4061 12.545 15.4841 12.4168 15.5303C12.2886 15.5764 12.1511 15.5992 12.0046 15.5984C11.858 15.5984 11.7206 15.5753 11.5924 15.5292C11.4641 15.483 11.345 15.4053 11.2351 15.2961L6.17864 10.2397C5.97712 10.0381 5.87635 9.78164 5.87635 9.47019C5.87635 9.15874 5.97712 8.90225 6.17864 8.70073Z" fill="#18181B"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 flex justify-end items-center relative">
+                    <input
+                      type="number"
+                      value={transferAmount}
+                      onChange={(e) => setTransferAmount(e.target.value)}
+                      placeholder="0.00"
+                      className="text-[#18181B] text-right text-[28px] font-medium bg-transparent border-none outline-none w-full"
+                    />
+                    {/* MAX Button */}
+                    <div className="absolute -top-[18px] right-4 flex px-1.5 py-1 justify-center items-center rounded-sm bg-[#E4E4E7]">
+                      <span className="text-[#51525C] text-center text-[10px] font-semibold uppercase tracking-wide">MAX</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <div className="text-[#51525C] text-xs font-medium uppercase">EURO</div>
+                  <div className="text-[#51525C] text-xs font-medium">€2,050,328.13</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Email Address Section */}
+            <div className="flex flex-col gap-2">
+              <div className="text-[#51525C] text-xs font-medium uppercase">EMAIL ADDRESS</div>
+              <div className="flex h-[52px] px-4 items-center rounded-lg border border-[#D1D1D6] bg-white">
+                <input
+                  type="email"
+                  value={transferEmailAddress}
+                  onChange={(e) => setTransferEmailAddress(e.target.value)}
+                  placeholder="Enter email address"
+                  className="flex-1 text-[#18181B] text-sm font-medium bg-transparent border-none outline-none uppercase"
+                />
+              </div>
+            </div>
+
+            {/* Reference Section */}
+            <div className="flex flex-col gap-2">
+              <div className="text-[#51525C] text-xs font-medium uppercase">REFERENCE</div>
+              <div className="flex h-[52px] px-4 items-center rounded-lg bg-[#F4F4F5]">
+                <input
+                  type="text"
+                  value={transferReference}
+                  onChange={(e) => setTransferReference(e.target.value)}
+                  placeholder="Enter your reference"
+                  className="flex-1 text-[#70707B] text-sm font-medium bg-transparent border-none outline-none uppercase"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Continue Button */}
+          <div className="p-4 pt-0">
+            <button
+              className={`w-full py-3 px-8 rounded-lg transition-all ${
+                transferAmount && transferEmailAddress
+                  ? 'bg-[#18181B] cursor-pointer hover:bg-[#2A2A2A]'
+                  : 'bg-[#3F3F46] opacity-50 cursor-not-allowed'
+              }`}
+              disabled={!transferAmount || !transferEmailAddress}
+            >
+              <span className="text-white text-sm font-semibold uppercase">CONTINUE</span>
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Bottom Navigation */}
       {!showDepositOverlay && !showIbanDetailsOverlay && !showCryptoDepositOverlay && !showWithdrawalOverlay && !showThirdPartyPaymentOverlay && !showTransferOverlay && (
         <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
