@@ -1032,7 +1032,7 @@ export default function Dashboard_Fiat() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 md:p-4">
           <div className="bg-white w-full h-full md:h-auto md:rounded-lg md:max-w-sm md:mx-auto flex flex-col">
             {/* Header */}
-            <div className="flex justify-between items-center p-4 border-b border-[#F4F4F5]">
+            <div className="flex justify-between items-center p-4 border-b border-[#F4F4F5] flex-shrink-0">
               <h2 className="text-[#18181B] text-lg font-semibold uppercase tracking-wider">DEPOSIT</h2>
               <button
                 onClick={() => setShowDepositOverlay(false)}
@@ -1045,7 +1045,7 @@ export default function Dashboard_Fiat() {
             </div>
 
             {/* Content */}
-            <div className="p-4 space-y-2">
+            <div className="flex-1 p-4 space-y-7 flex flex-col justify-center md:justify-start md:space-y-2">
               {/* FIAT Option */}
               <div className="flex flex-col justify-center items-center gap-6 p-10 rounded-lg bg-[#F4F4F5] cursor-pointer hover:bg-[#E4E4E7] transition-colors">
                 <svg width="36" height="36" viewBox="0 0 37 36" fill="none">
