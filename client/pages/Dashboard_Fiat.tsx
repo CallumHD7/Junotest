@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard_Fiat() {
@@ -20,8 +20,37 @@ export default function Dashboard_Fiat() {
   const [cryptoReceiveAmount, setCryptoReceiveAmount] = useState("");
   const navigate = useNavigate();
 
-  // Exchange rate: 1 BTC = $114,795.97
-  const btcToUsdRate = 114795.97;
+  // Real-time exchange rate state
+  const [btcToUsdRate, setBtcToUsdRate] = useState(114795.97);
+  const [isRateLoading, setIsRateLoading] = useState(false);
+
+  // Fetch real-time BTC to USD rate
+  const fetchBtcRate = async () => {
+    try {
+      setIsRateLoading(true);
+      const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+      const data = await response.json();
+      if (data.bitcoin && data.bitcoin.usd) {
+        setBtcToUsdRate(data.bitcoin.usd);
+      }
+    } catch (error) {
+      console.error('Failed to fetch BTC rate:', error);
+    } finally {
+      setIsRateLoading(false);
+    }
+  };
+
+  // Set up real-time rate updates
+  useEffect(() => {
+    // Fetch rate immediately
+    fetchBtcRate();
+
+    // Set up interval to fetch rate every 30 seconds
+    const interval = setInterval(fetchBtcRate, 30000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
 
   const handleCryptoSendChange = (value: string) => {
     setCryptoSendAmount(value);
