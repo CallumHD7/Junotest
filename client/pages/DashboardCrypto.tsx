@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function DashboardCrypto() {
+  const [showCryptoDepositOverlay, setShowCryptoDepositOverlay] = useState(false);
+  const [showCryptoSendDropdown, setShowCryptoSendDropdown] = useState(false);
+  const [showCryptoReceiveDropdown, setShowCryptoReceiveDropdown] = useState(false);
+  const [selectedCryptoCurrency, setSelectedCryptoCurrency] = useState("BITCOIN (BTC)");
+  const [selectedFiatCurrency, setSelectedFiatCurrency] = useState("AMERICAN DOLLAR (USD)");
   const navigate = useNavigate();
 
   return (
