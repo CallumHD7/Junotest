@@ -7,6 +7,7 @@ export default function Dashboard_Fiat() {
   const [showDepositOverlay, setShowDepositOverlay] = useState(false);
   const [showFiatDepositOverlay, setShowFiatDepositOverlay] = useState(false);
   const [showCurrencyDropdown, setShowCurrencyDropdown] = useState(false);
+  const [showIbanDetailsOverlay, setShowIbanDetailsOverlay] = useState(false);
   const [selectedCurrency, setSelectedCurrency] = useState("AMERICAN DOLLAR (USD)");
   const navigate = useNavigate();
 
