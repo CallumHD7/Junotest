@@ -67,6 +67,10 @@ export default function Dashboard_Fiat() {
   const [transferEmailAddress, setTransferEmailAddress] = useState("test@example.com");
   const [transferReference, setTransferReference] = useState("");
 
+  // MORE dropdown state
+  const [showMoreDropdown, setShowMoreDropdown] = useState(false);
+  const [selectedMoreOption, setSelectedMoreOption] = useState("FX");
+
   const navigate = useNavigate();
 
   // Real-time exchange rate state
