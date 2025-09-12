@@ -431,12 +431,12 @@ export default function Dashboard_Fiat() {
                 <>
                   {/* Background Overlay */}
                   <div
-                    className="fixed inset-0 bg-black bg-opacity-[0.08] z-40"
+                    className="fixed inset-0 bg-black bg-opacity-[0.08] z-30"
                     onClick={() => setShowMoreDropdown(false)}
                   />
 
                   {/* Dropdown Menu */}
-                  <div className="absolute top-full mt-2 right-0 z-50 flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden">
+                  <div className="absolute top-full right-0 z-[60] flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden" style={{marginTop: '8px'}}>
                     {/* FX Option */}
                     <div
                       className={`flex px-3 py-3 items-center cursor-pointer transition-colors ${
@@ -1459,7 +1459,7 @@ export default function Dashboard_Fiat() {
 
       {/* Bottom Navigation */}
       {!showDepositOverlay && !showIbanDetailsOverlay && !showCryptoDepositOverlay && !showWithdrawalOverlay && !showThirdPartyPaymentOverlay && !showTransferOverlay && (
-        <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
+        <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-20">
         {/* Home */}
         <div className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg border-b-[3px] border-[#18181B] bg-[#F4F4F5]">
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
