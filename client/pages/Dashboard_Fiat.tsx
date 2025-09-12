@@ -1303,7 +1303,8 @@ export default function Dashboard_Fiat() {
               <button
                 onClick={() => {
                   setShowIbanDetailsOverlay(false);
-                  setShowFiatDepositOverlay(true);
+                  setShowFiatDepositOverlay(false);
+                  setShowDepositOverlay(true);
                 }}
                 className="w-6 h-6 flex items-center justify-center"
               >
