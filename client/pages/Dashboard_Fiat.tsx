@@ -46,6 +46,19 @@ export default function Dashboard_Fiat() {
   const [reference, setReference] = useState("");
   const [saveAccount, setSaveAccount] = useState(false);
 
+  // Third-Party Payment form fields
+  const [tppBeneficiaryName, setTppBeneficiaryName] = useState("Tiana Workman");
+  const [tppBeneficiaryAddress, setTppBeneficiaryAddress] = useState("");
+  const [tppBankName, setTppBankName] = useState("");
+  const [tppBankAddress, setTppBankAddress] = useState("");
+  const [tppAccountNumber, setTppAccountNumber] = useState("");
+  const [tppSortCode, setTppSortCode] = useState("");
+  const [tppIban, setTppIban] = useState("");
+  const [tppSwift, setTppSwift] = useState("");
+  const [tppAdditionalInfo, setTppAdditionalInfo] = useState("");
+  const [tppReference, setTppReference] = useState("");
+  const [tppSaveAccount, setTppSaveAccount] = useState(false);
+
   const navigate = useNavigate();
 
   // Real-time exchange rate state
@@ -124,7 +137,7 @@ export default function Dashboard_Fiat() {
       flag: "🇬🇧",
       name: "BRITISH POUND",
       code: "GBP",
-      amount: "��2,500.00",
+      amount: "£2,500.00",
       equivalent: "$3,000.00",
       percentage: 12.2,
       color: "#FF002E"
