@@ -1189,7 +1189,7 @@ export default function Dashboard_Fiat() {
                             </clipPath>
                           </defs>
                         </svg>
-                        <span className="flex-1 text-[#18181B] text-sm font-medium uppercase">AMERICAN DOLLAR (USD)</span>
+                        <span className="flex-1 text-[#18181B] text-sm font-medium uppercase truncate">AMERICAN DOLLAR (USD)</span>
                         {hasCurrencyBeenSelected && selectedCurrency === "AMERICAN DOLLAR (USD)" && (
                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M3.60156 11.9984L9.20156 17.5984L20.4016 6.39844" stroke="#18181B" strokeWidth="2.28" strokeLinecap="round" strokeLinejoin="round"/>
