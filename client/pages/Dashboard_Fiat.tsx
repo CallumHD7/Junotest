@@ -1395,18 +1395,12 @@ export default function Dashboard_Fiat() {
         </div>
       )}
 
-      {/* MORE Dropdown Portal */}
+      {/* MORE Dropdown */}
       {showMoreDropdown && (
         <>
-          {/* Background Overlay */}
+          {/* Dropdown Menu */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-[0.08] z-30"
-            onClick={() => setShowMoreDropdown(false)}
-          />
-
-          {/* Dropdown Menu - Positioned as portal */}
-          <div
-            className="fixed z-[60] flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden top-48 sm:top-48 max-sm:top-[548px]"
+            className="fixed z-50 flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden top-48 sm:top-48 max-sm:top-[548px]"
             style={{
               right: '16px', // Aligned with button from right edge
             }}
