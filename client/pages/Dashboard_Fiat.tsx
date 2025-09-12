@@ -52,11 +52,11 @@ export default function Dashboard_Fiat() {
 
   // Set up real-time rate updates
   useEffect(() => {
-    // Fetch rate immediately
-    fetchBtcRate();
+    // Update rate immediately
+    updateBtcRate();
 
-    // Set up interval to fetch rate every 30 seconds
-    const interval = setInterval(fetchBtcRate, 30000);
+    // Set up interval to update rate every 30 seconds
+    const interval = setInterval(updateBtcRate, 30000);
 
     // Cleanup interval on component unmount
     return () => clearInterval(interval);
