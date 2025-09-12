@@ -24,67 +24,30 @@ export default function Dashboard_Fiat() {
   const [btcToUsdRate, setBtcToUsdRate] = useState(114795.97);
   const [isRateLoading, setIsRateLoading] = useState(false);
 
-  // Fetch real-time BTC to USD rate with fallback options
-  const fetchBtcRate = async () => {
-    try {
-      setIsRateLoading(true);
+  // Simulate real-time BTC to USD rate changes locally
+  const updateBtcRate = () => {
+    setIsRateLoading(true);
 
-      // Try multiple APIs in order of preference
-      const apis = [
-        {
-          url: 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd',
-          parser: (data: any) => data.bitcoin?.usd
-        },
-        {
-          url: 'https://api.coinbase.com/v2/spot-prices/BTC-USD',
-          parser: (data: any) => parseFloat(data.data?.amount)
-        },
-        {
-          url: 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT',
-          parser: (data: any) => parseFloat(data.price)
-        }
-      ];
-
-      for (const api of apis) {
-        try {
-          const response = await fetch(api.url, {
-            method: 'GET',
-            headers: {
-              'Accept': 'application/json',
-            },
-            mode: 'cors'
-          });
-
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-
-          const data = await response.json();
-          const rate = api.parser(data);
-
-          if (rate && !isNaN(rate) && rate > 0) {
-            setBtcToUsdRate(rate);
-            return; // Success, exit the function
-          }
-        } catch (apiError) {
-          console.warn(`API ${api.url} failed:`, apiError);
-          continue; // Try next API
-        }
-      }
-
-      // If all APIs fail, use a simulated realistic rate with small variations
+    // Simulate API delay
+    setTimeout(() => {
+      // Use time-based seed for consistent but varying rates
+      const timeSeed = Math.floor(Date.now() / 30000); // Changes every 30 seconds
       const baseRate = 114795.97;
-      const variation = (Math.random() - 0.5) * 2000; // ±$1000 variation
-      const simulatedRate = baseRate + variation;
-      setBtcToUsdRate(simulatedRate);
-      console.log('Using simulated BTC rate due to API failures:', simulatedRate);
 
-    } catch (error) {
-      console.error('Failed to fetch BTC rate:', error);
-      // Keep the existing rate as fallback
-    } finally {
+      // Create realistic price movements using sine wave with random noise
+      const timeOffset = (timeSeed % 100) / 100;
+      const trend = Math.sin(timeOffset * Math.PI * 2) * 1500; // ±$1500 trend
+      const volatility = (Math.sin(timeSeed * 0.1) * 0.5 + 0.5) * 800; // 0-$800 volatility
+      const noise = (Math.random() - 0.5) * volatility;
+
+      const newRate = baseRate + trend + noise;
+
+      // Ensure rate stays within reasonable bounds
+      const clampedRate = Math.max(90000, Math.min(140000, newRate));
+
+      setBtcToUsdRate(clampedRate);
       setIsRateLoading(false);
-    }
+    }, 500); // 500ms simulated API delay
   };
 
   // Set up real-time rate updates
