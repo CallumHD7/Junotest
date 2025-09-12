@@ -18,6 +18,27 @@ export default function Dashboard_Fiat() {
   const [hasCurrencyBeenSelected, setHasCurrencyBeenSelected] = useState(false);
   const [cryptoSendAmount, setCryptoSendAmount] = useState("");
   const [cryptoReceiveAmount, setCryptoReceiveAmount] = useState("");
+
+  // Withdrawal overlay state
+  const [showWithdrawalOverlay, setShowWithdrawalOverlay] = useState(false);
+  const [withdrawalTab, setWithdrawalTab] = useState("new"); // "new" or "saved"
+  const [withdrawalAmount, setWithdrawalAmount] = useState("");
+  const [withdrawalCurrency, setWithdrawalCurrency] = useState("EUR");
+  const [showWithdrawalCurrencyDropdown, setShowWithdrawalCurrencyDropdown] = useState(false);
+
+  // Withdrawal form fields
+  const [beneficiaryName, setBeneficiaryName] = useState("");
+  const [beneficiaryAddress, setBeneficiaryAddress] = useState("");
+  const [bankName, setBankName] = useState("");
+  const [bankAddress, setBankAddress] = useState("");
+  const [accountNumber, setAccountNumber] = useState("");
+  const [sortCode, setSortCode] = useState("");
+  const [iban, setIban] = useState("");
+  const [swift, setSwift] = useState("");
+  const [additionalInfo, setAdditionalInfo] = useState("");
+  const [reference, setReference] = useState("");
+  const [saveAccount, setSaveAccount] = useState(false);
+
   const navigate = useNavigate();
 
   // Real-time exchange rate state
@@ -325,8 +346,8 @@ export default function Dashboard_Fiat() {
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">DEPOSIT</span>
             </div>
 
-            {/* SELL */}
-            <div className="flex flex-col items-center gap-2.5">
+            {/* WITHDRAW */}
+            <div className="flex flex-col items-center gap-2.5 cursor-pointer" onClick={() => setShowWithdrawalOverlay(true)}>
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
                   <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
