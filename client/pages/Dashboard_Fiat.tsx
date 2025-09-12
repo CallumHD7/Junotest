@@ -1249,6 +1249,8 @@ export default function Dashboard_Fiat() {
                         onClick={() => {
                           setSelectedCurrency("UNITED ARAB EMIRATES DIRHAM (AED)");
                           setShowCurrencyDropdown(false);
+                          setShowFiatDepositOverlay(false);
+                          setShowIbanDetailsOverlay(true);
                         }}
                       >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
