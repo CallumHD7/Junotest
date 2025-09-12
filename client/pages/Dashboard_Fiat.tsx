@@ -1116,7 +1116,7 @@ export default function Dashboard_Fiat() {
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-4 flex flex-col justify-center gap-8 md:justify-start">
+            <div className="flex-1 p-4 flex flex-col justify-start items-start gap-8 md:justify-center md:items-center">
               {/* Deposit Currency Section */}
               <div className="flex flex-col items-start gap-2 w-full">
                 <label className="text-[#51525C] text-xs font-medium uppercase">DEPOSIT CURRENCY</label>
