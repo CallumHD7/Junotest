@@ -1835,6 +1835,348 @@ export default function Dashboard_Fiat() {
           </div>
         </div>
       )}
+
+      {/* Withdrawal Overlay */}
+      {showWithdrawalOverlay && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 md:p-4">
+          <div className="bg-white w-full h-full md:h-auto md:rounded-lg md:max-w-sm md:mx-auto flex flex-col max-h-screen overflow-hidden">
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 flex-shrink-0 border-b border-[#D1D1D6]">
+              <h2 className="text-[#18181B] text-lg font-semibold uppercase tracking-wider">WITHDRAWAL</h2>
+              <button
+                onClick={() => setShowWithdrawalOverlay(false)}
+                className="w-6 h-6 flex items-center justify-center"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M11.9969 13.4008L7.09687 18.3008C6.91354 18.4841 6.68021 18.5758 6.39687 18.5758C6.11354 18.5758 5.88021 18.4841 5.69687 18.3008C5.51354 18.1174 5.42188 17.8841 5.42188 17.6008C5.42188 17.3174 5.51354 17.0841 5.69687 16.9008L10.5969 12.0008L5.69687 7.10078C5.51354 6.91745 5.42188 6.68411 5.42188 6.40078C5.42188 6.11745 5.51354 5.88411 5.69687 5.70078C5.88021 5.51745 6.11354 5.42578 6.39687 5.42578C6.68021 5.42578 6.91354 5.51745 7.09687 5.70078L11.9969 10.6008L16.8969 5.70078C17.0802 5.51745 17.3135 5.42578 17.5969 5.42578C17.8802 5.42578 18.1135 5.51745 18.2969 5.70078C18.4802 5.88411 18.5719 6.11745 18.5719 6.40078C18.5719 6.68411 18.4802 6.91745 18.2969 7.10078L13.3969 12.0008L18.2969 16.9008C18.4802 17.0841 18.5719 17.3174 18.5719 17.6008C18.5719 17.8841 18.4802 18.1174 18.2969 18.3008C18.1135 18.4841 17.8802 18.5758 17.5969 18.5758C17.3135 18.5758 17.0802 18.4841 16.8969 18.3008L11.9969 13.4008Z" fill="#18181B"/>
+                </svg>
+              </button>
+            </div>
+
+            {/* Tab Navigation */}
+            <div className="flex h-11 items-start gap-1.5 p-4 flex-shrink-0">
+              <div className="flex h-11 p-0.5 items-center flex-1 rounded-lg bg-[#F4F4F5] backdrop-blur-[12px]">
+                <button
+                  className={`flex px-[18px] py-1.5 justify-center items-center gap-2.5 flex-1 self-stretch rounded-[7px] ${
+                    withdrawalTab === "new"
+                      ? 'border border-black/[0.04] bg-[#FCFCFC] shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)]'
+                      : ''
+                  }`}
+                  onClick={() => setWithdrawalTab("new")}
+                >
+                  <span className={`text-center text-sm font-semibold leading-normal tracking-[0.14px] uppercase ${
+                    withdrawalTab === "new" ? 'text-[#18181B]' : 'text-[#51525C]'
+                  }`}>
+                    New Account
+                  </span>
+                </button>
+                <button
+                  className={`flex px-[18px] py-1.5 justify-center items-center gap-2.5 flex-1 self-stretch rounded-[7px] ${
+                    withdrawalTab === "saved"
+                      ? 'border border-black/[0.04] bg-[#FCFCFC] shadow-[0_3px_8px_0_rgba(0,0,0,0.12),0_3px_1px_0_rgba(0,0,0,0.04)]'
+                      : ''
+                  }`}
+                  onClick={() => setWithdrawalTab("saved")}
+                >
+                  <span className={`text-center text-sm font-medium leading-normal tracking-[0.14px] uppercase ${
+                    withdrawalTab === "saved" ? 'text-[#18181B]' : 'text-[#51525C]'
+                  }`}>
+                    Saved Accounts
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 px-4 pb-6 overflow-y-auto">
+              <div className="flex flex-col gap-6">
+                {/* Withdraw With Section */}
+                <div className="flex flex-col gap-4 p-5 rounded-lg bg-[#F4F4F5] relative">
+                  <div className="text-[#51525C] text-xs font-medium uppercase">WITHDRAW WITH</div>
+
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-3">
+                      {/* Currency Dropdown */}
+                      <div className="flex items-center gap-2 self-stretch relative">
+                        <div
+                          className="flex items-center gap-1 cursor-pointer"
+                          onClick={() => setShowWithdrawalCurrencyDropdown(!showWithdrawalCurrencyDropdown)}
+                        >
+                          <div className="flex items-center gap-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <g clipPath="url(#clip0_eur_withdrawal)">
+                                <mask id="mask0_eur_withdrawal" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                  <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0_eur_withdrawal)">
+                                  <path d="M0 0H24V24H0V0Z" fill="#0052B4"/>
+                                  <path d="M11.9984 4.69531L12.3875 5.89062H13.6391L12.6219 6.62656L13.0109 7.82656L11.9937 7.08594L10.9766 7.82656L11.3656 6.62656L10.3484 5.89062H11.6047L11.9984 4.69531ZM6.83281 6.83281L7.95781 7.40469L8.84375 6.51406L8.64688 7.75625L9.76719 8.32812L8.525 8.525L8.32812 9.76719L7.75625 8.64219L6.51406 8.84375L7.40469 7.95312L6.83281 6.83281ZM4.69531 11.9984L5.89062 11.6094V10.3578L6.62656 11.375L7.82656 10.9859L7.08594 12.0031L7.82656 13.0203L6.62656 12.6313L5.89062 13.6484V12.3922L4.69531 11.9984ZM6.83281 17.1641L7.40469 16.0391L6.51406 15.1531L7.75625 15.35L8.32812 14.2297L8.525 15.4719L9.76719 15.6687L8.64219 16.2406L8.84375 17.4828L7.95312 16.5922L6.83281 17.1641ZM11.9984 19.3016L11.6094 18.1062H10.3578L11.375 17.3703L10.9859 16.1703L12.0031 16.9109L13.0203 16.1703L12.6313 17.3703L13.6484 18.1062H12.3922L11.9984 19.3016ZM17.1641 17.1641L16.0391 16.5922L15.1531 17.4828L15.35 16.2406L14.2297 15.6687L15.4719 15.4719L15.6687 14.2297L16.2406 15.3547L17.4828 15.1531L16.5922 16.0437L17.1641 17.1641ZM19.3016 11.9984L18.1062 12.3875V13.6391L17.3703 12.6219L16.1703 13.0109L16.9109 11.9937L16.1703 10.9766L17.3703 11.3656L18.1062 10.3484V11.6047L19.3016 11.9984ZM17.1641 6.83281L16.5922 7.95781L17.4828 8.84375L16.2406 8.64688L15.6687 9.76719L15.4719 8.525L14.2297 8.32812L15.3547 7.75625L15.1531 6.51406L16.0437 7.40469L17.1641 6.83281Z" fill="#FFDA44"/>
+                                </g>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_eur_withdrawal">
+                                  <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                            <span className="text-[#18181B] text-xl font-medium uppercase">{withdrawalCurrency}</span>
+                          </div>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            className={`transition-transform ${showWithdrawalCurrencyDropdown ? 'rotate-180' : 'rotate-90'}`}
+                          >
+                            <path d="M6.17864 8.70073C6.38017 8.4992 6.63666 8.39844 6.94811 8.39844C7.25956 8.39844 7.51604 8.4992 7.71757 8.70073L12.0046 12.9877L16.2916 8.70073C16.4931 8.4992 16.7496 8.39844 17.0611 8.39844C17.3725 8.39844 17.629 8.4992 17.8305 8.70073C18.032 8.90225 18.1328 9.15874 18.1328 9.47019C18.1328 9.78164 18.032 10.0381 17.8305 10.2397L12.774 15.2961C12.6641 15.4061 12.545 15.4841 12.4168 15.5303C12.2886 15.5764 12.1511 15.5992 12.0046 15.5984C11.858 15.5984 11.7206 15.5753 11.5924 15.5292C11.4641 15.483 11.345 15.4053 11.2351 15.2961L6.17864 10.2397C5.97712 10.0381 5.87635 9.78164 5.87635 9.47019C5.87635 9.15874 5.97712 8.90225 6.17864 8.70073Z" fill="#18181B"/>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div className="flex-1"></div>
+
+                      <input
+                        type="number"
+                        value={withdrawalAmount}
+                        onChange={(e) => setWithdrawalAmount(e.target.value)}
+                        placeholder="900.00"
+                        className="text-[#18181B] text-right text-[28px] font-medium bg-transparent border-none outline-none w-32"
+                      />
+                    </div>
+
+                    <div className="flex items-start gap-2 self-stretch">
+                      <div className="flex-1 text-[#51525C] text-xs font-medium uppercase">EURO</div>
+                      <div className="flex-1 text-[#51525C] text-right text-xs font-medium uppercase">€2,050,328.13</div>
+                    </div>
+                  </div>
+
+                  {/* MAX Button */}
+                  <div className="absolute right-4 top-5 flex px-1.5 py-1 justify-center items-center gap-2.5 rounded bg-[#E4E4E7]">
+                    <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal tracking-[0.1px] uppercase">MAX</span>
+                  </div>
+                </div>
+
+                {/* Form Fields */}
+                <div className="flex flex-col gap-6">
+                  {/* Beneficiary Name */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">Beneficiary name</label>
+                    <input
+                      type="text"
+                      value={beneficiaryName}
+                      onChange={(e) => setBeneficiaryName(e.target.value)}
+                      placeholder="Tiana Workman"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg border border-[#D1D1D6] bg-white text-[#18181B] text-sm font-medium leading-5 uppercase outline-none focus:border-[#18181B]"
+                    />
+                  </div>
+
+                  {/* Beneficiary Address */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">Beneficiary address</label>
+                    <input
+                      type="text"
+                      value={beneficiaryAddress}
+                      onChange={(e) => setBeneficiaryAddress(e.target.value)}
+                      placeholder="Enter beneficiary address"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* Bank Name */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">Bank name</label>
+                    <input
+                      type="text"
+                      value={bankName}
+                      onChange={(e) => setBankName(e.target.value)}
+                      placeholder="Enter bank name"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* Bank Address with Save Checkbox */}
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[#51525C] text-xs font-medium uppercase">Bank address</label>
+                      <input
+                        type="text"
+                        value={bankAddress}
+                        onChange={(e) => setBankAddress(e.target.value)}
+                        placeholder="Enter bank address"
+                        className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                      />
+                    </div>
+
+                    {/* Save Bank Account Checkbox */}
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={`w-5 h-5 rounded-md border cursor-pointer flex items-center justify-center ${
+                          saveAccount ? 'border-[#18181B] bg-[#18181B]' : 'border-[#D1D1D6] bg-white'
+                        }`}
+                        onClick={() => setSaveAccount(!saveAccount)}
+                      >
+                        {saveAccount && (
+                          <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
+                            <path d="M1 4.5L4.5 8L11 1.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <span className="text-[#18181B] text-xs font-medium uppercase">Save this Bank Account</span>
+                    </div>
+                  </div>
+
+                  {/* Account Number */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">Account number</label>
+                    <input
+                      type="text"
+                      value={accountNumber}
+                      onChange={(e) => setAccountNumber(e.target.value)}
+                      placeholder="Enter account number"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* Sort Code */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">Sort code</label>
+                    <input
+                      type="text"
+                      value={sortCode}
+                      onChange={(e) => setSortCode(e.target.value)}
+                      placeholder="Enter sort code"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* IBAN */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">IBAN</label>
+                    <input
+                      type="text"
+                      value={iban}
+                      onChange={(e) => setIban(e.target.value)}
+                      placeholder="Enter IBAN"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* SWIFT */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">SWIFT</label>
+                    <input
+                      type="text"
+                      value={swift}
+                      onChange={(e) => setSwift(e.target.value)}
+                      placeholder="Enter swift code"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* Additional Info */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">Additional info</label>
+                    <textarea
+                      value={additionalInfo}
+                      onChange={(e) => setAdditionalInfo(e.target.value)}
+                      placeholder="EG: routing number"
+                      rows={5}
+                      className="flex p-4 items-start self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none resize-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* Reference */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[#51525C] text-xs font-medium uppercase">Reference</label>
+                    <input
+                      type="text"
+                      value={reference}
+                      onChange={(e) => setReference(e.target.value)}
+                      placeholder="Enter your reference"
+                      className="flex h-[52px] px-4 items-center self-stretch rounded-lg bg-[#F4F4F5] text-[#70707B] text-sm font-medium leading-5 uppercase outline-none focus:bg-white focus:border focus:border-[#D1D1D6]"
+                    />
+                  </div>
+
+                  {/* Divider */}
+                  <div className="h-px self-stretch bg-[#D1D1D6]"></div>
+
+                  {/* Attachments Section */}
+                  <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[#51525C] text-xs font-medium uppercase">Attachments</label>
+                      <div className="flex p-6 flex-col items-center gap-3 self-stretch rounded-lg border border-dashed border-[#A0A0AB] bg-[#FCFCFC]">
+                        <div className="flex flex-col items-center gap-1">
+                          <div className="flex justify-center items-start gap-1 self-stretch">
+                            <span className="text-[#18181B] text-xs font-semibold uppercase">Click to upload</span>
+                            <span className="text-[#51525C] text-xs font-medium uppercase">or drag and drop</span>
+                          </div>
+                          <span className="text-[#51525C] text-xs font-medium uppercase">SVG, PNG, JPG or GIF (max. 800x400px)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* File List */}
+                    <div className="flex flex-col gap-2">
+                      {/* File Item 1 */}
+                      <div className="flex p-3 flex-col justify-center items-start gap-3 self-stretch rounded-lg border border-[#D1D1D6] bg-white">
+                        <div className="flex items-center gap-2 self-stretch">
+                          <div className="flex flex-col items-start flex-1 self-stretch">
+                            <span className="text-[#18181B] text-sm font-medium leading-5 uppercase">Project_Specifications_2023.pdf</span>
+                            <span className="text-[#51525C] text-xs font-medium leading-4 uppercase">512 KB</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 self-stretch">
+                          <div className="flex-1 h-2 rounded-lg bg-[#E4E4E7] relative">
+                            <div className="w-4/5 h-2 rounded-lg bg-[#18181B] absolute left-0 top-0"></div>
+                          </div>
+                          <span className="text-[#18181B] text-xs font-medium leading-4 uppercase">80%</span>
+                        </div>
+                      </div>
+
+                      {/* File Item 2 */}
+                      <div className="flex p-3 flex-col justify-center items-start gap-3 self-stretch rounded-lg border border-[#D1D1D6] bg-white">
+                        <div className="flex items-center gap-2 self-stretch">
+                          <div className="flex flex-col items-start flex-1 self-stretch">
+                            <span className="text-[#18181B] text-sm font-medium leading-5 uppercase">System_Architecture_Overvie...pdf</span>
+                            <span className="text-[#51525C] text-xs font-medium leading-4 uppercase">1.5 MB</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* File Item 3 */}
+                      <div className="flex p-3 flex-col justify-center items-start gap-3 self-stretch rounded-lg border border-[#D1D1D6] bg-white">
+                        <div className="flex items-center gap-2 self-stretch">
+                          <div className="flex flex-col items-start flex-1 self-stretch">
+                            <span className="text-[#18181B] text-sm font-medium leading-5 uppercase">User_Interface_Guidelines.pdf</span>
+                            <span className="text-[#51525C] text-xs font-medium leading-4 uppercase">750 KB</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* File Item 4 */}
+                      <div className="flex p-3 flex-col justify-center items-start gap-3 self-stretch rounded-lg border border-[#D1D1D6] bg-white">
+                        <div className="flex items-center gap-2 self-stretch">
+                          <div className="flex flex-col items-start flex-1 self-stretch">
+                            <span className="text-[#18181B] text-sm font-medium leading-5 uppercase">Database_Design_Proposal.pdf</span>
+                            <span className="text-[#51525C] text-xs font-medium leading-4 uppercase">2.3 MB</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="flex w-full p-4 items-center gap-2.5 flex-shrink-0 border-t border-[#D1D1D6] bg-white">
+              <button className="flex px-8 py-3 justify-center items-center gap-2.5 flex-1 self-stretch rounded-lg bg-[#18181B]">
+                <span className="text-white text-center text-sm font-semibold leading-5">CONTINUE</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
