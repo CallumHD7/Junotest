@@ -795,6 +795,151 @@ export default function DashboardCrypto() {
           </svg>
         </button>
       </div>
+
+      {/* Crypto Deposit Overlay */}
+      {showCryptoDepositOverlay && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 md:p-4">
+          <div className="bg-white w-full h-full md:h-auto md:rounded-lg md:max-w-sm md:mx-auto flex flex-col">
+            {/* Header */}
+            <div className="flex items-center gap-3 p-4 flex-shrink-0">
+              {/* Back Button */}
+              <button
+                onClick={() => setShowCryptoDepositOverlay(false)}
+                className="w-6 h-6 flex items-center justify-center"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="#18181B"/>
+                </svg>
+              </button>
+
+              {/* Title */}
+              <h2 className="flex-1 text-[#18181B] text-lg font-semibold uppercase tracking-wider">DEPOSIT CRYPTO</h2>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setShowCryptoDepositOverlay(false)}
+                className="w-6 h-6 flex items-center justify-center"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M11.9969 13.4008L7.09687 18.3008C6.91354 18.4841 6.68021 18.5758 6.39687 18.5758C6.11354 18.5758 5.88021 18.4841 5.69687 18.3008C5.51354 18.1174 5.42188 17.8841 5.42188 17.6008C5.42188 17.3174 5.51354 17.0841 5.69687 16.9008L10.5969 12.0008L5.69687 7.10078C5.51354 6.91745 5.42188 6.68411 5.42188 6.40078C5.42188 6.11745 5.51354 5.88411 5.69687 5.70078C5.88021 5.51745 6.11354 5.42578 6.39687 5.42578C6.68021 5.42578 6.91354 5.51745 7.09687 5.70078L11.9969 10.6008L16.8969 5.70078C17.0802 5.51745 17.3135 5.42578 17.5969 5.42578C17.8802 5.42578 18.1135 5.51745 18.2969 5.70078C18.4802 5.88411 18.5719 6.11745 18.5719 6.40078C18.5719 6.68411 18.4802 6.91745 18.2969 7.10078L13.3969 12.0008L18.2969 16.9008C18.4802 17.0841 18.5719 17.3174 18.5719 17.6008C18.5719 17.8841 18.4802 18.1174 18.2969 18.3008C18.1135 18.4841 17.8802 18.5758 17.5969 18.5758C17.3135 18.5758 17.0802 18.4841 16.8969 18.3008L11.9969 13.4008Z" fill="#18181B"/>
+                </svg>
+              </button>
+            </div>
+
+            {/* Description */}
+            <div className="px-4 pb-4">
+              <p className="text-[#51525C] text-sm font-medium uppercase">
+                Select the Crypto you'd like to send and the fiat you'd like it to be deposited into your account as.
+              </p>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 px-4 pb-6 flex flex-col gap-6">
+              {/* YOU SEND Section */}
+              <div className="flex flex-col gap-4 p-5 rounded-lg bg-[#F4F4F5]">
+                <div className="text-[#51525C] text-xs font-medium uppercase">YOU SEND</div>
+
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-3">
+                    {/* Crypto Dropdown */}
+                    <div
+                      className="flex items-center gap-2 cursor-pointer"
+                      onClick={() => setShowCryptoSendDropdown(!showCryptoSendDropdown)}
+                    >
+                      <div className="flex items-center gap-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F7931A"/>
+                          <path d="M17.3912 10.515C17.6267 8.943 16.4289 8.09775 14.7924 7.53375L15.3234 5.40375L14.0274 5.08125L13.5099 7.155C13.1694 7.0695 12.8199 6.99 12.4712 6.9105L12.9924 4.82325L11.6964 4.5L11.1654 6.62925C10.8834 6.56475 10.6059 6.50175 10.3374 6.43425L10.3389 6.4275L8.55094 5.98125L8.20594 7.36575C8.20594 7.36575 9.16819 7.58625 9.14794 7.59975C9.67294 7.731 9.76744 8.07825 9.75169 8.35425L9.14719 10.7805C9.18319 10.7895 9.22969 10.803 9.28219 10.8232L9.14494 10.7895L8.29744 14.1885C8.23294 14.3475 8.07019 14.5867 7.70269 14.496C7.71619 14.5147 6.76069 14.2612 6.76069 14.2612L6.11719 15.7448L7.80469 16.1655C8.11819 16.2443 8.42569 16.3267 8.72794 16.404L8.19169 18.558L9.48694 18.8805L10.0179 16.7505C10.3719 16.8457 10.7154 16.9342 11.0514 17.0182L10.5219 19.1392L11.8179 19.4617L12.3542 17.3123C14.5652 17.7308 16.2272 17.562 16.9269 15.5625C17.4909 13.953 16.8992 13.0238 15.7359 12.4185C16.5834 12.2235 17.2209 11.6663 17.3912 10.515V10.515ZM14.4287 14.6685C14.0289 16.2788 11.3177 15.408 10.4387 15.1898L11.1512 12.336C12.0302 12.5557 14.8479 12.99 14.4287 14.6685ZM14.8299 10.4918C14.4647 11.9565 12.2087 11.2118 11.4774 11.0295L12.1224 8.442C12.8537 8.62425 15.2109 8.964 14.8299 10.4918Z" fill="white"/>
+                        </svg>
+                        <span className="text-[#18181B] text-xl font-medium">BTC</span>
+                      </div>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className={`transition-transform ${showCryptoSendDropdown ? 'rotate-180' : 'rotate-90'}`}
+                      >
+                        <path d="M6.17864 8.70073C6.38017 8.4992 6.63666 8.39844 6.94811 8.39844C7.25956 8.39844 7.51604 8.4992 7.71757 8.70073L12.0046 12.9877L16.2916 8.70073C16.4931 8.4992 16.7496 8.39844 17.0611 8.39844C17.3725 8.39844 17.629 8.4992 17.8305 8.70073C18.032 8.90225 18.1328 9.15874 18.1328 9.47019C18.1328 9.78164 18.032 10.0381 17.8305 10.2397L12.774 15.2961C12.6641 15.4061 12.545 15.4841 12.4168 15.5303C12.2886 15.5764 12.1511 15.5992 12.0046 15.5984C11.858 15.5984 11.7206 15.5753 11.5924 15.5292C11.4641 15.483 11.345 15.4053 11.2351 15.2961L6.17864 10.2397C5.97712 10.0381 5.87635 9.78164 5.87635 9.47019C5.87635 9.15874 5.97712 8.90225 6.17864 8.70073Z" fill="#18181B"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1"></div>
+                    <div className="text-[#18181B] text-right text-[28px] font-medium">0.00</div>
+                  </div>
+
+                  <div className="text-[#51525C] text-xs font-medium uppercase">BITCOIN</div>
+                </div>
+              </div>
+
+              {/* YOU RECEIVE Section */}
+              <div className="flex flex-col gap-4 p-5 rounded-lg bg-[#F4F4F5]">
+                <div className="text-[#51525C] text-xs font-medium uppercase">YOU RECEIVE</div>
+
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-3">
+                    {/* Fiat Dropdown */}
+                    <div
+                      className="flex items-center gap-2 cursor-pointer"
+                      onClick={() => setShowCryptoReceiveDropdown(!showCryptoReceiveDropdown)}
+                    >
+                      <div className="flex items-center gap-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <g clipPath="url(#clip0_crypto_usd)">
+                            <mask id="mask0_crypto_usd" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                              <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_crypto_usd)">
+                              <path d="M12 0H24V3L22.5 4.5L24 6V9L22.5 10.5L24 12V15L22.5 16.5L24 18V21L12 22.5L0 21V18L1.5 16.5L0 15V12L12 0Z" fill="#EEEEEE"/>
+                              <path d="M10.5 3H24V6H10.5V3ZM10.5 9H24V12H12L10.5 9ZM0 15H24V18H0V15ZM0 21H24V24H0V21Z" fill="#D80027"/>
+                              <path d="M0 0H12V12H0V0Z" fill="#0052B4"/>
+                              <path d="M8.76562 11.3906L11.4375 9.46875H8.15625L10.8281 11.3906L9.79688 8.25L8.76562 11.3906ZM4.96875 11.3906L7.64062 9.46875H4.35938L7.03125 11.3906L6 8.25L4.96875 11.3906ZM1.17188 11.3906L3.84375 9.46875H0.5625L3.23438 11.3906L2.20312 8.25L1.17188 11.3906ZM8.76562 7.59375L11.4375 5.67188H8.15625L10.8281 7.59375L9.79688 4.45312L8.76562 7.59375ZM4.96875 7.59375L7.64062 5.67188H4.35938L7.03125 7.59375L6 4.45312L4.96875 7.59375ZM1.17188 7.59375L3.84375 5.67188H0.5625L3.23438 7.59375L2.20312 4.45312L1.17188 7.59375ZM8.76562 3.75L11.4375 1.82812H8.15625L10.8281 3.75L9.79688 0.609375L8.76562 3.75ZM4.96875 3.75L7.64062 1.82812H4.35938L7.03125 3.75L6 0.609375L4.96875 3.75ZM1.17188 3.75L3.84375 1.82812H0.5625L3.23438 3.75L2.20312 0.609375L1.17188 3.75Z" fill="#EEEEEE"/>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_crypto_usd">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span className="text-[#18181B] text-xl font-medium">USD</span>
+                      </div>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className={`transition-transform ${showCryptoReceiveDropdown ? 'rotate-180' : 'rotate-90'}`}
+                      >
+                        <path d="M6.17864 8.70073C6.38017 8.4992 6.63666 8.39844 6.94811 8.39844C7.25956 8.39844 7.51604 8.4992 7.71757 8.70073L12.0046 12.9877L16.2916 8.70073C16.4931 8.4992 16.7496 8.39844 17.0611 8.39844C17.3725 8.39844 17.629 8.4992 17.8305 8.70073C18.032 8.90225 18.1328 9.15874 18.1328 9.47019C18.1328 9.78164 18.032 10.0381 17.8305 10.2397L12.774 15.2961C12.6641 15.4061 12.545 15.4841 12.4168 15.5303C12.2886 15.5764 12.1511 15.5992 12.0046 15.5984C11.858 15.5984 11.7206 15.5753 11.5924 15.5292C11.4641 15.483 11.345 15.4053 11.2351 15.2961L6.17864 10.2397C5.97712 10.0381 5.87635 9.78164 5.87635 9.47019C5.87635 9.15874 5.97712 8.90225 6.17864 8.70073Z" fill="#18181B"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1"></div>
+                    <div className="text-[#18181B] text-right text-[28px] font-medium">0.00</div>
+                  </div>
+
+                  <div className="text-[#51525C] text-xs font-medium uppercase">AMERICAN DOLLAR</div>
+                </div>
+              </div>
+
+              {/* Exchange Rate */}
+              <div className="flex items-center justify-center gap-2 p-2 rounded-md bg-[#F4F4F5]">
+                <svg width="20" height="20" viewBox="0 0 21 20" fill="none">
+                  <path d="M10.5 2.5C14.6422 2.5 18 5.85787 18 10C18 14.1422 14.6422 17.5 10.5 17.5C6.35787 17.5 3 14.1422 3 10C3 5.85787 6.35787 2.5 10.5 2.5Z" stroke="#18181B" strokeOpacity="0.3" strokeWidth="1.66667" strokeLinecap="round"/>
+                  <path d="M10.5 2.5C14.6422 2.5 18 5.85787 18 10" stroke="#18181B" strokeWidth="1.66667" strokeLinecap="round"/>
+                </svg>
+                <span className="text-[#18181B] text-sm font-medium">1 BTC = $114,795.97</span>
+              </div>
+            </div>
+
+            {/* Continue Button */}
+            <div className="p-4 pt-0">
+              <button className="w-full py-3 px-8 rounded-lg bg-[#3F3F46] opacity-50 cursor-not-allowed">
+                <span className="text-white text-sm font-semibold uppercase">CONTINUE</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
