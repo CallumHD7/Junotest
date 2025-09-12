@@ -6,6 +6,8 @@ export default function Dashboard_Fiat() {
   const [selectedView, setSelectedView] = useState("fiat");
   const [showDepositOverlay, setShowDepositOverlay] = useState(false);
   const [showFiatDepositOverlay, setShowFiatDepositOverlay] = useState(false);
+  const [showCurrencyDropdown, setShowCurrencyDropdown] = useState(false);
+  const [selectedCurrency, setSelectedCurrency] = useState("AMERICAN DOLLAR (USD)");
   const navigate = useNavigate();
 
   // Mock data for the dashboard
