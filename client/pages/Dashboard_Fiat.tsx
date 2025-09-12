@@ -71,6 +71,20 @@ export default function Dashboard_Fiat() {
   const [showMoreDropdown, setShowMoreDropdown] = useState(false);
   const [selectedMoreOption, setSelectedMoreOption] = useState("FX");
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (showMoreDropdown && !(event.target as Element).closest('[data-dropdown="more"]')) {
+        setShowMoreDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showMoreDropdown]);
+
   const navigate = useNavigate();
 
   // Real-time exchange rate state
