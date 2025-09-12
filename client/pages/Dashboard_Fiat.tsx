@@ -360,7 +360,7 @@ export default function Dashboard_Fiat() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex items-baseline">
               <span className="text-[#18181B] text-2xl font-medium">$</span>
-              <span className="text-[#18181B] text-[28px] font-semibold">3,749,002</span>
+              <span className="text-[#18181B] text-[40px] font-semibold">3,749,002</span>
             </div>
           </div>
         </div>
