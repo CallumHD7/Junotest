@@ -1058,7 +1058,13 @@ export default function Dashboard_Fiat() {
                       </svg>
                     </div>
                     <div className="flex-1"></div>
-                    <div className="text-[#18181B] text-right text-[28px] font-medium">0.00</div>
+                    <input
+                      type="number"
+                      value={cryptoSendAmount}
+                      onChange={(e) => setCryptoSendAmount(e.target.value)}
+                      placeholder="0.00"
+                      className="text-[#18181B] text-right text-[28px] font-medium bg-transparent border-none outline-none w-32"
+                    />
                   </div>
 
                   <div className="text-[#51525C] text-xs font-medium uppercase">BITCOIN</div>
