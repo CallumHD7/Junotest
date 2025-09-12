@@ -10,6 +10,7 @@ export default function Dashboard_Fiat() {
   const [showIbanCurrencyDropdown, setShowIbanCurrencyDropdown] = useState(false);
   const [showIbanDetailsOverlay, setShowIbanDetailsOverlay] = useState(false);
   const [selectedCurrency, setSelectedCurrency] = useState("AMERICAN DOLLAR (USD)");
+  const [hasCurrencyBeenSelected, setHasCurrencyBeenSelected] = useState(false);
   const navigate = useNavigate();
 
   // Mock data for the dashboard
