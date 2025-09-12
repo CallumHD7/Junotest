@@ -1140,7 +1140,7 @@ export default function Dashboard_Fiat() {
                     <input
                       type="number"
                       value={cryptoReceiveAmount}
-                      onChange={(e) => setCryptoReceiveAmount(e.target.value)}
+                      onChange={(e) => handleCryptoReceiveChange(e.target.value)}
                       placeholder="0.00"
                       className="text-[#18181B] text-right text-[28px] font-medium bg-transparent border-none outline-none w-32"
                     />
