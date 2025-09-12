@@ -414,8 +414,8 @@ export default function Dashboard_Fiat() {
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">TRANSFER</span>
             </div>
 
-            {/* SEND */}
-            <div className="flex flex-col items-center gap-2.5">
+            {/* MORE */}
+            <div className="flex flex-col items-center gap-2.5 cursor-pointer relative" onClick={() => setShowMoreDropdown(!showMoreDropdown)}>
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fc0f8d126fa5f43078f41027e24e57734?format=webp&width=800"
@@ -425,6 +425,68 @@ export default function Dashboard_Fiat() {
                 />
               </div>
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">MORE</span>
+
+              {/* MORE Dropdown */}
+              {showMoreDropdown && (
+                <>
+                  {/* Background Overlay */}
+                  <div
+                    className="fixed inset-0 bg-black bg-opacity-[0.08] z-40"
+                    onClick={() => setShowMoreDropdown(false)}
+                  />
+
+                  {/* Dropdown Menu */}
+                  <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 z-50 flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden">
+                    {/* FX Option */}
+                    <div
+                      className={`flex px-3 py-3 items-center cursor-pointer transition-colors ${
+                        selectedMoreOption === "FX" ? 'bg-[#F4F4F5]' : 'bg-white hover:bg-[#F9F9F9]'
+                      }`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedMoreOption("FX");
+                        setShowMoreDropdown(false);
+                      }}
+                    >
+                      <span className="text-[#18181B] text-sm font-medium uppercase tracking-wide">FX</span>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="h-px bg-[#E4E4E7]"></div>
+
+                    {/* MERCHANT Option */}
+                    <div
+                      className={`flex px-3 py-3 items-center cursor-pointer transition-colors ${
+                        selectedMoreOption === "MERCHANT" ? 'bg-[#F4F4F5]' : 'bg-white hover:bg-[#F9F9F9]'
+                      }`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedMoreOption("MERCHANT");
+                        setShowMoreDropdown(false);
+                      }}
+                    >
+                      <span className="text-[#51525C] text-sm font-medium uppercase tracking-wide">MERCHANT</span>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="h-px bg-[#E4E4E7]"></div>
+
+                    {/* BULK PAY Option */}
+                    <div
+                      className={`flex px-3 py-3 items-center cursor-pointer transition-colors ${
+                        selectedMoreOption === "BULK PAY" ? 'bg-[#F4F4F5]' : 'bg-white hover:bg-[#F9F9F9]'
+                      }`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedMoreOption("BULK PAY");
+                        setShowMoreDropdown(false);
+                      }}
+                    >
+                      <span className="text-[#51525C] text-sm font-medium uppercase tracking-wide">BULK PAY</span>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
