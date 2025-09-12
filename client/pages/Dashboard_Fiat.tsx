@@ -1291,6 +1291,147 @@ export default function Dashboard_Fiat() {
           </div>
         </div>
       )}
+
+      {/* IBAN Details Overlay */}
+      {showIbanDetailsOverlay && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 md:p-4">
+          <div className="bg-white w-full h-full md:h-auto md:rounded-lg md:max-w-sm md:mx-auto flex flex-col">
+            {/* Header */}
+            <div className="flex items-center gap-3 p-4 flex-shrink-0">
+              {/* Back Button */}
+              <button
+                onClick={() => {
+                  setShowIbanDetailsOverlay(false);
+                  setShowFiatDepositOverlay(true);
+                }}
+                className="w-6 h-6 flex items-center justify-center"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="#18181B"/>
+                </svg>
+              </button>
+
+              {/* Title */}
+              <h2 className="flex-1 text-[#18181B] text-lg font-semibold uppercase tracking-wider">DEPOSIT FIAT</h2>
+
+              {/* Close Button */}
+              <button
+                onClick={() => {
+                  setShowIbanDetailsOverlay(false);
+                  setShowFiatDepositOverlay(false);
+                  setShowDepositOverlay(false);
+                }}
+                className="w-6 h-6 flex items-center justify-center"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M11.9969 13.4008L7.09687 18.3008C6.91354 18.4841 6.68021 18.5758 6.39687 18.5758C6.11354 18.5758 5.88021 18.4841 5.69687 18.3008C5.51354 18.1174 5.42188 17.8841 5.42188 17.6008C5.42188 17.3174 5.51354 17.0841 5.69687 16.9008L10.5969 12.0008L5.69687 7.10078C5.51354 6.91745 5.42188 6.68411 5.42188 6.40078C5.42188 6.11745 5.51354 5.88411 5.69687 5.70078C5.88021 5.51745 6.11354 5.42578 6.39687 5.42578C6.68021 5.42578 6.91354 5.51745 7.09687 5.70078L11.9969 10.6008L16.8969 5.70078C17.0802 5.51745 17.3135 5.42578 17.5969 5.42578C17.8802 5.42578 18.1135 5.51745 18.2969 5.70078C18.4802 5.88411 18.5719 6.11745 18.5719 6.40078C18.5719 6.68411 18.4802 6.91745 18.2969 7.10078L13.3969 12.0008L18.2969 16.9008C18.4802 17.0841 18.5719 17.3174 18.5719 17.6008C18.5719 17.8841 18.4802 18.1174 18.2969 18.3008C18.1135 18.4841 17.8802 18.5758 17.5969 18.5758C17.3135 18.5758 17.0802 18.4841 16.8969 18.3008L11.9969 13.4008Z" fill="#18181B"/>
+                </svg>
+              </button>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 p-4 flex flex-col justify-start items-start gap-8 md:justify-center md:items-center">
+              {/* Currency Selection Display */}
+              <div className="flex flex-col items-start gap-6 w-full">
+                <div className="flex flex-col items-start gap-2 w-full">
+                  <label className="text-[#51525C] text-xs font-medium uppercase">DEPOSIT CURRENCY</label>
+                  <div className="flex h-[52px] px-4 items-center gap-2 w-full rounded-lg bg-[#F4F4F5]">
+                    {/* Flag Icon based on selected currency */}
+                    {selectedCurrency === "AMERICAN DOLLAR (USD)" && (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clipPath="url(#clip0_usd_details)">
+                          <mask id="mask0_usd_details" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"/>
+                          </mask>
+                          <g mask="url(#mask0_usd_details)">
+                            <path d="M12 0H24V3L22.5 4.5L24 6V9L22.5 10.5L24 12V15L22.5 16.5L24 18V21L12 22.5L0 21V18L1.5 16.5L0 15V12L12 0Z" fill="#EEEEEE"/>
+                            <path d="M10.5 3H24V6H10.5V3ZM10.5 9H24V12H12L10.5 9ZM0 15H24V18H0V15ZM0 21H24V24H0V21Z" fill="#D80027"/>
+                            <path d="M0 0H12V12H0V0Z" fill="#0052B4"/>
+                            <path d="M8.76562 11.3906L11.4375 9.46875H8.15625L10.8281 11.3906L9.79688 8.25L8.76562 11.3906ZM4.96875 11.3906L7.64062 9.46875H4.35938L7.03125 11.3906L6 8.25L4.96875 11.3906ZM1.17188 11.3906L3.84375 9.46875H0.5625L3.23438 11.3906L2.20312 8.25L1.17188 11.3906ZM8.76562 7.59375L11.4375 5.67188H8.15625L10.8281 7.59375L9.79688 4.45312L8.76562 7.59375ZM4.96875 7.59375L7.64062 5.67188H4.35938L7.03125 7.59375L6 4.45312L4.96875 7.59375ZM1.17188 7.59375L3.84375 5.67188H0.5625L3.23438 7.59375L2.20312 4.45312L1.17188 7.59375ZM8.76562 3.75L11.4375 1.82812H8.15625L10.8281 3.75L9.79688 0.609375L8.76562 3.75ZM4.96875 3.75L7.64062 1.82812H4.35938L7.03125 3.75L6 0.609375L4.96875 3.75ZM1.17188 3.75L3.84375 1.82812H0.5625L3.23438 3.75L2.20312 0.609375L1.17188 3.75Z" fill="#EEEEEE"/>
+                          </g>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_usd_details">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    )}
+                    {selectedCurrency === "BRITISH POUND (GBP)" && (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clipPath="url(#clip0_gbp_details)">
+                          <mask id="mask0_gbp_details" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"/>
+                          </mask>
+                          <g mask="url(#mask0_gbp_details)">
+                            <path d="M0 0L0.375 1.03125L0 2.10938V3.1875L1.5 5.71875L0 8.25V9.75L1.5 12L0 14.25V15.75L1.5 18.2812L0 20.8125V24L1.03125 23.625L2.10938 24H3.1875L5.71875 22.5L8.25 24H9.75L12 22.5L14.25 24H15.75L18.2812 22.5L20.8125 24H24L23.625 22.9688L24 21.8906V20.8125L22.5 18.2812L24 15.75V14.25L22.5 12L24 9.75V8.25L22.5 5.71875L24 3.1875V0L22.9688 0.375L21.8906 0H20.8125L18.2812 1.5L15.75 0H14.25L12 1.5L9.75 0H8.25L5.71875 1.5L3.1875 0H0Z" fill="#EEEEEE"/>
+                            <path d="M15.75 0V5.0625L20.8125 0H15.75ZM24 3.1875L18.9375 8.25H24V3.1875ZM0 8.25H5.0625L0 3.1875V8.25ZM3.1875 0L8.25 5.0625V0H3.1875ZM8.25 24V18.9375L3.1875 24H8.25ZM0 20.8125L5.0625 15.75H0V20.8125ZM24 15.75H18.9375L24 20.8125V15.75ZM20.8125 24L15.75 18.9375V24H20.8125Z" fill="#0052B4"/>
+                            <path d="M0 0V2.10938L6.14062 8.25H8.25L0 0ZM9.75 0V9.75H0V14.25H9.75V24H14.25V14.25H24V9.75H14.25V0H9.75ZM21.8906 0L15.75 6.14062V8.25L24 0H21.8906ZM8.25 15.75L0 24H2.10938L8.25 17.8594V15.75ZM15.75 15.75L24 24V21.8906L17.8594 15.75H15.75Z" fill="#D80027"/>
+                          </g>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_gbp_details">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    )}
+                    {selectedCurrency === "UNITED ARAB EMIRATES DIRHAM (AED)" && (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clipPath="url(#clip0_aed_details)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F0F0F0"/>
+                          <path d="M6.78125 16.1758L7.82473 23.2556C9.12467 23.738 10.5308 24.0019 11.9986 24.0019C17.1582 24.0019 21.5567 20.7454 23.2522 16.1758H6.78125Z" fill="#18181B"/>
+                          <path d="M6.78125 7.82611L7.82473 0.746297C9.12467 0.263906 10.5308 0 11.9986 0C17.1582 0 21.5567 3.2565 23.2522 7.82611H6.78125Z" fill="#6DA544"/>
+                          <path d="M0 11.9997C0 17.1593 3.25655 21.5578 7.82611 23.2533V0.746094C3.25655 2.44161 0 6.84012 0 11.9997Z" fill="#A2001D"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_aed_details">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    )}
+                    <span className="flex-1 text-[#18181B] text-sm font-medium uppercase">{selectedCurrency}</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="transform rotate-90">
+                      <path d="M6.17864 8.70073C6.38017 8.4992 6.63666 8.39844 6.94811 8.39844C7.25956 8.39844 7.51604 8.4992 7.71757 8.70073L12.0046 12.9877L16.2916 8.70073C16.4931 8.4992 16.7496 8.39844 17.0611 8.39844C17.3725 8.39844 17.629 8.4992 17.8305 8.70073C18.032 8.90225 18.1328 9.15874 18.1328 9.47019C18.1328 9.78164 18.032 10.0381 17.8305 10.2397L12.774 15.2961C12.6641 15.4061 12.545 15.4841 12.4168 15.5303C12.2886 15.5764 12.1511 15.5992 12.0046 15.5984C11.858 15.5984 11.7206 15.5753 11.5924 15.5292C11.4641 15.483 11.345 15.4053 11.2351 15.2961L6.17864 10.2397C5.97712 10.0381 5.87635 9.78164 5.87635 9.47019C5.87635 9.15874 5.97712 8.90225 6.17864 8.70073Z" fill="#51525C"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px w-full bg-[#D1D1D6]"></div>
+
+                {/* Instructions */}
+                <p className="text-[#51525C] text-sm font-medium uppercase">TO DEPOSIT FUNDS PLEASE USE THIS IBAN NUMBER.</p>
+              </div>
+
+              {/* IBAN Section */}
+              <div className="flex flex-col justify-center items-start gap-2 w-full">
+                <label className="text-[#51525C] text-xs font-medium uppercase">IBAN</label>
+                <div className="flex items-center gap-2 w-full">
+                  <span className="flex-1 text-[#18181B] text-base font-semibold uppercase">GB29 NWBK 6016 1331 9268 19</span>
+                  <button className="w-6 h-6 flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M6.78906 6.52042V4.332C6.78919 3.97869 6.92963 3.63989 7.1795 3.39011C7.42938 3.14032 7.76822 3 8.12154 3H19.6671C20.0205 3 20.3594 3.14039 20.6093 3.39027C20.8592 3.64016 20.9996 3.97908 20.9996 4.33247V15.8785C20.9995 16.2318 20.8591 16.5705 20.6093 16.8203C20.3595 17.07 20.0208 17.2104 19.6676 17.2105H17.4545" stroke="#1A8A7E" strokeWidth="1.68" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M15.8785 6.78906H4.33153C3.9783 6.78931 3.63962 6.92981 3.38994 7.17967C3.14025 7.42953 3 7.76831 3 8.12154V19.6671C3 20.0205 3.14039 20.3594 3.39027 20.6093C3.64016 20.8592 3.97908 20.9996 4.33247 20.9996H15.8785C16.2318 20.9995 16.5705 20.8591 16.8203 20.6093C17.07 20.3595 17.2104 20.0208 17.2105 19.6676V8.12059C17.2103 7.76744 17.0698 7.42884 16.8201 7.17917C16.5703 6.9295 16.2317 6.78919 15.8785 6.78906Z" stroke="#1A8A7E" strokeWidth="1.68" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              {/* Info Message */}
+              <div className="flex p-3 items-center gap-2 w-full rounded-md bg-[rgba(170,170,187,0.12)]">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 17C12.2833 17 12.521 16.904 12.713 16.712C12.905 16.52 13.0007 16.2827 13 16C12.9993 15.7173 12.9033 15.48 12.712 15.288C12.5207 15.096 12.2833 15 12 15C11.7167 15 11.4793 15.096 11.288 15.288C11.0967 15.48 11.0007 15.7173 11 16C10.9993 16.2827 11.0953 16.5203 11.288 16.713C11.4807 16.9057 11.718 17.0013 12 17ZM11 13H13V7H11V13ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88334 20.6867 5.825 19.9743 4.925 19.075C4.025 18.1757 3.31267 17.1173 2.788 15.9C2.26333 14.6827 2.00067 13.3827 2 12C1.99933 10.6173 2.262 9.31733 2.788 8.1C3.314 6.88267 4.02633 5.82433 4.925 4.925C5.82367 4.02567 6.882 3.31333 8.1 2.788C9.318 2.26267 10.618 2 12 2C13.382 2 14.682 2.26267 15.9 2.788C17.118 3.31333 18.1763 4.02567 19.075 4.925C19.9737 5.82433 20.6863 6.88267 21.213 8.1C21.7397 9.31733 22.002 10.6173 22 12C21.998 13.3827 21.7353 14.6827 21.212 15.9C20.6887 17.1173 19.9763 18.1757 19.075 19.075C18.1737 19.9743 17.1153 20.687 15.9 21.213C14.6847 21.739 13.3847 22.0013 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="#26272B"/>
+                </svg>
+                <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
+                  <p className="text-[#18181B] text-xs font-semibold uppercase">IT CAN TAKE UP TO 5 DAYS TO DEPOSIT.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
