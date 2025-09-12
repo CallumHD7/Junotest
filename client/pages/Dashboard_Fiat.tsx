@@ -5,6 +5,7 @@ export default function Dashboard_Fiat() {
   const [selectedTab, setSelectedTab] = useState("home");
   const [selectedView, setSelectedView] = useState("fiat");
   const [showDepositOverlay, setShowDepositOverlay] = useState(false);
+  const [showFiatDepositOverlay, setShowFiatDepositOverlay] = useState(false);
   const navigate = useNavigate();
 
   // Mock data for the dashboard
