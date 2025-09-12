@@ -1058,7 +1058,7 @@ export default function Dashboard_Fiat() {
               </div>
 
               {/* CRYPTO Option */}
-              <div className="flex flex-col justify-center items-center gap-6 p-10 rounded-lg bg-[#F4F4F5] cursor-pointer hover:bg-[#E4E4E7] transition-colors">
+              <div className="flex flex-col justify-center items-center gap-6 p-10 rounded-lg bg-[#F4F4F5] cursor-pointer hover:bg-[#E4E4E7] transition-colors w-full">
                 <svg width="36" height="36" viewBox="0 0 37 36" fill="none">
                   <path d="M12.9946 2.25V5.88462H8.14844V30.1154H12.9946V33.75H15.4177V30.1154H17.8407V33.75H20.2638V30.1154H22.0811C25.7485 30.1154 28.7446 27.1192 28.7446 23.4519C28.7446 20.9295 27.3392 18.7148 25.2614 17.5832C26.281 16.6881 27.0038 15.5038 27.3337 14.1878C27.6636 12.8718 27.5848 11.4865 27.108 10.2163C26.6312 8.94614 25.7788 7.8513 24.6644 7.07749C23.55 6.30368 22.2263 5.8876 20.8696 5.88462H20.2638V2.25H17.8407V5.88462H15.4177V2.25H12.9946ZM10.5715 8.30769H20.8696C23.226 8.30769 25.11 10.1916 25.11 12.5481C25.11 14.9045 23.226 16.7885 20.8696 16.7885H10.5715V8.30769ZM10.5715 19.2115H22.0811C24.4376 19.2115 26.3215 21.0955 26.3215 23.4519C26.3215 25.8084 24.4376 27.6923 22.0811 27.6923H10.5715V19.2115Z" fill="#18181B"/>
                 </svg>
