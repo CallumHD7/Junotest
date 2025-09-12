@@ -1399,7 +1399,7 @@ export default function Dashboard_Fiat() {
                         </defs>
                       </svg>
                     )}
-                    <span className="flex-1 text-[#18181B] text-sm font-medium uppercase">{selectedCurrency}</span>
+                    <span className="flex-1 text-[#18181B] text-sm font-medium uppercase truncate">{selectedCurrency}</span>
                     <svg
                       width="24"
                       height="24"
