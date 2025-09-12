@@ -59,6 +59,14 @@ export default function Dashboard_Fiat() {
   const [tppReference, setTppReference] = useState("");
   const [tppSaveAccount, setTppSaveAccount] = useState(false);
 
+  // Transfer overlay state
+  const [showTransferOverlay, setShowTransferOverlay] = useState(false);
+  const [transferAmount, setTransferAmount] = useState("900.00");
+  const [transferCurrency, setTransferCurrency] = useState("EUR");
+  const [showTransferCurrencyDropdown, setShowTransferCurrencyDropdown] = useState(false);
+  const [transferEmailAddress, setTransferEmailAddress] = useState("test@example.com");
+  const [transferReference, setTransferReference] = useState("");
+
   const navigate = useNavigate();
 
   // Real-time exchange rate state
