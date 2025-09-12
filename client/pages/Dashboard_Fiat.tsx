@@ -75,7 +75,7 @@ export default function Dashboard_Fiat() {
       iban: "GB29NWBK...8193"
     },
     {
-      flag: "🇬🇧",
+      flag: "🇬���",
       label: "ROSSI",
       name: "Leonardo Rossi",
       iban: "GB29NWBK...8193",
@@ -1026,6 +1026,51 @@ export default function Dashboard_Fiat() {
           </svg>
         </button>
       </div>
+
+      {/* Deposit Overlay */}
+      {showDepositOverlay && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg w-full max-w-sm mx-auto">
+            {/* Header */}
+            <div className="flex justify-between items-center p-4 border-b border-[#F4F4F5]">
+              <h2 className="text-[#18181B] text-lg font-semibold uppercase tracking-wider">DEPOSIT</h2>
+              <button
+                onClick={() => setShowDepositOverlay(false)}
+                className="w-6 h-6 flex items-center justify-center"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M11.9969 13.4008L7.09687 18.3008C6.91354 18.4841 6.68021 18.5758 6.39687 18.5758C6.11354 18.5758 5.88021 18.4841 5.69687 18.3008C5.51354 18.1174 5.42188 17.8841 5.42188 17.6008C5.42188 17.3174 5.51354 17.0841 5.69687 16.9008L10.5969 12.0008L5.69687 7.10078C5.51354 6.91745 5.42188 6.68411 5.42188 6.40078C5.42188 6.11745 5.51354 5.88411 5.69687 5.70078C5.88021 5.51745 6.11354 5.42578 6.39687 5.42578C6.68021 5.42578 6.91354 5.51745 7.09687 5.70078L11.9969 10.6008L16.8969 5.70078C17.0802 5.51745 17.3135 5.42578 17.5969 5.42578C17.8802 5.42578 18.1135 5.51745 18.2969 5.70078C18.4802 5.88411 18.5719 6.11745 18.5719 6.40078C18.5719 6.68411 18.4802 6.91745 18.2969 7.10078L13.3969 12.0008L18.2969 16.9008C18.4802 17.0841 18.5719 17.3174 18.5719 17.6008C18.5719 17.8841 18.4802 18.1174 18.2969 18.3008C18.1135 18.4841 17.8802 18.5758 17.5969 18.5758C17.3135 18.5758 17.0802 18.4841 16.8969 18.3008L11.9969 13.4008Z" fill="#18181B"/>
+                </svg>
+              </button>
+            </div>
+
+            {/* Content */}
+            <div className="p-4 space-y-2">
+              {/* FIAT Option */}
+              <div className="flex flex-col justify-center items-center gap-6 p-10 rounded-lg bg-[#F4F4F5] cursor-pointer hover:bg-[#E4E4E7] transition-colors">
+                <svg width="36" height="36" viewBox="0 0 37 36" fill="none">
+                  <path d="M29.6909 8.9775C26.7758 7.52063 22.9058 6.75 18.5 6.75C14.0942 6.75 10.2242 7.52063 7.30906 8.9775C4.39391 10.4344 2.75 12.4847 2.75 14.625V21.375C2.75 23.5153 4.41219 25.5727 7.30906 27.0225C10.2059 28.4723 14.0942 29.25 18.5 29.25C22.9058 29.25 26.7758 28.4794 29.6909 27.0225C32.6061 25.5656 34.25 23.5153 34.25 21.375V14.625C34.25 12.4847 32.5878 10.4273 29.6909 8.9775ZM18.5 9C27.3087 9 32 12.2667 32 14.625C32 16.9833 27.3087 20.25 18.5 20.25C9.69125 20.25 5 16.9833 5 14.625C5 12.2667 9.69125 9 18.5 9ZM17.375 22.4803V26.9803C14.7031 26.8931 12.4531 26.4994 10.625 25.927V21.5227C12.8288 22.1098 15.0949 22.4313 17.375 22.4803ZM19.625 22.4803C21.9051 22.4313 24.1712 22.1098 26.375 21.5227V25.9256C24.5469 26.498 22.2969 26.8917 19.625 26.9789V22.4803ZM5 21.375V18.7777C5.70808 19.3652 6.48315 19.867 7.30906 20.2725C7.65078 20.4427 8.01219 20.603 8.375 20.7548V25.0312C6.14891 23.9287 5 22.5408 5 21.375ZM28.625 25.0312V20.7548C28.992 20.603 29.3492 20.4427 29.6909 20.2725C30.5169 19.867 31.2919 19.3652 32 18.7777V21.375C32 22.5408 30.8511 23.9287 28.625 25.0312Z" fill="#18181B"/>
+                </svg>
+                <div className="flex flex-col items-center gap-1">
+                  <h3 className="text-[#18181B] text-center text-base font-semibold uppercase">FIAT</h3>
+                  <p className="text-[#51525C] text-center text-xs font-medium uppercase">DEPOSIT FIAT VIA IBAN TRANSFER.</p>
+                </div>
+              </div>
+
+              {/* CRYPTO Option */}
+              <div className="flex flex-col justify-center items-center gap-6 p-10 rounded-lg bg-[#F4F4F5] cursor-pointer hover:bg-[#E4E4E7] transition-colors">
+                <svg width="36" height="36" viewBox="0 0 37 36" fill="none">
+                  <path d="M12.9946 2.25V5.88462H8.14844V30.1154H12.9946V33.75H15.4177V30.1154H17.8407V33.75H20.2638V30.1154H22.0811C25.7485 30.1154 28.7446 27.1192 28.7446 23.4519C28.7446 20.9295 27.3392 18.7148 25.2614 17.5832C26.281 16.6881 27.0038 15.5038 27.3337 14.1878C27.6636 12.8718 27.5848 11.4865 27.108 10.2163C26.6312 8.94614 25.7788 7.8513 24.6644 7.07749C23.55 6.30368 22.2263 5.8876 20.8696 5.88462H20.2638V2.25H17.8407V5.88462H15.4177V2.25H12.9946ZM10.5715 8.30769H20.8696C23.226 8.30769 25.11 10.1916 25.11 12.5481C25.11 14.9045 23.226 16.7885 20.8696 16.7885H10.5715V8.30769ZM10.5715 19.2115H22.0811C24.4376 19.2115 26.3215 21.0955 26.3215 23.4519C26.3215 25.8084 24.4376 27.6923 22.0811 27.6923H10.5715V19.2115Z" fill="#18181B"/>
+                </svg>
+                <div className="flex flex-col items-center gap-1">
+                  <h3 className="text-[#18181B] text-center text-base font-semibold uppercase">CRYPTO</h3>
+                  <p className="text-[#51525C] text-center text-xs font-medium uppercase">DEPOSIT VIA CRYPTO OF YOUR CHOICE.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
