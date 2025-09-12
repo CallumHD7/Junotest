@@ -164,10 +164,7 @@ export default function DashboardCrypto() {
 
           <div className="flex flex-col items-start gap-1 self-stretch">
             {/* Bitcoin */}
-            <div
-              className="flex p-[18px] px-3 flex-col items-start gap-3 self-stretch rounded-lg border border-black/[0.12] bg-white cursor-pointer hover:bg-[#F9F9F9] transition-colors"
-              onClick={() => setShowCryptoDepositOverlay(true)}
-            >
+            <div className="flex p-[18px] px-3 flex-col items-start gap-3 self-stretch rounded-lg border border-black/[0.12] bg-white">
               <div className="flex items-center gap-3 self-stretch">
                 <div className="w-11 h-11 relative">
                   <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
