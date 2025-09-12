@@ -27,7 +27,7 @@ export default function Dashboard_Fiat() {
   const [showWithdrawalCurrencyDropdown, setShowWithdrawalCurrencyDropdown] = useState(false);
 
   // Withdrawal form fields
-  const [beneficiaryName, setBeneficiaryName] = useState("");
+  const [beneficiaryName, setBeneficiaryName] = useState("Tiana Workman");
   const [beneficiaryAddress, setBeneficiaryAddress] = useState("");
   const [bankName, setBankName] = useState("");
   const [bankAddress, setBankAddress] = useState("");
