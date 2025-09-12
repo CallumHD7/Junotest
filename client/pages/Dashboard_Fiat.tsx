@@ -1165,6 +1165,7 @@ export default function Dashboard_Fiat() {
                         }`}
                         onClick={() => {
                           setSelectedCurrency("AMERICAN DOLLAR (USD)");
+                          setHasCurrencyBeenSelected(true);
                           setShowCurrencyDropdown(false);
                           setShowFiatDepositOverlay(false);
                           setShowIbanDetailsOverlay(true);
@@ -1206,6 +1207,7 @@ export default function Dashboard_Fiat() {
                         }`}
                         onClick={() => {
                           setSelectedCurrency("BRITISH POUND (GBP)");
+                          setHasCurrencyBeenSelected(true);
                           setShowCurrencyDropdown(false);
                           setShowFiatDepositOverlay(false);
                           setShowIbanDetailsOverlay(true);
@@ -1246,6 +1248,7 @@ export default function Dashboard_Fiat() {
                         }`}
                         onClick={() => {
                           setSelectedCurrency("UNITED ARAB EMIRATES DIRHAM (AED)");
+                          setHasCurrencyBeenSelected(true);
                           setShowCurrencyDropdown(false);
                           setShowFiatDepositOverlay(false);
                           setShowIbanDetailsOverlay(true);
