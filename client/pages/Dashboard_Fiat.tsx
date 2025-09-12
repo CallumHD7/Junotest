@@ -1134,7 +1134,8 @@ export default function Dashboard_Fiat() {
       )}
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
+      {!showDepositOverlay && !showIbanDetailsOverlay && !showCryptoDepositOverlay && (
+        <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
         {/* Home */}
         <div className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg border-b-[3px] border-[#18181B] bg-[#F4F4F5]">
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
@@ -1184,7 +1185,8 @@ export default function Dashboard_Fiat() {
             <path d="M20.3047 17.5C20.3047 19.985 20.3047 22 12.3047 22C4.30469 22 4.30469 19.985 4.30469 17.5C4.30469 15.015 7.88669 13 12.3047 13C16.7227 13 20.3047 15.015 20.3047 17.5Z" stroke="#51525C" strokeWidth="1.8"/>
           </svg>
         </button>
-      </div>
+        </div>
+      )}
 
       {/* Deposit Overlay */}
       {showDepositOverlay && (
