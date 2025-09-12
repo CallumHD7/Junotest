@@ -16,6 +16,8 @@ export default function Dashboard_Fiat() {
   const [selectedFiatCurrency, setSelectedFiatCurrency] = useState("AMERICAN DOLLAR (USD)");
   const [selectedCurrency, setSelectedCurrency] = useState("AMERICAN DOLLAR (USD)");
   const [hasCurrencyBeenSelected, setHasCurrencyBeenSelected] = useState(false);
+  const [cryptoSendAmount, setCryptoSendAmount] = useState("");
+  const [cryptoReceiveAmount, setCryptoReceiveAmount] = useState("");
   const navigate = useNavigate();
 
   // Mock data for the dashboard
