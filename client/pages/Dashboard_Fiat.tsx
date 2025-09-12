@@ -1120,14 +1120,155 @@ export default function Dashboard_Fiat() {
             {/* Content */}
             <div className="flex-1 p-4 flex flex-col justify-start items-start gap-8 md:justify-center md:items-center">
               {/* Deposit Currency Section */}
-              <div className="flex flex-col items-start gap-2 w-full">
+              <div className="flex flex-col items-start gap-2 w-full relative">
                 <label className="text-[#51525C] text-xs font-medium uppercase">DEPOSIT CURRENCY</label>
-                <div className="flex h-[52px] px-4 items-center gap-2 w-full rounded-lg bg-[#F4F4F5]">
-                  <span className="flex-1 text-[#70707B] text-sm font-medium uppercase">SELECT DEPOSIT CURRENCY</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <div
+                  className={`flex h-[52px] px-4 items-center gap-2 w-full rounded-lg cursor-pointer transition-colors ${
+                    showCurrencyDropdown
+                      ? 'bg-white border border-[#D1D1D6]'
+                      : 'bg-[#F4F4F5] border border-transparent'
+                  }`}
+                  onClick={() => setShowCurrencyDropdown(!showCurrencyDropdown)}
+                >
+                  <span className={`flex-1 text-sm font-medium uppercase ${
+                    selectedCurrency === "SELECT DEPOSIT CURRENCY"
+                      ? 'text-[#70707B]'
+                      : 'text-[#18181B]'
+                  }`}>
+                    {selectedCurrency === "SELECT DEPOSIT CURRENCY" ? "SELECT DEPOSIT CURRENCY" : selectedCurrency}
+                  </span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className={`transition-transform ${showCurrencyDropdown ? 'rotate-180' : ''}`}
+                  >
                     <path d="M7 10L12 15L17 10" stroke="#51525C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
+
+                {/* Currency Dropdown */}
+                {showCurrencyDropdown && (
+                  <>
+                    {/* Background Overlay */}
+                    <div
+                      className="fixed inset-0 bg-black bg-opacity-[0.08] z-40"
+                      onClick={() => setShowCurrencyDropdown(false)}
+                    />
+
+                    {/* Dropdown */}
+                    <div className="absolute top-full mt-1 w-full z-50 flex flex-col rounded-lg border border-[#E4E4E7] bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.12)]">
+                      {/* USD Option */}
+                      <div
+                        className={`flex p-3 items-center gap-2 cursor-pointer ${
+                          selectedCurrency === "AMERICAN DOLLAR (USD)" ? 'bg-[#F4F4F5]' : 'bg-white hover:bg-[#F9F9F9]'
+                        }`}
+                        onClick={() => {
+                          setSelectedCurrency("AMERICAN DOLLAR (USD)");
+                          setShowCurrencyDropdown(false);
+                        }}
+                      >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <g clipPath="url(#clip0_usd)">
+                            <mask id="mask0_usd" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                              <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_usd)">
+                              <path d="M12 0H24V3L22.5 4.5L24 6V9L22.5 10.5L24 12V15L22.5 16.5L24 18V21L12 22.5L0 21V18L1.5 16.5L0 15V12L12 0Z" fill="#EEEEEE"/>
+                              <path d="M10.5 3H24V6H10.5V3ZM10.5 9H24V12H12L10.5 9ZM0 15H24V18H0V15ZM0 21H24V24H0V21Z" fill="#D80027"/>
+                              <path d="M0 0H12V12H0V0Z" fill="#0052B4"/>
+                              <path d="M8.76562 11.3906L11.4375 9.46875H8.15625L10.8281 11.3906L9.79688 8.25L8.76562 11.3906ZM4.96875 11.3906L7.64062 9.46875H4.35938L7.03125 11.3906L6 8.25L4.96875 11.3906ZM1.17188 11.3906L3.84375 9.46875H0.5625L3.23438 11.3906L2.20312 8.25L1.17188 11.3906ZM8.76562 7.59375L11.4375 5.67188H8.15625L10.8281 7.59375L9.79688 4.45312L8.76562 7.59375ZM4.96875 7.59375L7.64062 5.67188H4.35938L7.03125 7.59375L6 4.45312L4.96875 7.59375ZM1.17188 7.59375L3.84375 5.67188H0.5625L3.23438 7.59375L2.20312 4.45312L1.17188 7.59375ZM8.76562 3.75L11.4375 1.82812H8.15625L10.8281 3.75L9.79688 0.609375L8.76562 3.75ZM4.96875 3.75L7.64062 1.82812H4.35938L7.03125 3.75L6 0.609375L4.96875 3.75ZM1.17188 3.75L3.84375 1.82812H0.5625L3.23438 3.75L2.20312 0.609375L1.17188 3.75Z" fill="#EEEEEE"/>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_usd">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span className="flex-1 text-[#18181B] text-sm font-medium uppercase">AMERICAN DOLLAR (USD)</span>
+                        {selectedCurrency === "AMERICAN DOLLAR (USD)" && (
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.60156 11.9984L9.20156 17.5984L20.4016 6.39844" stroke="#18181B" strokeWidth="2.28" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+
+                      {/* Divider */}
+                      <div className="h-px bg-[#E4E4E7]"></div>
+
+                      {/* GBP Option */}
+                      <div
+                        className={`flex p-3 items-center gap-2 cursor-pointer ${
+                          selectedCurrency === "BRITISH POUND (GBP)" ? 'bg-[#F4F4F5]' : 'bg-white hover:bg-[#F9F9F9]'
+                        }`}
+                        onClick={() => {
+                          setSelectedCurrency("BRITISH POUND (GBP)");
+                          setShowCurrencyDropdown(false);
+                        }}
+                      >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <g clipPath="url(#clip0_gbp)">
+                            <mask id="mask0_gbp" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                              <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_gbp)">
+                              <path d="M0 0L0.375 1.03125L0 2.10938V3.1875L1.5 5.71875L0 8.25V9.75L1.5 12L0 14.25V15.75L1.5 18.2812L0 20.8125V24L1.03125 23.625L2.10938 24H3.1875L5.71875 22.5L8.25 24H9.75L12 22.5L14.25 24H15.75L18.2812 22.5L20.8125 24H24L23.625 22.9688L24 21.8906V20.8125L22.5 18.2812L24 15.75V14.25L22.5 12L24 9.75V8.25L22.5 5.71875L24 3.1875V0L22.9688 0.375L21.8906 0H20.8125L18.2812 1.5L15.75 0H14.25L12 1.5L9.75 0H8.25L5.71875 1.5L3.1875 0H0Z" fill="#EEEEEE"/>
+                              <path d="M15.75 0V5.0625L20.8125 0H15.75ZM24 3.1875L18.9375 8.25H24V3.1875ZM0 8.25H5.0625L0 3.1875V8.25ZM3.1875 0L8.25 5.0625V0H3.1875ZM8.25 24V18.9375L3.1875 24H8.25ZM0 20.8125L5.0625 15.75H0V20.8125ZM24 15.75H18.9375L24 20.8125V15.75ZM20.8125 24L15.75 18.9375V24H20.8125Z" fill="#0052B4"/>
+                              <path d="M0 0V2.10938L6.14062 8.25H8.25L0 0ZM9.75 0V9.75H0V14.25H9.75V24H14.25V14.25H24V9.75H14.25V0H9.75ZM21.8906 0L15.75 6.14062V8.25L24 0H21.8906ZM8.25 15.75L0 24H2.10938L8.25 17.8594V15.75ZM15.75 15.75L24 24V21.8906L17.8594 15.75H15.75Z" fill="#D80027"/>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_gbp">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span className="flex-1 text-[#18181B] text-sm font-medium uppercase">BRITISH POUND (GBP)</span>
+                        {selectedCurrency === "BRITISH POUND (GBP)" && (
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.60156 11.9984L9.20156 17.5984L20.4016 6.39844" stroke="#18181B" strokeWidth="2.28" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+
+                      {/* Divider */}
+                      <div className="h-px bg-[#E4E4E7]"></div>
+
+                      {/* AED Option */}
+                      <div
+                        className={`flex p-3 items-center gap-2 cursor-pointer ${
+                          selectedCurrency === "UNITED ARAB EMIRATES DIRHAM (AED)" ? 'bg-[#F4F4F5]' : 'bg-white hover:bg-[#F9F9F9]'
+                        }`}
+                        onClick={() => {
+                          setSelectedCurrency("UNITED ARAB EMIRATES DIRHAM (AED)");
+                          setShowCurrencyDropdown(false);
+                        }}
+                      >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <g clipPath="url(#clip0_aed)">
+                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F0F0F0"/>
+                            <path d="M6.78125 16.1758L7.82473 23.2556C9.12467 23.738 10.5308 24.0019 11.9986 24.0019C17.1582 24.0019 21.5567 20.7454 23.2522 16.1758H6.78125Z" fill="#18181B"/>
+                            <path d="M6.78125 7.82611L7.82473 0.746297C9.12467 0.263906 10.5308 0 11.9986 0C17.1582 0 21.5567 3.2565 23.2522 7.82611H6.78125Z" fill="#6DA544"/>
+                            <path d="M0 11.9997C0 17.1593 3.25655 21.5578 7.82611 23.2533V0.746094C3.25655 2.44161 0 6.84012 0 11.9997Z" fill="#A2001D"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_aed">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span className="flex-1 text-[#18181B] text-sm font-medium uppercase truncate">UNITED ARAB EMIRATES DIRHAM (AED)</span>
+                        {selectedCurrency === "UNITED ARAB EMIRATES DIRHAM (AED)" && (
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.60156 11.9984L9.20156 17.5984L20.4016 6.39844" stroke="#18181B" strokeWidth="2.28" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* Info Message */}
