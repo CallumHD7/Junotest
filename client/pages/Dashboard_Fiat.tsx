@@ -75,7 +75,7 @@ export default function Dashboard_Fiat() {
       iban: "GB29NWBK...8193"
     },
     {
-      flag: "🇬���",
+      flag: "🇬🇧",
       label: "ROSSI",
       name: "Leonardo Rossi",
       iban: "GB29NWBK...8193",
@@ -1029,8 +1029,8 @@ export default function Dashboard_Fiat() {
 
       {/* Deposit Overlay */}
       {showDepositOverlay && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg w-full max-w-sm mx-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 md:p-4">
+          <div className="bg-white w-full h-full md:h-auto md:rounded-lg md:max-w-sm md:mx-auto flex flex-col">
             {/* Header */}
             <div className="flex justify-between items-center p-4 border-b border-[#F4F4F5]">
               <h2 className="text-[#18181B] text-lg font-semibold uppercase tracking-wider">DEPOSIT</h2>
