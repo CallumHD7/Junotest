@@ -429,7 +429,7 @@ export default function Dashboard_Fiat() {
             </div>
 
             {/* MORE */}
-            <div className="flex flex-col items-center gap-2.5 cursor-pointer" onClick={() => setShowMoreDropdown(!showMoreDropdown)}>
+            <div className="flex flex-col items-center gap-2.5 cursor-pointer" data-dropdown="more" onClick={() => setShowMoreDropdown(!showMoreDropdown)}>
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fc0f8d126fa5f43078f41027e24e57734?format=webp&width=800"
