@@ -1139,7 +1139,14 @@ export default function Dashboard_Fiat() {
 
             {/* Continue Button */}
             <div className="p-4 pt-0">
-              <button className="w-full py-3 px-8 rounded-lg bg-[#3F3F46] opacity-50 cursor-not-allowed">
+              <button
+                className={`w-full py-3 px-8 rounded-lg transition-all ${
+                  cryptoSendAmount || cryptoReceiveAmount
+                    ? 'bg-[#18181B] cursor-pointer hover:bg-[#2A2A2A]'
+                    : 'bg-[#3F3F46] opacity-50 cursor-not-allowed'
+                }`}
+                disabled={!cryptoSendAmount && !cryptoReceiveAmount}
+              >
                 <span className="text-white text-sm font-semibold uppercase">CONTINUE</span>
               </button>
             </div>
