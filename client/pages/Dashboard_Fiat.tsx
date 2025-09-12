@@ -1406,9 +1406,8 @@ export default function Dashboard_Fiat() {
 
           {/* Dropdown Menu - Positioned as portal */}
           <div
-            className="fixed z-[60] flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden"
+            className="fixed z-[60] flex flex-col w-40 rounded-lg border border-[#E4E4E7] bg-white shadow-[0_5px_14px_0_rgba(0,0,0,0.15)] overflow-hidden top-48 sm:top-48 max-sm:top-[548px]"
             style={{
-              top: '192px', // Approximate position below MORE button
               right: '16px', // Aligned with button from right edge
             }}
           >
