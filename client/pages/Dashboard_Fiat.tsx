@@ -26,6 +26,13 @@ export default function Dashboard_Fiat() {
   const [withdrawalCurrency, setWithdrawalCurrency] = useState("EUR");
   const [showWithdrawalCurrencyDropdown, setShowWithdrawalCurrencyDropdown] = useState(false);
 
+  // Third-Party Payment overlay state
+  const [showThirdPartyPaymentOverlay, setShowThirdPartyPaymentOverlay] = useState(false);
+  const [thirdPartyPaymentTab, setThirdPartyPaymentTab] = useState("new"); // "new" or "saved"
+  const [thirdPartyPaymentAmount, setThirdPartyPaymentAmount] = useState("900.00");
+  const [thirdPartyPaymentCurrency, setThirdPartyPaymentCurrency] = useState("EUR");
+  const [showThirdPartyPaymentCurrencyDropdown, setShowThirdPartyPaymentCurrencyDropdown] = useState(false);
+
   // Withdrawal form fields
   const [beneficiaryName, setBeneficiaryName] = useState("Tiana Workman");
   const [beneficiaryAddress, setBeneficiaryAddress] = useState("");
@@ -356,8 +363,8 @@ export default function Dashboard_Fiat() {
               <span className="text-[#51525C] text-center text-[10px] font-semibold leading-normal">WITHDRAW</span>
             </div>
 
-            {/* RECEIVE */}
-            <div className="flex flex-col items-center gap-2.5">
+            {/* TPP'S */}
+            <div className="flex flex-col items-center gap-2.5 cursor-pointer" onClick={() => setShowThirdPartyPaymentOverlay(true)}>
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F54af6e57111f41e78b75ae15f5e780ca?format=webp&width=800"
@@ -1239,7 +1246,7 @@ export default function Dashboard_Fiat() {
       )}
 
       {/* Bottom Navigation */}
-      {!showDepositOverlay && !showIbanDetailsOverlay && !showCryptoDepositOverlay && !showWithdrawalOverlay && (
+      {!showDepositOverlay && !showIbanDetailsOverlay && !showCryptoDepositOverlay && !showWithdrawalOverlay && !showThirdPartyPaymentOverlay && (
         <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
         {/* Home */}
         <div className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg border-b-[3px] border-[#18181B] bg-[#F4F4F5]">
