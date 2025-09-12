@@ -1267,7 +1267,7 @@ export default function Dashboard_Fiat() {
       )}
 
       {/* Bottom Navigation */}
-      {!showDepositOverlay && !showIbanDetailsOverlay && !showCryptoDepositOverlay && !showWithdrawalOverlay && !showThirdPartyPaymentOverlay && (
+      {!showDepositOverlay && !showIbanDetailsOverlay && !showCryptoDepositOverlay && !showWithdrawalOverlay && !showThirdPartyPaymentOverlay && !showTransferOverlay && (
         <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
         {/* Home */}
         <div className="flex p-2.5 flex-col justify-center items-center flex-1 self-stretch rounded-lg border-b-[3px] border-[#18181B] bg-[#F4F4F5]">
