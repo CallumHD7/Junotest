@@ -20,6 +20,29 @@ export default function Dashboard_Fiat() {
   const [cryptoReceiveAmount, setCryptoReceiveAmount] = useState("");
   const navigate = useNavigate();
 
+  // Exchange rate: 1 BTC = $114,795.97
+  const btcToUsdRate = 114795.97;
+
+  const handleCryptoSendChange = (value: string) => {
+    setCryptoSendAmount(value);
+    if (value && !isNaN(Number(value))) {
+      const usdAmount = (Number(value) * btcToUsdRate).toFixed(2);
+      setCryptoReceiveAmount(usdAmount);
+    } else {
+      setCryptoReceiveAmount("");
+    }
+  };
+
+  const handleCryptoReceiveChange = (value: string) => {
+    setCryptoReceiveAmount(value);
+    if (value && !isNaN(Number(value))) {
+      const btcAmount = (Number(value) / btcToUsdRate).toFixed(8);
+      setCryptoSendAmount(btcAmount);
+    } else {
+      setCryptoSendAmount("");
+    }
+  };
+
   // Mock data for the dashboard
   const balances = [
     {
