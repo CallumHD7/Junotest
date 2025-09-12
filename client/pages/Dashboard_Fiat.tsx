@@ -993,7 +993,10 @@ export default function Dashboard_Fiat() {
             <div className="flex items-center gap-3 p-4 flex-shrink-0">
               {/* Back Button */}
               <button
-                onClick={() => setShowCryptoDepositOverlay(false)}
+                onClick={() => {
+                  setShowCryptoDepositOverlay(false);
+                  setShowDepositOverlay(true);
+                }}
                 className="w-6 h-6 flex items-center justify-center"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
