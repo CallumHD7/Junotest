@@ -1132,12 +1132,8 @@ export default function Dashboard_Fiat() {
                   }`}
                   onClick={() => setShowCurrencyDropdown(!showCurrencyDropdown)}
                 >
-                  <span className={`flex-1 text-sm font-medium uppercase ${
-                    selectedCurrency === "SELECT DEPOSIT CURRENCY"
-                      ? 'text-[#70707B]'
-                      : 'text-[#18181B]'
-                  }`}>
-                    {selectedCurrency === "SELECT DEPOSIT CURRENCY" ? "SELECT DEPOSIT CURRENCY" : selectedCurrency}
+                  <span className="flex-1 text-sm font-medium uppercase text-[#70707B]">
+                    SELECT DEPOSIT CURRENCY
                   </span>
                   <svg
                     width="24"
