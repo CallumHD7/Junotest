@@ -130,7 +130,7 @@ export default function DashboardCrypto() {
             </div>
 
             {/* RECEIVE */}
-            <div className="flex flex-col items-center gap-2.5">
+            <div className="flex flex-col items-center gap-2.5 cursor-pointer" onClick={() => setShowReceiveCryptoOverlay(true)}>
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Ff0189caaeb1c4325a1764610c400841d?format=webp&width=800"
