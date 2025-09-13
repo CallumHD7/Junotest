@@ -63,7 +63,7 @@ export default function DashboardCrypto() {
         />
 
         {/* Header within Main Section */}
-        <div className="w-full h-[52px] flex items-center justify-between px-4 py-[15px] relative rounded-b-[4px] top-2 z-[60]">
+        <div className="w-full h-[52px] flex items-center justify-between px-4 py-[15px] relative rounded-b-[4px] top-2">
           {/* Juno Logo */}
           <div className="flex items-center">
             <svg width="48" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -911,7 +911,7 @@ export default function DashboardCrypto() {
 
                 <div className="flex justify-between items-center">
                   <div className="text-[#51525C] text-xs font-medium uppercase">TETHER</div>
-                  <div className="text-[#51525C] text-xs font-medium">₮6,048.54</div>
+                  <div className="text-[#51525C] text-xs font-medium">���6,048.54</div>
                 </div>
               </div>
             </div>
@@ -1415,7 +1415,7 @@ export default function DashboardCrypto() {
 
                 <div className="flex justify-between items-center">
                   <div className="text-[#51525C] text-xs font-medium uppercase">TETHER</div>
-                  <div className="text-[#51525C] text-xs font-medium uppercase">₮6,048.54</div>
+                  <div className="text-[#51525C] text-xs font-medium uppercase">��6,048.54</div>
                 </div>
               </div>
 
