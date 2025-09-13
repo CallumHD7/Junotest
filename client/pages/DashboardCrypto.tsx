@@ -14,6 +14,16 @@ export default function DashboardCrypto() {
   const [showYouGetCurrencyDropdown, setShowYouGetCurrencyDropdown] = useState(false);
   const [exchangeRate, setExchangeRate] = useState("1 EUR = 1.10 USDT");
 
+  // Sell Crypto overlay state
+  const [showSellCryptoOverlay, setShowSellCryptoOverlay] = useState(false);
+  const [sellAmount, setSellAmount] = useState("1,000.00");
+  const [sellCurrency, setSellCurrency] = useState("USDT");
+  const [showSellCurrencyDropdown, setShowSellCurrencyDropdown] = useState(false);
+  const [receiveAmount, setReceiveAmount] = useState("900.00");
+  const [receiveCurrency, setReceiveCurrency] = useState("EUR");
+  const [showReceiveCurrencyDropdown, setShowReceiveCurrencyDropdown] = useState(false);
+  const [sellExchangeRate, setSellExchangeRate] = useState("1 USDT = 0.90 EUR");
+
   return (
     <div className="w-full bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col" style={{ paddingBottom: 'calc(70px + env(safe-area-inset-bottom))' }}>
       {/* Main Section with Background - Complete Figma Design */}
