@@ -41,6 +41,16 @@ export default function DashboardCrypto() {
   const [showToCurrencyDropdown, setShowToCurrencyDropdown] = useState(false);
   const [exchangeRateText, setExchangeRateText] = useState("1 USDT = 0.000010 BTC");
 
+  // Send Crypto overlay state
+  const [showSendCryptoOverlay, setShowSendCryptoOverlay] = useState(false);
+  const [sendAmount, setSendAmount] = useState("1,000.00");
+  const [sendCurrency, setSendCurrency] = useState("USDT");
+  const [showSendCurrencyDropdown, setShowSendCurrencyDropdown] = useState(false);
+  const [selectedBlockchain, setSelectedBlockchain] = useState("TRON - 20");
+  const [showBlockchainDropdown, setShowBlockchainDropdown] = useState(false);
+  const [recipientAddress, setRecipientAddress] = useState("TETHER MAIN: bc1mV2zCb9L0uNz...3cxZ");
+  const [showRecipientAddressDropdown, setShowRecipientAddressDropdown] = useState(false);
+
   return (
     <div className="w-full bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col" style={{ paddingBottom: 'calc(70px + env(safe-area-inset-bottom))' }}>
       {/* Main Section with Background - Complete Figma Design */}
