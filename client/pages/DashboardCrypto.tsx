@@ -24,6 +24,13 @@ export default function DashboardCrypto() {
   const [showReceiveCurrencyDropdown, setShowReceiveCurrencyDropdown] = useState(false);
   const [sellExchangeRate, setSellExchangeRate] = useState("1 USDT = 0.90 EUR");
 
+  // Receive Crypto overlay state
+  const [showReceiveCryptoOverlay, setShowReceiveCryptoOverlay] = useState(false);
+  const [recipientWallet, setRecipientWallet] = useState("TETHER (USDT) (ETHEREUM)");
+  const [showRecipientWalletDropdown, setShowRecipientWalletDropdown] = useState(false);
+  const [receivingAddress, setReceivingAddress] = useState("");
+  const [isAddressGenerated, setIsAddressGenerated] = useState(false);
+
   return (
     <div className="w-full bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col" style={{ paddingBottom: 'calc(70px + env(safe-area-inset-bottom))' }}>
       {/* Main Section with Background - Complete Figma Design */}
