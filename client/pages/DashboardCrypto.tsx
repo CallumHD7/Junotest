@@ -4,6 +4,16 @@ import { useNavigate } from "react-router-dom";
 export default function DashboardCrypto() {
   const navigate = useNavigate();
 
+  // Buy Crypto overlay state
+  const [showBuyCryptoOverlay, setShowBuyCryptoOverlay] = useState(false);
+  const [youPayAmount, setYouPayAmount] = useState("900.00");
+  const [youPayCurrency, setYouPayCurrency] = useState("EUR");
+  const [showYouPayCurrencyDropdown, setShowYouPayCurrencyDropdown] = useState(false);
+  const [youGetAmount, setYouGetAmount] = useState("1,000.00");
+  const [youGetCurrency, setYouGetCurrency] = useState("USDT");
+  const [showYouGetCurrencyDropdown, setShowYouGetCurrencyDropdown] = useState(false);
+  const [exchangeRate, setExchangeRate] = useState("1 EUR = 1.10 USDT");
+
   return (
     <div className="w-full bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col" style={{ paddingBottom: 'calc(70px + env(safe-area-inset-bottom))' }}>
       {/* Main Section with Background - Complete Figma Design */}
