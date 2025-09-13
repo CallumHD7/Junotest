@@ -315,7 +315,7 @@ export default function Dashboard_Fiat() {
         />
 
         {/* Header within Main Section */}
-        <div className="w-full h-[52px] flex items-center justify-between px-4 py-[15px] relative rounded-b-[4px] top-2">
+        <div className="w-full h-[52px] flex items-center justify-between px-4 py-[15px] relative rounded-b-[4px] top-2 z-[60]">
           {/* Juno Logo */}
           <div className="flex items-center">
             <svg width="48" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
