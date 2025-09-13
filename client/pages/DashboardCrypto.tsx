@@ -113,7 +113,7 @@ export default function DashboardCrypto() {
             </div>
 
             {/* SELL */}
-            <div className="flex flex-col items-center gap-2.5">
+            <div className="flex flex-col items-center gap-2.5 cursor-pointer" onClick={() => setShowSellCryptoOverlay(true)}>
               <div className="w-[60px] h-[60px] rounded-lg bg-[#E4E4E7] flex items-center justify-center p-2 backdrop-blur-[12px]">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
                   <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
