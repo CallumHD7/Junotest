@@ -1340,7 +1340,7 @@ export default function DashboardCrypto() {
       )}
 
       {/* Bottom Navigation */}
-      {!showBuyCryptoOverlay && !showSellCryptoOverlay && !showReceiveCryptoOverlay && (
+      {!showBuyCryptoOverlay && !showSellCryptoOverlay && !showReceiveCryptoOverlay && !showExchangeOverlay && (
         <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
         <div className="flex p-2.5 flex-col justify-center items-center gap-1 flex-1 self-stretch rounded-lg border-b-[3px] border-[#18181B] bg-[#F4F4F5]">
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none">
