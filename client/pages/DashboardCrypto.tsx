@@ -1094,11 +1094,11 @@ export default function DashboardCrypto() {
           {/* Content */}
           <div className="flex-1 px-4 pb-6 flex flex-col items-center gap-8">
             {/* QR Code */}
-            <div className="w-37 h-37">
+            <div className="w-36 h-36">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/8f256fab8e93649de7572b113cdc421f3ad11459?width=296"
                 alt="QR Code"
-                className="w-37 h-37 object-contain"
+                className="w-36 h-36 object-contain"
               />
             </div>
 
