@@ -31,6 +31,16 @@ export default function DashboardCrypto() {
   const [receivingAddress, setReceivingAddress] = useState("");
   const [isAddressGenerated, setIsAddressGenerated] = useState(false);
 
+  // Exchange Crypto overlay state
+  const [showExchangeOverlay, setShowExchangeOverlay] = useState(false);
+  const [fromAmount, setFromAmount] = useState("1,000.00");
+  const [fromCurrency, setFromCurrency] = useState("USDT");
+  const [showFromCurrencyDropdown, setShowFromCurrencyDropdown] = useState(false);
+  const [toAmount, setToAmount] = useState("0.010");
+  const [toCurrency, setToCurrency] = useState("BTC");
+  const [showToCurrencyDropdown, setShowToCurrencyDropdown] = useState(false);
+  const [exchangeRateText, setExchangeRateText] = useState("1 USDT = 0.000010 BTC");
+
   return (
     <div className="w-full bg-[#fbfbfb] sm:bg-[#F4F4F5] flex flex-col" style={{ paddingBottom: 'calc(70px + env(safe-area-inset-bottom))' }}>
       {/* Main Section with Background - Complete Figma Design */}
