@@ -1183,6 +1183,162 @@ export default function DashboardCrypto() {
         </div>
       )}
 
+      {/* Exchange Crypto Overlay */}
+      {showExchangeOverlay && (
+        <div className="fixed inset-0 bg-white flex flex-col z-50">
+          {/* Header */}
+          <div className="flex justify-between items-center p-4 flex-shrink-0">
+            <h2 className="text-[#18181B] text-lg font-bold uppercase tracking-wide">EXCHANGE</h2>
+            <button
+              onClick={() => setShowExchangeOverlay(false)}
+              className="w-6 h-6 flex items-center justify-center"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12.0008 13.4008L7.10078 18.3008C6.91745 18.4841 6.68411 18.5758 6.40078 18.5758C6.11745 18.5758 5.88411 18.4841 5.70078 18.3008C5.51745 18.1174 5.42578 17.8841 5.42578 17.6008C5.42578 17.3174 5.51745 17.0841 5.70078 16.9008L10.6008 12.0008L5.70078 7.10078C5.51745 6.91745 5.42578 6.68411 5.42578 6.40078C5.42578 6.11745 5.51745 5.88411 5.70078 5.70078C5.88411 5.51745 6.11745 5.42578 6.40078 5.42578C6.68411 5.42578 6.91745 5.51745 7.10078 5.70078L12.0008 10.6008L16.9008 5.70078C17.0841 5.51745 17.3174 5.42578 17.6008 5.42578C17.8841 5.42578 18.1174 5.51745 18.3008 5.70078C18.4841 5.88411 18.5758 6.11745 18.5758 6.40078C18.5758 6.68411 18.4841 6.91745 18.3008 7.10078L13.4008 12.0008L18.3008 16.9008C18.4841 17.0841 18.5758 17.3174 18.5758 17.6008C18.5758 17.8841 18.4841 18.1174 18.3008 18.3008C18.1174 18.4841 17.8841 18.5758 17.6008 18.5758C17.3174 18.5758 17.0841 18.4841 16.9008 18.3008L12.0008 13.4008Z" fill="#18181B"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 px-4 pb-6 flex flex-col gap-6">
+            {/* FROM Section */}
+            <div className="flex flex-col gap-4 p-5 rounded-lg bg-[#F4F4F5] relative">
+              <div className="text-[#51525C] text-xs font-medium uppercase">FROM</div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  {/* Currency Dropdown */}
+                  <div
+                    className="flex items-center gap-2 cursor-pointer"
+                    onClick={() => setShowFromCurrencyDropdown(!showFromCurrencyDropdown)}
+                  >
+                    <div className="flex items-center gap-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clipPath="url(#clip0_16470_17924)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#26A17B"/>
+                          <path fillRule="evenodd" clipRule="evenodd" d="M13.4431 13.0363V13.0348C13.3606 13.0408 12.9353 13.0663 11.9866 13.0663C11.2291 13.0663 10.6958 13.0438 10.5083 13.0348V13.037C7.59231 12.9088 5.41581 12.401 5.41581 11.7935C5.41581 11.1868 7.59231 10.679 10.5083 10.5485V12.5315C10.6988 12.545 11.2448 12.5773 11.9993 12.5773C12.9046 12.5773 13.3583 12.5398 13.4431 12.5323V10.55C16.3531 10.6798 18.5243 11.1875 18.5243 11.7935C18.5243 12.401 16.3531 12.9073 13.4431 13.0363V13.0363ZM13.4431 10.3438V8.56928H17.5036V5.86328H6.44781V8.56928H10.5083V10.343C7.20831 10.4945 4.72656 11.1485 4.72656 11.9315C4.72656 12.7145 7.20831 13.3678 10.5083 13.52V19.2065H13.4431V13.5185C16.7378 13.367 19.2136 12.7138 19.2136 11.9315C19.2136 11.1493 16.7378 10.496 13.4431 10.3438" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_16470_17924">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span className="text-[#18181B] text-xl font-medium uppercase">USDT</span>
+                    </div>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className={`transition-transform ${showFromCurrencyDropdown ? 'rotate-180' : ''}`}
+                    >
+                      <path d="M6.17474 8.70073C6.37626 8.4992 6.63275 8.39844 6.9442 8.39844C7.25565 8.39844 7.51214 8.4992 7.71366 8.70073L12.0007 12.9877L16.2877 8.70073C16.4892 8.4992 16.7457 8.39844 17.0572 8.39844C17.3686 8.39844 17.6251 8.4992 17.8266 8.70073C18.0281 8.90225 18.1289 9.15874 18.1289 9.47019C18.1289 9.78164 18.0281 10.0381 17.8266 10.2397L12.7701 15.2961C12.6602 15.4061 12.5411 15.4841 12.4129 15.5303C12.2846 15.5764 12.1472 15.5992 12.0007 15.5984C11.8541 15.5984 11.7167 15.5753 11.5885 15.5292C11.4602 15.483 11.3411 15.4053 11.2312 15.2961L6.17474 10.2397C5.97321 10.0381 5.87245 9.78164 5.87245 9.47019C5.87245 9.15874 5.97321 8.90225 6.17474 8.70073Z" fill="#18181B"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 flex justify-end items-center relative">
+                    <input
+                      type="text"
+                      value={fromAmount}
+                      onChange={(e) => setFromAmount(e.target.value)}
+                      placeholder="0.00"
+                      className="text-[#18181B] text-right text-[28px] font-medium bg-transparent border-none outline-none w-full"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <div className="text-[#51525C] text-xs font-medium uppercase">TETHER</div>
+                  <div className="text-[#51525C] text-xs font-medium uppercase">₮6,048.54</div>
+                </div>
+              </div>
+
+              {/* MAX Button */}
+              <div className="absolute -top-[1px] right-4 flex px-1.5 py-1 justify-center items-center rounded-sm bg-[#E4E4E7]">
+                <span className="text-[#51525C] text-center text-[10px] font-semibold uppercase tracking-wide">MAX</span>
+              </div>
+            </div>
+
+            {/* TO Section */}
+            <div className="flex flex-col gap-4 p-5 rounded-lg bg-[#F4F4F5] relative">
+              <div className="text-[#51525C] text-xs font-medium uppercase">TO</div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  {/* Currency Dropdown */}
+                  <div
+                    className="flex items-center gap-2 cursor-pointer"
+                    onClick={() => setShowToCurrencyDropdown(!showToCurrencyDropdown)}
+                  >
+                    <div className="flex items-center gap-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clipPath="url(#clip0_16470_17942)">
+                          <path d="M23.6383 14.9029C22.0356 21.3315 15.5244 25.2438 9.09503 23.6407C2.66833 22.038 -1.24401 15.5265 0.359382 9.09837C1.96136 2.66903 8.47253 -1.24361 14.8999 0.359081C21.3289 1.96177 25.241 8.47404 23.6381 14.903L23.6382 14.9029H23.6383Z" fill="#F7931A"/>
+                          <path d="M17.291 10.2894C17.5299 8.69242 16.3141 7.834 14.6516 7.26136L15.1909 5.09816L13.8741 4.77005L13.3491 6.87629C13.0029 6.78995 12.6474 6.70859 12.2941 6.62794L12.8229 4.5078L11.5069 4.17969L10.9673 6.34218C10.6808 6.27695 10.3994 6.21249 10.1265 6.14457L10.128 6.13776L8.31209 5.6843L7.9618 7.09073C7.9618 7.09073 8.93876 7.31467 8.91817 7.32846C9.4514 7.46155 9.54783 7.81453 9.53182 8.09432L8.91747 10.5587C8.95418 10.568 9.00181 10.5815 9.05437 10.6026C9.01043 10.5917 8.96369 10.5798 8.91518 10.5682L8.05407 14.0205C7.9889 14.1825 7.82349 14.4256 7.45068 14.3333C7.46388 14.3524 6.49361 14.0944 6.49361 14.0944L5.83984 15.6017L7.55345 16.0289C7.87224 16.1089 8.18463 16.1925 8.49228 16.2712L7.94737 18.4592L9.26265 18.7873L9.80228 16.6225C10.1616 16.72 10.5103 16.81 10.8517 16.8948L10.3139 19.0494L11.6307 19.3775L12.1756 17.1936C14.421 17.6186 16.1094 17.4472 16.82 15.4163C17.3927 13.7811 16.7915 12.8379 15.6102 12.2229C16.4706 12.0244 17.1187 11.4585 17.2915 10.2895L17.2911 10.2892L17.291 10.2894ZM14.2825 14.5082C13.8755 16.1434 11.1224 15.2594 10.2298 15.0378L10.9529 12.139C11.8454 12.3619 14.7078 12.8028 14.2825 14.5082H14.2825ZM14.6897 10.2657C14.3185 11.753 12.027 10.9974 11.2837 10.8121L11.9392 8.18312C12.6826 8.36841 15.0764 8.71424 14.6898 10.2657H14.6897Z" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_16470_17942">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span className="text-[#18181B] text-xl font-medium uppercase">BTC</span>
+                    </div>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className={`transition-transform ${showToCurrencyDropdown ? 'rotate-180' : ''}`}
+                    >
+                      <path d="M6.17474 8.70073C6.37626 8.4992 6.63275 8.39844 6.9442 8.39844C7.25565 8.39844 7.51214 8.4992 7.71366 8.70073L12.0007 12.9877L16.2877 8.70073C16.4892 8.4992 16.7457 8.39844 17.0572 8.39844C17.3686 8.39844 17.6251 8.4992 17.8266 8.70073C18.0281 8.90225 18.1289 9.15874 18.1289 9.47019C18.1289 9.78164 18.0281 10.0381 17.8266 10.2397L12.7701 15.2961C12.6602 15.4061 12.5411 15.4841 12.4129 15.5303C12.2846 15.5764 12.1472 15.5992 12.0007 15.5984C11.8541 15.5984 11.7167 15.5753 11.5885 15.5292C11.4602 15.483 11.3411 15.4053 11.2312 15.2961L6.17474 10.2397C5.97321 10.0381 5.87245 9.78164 5.87245 9.47019C5.87245 9.15874 5.97321 8.90225 6.17474 8.70073Z" fill="#18181B"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 flex justify-end items-center">
+                    <span className="text-[#18181B] text-right text-[28px] font-medium">{toAmount}</span>
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <div className="text-[#51525C] text-xs font-medium uppercase">BITCOIN</div>
+                  <div className="text-[#51525C] text-xs font-medium uppercase">₿24.92</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Swap Icon */}
+            <div className="absolute left-1/2 top-[235px] transform -translate-x-1/2 w-9 h-9 p-2 flex justify-center items-center rounded-lg bg-[#18181B]">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M11 5.59766L6.5 10.0977H15.5L11 5.59766ZM6.5 11.8977L11 16.3977L15.5 11.8977H6.5Z" fill="white"/>
+              </svg>
+            </div>
+
+            {/* Exchange Rate Section */}
+            <div className="flex px-0 py-2 justify-center items-center gap-2 rounded-md bg-[#F4F4F5]">
+              <svg width="20" height="20" viewBox="0 0 21 20" fill="none">
+                <path d="M10.5 2.5C14.6422 2.5 18 5.85787 18 10C18 14.1422 14.6422 17.5 10.5 17.5C6.35787 17.5 3 14.1422 3 10C3 5.85787 6.35787 2.5 10.5 2.5Z" stroke="#18181B" strokeOpacity="0.3" strokeWidth="1.66667" strokeLinecap="round"/>
+                <path d="M10.5 2.5C14.6422 2.5 18 5.85787 18 10" stroke="#18181B" strokeWidth="1.66667" strokeLinecap="round"/>
+              </svg>
+              <div className="text-[#18181B] text-center text-sm font-medium">{exchangeRateText}</div>
+            </div>
+          </div>
+
+          {/* Continue Button */}
+          <div className="p-4 pt-0">
+            <button
+              className={`w-full py-3 px-8 rounded-lg transition-all ${
+                fromAmount && parseFloat(fromAmount.replace(/,/g, '')) > 0
+                  ? 'bg-[#18181B] cursor-pointer hover:bg-[#2A2A2A]'
+                  : 'bg-[#3F3F46] opacity-50 cursor-not-allowed'
+              }`}
+              disabled={!fromAmount || parseFloat(fromAmount.replace(/,/g, '')) <= 0}
+            >
+              <span className="text-white text-sm font-semibold uppercase">CONTINUE</span>
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Bottom Navigation */}
       {!showBuyCryptoOverlay && !showSellCryptoOverlay && !showReceiveCryptoOverlay && (
         <div className="fixed bottom-0 left-0 right-0 flex w-full h-[70px] p-1.5 items-center justify-between border-t border-[#E4E4E7] bg-white z-50">
