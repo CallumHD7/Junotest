@@ -1538,30 +1538,22 @@ export default function Dashboard_Fiat() {
 
             {/* FX Transaction */}
             <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
-              <div className="flex w-11 h-11 p-[11px] justify-center items-center rounded-full bg-[#E4E4E7] relative">
+              <div className="w-11 h-11 rounded-full bg-[#E4E4E7] flex items-center justify-center">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F9558985cef534a6da901009598e32446?format=webp&width=800"
-                  alt="Exchange Icon"
-                  className="w-4 h-4 object-contain"
+                  alt="Exchange icon"
+                  className="w-5 h-5"
                 />
               </div>
               <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
-                <div className="text-[#51525C] text-sm font-medium leading-5">
-                  24.05.21 16:55
-                </div>
-                <div className="text-[#18181B] text-sm font-bold leading-5">
-                  FX
-                </div>
+                <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
+                <div className="text-[#18181B] text-sm font-semibold leading-5">EXCHANGE</div>
               </div>
               <div className="flex flex-col justify-center items-end gap-0.5">
-                <div className="flex py-0.5 px-1 justify-center items-center gap-2.5 rounded bg-[rgba(130,179,96,0.16)]">
-                  <div className="text-[#275F00] text-center text-xs font-bold leading-4 tracking-[0.24px] uppercase">
-                    Completed
-                  </div>
+                <div className="flex px-1 py-0.5 justify-center items-center gap-2.5 rounded bg-[rgba(130,179,96,0.16)]">
+                  <div className="text-[#275F00] text-center text-xs font-semibold leading-4 tracking-[0.24px] uppercase">COMPLETED</div>
                 </div>
-                <div className="text-[#18181B] text-right text-sm font-bold leading-5">
-                  99,082.90 USD
-                </div>
+                <div className="text-[#18181B] text-right text-sm font-semibold leading-5">99,082.90 USD</div>
               </div>
             </div>
             <div className="h-px self-stretch bg-[#E4E4E7]"></div>
