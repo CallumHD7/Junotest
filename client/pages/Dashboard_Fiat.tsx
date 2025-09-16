@@ -1303,7 +1303,7 @@ export default function Dashboard_Fiat() {
             {/* Statistics Cards */}
             <div className="flex w-full h-[114px] items-center gap-1 rounded-md overflow-x-auto">
               {/* Total Card */}
-              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 flex-shrink-0 rounded-md bg-[#F4F4F5]">
                 <div className="flex justify-between items-start self-stretch">
                   <div className="flex flex-col items-start gap-1">
                     <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
@@ -1332,7 +1332,7 @@ export default function Dashboard_Fiat() {
               </div>
 
               {/* Completed Card */}
-              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 flex-shrink-0 rounded-md bg-[#F4F4F5]">
                 <div className="flex justify-between items-start self-stretch">
                   <div className="flex flex-col items-start gap-1">
                     <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
@@ -1361,7 +1361,7 @@ export default function Dashboard_Fiat() {
               </div>
 
               {/* Processing Card */}
-              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 flex-shrink-0 rounded-md bg-[#F4F4F5]">
                 <div className="flex justify-between items-start self-stretch">
                   <div className="flex flex-col items-start gap-1">
                     <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
@@ -1390,7 +1390,7 @@ export default function Dashboard_Fiat() {
               </div>
 
               {/* Failed Card */}
-              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 flex-shrink-0 rounded-md bg-[#F4F4F5]">
                 <div className="flex justify-between items-start self-stretch">
                   <div className="flex flex-col items-start gap-1">
                     <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
