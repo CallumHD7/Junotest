@@ -1086,11 +1086,11 @@ export default function Dashboard_Fiat() {
                     fill="#26272B"
                   />
                 </svg>
-                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden">
+                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden flex flex-col justify-center items-start">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F03a94dae342c4c11b8deff4d081d1135?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fa24334486a3f49d2903c82724503d011?format=webp&width=800"
                     alt="US Flag"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover my-auto"
                   />
                 </div>
               </div>
@@ -1120,11 +1120,11 @@ export default function Dashboard_Fiat() {
                     fill="#26272B"
                   />
                 </svg>
-                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden">
+                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden flex flex-col justify-center items-start">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F03a94dae342c4c11b8deff4d081d1135?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fa24334486a3f49d2903c82724503d011?format=webp&width=800"
                     alt="US Flag"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover my-auto"
                   />
                 </div>
               </div>
@@ -1239,11 +1239,11 @@ export default function Dashboard_Fiat() {
                     fill="#26272B"
                   />
                 </svg>
-                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden">
+                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden flex flex-col justify-center items-start">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F03a94dae342c4c11b8deff4d081d1135?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2Fa24334486a3f49d2903c82724503d011?format=webp&width=800"
                     alt="US Flag"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover my-auto"
                   />
                 </div>
               </div>
