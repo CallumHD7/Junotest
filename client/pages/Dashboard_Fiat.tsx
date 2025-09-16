@@ -1439,6 +1439,7 @@ export default function Dashboard_Fiat() {
                 e.stopPropagation();
                 setSelectedMoreOption("FX");
                 setShowMoreDropdown(false);
+                setShowFxOverlay(true);
               }}
             >
               <span className="text-[#18181B] text-sm font-medium uppercase tracking-wide">FX</span>
