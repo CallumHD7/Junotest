@@ -87,13 +87,19 @@ export default function Dashboard_Fiat() {
       if (showMoreDropdown && !(event.target as Element).closest('[data-dropdown="more"]')) {
         setShowMoreDropdown(false);
       }
+      if (showFxFromDropdown && !(event.target as Element).closest('[data-dropdown="fx-from"]')) {
+        setShowFxFromDropdown(false);
+      }
+      if (showFxToDropdown && !(event.target as Element).closest('[data-dropdown="fx-to"]')) {
+        setShowFxToDropdown(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [showMoreDropdown]);
+  }, [showMoreDropdown, showFxFromDropdown, showFxToDropdown]);
 
   const navigate = useNavigate();
 
