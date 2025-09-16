@@ -1157,11 +1157,11 @@ export default function Dashboard_Fiat() {
                     fill="#26272B"
                   />
                 </svg>
-                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden">
+                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden flex flex-col justify-center items-start">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F159120e476f347b7ad75f3cb56b786eb?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F299665a9025d4323949aefa660002162?format=webp&width=800"
                     alt="UK Flag"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover my-auto"
                   />
                 </div>
               </div>
@@ -1198,11 +1198,11 @@ export default function Dashboard_Fiat() {
                     fill="#26272B"
                   />
                 </svg>
-                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden">
+                <div className="absolute -top-1 left-[30px] w-[22px] h-[22px] rounded-full border-[1.837px] border-white overflow-hidden flex flex-col justify-center items-start">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F159120e476f347b7ad75f3cb56b786eb?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F299665a9025d4323949aefa660002162?format=webp&width=800"
                     alt="UK Flag"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover my-auto"
                   />
                 </div>
               </div>
