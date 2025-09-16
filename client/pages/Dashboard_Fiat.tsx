@@ -1301,7 +1301,7 @@ export default function Dashboard_Fiat() {
             </div>
 
             {/* Statistics Cards */}
-            <div className="flex h-[114px] items-center gap-1 rounded-md">
+            <div className="flex w-full h-[114px] items-center gap-1 rounded-md overflow-x-auto">
               {/* Total Card */}
               <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
                 <div className="flex justify-between items-start self-stretch">
