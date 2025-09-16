@@ -1547,7 +1547,7 @@ export default function Dashboard_Fiat() {
               </div>
               <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
                 <div className="text-[#51525C] text-sm font-medium leading-5">24.05.21 16:55</div>
-                <div className="text-[#18181B] text-sm font-semibold leading-5">EXCHANGE</div>
+                <div className="text-[#18181B] text-sm font-semibold leading-5"><p>FX</p></div>
               </div>
               <div className="flex flex-col justify-center items-end gap-0.5">
                 <div className="flex px-1 py-0.5 justify-center items-center gap-2.5 rounded bg-[rgba(130,179,96,0.16)]">
