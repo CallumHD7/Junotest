@@ -1468,6 +1468,7 @@ export default function Dashboard_Fiat() {
                 e.stopPropagation();
                 setSelectedMoreOption("MERCHANT");
                 setShowMoreDropdown(false);
+                setShowMerchantsOverlay(true);
               }}
             >
               <span className="text-[#51525C] text-sm font-medium uppercase tracking-wide">MERCHANT</span>
