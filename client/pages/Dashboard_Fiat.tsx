@@ -86,6 +86,11 @@ export default function Dashboard_Fiat() {
   const [selectedMerchant, setSelectedMerchant] = useState("Olympic Casino Tallinn - Cash Transfers");
   const [merchantSearchQuery, setMerchantSearchQuery] = useState("");
 
+  // Upload File page state
+  const [showUploadFilePage, setShowUploadFilePage] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [uploadProgress, setUploadProgress] = useState(32); // 32% as shown in design
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
