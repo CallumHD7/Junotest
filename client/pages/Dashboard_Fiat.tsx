@@ -92,6 +92,10 @@ export default function Dashboard_Fiat() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploadProgress, setUploadProgress] = useState(32); // 32% as shown in design
 
+  // Real-time exchange rate state
+  const [btcToUsdRate, setBtcToUsdRate] = useState(114795.97);
+  const [isRateLoading, setIsRateLoading] = useState(false);
+
   // Handle file selection
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null;
@@ -255,11 +259,6 @@ export default function Dashboard_Fiat() {
     };
   }, [showMoreDropdown, showFxFromDropdown, showFxToDropdown]);
 
-  const navigate = useNavigate();
-
-  // Real-time exchange rate state
-  const [btcToUsdRate, setBtcToUsdRate] = useState(114795.97);
-  const [isRateLoading, setIsRateLoading] = useState(false);
 
   // Simulate real-time BTC to USD rate changes locally
   const updateBtcRate = () => {
