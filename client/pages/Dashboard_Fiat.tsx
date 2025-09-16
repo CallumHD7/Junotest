@@ -1491,6 +1491,7 @@ export default function Dashboard_Fiat() {
                 e.stopPropagation();
                 setSelectedMoreOption("BULK PAY");
                 setShowMoreDropdown(false);
+                setShowUploadFilePage(true);
               }}
             >
               <span className="text-[#51525C] text-sm font-medium uppercase tracking-wide">BULK PAY</span>
