@@ -2,6 +2,145 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard_Fiat() {
+  // Handle file selection
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0] || null;
+    setSelectedFile(file);
+  };
+
+  // If Upload File page is shown, render that instead
+  if (showUploadFilePage) {
+    return (
+      <div className="w-full h-screen bg-[#F4F4F5] overflow-hidden">
+        {/* Status Bar */}
+        <div className="w-full h-11 bg-white flex items-center justify-between px-5 relative">
+          <div className="text-[#18181B] text-base font-semibold">9:41</div>
+          <div className="flex items-center gap-1">
+            {/* Signal bars */}
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+              <path fillRule="evenodd" clipRule="evenodd" d="M3 7.5H4C4.55228 7.5 5 7.94772 5 8.5V11C5 11.5523 4.55228 12 4 12H3C2.44772 12 2 11.5523 2 11V8.5C2 7.94772 2.44772 7.5 3 7.5Z" fill="#18181B"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M7.5 6H8.5C9.05228 6 9.5 6.44772 9.5 7V11C9.5 11.5523 9.05228 12 8.5 12H7.5C6.94772 12 6.5 11.5523 6.5 11V7C6.5 6.44772 6.94772 6 7.5 6Z" fill="#18181B"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M12 4H13C13.5523 4 14 4.44772 14 5V11C14 11.5523 13.5523 12 13 12H12C11.4477 12 11 11.5523 11 11V5C11 4.44772 11.4477 4 12 4Z" fill="#18181B"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M16.5 2H17.5C18.0523 2 18.5 2.44772 18.5 3V11C18.5 11.5523 18.0523 12 17.5 12H16.5C15.9477 12 15.5 11.5523 15.5 11V3C15.5 2.44772 15.9477 2 16.5 2Z" fill="#3C3C43" fillOpacity="0.18"/>
+            </svg>
+            {/* WiFi */}
+            <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+              <path d="M8.13198 8.94141C8.77147 8.94141 9.39286 9.10945 9.94037 9.42987L10.1622 9.5597C10.3304 9.65813 10.36 9.88848 10.2221 10.026L8.328 11.9148C8.21166 12.0308 8.02303 12.0308 7.90669 11.9148L6.02478 10.0381C5.88749 9.90122 5.91611 9.67204 6.08287 9.57289L6.30222 9.44247C6.85476 9.11394 7.48403 8.94141 8.13198 8.94141Z" fill="#18181B"/>
+              <path d="M8.13657 5.46875C9.72741 5.46875 11.2548 5.99649 12.4991 6.97382L12.675 7.11194C12.8152 7.22205 12.8275 7.42955 12.7013 7.55539L11.5705 8.68302C11.4659 8.78732 11.3004 8.7993 11.1818 8.71116L11.044 8.60871C10.2036 7.98413 9.19024 7.6491 8.13657 7.6491C7.07642 7.6491 6.05714 7.9883 5.21396 8.62005L5.07597 8.72343C4.95737 8.8123 4.79127 8.8006 4.68637 8.69599L3.55601 7.56877C3.43008 7.44319 3.44204 7.23622 3.58159 7.1259L3.75644 6.98766C5.00369 6.00163 6.53806 5.46875 8.13657 5.46875Z" fill="#18181B"/>
+              <path d="M8.13272 2C10.6574 2 13.0717 2.89057 14.9828 4.52294L15.1459 4.66228C15.2777 4.77488 15.2855 4.97558 15.1627 5.09797L14.0356 6.22195C13.9264 6.33084 13.7519 6.33847 13.6336 6.23952L13.494 6.12283C11.9894 4.86472 10.1035 4.18035 8.13272 4.18035C6.15517 4.18035 4.26327 4.86943 2.75641 6.13541L2.6168 6.2527C2.4985 6.3521 2.32359 6.34466 2.2142 6.23557L1.08726 5.11176C0.964693 4.98954 0.972236 4.78918 1.10365 4.67646L1.26614 4.53708C3.17953 2.89589 5.60056 2 8.13272 2Z" fill="#18181B"/>
+            </svg>
+            {/* Battery */}
+            <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+              <path d="M24 5C24.5523 5 25 5.44772 25 6V8C25 8.55228 24.5523 9 24 9V5Z" fill="#3C3C43" fillOpacity="0.6"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M3 1H20C21.6569 1 23 2.34315 23 4V10C23 11.6569 21.6569 13 20 13H3C1.34315 13 0 11.6569 0 10V4C0 2.34315 1.34315 1 3 1ZM3 2C1.89543 2 1 2.89543 1 4V10C1 11.1046 1.89543 12 3 12H20C21.1046 12 22 11.1046 22 10V4C22 2.89543 21.1046 2 20 2H3Z" fill="#3C3C43" fillOpacity="0.6"/>
+              <rect x="2" y="3" width="19" height="8" rx="1" fill="#18181B"/>
+            </svg>
+          </div>
+        </div>
+
+        {/* Header */}
+        <div className="w-full h-[86px] bg-white border-b border-black/[0.12] rounded-b-lg relative">
+          <button
+            onClick={() => setShowUploadFilePage(false)}
+            className="absolute left-4 top-3.5 w-6 h-6 flex items-center justify-center"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="#18181B"/>
+            </svg>
+          </button>
+          <div className="absolute left-[136px] top-3.5 w-[103px] h-6 text-[#18181B] text-center text-base font-semibold uppercase">
+            UPLOAD FILE
+          </div>
+          {/* Progress Bar */}
+          <div className="absolute left-4 top-[62px] w-[343px] h-2 bg-[#E4E4E7] rounded-sm">
+            <div
+              className="h-2 bg-[#18181B] rounded-sm transition-all duration-300"
+              style={{ width: `${uploadProgress}%` }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="w-full h-[678px] p-4 flex flex-col gap-6 bg-white border-t border-black/[0.12] rounded-lg mt-[2px]">
+          {/* Title Section */}
+          <div className="flex flex-col gap-3">
+            <h1 className="text-[#18181B] text-lg font-semibold uppercase tracking-wide">
+              UPLOAD BULK PAY CSV
+            </h1>
+            <p className="text-[#51525C] text-sm font-medium uppercase">
+              FOR BEST RESULTS, COMPLETE AND UPLOAD OUR BULK PAY CSV TEMPLATE PROVIDED BELOW.
+            </p>
+          </div>
+
+          {/* File Upload Section */}
+          <div className="flex flex-col gap-2">
+            <label className="text-[#51525C] text-xs font-medium uppercase">
+              BULK PAYMENTS*
+            </label>
+            <div className="flex h-[52px] px-3 items-center gap-3 border border-[#D1D1D6] rounded-lg bg-[#FAFAFA]">
+              <label className="flex px-2 py-2 justify-center items-center gap-2.5 border border-[#51525C] rounded bg-[#E4E4E7] cursor-pointer">
+                <span className="text-[#18181B] text-xs font-medium uppercase">CHOOSE FILE</span>
+                <input
+                  type="file"
+                  accept=".csv"
+                  onChange={handleFileSelect}
+                  className="hidden"
+                />
+              </label>
+              <span className="flex-1 text-[#51525C] text-sm font-medium uppercase">
+                {selectedFile ? selectedFile.name : "NO FILE CHOSEN"}
+              </span>
+            </div>
+          </div>
+
+          {/* Continue Button */}
+          <button
+            className={`flex h-11 px-8 py-3 justify-center items-center gap-2.5 self-stretch rounded-lg transition-opacity ${
+              selectedFile ? 'bg-[#18181B] opacity-100' : 'bg-[#18181B] opacity-50'
+            }`}
+            disabled={!selectedFile}
+          >
+            <span className="text-white text-center text-sm font-semibold uppercase">CONTINUE</span>
+          </button>
+
+          {/* Links Section */}
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-3">
+              {/* View Instructions */}
+              <button className="flex items-center gap-2 self-start">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12Z" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 12C3.6 7.903 7.336 5 12 5C16.664 5 20.4 7.903 22 12C20.4 16.097 16.664 19 12 19C7.336 19 3.6 16.097 2 12Z" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <span className="text-[#18181B] text-sm font-medium uppercase underline decoration-dotted underline-offset-[3.5px]">
+                  VIEW INSTRUCTIONS
+                </span>
+              </button>
+
+              {/* Download Template */}
+              <div className="flex flex-col gap-6">
+                <button className="flex items-center gap-2 self-start">
+                  <div className="flex p-0.5 justify-center items-center">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                      <path d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.2652 5.66374e-05 10.5195 0.105451 10.707 0.293L15.707 5.293C15.8946 5.48049 15.9999 5.73481 16 6V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2ZM13.586 6L10 2.414V6H13.586ZM8 2H2V18H14V8H9C8.73478 8 8.48043 7.89464 8.29289 7.70711C8.10536 7.51957 8 7.26522 8 7V2ZM8 9.5C8.26522 9.5 8.51957 9.60536 8.70711 9.79289C8.89464 9.98043 9 10.2348 9 10.5V13.086L9.293 12.793C9.4816 12.6108 9.7342 12.51 9.9964 12.5123C10.2586 12.5146 10.5094 12.6198 10.6948 12.8052C10.8802 12.9906 10.9854 13.2414 10.9877 13.5036C10.99 13.7658 10.8892 14.0184 10.707 14.207L8.707 16.207C8.51947 16.3945 8.26516 16.4998 8 16.4998C7.73484 16.4998 7.48053 16.3945 7.293 16.207L5.293 14.207C5.19749 14.1148 5.12131 14.0044 5.0689 13.8824C5.01649 13.7604 4.9889 13.6292 4.98775 13.4964C4.9866 13.3636 5.0119 13.2319 5.06218 13.109C5.11246 12.9861 5.18671 12.8745 5.28061 12.7806C5.3745 12.6867 5.48615 12.6125 5.60905 12.5622C5.73194 12.5119 5.86362 12.4866 5.9964 12.4877C6.12918 12.4889 6.2604 12.5165 6.3824 12.5689C6.50441 12.6213 6.61475 12.6975 6.707 12.793L7 13.086V10.5C7 10.2348 7.10536 9.98043 7.29289 9.79289C7.48043 9.60536 7.73478 9.5 8 9.5Z" fill="#18181B"/>
+                    </svg>
+                  </div>
+                  <span className="text-[#18181B] text-sm font-medium uppercase underline decoration-dotted underline-offset-[3.5px]">
+                    DOWNLOAD TEMPLATE CSV FILE
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Warning Text */}
+          <p className="text-[#51525C] text-sm font-medium uppercase">
+            MAKE SURE YOU COMPLETE ALL THE MANDATORY FIELDS. OTHERWISE YOUR PAYMENT WON'T BE PROCESSED.
+          </p>
+        </div>
+      </div>
+    );
+  }
   const [selectedTab, setSelectedTab] = useState("home");
   const [selectedView, setSelectedView] = useState("fiat");
   const [showDepositOverlay, setShowDepositOverlay] = useState(false);
@@ -306,7 +445,7 @@ export default function Dashboard_Fiat() {
     { flag: "🇪🇺", date: "24.05.21 16:55", amount: "$45,000.00" },
     { flag: "🇺🇸", date: "24.05.21 16:55", amount: "$45,000.00" },
     { flag: "🇦🇺", date: "24.05.21 16:55", amount: "$45,000.00" },
-    { flag: "🇨🇭", date: "24.05.21 16:55", amount: "$45,000.00" }
+    { flag: "����🇭", date: "24.05.21 16:55", amount: "$45,000.00" }
   ];
 
   const StatusIcon = ({ type }: { type: "failed" | "completed" }) => {
