@@ -96,10 +96,93 @@ export default function Dashboard_Fiat() {
   const [btcToUsdRate, setBtcToUsdRate] = useState(114795.97);
   const [isRateLoading, setIsRateLoading] = useState(false);
 
+  // Navigation hook
+  const navigate = useNavigate();
+
+  // Simulate real-time BTC to USD rate changes locally
+  const updateBtcRate = () => {
+    setIsRateLoading(true);
+
+    // Simulate API delay
+    setTimeout(() => {
+      // Use time-based seed for consistent but varying rates
+      const timeSeed = Math.floor(Date.now() / 30000); // Changes every 30 seconds
+      const baseRate = 114795.97;
+
+      // Create realistic price movements using sine wave with random noise
+      const timeOffset = (timeSeed % 100) / 100;
+      const trend = Math.sin(timeOffset * Math.PI * 2) * 1500; // ±$1500 trend
+      const volatility = (Math.sin(timeSeed * 0.1) * 0.5 + 0.5) * 800; // 0-$800 volatility
+      const noise = (Math.random() - 0.5) * volatility;
+
+      const newRate = baseRate + trend + noise;
+
+      // Ensure rate stays within reasonable bounds
+      const clampedRate = Math.max(90000, Math.min(140000, newRate));
+
+      setBtcToUsdRate(clampedRate);
+      setIsRateLoading(false);
+    }, 500); // 500ms simulated API delay
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (showMoreDropdown && !(event.target as Element).closest('[data-dropdown="more"]')) {
+        setShowMoreDropdown(false);
+      }
+      if (showFxFromDropdown && !(event.target as Element).closest('[data-dropdown="fx-from"]')) {
+        setShowFxFromDropdown(false);
+      }
+      if (showFxToDropdown && !(event.target as Element).closest('[data-dropdown="fx-to"]')) {
+        setShowFxToDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showMoreDropdown, showFxFromDropdown, showFxToDropdown]);
+
+  // Set up real-time rate updates
+  useEffect(() => {
+    // Update rate immediately
+    updateBtcRate();
+
+    // Set up interval to update rate every 30 seconds
+    const interval = setInterval(updateBtcRate, 30000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
   // Handle file selection
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null;
     setSelectedFile(file);
+  };
+
+  // Handle crypto send amount change
+  const handleCryptoSendChange = (value: string) => {
+    setCryptoSendAmount(value);
+    if (value && !isNaN(Number(value))) {
+      const usdAmount = (Number(value) * btcToUsdRate).toFixed(2);
+      setCryptoReceiveAmount(usdAmount);
+    } else {
+      setCryptoReceiveAmount("");
+    }
+  };
+
+  // Handle crypto receive amount change
+  const handleCryptoReceiveChange = (value: string) => {
+    setCryptoReceiveAmount(value);
+    if (value && !isNaN(Number(value))) {
+      const btcAmount = (Number(value) / btcToUsdRate).toFixed(8);
+      setCryptoSendAmount(btcAmount);
+    } else {
+      setCryptoSendAmount("");
+    }
   };
 
   // If Upload File page is shown, render that instead
@@ -236,87 +319,7 @@ export default function Dashboard_Fiat() {
     );
   }
 
-  // Navigation and other hooks
-  const navigate = useNavigate();
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (showMoreDropdown && !(event.target as Element).closest('[data-dropdown="more"]')) {
-        setShowMoreDropdown(false);
-      }
-      if (showFxFromDropdown && !(event.target as Element).closest('[data-dropdown="fx-from"]')) {
-        setShowFxFromDropdown(false);
-      }
-      if (showFxToDropdown && !(event.target as Element).closest('[data-dropdown="fx-to"]')) {
-        setShowFxToDropdown(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [showMoreDropdown, showFxFromDropdown, showFxToDropdown]);
-
-
-  // Simulate real-time BTC to USD rate changes locally
-  const updateBtcRate = () => {
-    setIsRateLoading(true);
-
-    // Simulate API delay
-    setTimeout(() => {
-      // Use time-based seed for consistent but varying rates
-      const timeSeed = Math.floor(Date.now() / 30000); // Changes every 30 seconds
-      const baseRate = 114795.97;
-
-      // Create realistic price movements using sine wave with random noise
-      const timeOffset = (timeSeed % 100) / 100;
-      const trend = Math.sin(timeOffset * Math.PI * 2) * 1500; // ±$1500 trend
-      const volatility = (Math.sin(timeSeed * 0.1) * 0.5 + 0.5) * 800; // 0-$800 volatility
-      const noise = (Math.random() - 0.5) * volatility;
-
-      const newRate = baseRate + trend + noise;
-
-      // Ensure rate stays within reasonable bounds
-      const clampedRate = Math.max(90000, Math.min(140000, newRate));
-
-      setBtcToUsdRate(clampedRate);
-      setIsRateLoading(false);
-    }, 500); // 500ms simulated API delay
-  };
-
-  // Set up real-time rate updates
-  useEffect(() => {
-    // Update rate immediately
-    updateBtcRate();
-
-    // Set up interval to update rate every 30 seconds
-    const interval = setInterval(updateBtcRate, 30000);
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleCryptoSendChange = (value: string) => {
-    setCryptoSendAmount(value);
-    if (value && !isNaN(Number(value))) {
-      const usdAmount = (Number(value) * btcToUsdRate).toFixed(2);
-      setCryptoReceiveAmount(usdAmount);
-    } else {
-      setCryptoReceiveAmount("");
-    }
-  };
-
-  const handleCryptoReceiveChange = (value: string) => {
-    setCryptoReceiveAmount(value);
-    if (value && !isNaN(Number(value))) {
-      const btcAmount = (Number(value) / btcToUsdRate).toFixed(8);
-      setCryptoSendAmount(btcAmount);
-    } else {
-      setCryptoSendAmount("");
-    }
-  };
+  // Main dashboard rendering starts here
 
   // Mock data for the dashboard
   const balances = [
