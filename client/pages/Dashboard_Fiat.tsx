@@ -2945,6 +2945,189 @@ export default function Dashboard_Fiat() {
           </div>
         </div>
       )}
+
+      {/* Merchants Overlay */}
+      {showMerchantsOverlay && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 md:p-4">
+          <div className="bg-white w-full h-full md:h-auto md:rounded-lg md:max-w-sm md:mx-auto flex flex-col max-h-screen overflow-hidden">
+            {/* Header */}
+            <div className="flex w-full p-4 flex-col items-start gap-6 bg-white flex-shrink-0">
+              <div className="flex flex-col justify-center items-start gap-3 self-stretch">
+                <div className="flex justify-between items-center self-stretch">
+                  <h2 className="text-[#18181B] text-lg font-semibold uppercase tracking-wider">MERCHANTS</h2>
+                  <button
+                    onClick={() => setShowMerchantsOverlay(false)}
+                    className="w-6 h-6 flex items-center justify-center"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M11.9969 13.4008L7.09687 18.3008C6.91354 18.4841 6.68021 18.5758 6.39687 18.5758C6.11354 18.5758 5.88021 18.4841 5.69687 18.3008C5.51354 18.1174 5.42188 17.8841 5.42188 17.6008C5.42188 17.3174 5.51354 17.0841 5.69687 16.9008L10.5969 12.0008L5.69687 7.10078C5.51354 6.91745 5.42188 6.68411 5.42188 6.40078C5.42188 6.11745 5.51354 5.88411 5.69687 5.70078C5.88021 5.51745 6.11354 5.42578 6.39687 5.42578C6.68021 5.42578 6.91354 5.51745 7.09687 5.70078L11.9969 10.6008L16.8969 5.70078C17.0802 5.51745 17.3135 5.42578 17.5969 5.42578C17.8802 5.42578 18.1135 5.51745 18.2969 5.70078C18.4802 5.88411 18.5719 6.11745 18.5719 6.40078C18.5719 6.68411 18.4802 6.91745 18.2969 7.10078L13.3969 12.0008L18.2969 16.9008C18.4802 17.0841 18.5719 17.3174 18.5719 17.6008C18.5719 17.8841 18.4802 18.1174 18.2969 18.3008C18.1135 18.4841 17.8802 18.5758 17.5969 18.5758C17.3135 18.5758 17.0802 18.4841 16.8969 18.3008L11.9969 13.4008Z" fill="#18181B"/>
+                    </svg>
+                  </button>
+                </div>
+                <div className="self-stretch text-[#51525C] text-sm font-medium uppercase">
+                  TO TRANSFER FUNDS TO A MERCHANT, PLEASE SELECT ONE FROM THE LIST BELOW.
+                </div>
+              </div>
+
+              {/* Search Bar */}
+              <div className="flex p-2 pl-3 items-center gap-1 self-stretch rounded-lg bg-[#F4F4F5]">
+                <input
+                  type="text"
+                  value={merchantSearchQuery}
+                  onChange={(e) => setMerchantSearchQuery(e.target.value)}
+                  placeholder="SEARCH MERCHANTS"
+                  className="flex-1 text-[#51525C] text-xs font-medium uppercase bg-transparent border-none outline-none placeholder:text-[#51525C]"
+                />
+                <div className="w-6 h-6 flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M6.5216 12.6135C4.81392 12.6135 3.36777 12.0212 2.18317 10.8366C0.998558 9.652 0.40625 8.20585 0.40625 6.49816C0.40625 4.79048 0.998558 3.34433 2.18317 2.15971C3.36777 0.975112 4.81392 0.382812 6.5216 0.382812C8.22928 0.382812 9.67543 0.975112 10.8601 2.15971C12.0447 3.34433 12.637 4.79048 12.637 6.49816C12.637 7.21226 12.5171 7.89431 12.2774 8.54431C12.0376 9.19431 11.7177 9.7597 11.3177 10.2405L17.0716 15.9943C17.21 16.1328 17.2809 16.3068 17.2841 16.5164C17.2873 16.726 17.2165 16.9033 17.0716 17.0481C16.9267 17.193 16.7511 17.2654 16.5447 17.2654C16.3383 17.2654 16.1626 17.193 16.0178 17.0481L10.2639 11.2943C9.7639 11.7071 9.1889 12.0302 8.5389 12.2635C7.8889 12.4968 7.21647 12.6135 6.5216 12.6135ZM6.5216 11.1136C7.81007 11.1136 8.90142 10.6664 9.79565 9.77221C10.6899 8.87798 11.137 7.78663 11.137 6.49816C11.137 5.2097 10.6899 4.11835 9.79565 3.22411C8.90142 2.32988 7.81007 1.88276 6.5216 1.88276C5.23313 1.88276 4.14178 2.32988 3.24755 3.22411C2.35333 4.11835 1.90623 5.2097 1.90623 6.49816C1.90623 7.78663 2.35333 8.87798 3.24755 9.77221C4.14178 10.6664 5.23313 11.1136 6.5216 11.1136Z" fill="#51525C"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Merchants List */}
+            <div className="flex p-3 pt-0 flex-col items-center gap-6 flex-1 self-stretch overflow-y-auto">
+              <div className="flex flex-col items-start gap-2 self-stretch">
+
+                {/* Olympic Casino Tallinn - Selected */}
+                <div
+                  className={`flex p-3 items-center gap-3 self-stretch rounded-lg border cursor-pointer transition-colors ${
+                    selectedMerchant === "Olympic Casino Tallinn - Cash Transfers" ? 'border-[#18181B]' : 'border-[#D1D1D6] hover:border-[#51525C]'
+                  }`}
+                  onClick={() => setSelectedMerchant("Olympic Casino Tallinn - Cash Transfers")}
+                >
+                  <div className="flex w-11 h-11 justify-center items-center rounded-full bg-[#B5B5B5] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/20bce99e47093839b71acf0f3964b9b2b59fc26e?width=88"
+                      alt="Olympic Casino Logo"
+                      className="w-11 h-11 object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-[#18181B] text-sm font-medium uppercase overflow-hidden text-ellipsis line-clamp-1">
+                    OLYMPIC CASINO TALLINN - CASH TRANSFERS
+                  </div>
+                </div>
+
+                {/* Potromaso Casino */}
+                <div
+                  className={`flex p-3 items-center gap-3 self-stretch rounded-lg border cursor-pointer transition-colors ${
+                    selectedMerchant === "Potromaso Casino" ? 'border-[#18181B]' : 'border-[#D1D1D6] hover:border-[#51525C]'
+                  }`}
+                  onClick={() => setSelectedMerchant("Potromaso Casino")}
+                >
+                  <div className="flex w-11 h-11 justify-center items-center rounded-full bg-[#B5B5B5] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/dd6a864f0f75b54e07677f5f120ce99a92c03d55?width=88"
+                      alt="Potromaso Casino Logo"
+                      className="w-11 h-11 object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-[#18181B] text-sm font-medium uppercase overflow-hidden text-ellipsis line-clamp-1">
+                    POTROMASO CASINO
+                  </div>
+                </div>
+
+                {/* Olympic Casino Tallinn - Second instance */}
+                <div
+                  className={`flex p-3 items-center gap-3 self-stretch rounded-lg border cursor-pointer transition-colors ${
+                    selectedMerchant === "Olympic Casino Tallinn - Cash Transfers 2" ? 'border-[#18181B]' : 'border-[#D1D1D6] hover:border-[#51525C]'
+                  }`}
+                  onClick={() => setSelectedMerchant("Olympic Casino Tallinn - Cash Transfers 2")}
+                >
+                  <div className="flex w-11 h-11 justify-center items-center rounded-full bg-[#B5B5B5] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/20bce99e47093839b71acf0f3964b9b2b59fc26e?width=88"
+                      alt="Olympic Casino Logo"
+                      className="w-11 h-11 object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-[#18181B] text-sm font-medium uppercase overflow-hidden text-ellipsis line-clamp-1">
+                    OLYMPIC CASINO TALLINN - CASH TRANSFERS
+                  </div>
+                </div>
+
+                {/* Potromaso Casino - Second instance */}
+                <div
+                  className={`flex p-3 items-center gap-3 self-stretch rounded-lg border cursor-pointer transition-colors ${
+                    selectedMerchant === "Potromaso Casino 2" ? 'border-[#18181B]' : 'border-[#D1D1D6] hover:border-[#51525C]'
+                  }`}
+                  onClick={() => setSelectedMerchant("Potromaso Casino 2")}
+                >
+                  <div className="flex w-11 h-11 justify-center items-center rounded-full bg-[#B5B5B5] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/dd6a864f0f75b54e07677f5f120ce99a92c03d55?width=88"
+                      alt="Potromaso Casino Logo"
+                      className="w-11 h-11 object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-[#18181B] text-sm font-medium uppercase overflow-hidden text-ellipsis line-clamp-1">
+                    POTROMASO CASINO
+                  </div>
+                </div>
+
+                {/* Olympic Casino Tallinn - Third instance */}
+                <div
+                  className={`flex p-3 items-center gap-3 self-stretch rounded-lg border cursor-pointer transition-colors ${
+                    selectedMerchant === "Olympic Casino Tallinn - Cash Transfers 3" ? 'border-[#18181B]' : 'border-[#D1D1D6] hover:border-[#51525C]'
+                  }`}
+                  onClick={() => setSelectedMerchant("Olympic Casino Tallinn - Cash Transfers 3")}
+                >
+                  <div className="flex w-11 h-11 justify-center items-center rounded-full bg-[#B5B5B5] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/20bce99e47093839b71acf0f3964b9b2b59fc26e?width=88"
+                      alt="Olympic Casino Logo"
+                      className="w-11 h-11 object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-[#18181B] text-sm font-medium uppercase overflow-hidden text-ellipsis line-clamp-1">
+                    OLYMPIC CASINO TALLINN - CASH TRANSFERS
+                  </div>
+                </div>
+
+                {/* Potromaso Casino - Third instance */}
+                <div
+                  className={`flex p-3 items-center gap-3 self-stretch rounded-lg border cursor-pointer transition-colors ${
+                    selectedMerchant === "Potromaso Casino 3" ? 'border-[#18181B]' : 'border-[#D1D1D6] hover:border-[#51525C]'
+                  }`}
+                  onClick={() => setSelectedMerchant("Potromaso Casino 3")}
+                >
+                  <div className="flex w-11 h-11 justify-center items-center rounded-full bg-[#B5B5B5] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/dd6a864f0f75b54e07677f5f120ce99a92c03d55?width=88"
+                      alt="Potromaso Casino Logo"
+                      className="w-11 h-11 object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-[#18181B] text-sm font-medium uppercase overflow-hidden text-ellipsis line-clamp-1">
+                    POTROMASO CASINO
+                  </div>
+                </div>
+
+                {/* Olympic Casino Tallinn - Fourth instance */}
+                <div
+                  className={`flex p-3 items-center gap-3 self-stretch rounded-lg border cursor-pointer transition-colors ${
+                    selectedMerchant === "Olympic Casino Tallinn - Cash Transfers 4" ? 'border-[#18181B]' : 'border-[#D1D1D6] hover:border-[#51525C]'
+                  }`}
+                  onClick={() => setSelectedMerchant("Olympic Casino Tallinn - Cash Transfers 4")}
+                >
+                  <div className="flex w-11 h-11 justify-center items-center rounded-full bg-[#B5B5B5] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/20bce99e47093839b71acf0f3964b9b2b59fc26e?width=88"
+                      alt="Olympic Casino Logo"
+                      className="w-11 h-11 object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-[#18181B] text-sm font-medium uppercase overflow-hidden text-ellipsis line-clamp-1">
+                    OLYMPIC CASINO TALLINN - CASH TRANSFERS
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
