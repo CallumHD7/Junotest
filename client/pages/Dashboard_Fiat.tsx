@@ -1539,14 +1539,11 @@ export default function Dashboard_Fiat() {
             {/* FX Transaction */}
             <div className="flex h-[76px] px-3 items-center gap-3 self-stretch">
               <div className="flex w-11 h-11 p-[11px] justify-center items-center rounded-full bg-[#E4E4E7] relative">
-                <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M10.6837 2.10844L11.4739 1.30078L15.2439 5.07192L11.4739 8.84307L10.6842 8.03597L13.0876 5.63319H1.26562V4.51066H13.0876L10.6837 2.10844ZM0.75 12.9266L4.5217 9.15547L5.31084 9.96257L2.9075 12.3653H14.7294V13.4879H2.90807L5.31084 15.8907L4.5217 16.6978L0.75 12.9266Z"
-                    fill="#18181B"
-                  />
-                </svg>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F83d02907b4ae4e20b4c5791e73e38dc8%2F9558985cef534a6da901009598e32446?format=webp&width=800"
+                  alt="Exchange Icon"
+                  className="w-4 h-4 object-contain"
+                />
               </div>
               <div className="flex flex-col justify-center items-start gap-0.5 flex-1">
                 <div className="text-[#51525C] text-sm font-medium leading-5">
