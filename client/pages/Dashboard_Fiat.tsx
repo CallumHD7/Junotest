@@ -81,6 +81,11 @@ export default function Dashboard_Fiat() {
   const [showFxToDropdown, setShowFxToDropdown] = useState(false);
   const [fxExchangeRate, setFxExchangeRate] = useState("1 EUR = 1.10 USD");
 
+  // Merchants overlay state
+  const [showMerchantsOverlay, setShowMerchantsOverlay] = useState(false);
+  const [selectedMerchant, setSelectedMerchant] = useState("Olympic Casino Tallinn - Cash Transfers");
+  const [merchantSearchQuery, setMerchantSearchQuery] = useState("");
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
