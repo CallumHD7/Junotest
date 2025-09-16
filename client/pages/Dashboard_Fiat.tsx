@@ -71,6 +71,16 @@ export default function Dashboard_Fiat() {
   const [showMoreDropdown, setShowMoreDropdown] = useState(false);
   const [selectedMoreOption, setSelectedMoreOption] = useState("FX");
 
+  // FX overlay state
+  const [showFxOverlay, setShowFxOverlay] = useState(false);
+  const [fxFromCurrency, setFxFromCurrency] = useState("EUR");
+  const [fxToCurrency, setFxToCurrency] = useState("USD");
+  const [fxFromAmount, setFxFromAmount] = useState("900.00");
+  const [fxToAmount, setFxToAmount] = useState("1,000.00");
+  const [showFxFromDropdown, setShowFxFromDropdown] = useState(false);
+  const [showFxToDropdown, setShowFxToDropdown] = useState(false);
+  const [fxExchangeRate, setFxExchangeRate] = useState("1 EUR = 1.10 USD");
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
