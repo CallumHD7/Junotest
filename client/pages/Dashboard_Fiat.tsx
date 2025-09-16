@@ -1301,12 +1301,12 @@ export default function Dashboard_Fiat() {
             </div>
 
             {/* Statistics Cards */}
-            <div className="flex w-full h-[114px] items-center gap-1 rounded-md overflow-x-auto">
+            <div className="flex h-[114px] items-center gap-1 rounded-md">
               {/* Total Card */}
-              <div className="flex w-[260px] p-3 flex-col items-start gap-4 flex-shrink-0 rounded-md bg-[#F4F4F5]">
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
                 <div className="flex justify-between items-start self-stretch">
                   <div className="flex flex-col items-start gap-1">
-                    <div className="text-[#18181B] text-[28px] font-bold leading-normal">
+                    <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
                       10,000
                     </div>
                     <div className="self-stretch text-[#51525C] text-xs font-medium leading-4 uppercase">
@@ -1315,23 +1315,14 @@ export default function Dashboard_Fiat() {
                   </div>
                   <div className="flex w-8 h-8 p-1.5 justify-center items-center gap-2 rounded-full bg-[#E4E4E7]">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <path
-                        d="M2.98473 12.1581C3.64281 13.4886 4.7101 14.5731 6.02992 15.2523C7.34029 15.9251 8.83429 16.1523 10.2854 15.8995C11.7411 15.6436 13.0747 14.9231 14.0867 13.846C15.108 12.7587 15.7584 11.3756 15.9441 9.89542C16.1328 8.4119 15.8487 6.90665 15.1321 5.59404C14.4221 4.29143 13.3127 3.25122 11.9671 2.62663C10.6305 2.0076 9.12851 1.84156 7.68903 2.15371C6.25005 2.46562 5.07086 3.17499 4.09547 4.29662C3.97802 4.42107 3.52376 4.92355 3.14652 5.68193M5.50022 5.88883L2.69304 6.44887L2 3.55535M9.00045 6.66666V9.77797L11.3339 11.3336"
-                        stroke="#18181B"
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
+                      <path d="M2.98473 12.1581C3.64281 13.4886 4.7101 14.5731 6.02992 15.2523C7.34029 15.9251 8.83429 16.1523 10.2854 15.8995C11.7411 15.6436 13.0747 14.9231 14.0867 13.846C15.108 12.7587 15.7584 11.3756 15.9441 9.89542C16.1328 8.4119 15.8487 6.90665 15.1321 5.59404C14.4221 4.29143 13.3127 3.25122 11.9671 2.62663C10.6305 2.0076 9.12851 1.84156 7.68903 2.15371C6.25005 2.46562 5.07086 3.17499 4.09547 4.29662C3.97802 4.42107 3.52376 4.92355 3.14652 5.68193M5.50022 5.88883L2.69304 6.44887L2 3.55535M9.00045 6.66666V9.77797L11.3339 11.3336" stroke="#18181B" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                 </div>
                 <div className="flex items-center gap-1.5 self-stretch">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-[11.429px]">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M4.95544 13.3346L15.0498 13.3346C15.7488 13.3346 16.0988 12.4831 15.6046 11.9851L10.5574 6.89949C10.251 6.59079 9.75419 6.59079 9.44785 6.89949L4.40069 11.9851C3.90635 12.4831 4.25644 13.3346 4.95544 13.3346Z"
-                        fill="#4CA30D"
-                      />
+                      <path d="M4.95544 13.3346L15.0498 13.3346C15.7488 13.3346 16.0988 12.4831 15.6046 11.9851L10.5574 6.89949C10.251 6.59079 9.75419 6.59079 9.44785 6.89949L4.40069 11.9851C3.90635 12.4831 4.25644 13.3346 4.95544 13.3346Z" fill="#4CA30D"/>
                     </svg>
                   </div>
                   <div className="text-[#51525C] text-sm font-medium leading-5 uppercase">
@@ -1341,25 +1332,84 @@ export default function Dashboard_Fiat() {
               </div>
 
               {/* Completed Card */}
-              <div className="flex w-[260px] p-3 flex-col items-start gap-4 flex-shrink-0 rounded-md bg-[#F4F4F5]">
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
                 <div className="flex justify-between items-start self-stretch">
                   <div className="flex flex-col items-start gap-1">
-                    <div className="text-[#18181B] text-[28px] font-bold leading-normal">
+                    <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
                       9,015
                     </div>
                     <div className="text-[#51525C] text-xs font-medium leading-4 uppercase">
                       Completed
                     </div>
                   </div>
-                  <div className="flex w-8 h-8 p-1.5 justify-center items-center gap-2 rounded-full bg-[#E4E4E7]"></div>
+                  <div className="flex w-8 h-8 p-1.5 justify-center items-center gap-2 rounded-full bg-[#E4E4E7]">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M15.7041 5.04785L15.6328 5.11816L6.68457 14.0664L6.61426 14.1377L2.30371 9.82715L2.375 9.75684L3.43359 8.70508L3.50488 8.63477L3.5752 8.70508L6.61328 11.7441L14.4404 3.92578L14.5107 3.85449L15.7041 5.04785Z" fill="#18181B" stroke="#18181B" strokeWidth="0.2"/>
+                    </svg>
+                  </div>
                 </div>
                 <div className="flex items-center gap-1.5 self-stretch">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-[11.429px]">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M4.95544 13.3346L15.0498 13.3346C15.7488 13.3346 16.0988 12.4831 15.6046 11.9851L10.5574 6.89949C10.251 6.59079 9.75419 6.59079 9.44785 6.89949L4.40069 11.9851C3.90635 12.4831 4.25644 13.3346 4.95544 13.3346Z"
-                        fill="#4CA30D"
-                      />
+                      <path d="M4.95544 13.3346L15.0498 13.3346C15.7488 13.3346 16.0988 12.4831 15.6046 11.9851L10.5574 6.89949C10.251 6.59079 9.75419 6.59079 9.44785 6.89949L4.40069 11.9851C3.90635 12.4831 4.25644 13.3346 4.95544 13.3346Z" fill="#4CA30D"/>
+                    </svg>
+                  </div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5 uppercase">
+                    +1.01% this week
+                  </div>
+                </div>
+              </div>
+
+              {/* Processing Card */}
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
+                <div className="flex justify-between items-start self-stretch">
+                  <div className="flex flex-col items-start gap-1">
+                    <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
+                      385
+                    </div>
+                    <div className="text-[#51525C] text-xs font-medium leading-4 uppercase">
+                      Processing
+                    </div>
+                  </div>
+                  <div className="flex w-8 h-8 p-1.5 justify-center items-center gap-2 rounded-full bg-[#E4E4E7]">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M9 0.950195C13.4458 0.950195 17.0498 4.5542 17.0498 9C17.0498 13.4458 13.4458 17.0498 9 17.0498C4.5542 17.0498 0.950195 13.4458 0.950195 9C0.950195 4.5542 4.5542 0.950195 9 0.950195ZM9 2.50488C7.2773 2.50488 5.62536 3.18909 4.40723 4.40723C3.18909 5.62536 2.50488 7.2773 2.50488 9C2.50488 10.7227 3.18909 12.3746 4.40723 13.5928C5.62536 14.8109 7.2773 15.4951 9 15.4951C9.85289 15.4951 10.6974 15.3273 11.4854 15.001C12.2734 14.6745 12.9896 14.1959 13.5928 13.5928C14.1959 12.9896 14.6745 12.2734 15.001 11.4854C15.3273 10.6974 15.4951 9.85289 15.4951 9C15.4951 8.14711 15.3273 7.30263 15.001 6.51465C14.6745 5.72658 14.1959 5.01039 13.5928 4.40723C12.9896 3.80407 12.2734 3.32545 11.4854 2.99902C10.6974 2.67267 9.85289 2.50488 9 2.50488ZM9 4.22266C9.42928 4.22266 9.77734 4.57072 9.77734 5V7.6709C9.77746 8.31599 10.0341 8.93447 10.4902 9.39062L11.7314 10.6318C12.0349 10.9353 12.0349 11.4279 11.7314 11.7314C11.4279 12.0349 10.9353 12.0349 10.6318 11.7314L9.08984 10.1885C8.53491 9.63354 8.22266 8.8805 8.22266 8.0957V5C8.22266 4.57072 8.57072 4.22266 9 4.22266Z" fill="#18181B" stroke="#18181B" strokeWidth="0.1"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 self-stretch">
+                  <div className="flex items-center gap-[11.429px]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M4.95544 13.3346L15.0498 13.3346C15.7488 13.3346 16.0988 12.4831 15.6046 11.9851L10.5574 6.89949C10.251 6.59079 9.75419 6.59079 9.44785 6.89949L4.40069 11.9851C3.90635 12.4831 4.25644 13.3346 4.95544 13.3346Z" fill="#4CA30D"/>
+                    </svg>
+                  </div>
+                  <div className="text-[#51525C] text-sm font-medium leading-5 uppercase">
+                    +1.01% this week
+                  </div>
+                </div>
+              </div>
+
+              {/* Failed Card */}
+              <div className="flex w-[260px] p-3 flex-col items-start gap-4 rounded-md bg-[#F4F4F5]">
+                <div className="flex justify-between items-start self-stretch">
+                  <div className="flex flex-col items-start gap-1">
+                    <div className="text-[#18181B] text-[28px] font-semibold leading-normal">
+                      600
+                    </div>
+                    <div className="text-[#51525C] text-xs font-medium leading-4 uppercase">
+                      Failed
+                    </div>
+                  </div>
+                  <div className="flex w-8 h-8 p-1.5 justify-center items-center gap-2 rounded-full bg-[#E4E4E7]">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M14.3916 4.80762L14.3203 4.87793L10.1982 9L14.3203 13.1221L14.3916 13.1924L13.1924 14.3916L13.1221 14.3203L9 10.1982L4.87793 14.3203L4.80762 14.3916L3.6084 13.1924L3.67969 13.1221L7.80176 9L3.67969 4.87793L3.6084 4.80762L4.80762 3.6084L4.87793 3.67969L9 7.80176L13.1221 3.67969L13.1924 3.6084L14.3916 4.80762Z" fill="#18181B" stroke="#18181B" strokeWidth="0.2"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 self-stretch">
+                  <div className="flex items-center gap-[11.429px]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M15.0446 6.66536H4.9502C4.25122 6.66536 3.90119 7.51686 4.39542 8.01486L9.44265 13.1005C9.74898 13.4092 10.2458 13.4092 10.5521 13.1005L15.5993 8.01486C16.0936 7.51686 15.7436 6.66536 15.0446 6.66536Z" fill="#A30D0D"/>
                     </svg>
                   </div>
                   <div className="text-[#51525C] text-sm font-medium leading-5 uppercase">
