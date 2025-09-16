@@ -233,6 +233,7 @@ export default function Dashboard_Fiat() {
   }
 
   // Navigation and other hooks
+  const navigate = useNavigate();
 
   // Close dropdown when clicking outside
   useEffect(() => {
