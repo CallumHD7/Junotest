@@ -2,6 +2,96 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard_Fiat() {
+  // All state declarations first
+  const [selectedTab, setSelectedTab] = useState("home");
+  const [selectedView, setSelectedView] = useState("fiat");
+  const [showDepositOverlay, setShowDepositOverlay] = useState(false);
+  const [showFiatDepositOverlay, setShowFiatDepositOverlay] = useState(false);
+  const [showCurrencyDropdown, setShowCurrencyDropdown] = useState(false);
+  const [showIbanCurrencyDropdown, setShowIbanCurrencyDropdown] = useState(false);
+  const [showIbanDetailsOverlay, setShowIbanDetailsOverlay] = useState(false);
+  const [showCryptoDepositOverlay, setShowCryptoDepositOverlay] = useState(false);
+  const [showCryptoSendDropdown, setShowCryptoSendDropdown] = useState(false);
+  const [showCryptoReceiveDropdown, setShowCryptoReceiveDropdown] = useState(false);
+  const [selectedCryptoCurrency, setSelectedCryptoCurrency] = useState("BITCOIN (BTC)");
+  const [selectedFiatCurrency, setSelectedFiatCurrency] = useState("AMERICAN DOLLAR (USD)");
+  const [selectedCurrency, setSelectedCurrency] = useState("AMERICAN DOLLAR (USD)");
+  const [hasCurrencyBeenSelected, setHasCurrencyBeenSelected] = useState(false);
+  const [cryptoSendAmount, setCryptoSendAmount] = useState("");
+  const [cryptoReceiveAmount, setCryptoReceiveAmount] = useState("");
+
+  // Withdrawal overlay state
+  const [showWithdrawalOverlay, setShowWithdrawalOverlay] = useState(false);
+  const [withdrawalTab, setWithdrawalTab] = useState("new"); // "new" or "saved"
+  const [withdrawalAmount, setWithdrawalAmount] = useState("900.00");
+  const [withdrawalCurrency, setWithdrawalCurrency] = useState("EUR");
+  const [showWithdrawalCurrencyDropdown, setShowWithdrawalCurrencyDropdown] = useState(false);
+
+  // Third-Party Payment overlay state
+  const [showThirdPartyPaymentOverlay, setShowThirdPartyPaymentOverlay] = useState(false);
+  const [thirdPartyPaymentTab, setThirdPartyPaymentTab] = useState("new"); // "new" or "saved"
+  const [thirdPartyPaymentAmount, setThirdPartyPaymentAmount] = useState("900.00");
+  const [thirdPartyPaymentCurrency, setThirdPartyPaymentCurrency] = useState("EUR");
+  const [showThirdPartyPaymentCurrencyDropdown, setShowThirdPartyPaymentCurrencyDropdown] = useState(false);
+
+  // Withdrawal form fields
+  const [beneficiaryName, setBeneficiaryName] = useState("Tiana Workman");
+  const [beneficiaryAddress, setBeneficiaryAddress] = useState("");
+  const [bankName, setBankName] = useState("");
+  const [bankAddress, setBankAddress] = useState("");
+  const [accountNumber, setAccountNumber] = useState("");
+  const [sortCode, setSortCode] = useState("");
+  const [iban, setIban] = useState("");
+  const [swift, setSwift] = useState("");
+  const [additionalInfo, setAdditionalInfo] = useState("");
+  const [reference, setReference] = useState("");
+  const [saveAccount, setSaveAccount] = useState(false);
+
+  // Third-Party Payment form fields
+  const [tppBeneficiaryName, setTppBeneficiaryName] = useState("Tiana Workman");
+  const [tppBeneficiaryAddress, setTppBeneficiaryAddress] = useState("");
+  const [tppBankName, setTppBankName] = useState("");
+  const [tppBankAddress, setTppBankAddress] = useState("");
+  const [tppAccountNumber, setTppAccountNumber] = useState("");
+  const [tppSortCode, setTppSortCode] = useState("");
+  const [tppIban, setTppIban] = useState("");
+  const [tppSwift, setTppSwift] = useState("");
+  const [tppAdditionalInfo, setTppAdditionalInfo] = useState("");
+  const [tppReference, setTppReference] = useState("");
+  const [tppSaveAccount, setTppSaveAccount] = useState(false);
+
+  // Transfer overlay state
+  const [showTransferOverlay, setShowTransferOverlay] = useState(false);
+  const [transferAmount, setTransferAmount] = useState("900.00");
+  const [transferCurrency, setTransferCurrency] = useState("EUR");
+  const [showTransferCurrencyDropdown, setShowTransferCurrencyDropdown] = useState(false);
+  const [transferEmailAddress, setTransferEmailAddress] = useState("test@example.com");
+  const [transferReference, setTransferReference] = useState("");
+
+  // MORE dropdown state
+  const [showMoreDropdown, setShowMoreDropdown] = useState(false);
+  const [selectedMoreOption, setSelectedMoreOption] = useState("FX");
+
+  // FX overlay state
+  const [showFxOverlay, setShowFxOverlay] = useState(false);
+  const [fxFromCurrency, setFxFromCurrency] = useState("EUR");
+  const [fxToCurrency, setFxToCurrency] = useState("USD");
+  const [fxFromAmount, setFxFromAmount] = useState("900.00");
+  const [fxToAmount, setFxToAmount] = useState("1,000.00");
+  const [showFxFromDropdown, setShowFxFromDropdown] = useState(false);
+  const [showFxToDropdown, setShowFxToDropdown] = useState(false);
+  const [fxExchangeRate, setFxExchangeRate] = useState("1 EUR = 1.10 USD");
+
+  // Merchants overlay state
+  const [showMerchantsOverlay, setShowMerchantsOverlay] = useState(false);
+  const [selectedMerchant, setSelectedMerchant] = useState("Olympic Casino Tallinn - Cash Transfers");
+  const [merchantSearchQuery, setMerchantSearchQuery] = useState("");
+
+  // Upload File page state
+  const [showUploadFilePage, setShowUploadFilePage] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [uploadProgress, setUploadProgress] = useState(32); // 32% as shown in design
+
   // Handle file selection
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null;
@@ -141,94 +231,8 @@ export default function Dashboard_Fiat() {
       </div>
     );
   }
-  const [selectedTab, setSelectedTab] = useState("home");
-  const [selectedView, setSelectedView] = useState("fiat");
-  const [showDepositOverlay, setShowDepositOverlay] = useState(false);
-  const [showFiatDepositOverlay, setShowFiatDepositOverlay] = useState(false);
-  const [showCurrencyDropdown, setShowCurrencyDropdown] = useState(false);
-  const [showIbanCurrencyDropdown, setShowIbanCurrencyDropdown] = useState(false);
-  const [showIbanDetailsOverlay, setShowIbanDetailsOverlay] = useState(false);
-  const [showCryptoDepositOverlay, setShowCryptoDepositOverlay] = useState(false);
-  const [showCryptoSendDropdown, setShowCryptoSendDropdown] = useState(false);
-  const [showCryptoReceiveDropdown, setShowCryptoReceiveDropdown] = useState(false);
-  const [selectedCryptoCurrency, setSelectedCryptoCurrency] = useState("BITCOIN (BTC)");
-  const [selectedFiatCurrency, setSelectedFiatCurrency] = useState("AMERICAN DOLLAR (USD)");
-  const [selectedCurrency, setSelectedCurrency] = useState("AMERICAN DOLLAR (USD)");
-  const [hasCurrencyBeenSelected, setHasCurrencyBeenSelected] = useState(false);
-  const [cryptoSendAmount, setCryptoSendAmount] = useState("");
-  const [cryptoReceiveAmount, setCryptoReceiveAmount] = useState("");
 
-  // Withdrawal overlay state
-  const [showWithdrawalOverlay, setShowWithdrawalOverlay] = useState(false);
-  const [withdrawalTab, setWithdrawalTab] = useState("new"); // "new" or "saved"
-  const [withdrawalAmount, setWithdrawalAmount] = useState("900.00");
-  const [withdrawalCurrency, setWithdrawalCurrency] = useState("EUR");
-  const [showWithdrawalCurrencyDropdown, setShowWithdrawalCurrencyDropdown] = useState(false);
-
-  // Third-Party Payment overlay state
-  const [showThirdPartyPaymentOverlay, setShowThirdPartyPaymentOverlay] = useState(false);
-  const [thirdPartyPaymentTab, setThirdPartyPaymentTab] = useState("new"); // "new" or "saved"
-  const [thirdPartyPaymentAmount, setThirdPartyPaymentAmount] = useState("900.00");
-  const [thirdPartyPaymentCurrency, setThirdPartyPaymentCurrency] = useState("EUR");
-  const [showThirdPartyPaymentCurrencyDropdown, setShowThirdPartyPaymentCurrencyDropdown] = useState(false);
-
-  // Withdrawal form fields
-  const [beneficiaryName, setBeneficiaryName] = useState("Tiana Workman");
-  const [beneficiaryAddress, setBeneficiaryAddress] = useState("");
-  const [bankName, setBankName] = useState("");
-  const [bankAddress, setBankAddress] = useState("");
-  const [accountNumber, setAccountNumber] = useState("");
-  const [sortCode, setSortCode] = useState("");
-  const [iban, setIban] = useState("");
-  const [swift, setSwift] = useState("");
-  const [additionalInfo, setAdditionalInfo] = useState("");
-  const [reference, setReference] = useState("");
-  const [saveAccount, setSaveAccount] = useState(false);
-
-  // Third-Party Payment form fields
-  const [tppBeneficiaryName, setTppBeneficiaryName] = useState("Tiana Workman");
-  const [tppBeneficiaryAddress, setTppBeneficiaryAddress] = useState("");
-  const [tppBankName, setTppBankName] = useState("");
-  const [tppBankAddress, setTppBankAddress] = useState("");
-  const [tppAccountNumber, setTppAccountNumber] = useState("");
-  const [tppSortCode, setTppSortCode] = useState("");
-  const [tppIban, setTppIban] = useState("");
-  const [tppSwift, setTppSwift] = useState("");
-  const [tppAdditionalInfo, setTppAdditionalInfo] = useState("");
-  const [tppReference, setTppReference] = useState("");
-  const [tppSaveAccount, setTppSaveAccount] = useState(false);
-
-  // Transfer overlay state
-  const [showTransferOverlay, setShowTransferOverlay] = useState(false);
-  const [transferAmount, setTransferAmount] = useState("900.00");
-  const [transferCurrency, setTransferCurrency] = useState("EUR");
-  const [showTransferCurrencyDropdown, setShowTransferCurrencyDropdown] = useState(false);
-  const [transferEmailAddress, setTransferEmailAddress] = useState("test@example.com");
-  const [transferReference, setTransferReference] = useState("");
-
-  // MORE dropdown state
-  const [showMoreDropdown, setShowMoreDropdown] = useState(false);
-  const [selectedMoreOption, setSelectedMoreOption] = useState("FX");
-
-  // FX overlay state
-  const [showFxOverlay, setShowFxOverlay] = useState(false);
-  const [fxFromCurrency, setFxFromCurrency] = useState("EUR");
-  const [fxToCurrency, setFxToCurrency] = useState("USD");
-  const [fxFromAmount, setFxFromAmount] = useState("900.00");
-  const [fxToAmount, setFxToAmount] = useState("1,000.00");
-  const [showFxFromDropdown, setShowFxFromDropdown] = useState(false);
-  const [showFxToDropdown, setShowFxToDropdown] = useState(false);
-  const [fxExchangeRate, setFxExchangeRate] = useState("1 EUR = 1.10 USD");
-
-  // Merchants overlay state
-  const [showMerchantsOverlay, setShowMerchantsOverlay] = useState(false);
-  const [selectedMerchant, setSelectedMerchant] = useState("Olympic Casino Tallinn - Cash Transfers");
-  const [merchantSearchQuery, setMerchantSearchQuery] = useState("");
-
-  // Upload File page state
-  const [showUploadFilePage, setShowUploadFilePage] = useState(false);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [uploadProgress, setUploadProgress] = useState(32); // 32% as shown in design
+  // Navigation and other hooks
 
   // Close dropdown when clicking outside
   useEffect(() => {
